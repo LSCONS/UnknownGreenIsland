@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using VInspector;
 
 public class PlayerControl : MonoBehaviour
 {
     private PlayerInput _input;
-    private CharacterController chrConPlayer;
+    private CharacterController _chrConPlayer;
     private PlayerStatus _playerStatus;
     private float _gravity = -9.81f;
     private Vector3 _playerVelocity;
-    public bool isGrounded;
+    [ShowInInspector]
     private float nowJumpForce = 0f;
+    public float multiple = 0f;
     private float NowJumpForce { get => nowJumpForce; }     //현재 받고 있는 점프의 힘을 저장하는 변수
+
+    private float playerSkinWidth;
 
     private float playerMaxY = 0;
     private bool isOut = false;
@@ -20,7 +24,7 @@ public class PlayerControl : MonoBehaviour
     private void OnValidate()
     {
         _input = transform.GetComponentDebug<PlayerInput>();
-        chrConPlayer = transform.GetComponentDebug<CharacterController>();
+        _chrConPlayer = transform.GetChildComponentDebug<CharacterController>();
         _playerStatus = transform.GetComponentDebug<PlayerStatus>();
     }
 
@@ -29,28 +33,28 @@ public class PlayerControl : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        isGrounded = chrConPlayer.isGrounded;
-        if (isGrounded) _playerVelocity.y = -0.1f;
-
-        if (isGrounded && _input.IsJump)
+        _playerStatus.CheckIsGround();
+        if (_playerStatus.IsGround && _playerVelocity.y <= 0) _playerVelocity.y = 0f;
+        if (_playerStatus.IsGround && _input.IsJump && nowJumpForce == 0f && _playerVelocity.y == 0f)
         {
             nowJumpForce = _playerStatus.NewJumpForce;
         }
-
-        
-
         Move();
+        if (nowJumpForce > 0f)
+        {
+            nowJumpForce -= Time.fixedDeltaTime * multiple;
+            if (nowJumpForce < 0f) nowJumpForce = 0f;
+        }
+    }
+
+
+    private void Update()
+    {
         RotateCharacter();
 
-        if(nowJumpForce > 0f)
-        {
-            nowJumpForce -= Time.deltaTime * 5;
-            if(nowJumpForce < 0f) nowJumpForce = 0f;
-        }
-
-        if (isGrounded == false)
+        if (!(_playerStatus.IsGround))
         {
             playerMaxY = Mathf.Max(playerMaxY, transform.position.y);
             isOut = true;
@@ -59,20 +63,19 @@ public class PlayerControl : MonoBehaviour
         {
             if(isOut)Debug.Log(playerMaxY);
             isOut =false;
+            playerMaxY = 0f;
         }
-
-
     }
 
 
     private void Move()
     {
-        _playerVelocity.y += (_playerStatus.PlayerMass *_gravity) * Time.deltaTime + nowJumpForce;
+        _playerVelocity.y += (_playerStatus.PlayerMass *_gravity) * Time.fixedDeltaTime + nowJumpForce;
 
-        chrConPlayer.Move(
-            _input.PlayerMoveDir.x * Time.deltaTime * transform.right +
-            _input.PlayerMoveDir.y * Time.deltaTime * transform.forward +
-            _playerVelocity.y * Time.deltaTime * transform.up
+        _chrConPlayer.Move(
+            _input.PlayerMoveDir.x * Time.fixedDeltaTime * transform.right +
+            _input.PlayerMoveDir.y * Time.fixedDeltaTime * transform.forward +
+            _playerVelocity.y * Time.fixedDeltaTime * transform.up
             );
     }
 
@@ -81,4 +84,5 @@ public class PlayerControl : MonoBehaviour
     {
         transform.eulerAngles += _input.MousePositionDir.x * _playerStatus.Sensitivity * Vector3.up;
     }
+
 }

@@ -15,9 +15,10 @@ public class PlayerStatus : MonoBehaviour
     private float curStamina = 100f;
     private float maxPositionY;
     private float staminaRecoverySpeed = 20f;
+    [ShowInInspector]
     private bool isGround = false;
-    private float playerMass = 3;
-    private float newJumpForce = 0.7f;
+    public float playerMass = 20f;
+    public float newJumpForce = 5f;
     public float NewJumpForce { get => newJumpForce; }
 
     private LayerMask _excludeLayerMask;
@@ -44,6 +45,10 @@ public class PlayerStatus : MonoBehaviour
     public float MinCurXRot { get => minCurXRot; }
     //
 
+    private void OnValidate()
+    {
+        _excludeLayerMask = ~(ReadonlyData.EnemyLayerMask | ReadonlyData.PlayerLayerMask); 
+    }
 
     //체력의 값에 변동을 주는 메서드 
     public void HealthChange(float value)
@@ -60,23 +65,41 @@ public class PlayerStatus : MonoBehaviour
 
 
     //플레이어가 땅에 닿고 있는지 확인하고 반환하는 메서드 
-    public bool CheckIsGround()
+    public void CheckIsGround()
     {
         Ray[] ray = new Ray[]
         {
-            new Ray(transform.position + Vector3.forward * 0.3f + Vector3.up * 0.01f, Vector3.down),
-            new Ray(transform.position + Vector3.back * 0.3f+ Vector3.up * 0.01f, Vector3.down),
-            new Ray(transform.position + Vector3.right * 0.3f+ Vector3.up * 0.01f, Vector3.down),
-            new Ray(transform.position + Vector3.left * 0.3f+ Vector3.up * 0.01f, Vector3.down)
+            new Ray(transform.position + Vector3.forward * 0.3f, Vector3.down),
+            new Ray(transform.position + Vector3.back * 0.3f, Vector3.down),
+            new Ray(transform.position + Vector3.right * 0.3f, Vector3.down),
+            new Ray(transform.position + Vector3.left * 0.3f, Vector3.down)
         };
 
         for (int i = 0; i < ray.Length; i++)
         {
             if (Physics.Raycast(ray[i], 0.02f, _excludeLayerMask))
             {
-                return true;
+                isGround = true;
+                return;
             }
         }
-        return false;
+        isGround = false;
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Ray[] ray = new Ray[]
+{
+            new Ray(transform.position + Vector3.forward * 0.3f, Vector3.down),
+            new Ray(transform.position + Vector3.back * 0.3f, Vector3.down),
+            new Ray(transform.position + Vector3.right * 0.3f, Vector3.down),
+            new Ray(transform.position + Vector3.left * 0.3f, Vector3.down)
+};
+
+        for (int i = 0; i < ray.Length; i++)
+        {
+            Debug.DrawRay(ray[i].origin, ray[i].direction * 0.02f, Color.red);
+        }
     }
 }

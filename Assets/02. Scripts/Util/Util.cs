@@ -102,6 +102,14 @@ public static class Util
     }
 
 
+    public static T GetChildComponentDebug<T>(this Transform parent, bool isDebug = true ) where T : Component
+    {
+        T tempT = parent.GetComponentInChildren<T>();
+        if (tempT == null && isDebug) Debug.LogError($"{typeof(T)} is null");
+        return tempT;
+    }
+
+
     /// <summary>
     /// 리스트를 무작위로 섞는 메서드
     /// </summary>
