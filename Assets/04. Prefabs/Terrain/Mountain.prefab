@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 442014495557226511}
   - component: {fileID: 57484524366736587}
   - component: {fileID: 6525214636366927893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mountain_L_03_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1746470642342616081}
   - component: {fileID: 1616879896416429859}
-  m_Layer: 0
+  - component: {fileID: 6638864585057370440}
+  m_Layer: 7
   m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,6 +146,26 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1167335752500013255}
   m_Enabled: 1
+--- !u!154 &6638864585057370440
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890498988479364594}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 0}
+  m_EnableTreeColliders: 1
 --- !u!1 &2501551100509338513
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +177,7 @@ GameObject:
   - component: {fileID: 8519912441236157915}
   - component: {fileID: 701294911204828820}
   - component: {fileID: 104276095510882902}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mountain_L_03_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +260,7 @@ GameObject:
   - component: {fileID: 71165602383917550}
   - component: {fileID: 2649760902513712878}
   - component: {fileID: 1167335752500013255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mountain_L_03_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
