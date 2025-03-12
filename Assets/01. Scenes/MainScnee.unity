@@ -749,6 +749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2093877076}
+  - component: {fileID: 2093877077}
   m_Layer: 0
   m_Name: BuildingManager
   m_TagString: Untagged
@@ -771,6 +772,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2093877077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093877075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4252255b5bec238479c932374f23c439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorObjects:
+  - {fileID: 3731645353567254866, guid: dde820ff1df43054ab89b79798e319fb, type: 3}
+  wallObjects:
+  - {fileID: 4595439678827867627, guid: e2e11e3bcb0cc354489b181b48b4b08e, type: 3}
+  currentBuildType: 0
+  connectorLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ghostMaterialValid: {fileID: 2100000, guid: 40ef4a56637430241b96e22a57399b6f, type: 2}
+  ghostMaterialInvalid: {fileID: 2100000, guid: cd6c77215d9224149a85d3840e9c9599, type: 2}
+  connectorOverlapRadius: 1
+  maxGroundAngle: 45
+  isBuilding: 0
+  currentBuildingIndex: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

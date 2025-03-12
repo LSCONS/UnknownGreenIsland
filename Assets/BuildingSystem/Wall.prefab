@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 2263490302279737179}
   - component: {fileID: 9104519319867434088}
   - component: {fileID: 3790045284899485140}
+  - component: {fileID: 5866841760954440652}
   m_Layer: 10
   m_Name: Connector (2)
   m_TagString: Untagged
@@ -140,6 +141,25 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5866841760954440652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428924839930512764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4026f1cff065348822eefad8951e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectorPosition: 2
+  connectorParentType: 1
+  isConnectedToFloor: 0
+  isConnectedToWall: 0
+  canConnectTo: 1
+  canConnectToFloor: 1
+  canConnectToWall: 1
 --- !u!1 &1548652435122602065
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +172,7 @@ GameObject:
   - component: {fileID: 1996961021180313112}
   - component: {fileID: 215714234818939751}
   - component: {fileID: 1005265227181024509}
+  - component: {fileID: 3157634016959678920}
   m_Layer: 10
   m_Name: Connector (1)
   m_TagString: Untagged
@@ -245,6 +266,25 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3157634016959678920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548652435122602065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4026f1cff065348822eefad8951e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectorPosition: 1
+  connectorParentType: 1
+  isConnectedToFloor: 0
+  isConnectedToWall: 0
+  canConnectTo: 1
+  canConnectToFloor: 1
+  canConnectToWall: 1
 --- !u!1 &1835992602853696680
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +297,7 @@ GameObject:
   - component: {fileID: 9052192514968912286}
   - component: {fileID: 6280313765331111698}
   - component: {fileID: 6294627597303597559}
+  - component: {fileID: 5885699677775981400}
   m_Layer: 10
   m_Name: Connector (3)
   m_TagString: Untagged
@@ -350,6 +391,25 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5885699677775981400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835992602853696680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4026f1cff065348822eefad8951e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectorPosition: 3
+  connectorParentType: 1
+  isConnectedToFloor: 0
+  isConnectedToWall: 0
+  canConnectTo: 1
+  canConnectToFloor: 1
+  canConnectToWall: 1
 --- !u!1 &4595439678827867627
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +421,7 @@ GameObject:
   - component: {fileID: 8370681018607461060}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Buildable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,6 +487,7 @@ GameObject:
   - component: {fileID: 8842220508962387095}
   - component: {fileID: 1290622828868309970}
   - component: {fileID: 2328780543211626945}
+  - component: {fileID: 8770743868913948726}
   m_Layer: 10
   m_Name: Connector
   m_TagString: Untagged
@@ -520,6 +581,25 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8770743868913948726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8323710637038645951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4026f1cff065348822eefad8951e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectorPosition: 0
+  connectorParentType: 1
+  isConnectedToFloor: 0
+  isConnectedToWall: 0
+  canConnectTo: 1
+  canConnectToFloor: 1
+  canConnectToWall: 1
 --- !u!1 &9017270203331433934
 GameObject:
   m_ObjectHideFlags: 0
