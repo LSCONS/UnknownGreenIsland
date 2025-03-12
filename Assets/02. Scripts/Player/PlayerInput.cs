@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
-
     PlayerInputSystem playerinput;
+    WeaponHandler weaponHandler;
 
     public float moveSpeed = 10f;
 
@@ -17,6 +17,12 @@ public class PlayerInput : MonoBehaviour
     private Vector2 mousePositionDir;
     public Vector2 MousePositionDir { get => mousePositionDir; }
 
+
+    private void Awake()
+    {
+        weaponHandler = "WeaponPivot".GetComponentNameDFS<WeaponHandler>();
+    }
+
     private void OnEnable()
     {
         playerinput = new PlayerInputSystem();
@@ -24,6 +30,9 @@ public class PlayerInput : MonoBehaviour
         playerinput.Player.Move.canceled += StopMove;
         playerinput.Player.MousePosition.performed += OnMousePosition;
         playerinput.Player.MousePosition.canceled += StopMousePosition;
+        playerinput.Player.Action.started += OnAction; 
+        playerinput.Player.Action.canceled += StopAction;
+
 
         playerinput.Enable();
     }
@@ -35,6 +44,10 @@ public class PlayerInput : MonoBehaviour
         playerinput.Player.Move.canceled -= StopMove;
         playerinput.Player.MousePosition.performed -= OnMousePosition;
         playerinput.Player.MousePosition.canceled -= StopMousePosition;
+        playerinput.Player.Action.started -= OnAction;
+        playerinput.Player.Action.canceled -= StopAction;
+
+
 
         playerinput.Disable();
     }
@@ -58,5 +71,15 @@ public class PlayerInput : MonoBehaviour
     private void StopMousePosition(InputAction.CallbackContext context)
     {
         mousePositionDir = Vector2.zero;
+    }
+
+    private void OnAction(InputAction.CallbackContext context) 
+    {
+        weaponHandler.Attack();
+    }
+    private void StopAction(InputAction.CallbackContext context)
+    {
+        weaponHandler.StopAttack();
+
     }
 }
