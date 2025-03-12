@@ -6,13 +6,13 @@ using UnityEngine.InputSystem;
 public class PlayerControl : MonoBehaviour
 {
     private PlayerInput _input;
-    private Rigidbody _rigidbody;
+    private CharacterController chrConPlayer;
     private PlayerStatus _playerStatus;
 
     private void OnValidate()
     {
         _input = transform.GetComponentDebug<PlayerInput>();
-        _rigidbody = transform.GetComponentDebug<Rigidbody>();
+        chrConPlayer = transform.GetComponentDebug<CharacterController>();
         _playerStatus = transform.GetComponentDebug<PlayerStatus>();
     }
 
@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody.velocity = _input.PlayerMoveDir.x * transform.right + _input.PlayerMoveDir.y * transform.forward;
+        chrConPlayer.Move(_input.PlayerMoveDir.x * transform.right + _input.PlayerMoveDir.y * transform.forward);
     }
 
     //플레이어를 회전시킴
