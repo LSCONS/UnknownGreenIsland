@@ -20,7 +20,7 @@ public class PlayerStatus : MonoBehaviour
     private LayerMask _excludeLayerMask;
 
     //TODO: 추후에 해당 변수들 이동 필요 
-    private float sensitivity = 0.5f;
+    private float sensitivity = 0.1f;
     private float maxCurXRot = 90;
     private float minCurXRot = -90f;
     private float consumptionJump = 20f;
