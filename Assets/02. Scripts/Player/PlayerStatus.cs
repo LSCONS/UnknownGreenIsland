@@ -16,6 +16,9 @@ public class PlayerStatus : MonoBehaviour
     private float maxPositionY;
     private float staminaRecoverySpeed = 20f;
     private bool isGround = false;
+    private float playerMass = 3;
+    private float newJumpForce = 0.7f;
+    public float NewJumpForce { get => newJumpForce; }
 
     private LayerMask _excludeLayerMask;
 
@@ -33,6 +36,7 @@ public class PlayerStatus : MonoBehaviour
     public float MaxStamina { get => maxStamina; }
     public float CurStamina { get => curStamina; }
     public bool IsGround { get => isGround; }
+    public float PlayerMass { get => playerMass; }
 
     //TODO: 추후에 해당 변수들 이동 필요 
     public float Sensitivity { get => sensitivity; }
