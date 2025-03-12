@@ -24,6 +24,10 @@ public class PlayerControl : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+    }
+
+    private void LateUpdate()
+    {
         RotateCharacter();
     }
 
