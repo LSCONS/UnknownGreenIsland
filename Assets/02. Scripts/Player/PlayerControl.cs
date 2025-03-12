@@ -21,20 +21,19 @@ public class PlayerControl : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Move();
-    }
-
-    private void LateUpdate()
-    {
         RotateCharacter();
     }
 
 
     private void Move()
     {
-        chrConPlayer.Move(_input.PlayerMoveDir.x * transform.right + _input.PlayerMoveDir.y * transform.forward);
+        chrConPlayer.Move(
+            _input.PlayerMoveDir.x * Time.deltaTime * transform.right  + 
+            _input.PlayerMoveDir.y * Time.deltaTime * transform.forward 
+            );
     }
 
     //플레이어를 회전시킴
