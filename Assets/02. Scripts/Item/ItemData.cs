@@ -37,7 +37,7 @@ public class ItemData : ScriptableObject
     public GameObject dropPrefab; //드롭했을 때 나타나는 3D 오브젝트
 
     [Header("QuantityLimit")]
-    public bool canStack; //다중 보유가능 유무 
+    public bool canStack; //다중 보유가능 유무 true= 다중, false=한개만
     public int maxStackAmount; //최대 보유수량
 
     [Header("Consumable")]
