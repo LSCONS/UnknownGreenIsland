@@ -27,7 +27,6 @@ public class PlayerStatus : MonoBehaviour
     private float sensitivity = 0.1f;
     private float maxCurXRot = 90;
     private float minCurXRot = -90f;
-    private float consumptionJump = 20f;
     //
 
     public float MoveSpeed { get => moveSpeed; }
@@ -61,22 +60,5 @@ public class PlayerStatus : MonoBehaviour
     public void StaminaChange(float value)
     {
 
-    }
-
-
-    private void OnDrawGizmos()
-    {
-        Ray[] ray = new Ray[]
-{
-            new Ray(_chrcon.transform.position + Vector3.forward * 0.3f, Vector3.down),
-            new Ray(_chrcon.transform.position + Vector3.back * 0.3f, Vector3.down),
-            new Ray(_chrcon.transform.position + Vector3.right * 0.3f, Vector3.down),
-            new Ray(_chrcon.transform.position + Vector3.left * 0.3f, Vector3.down)
-};
-
-        for (int i = 0; i < ray.Length; i++)
-        {
-            Debug.DrawRay(ray[i].origin, ray[i].direction * 0.02f, Color.red);
-        }
     }
 }
