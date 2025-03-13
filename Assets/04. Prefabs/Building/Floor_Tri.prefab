@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8483370612520941581}
   - component: {fileID: 6488875399152709739}
   - component: {fileID: 7221816669839526757}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7780137510378584929}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Connectors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,8 +274,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5861472513578056406}
-  m_Layer: 0
-  m_Name: Floor
+  m_Layer: 11
+  m_Name: Floor_Tri
   m_TagString: Buildable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,7 +432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1793026223856475545}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

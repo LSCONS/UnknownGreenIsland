@@ -41,6 +41,12 @@ public class BuildingManager : MonoBehaviour
             GhostBuild();
         }
 
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            RemoveBuild();
+            Debug.Log("Destroy");
+        }
+
         if (isBuilding)
         {
             GhostBuild();
@@ -173,6 +179,26 @@ public class BuildingManager : MonoBehaviour
 
         GhostifyModel(ModelParent, ghostMaterialValid);
         isGhostInValidPosition = true;
+    }
+
+    private void RemoveBuild()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            GameObject target = hit.collider.gameObject;
+            Transform parentTransform = target.transform.root;
+            GameObject objectToDestroy = parentTransform.gameObject;
+            LayerMask targetlayer = LayerMask.NameToLayer("BuildingPre");
+
+            if (target.layer == targetlayer)
+            {
+                Debug.Log("111");
+                Destroy(objectToDestroy);
+            }
+        }
+       
     }
 
     private void GhostSeparateBuild()
