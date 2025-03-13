@@ -15,7 +15,7 @@ public class PlayerCheckAngle : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         // 충돌한 오브젝트 정보 확인
-        Debug.Log("충돌한 오브젝트: " + hit.gameObject.name);
+        //Debug.Log("충돌한 오브젝트: " + hit.gameObject.name);
 
         // 충돌한 면의 법선 벡터를 이용해 바닥 판정 등의 추가 로직 구현 가능
         float angle = Vector3.Angle(hit.normal, Vector3.up);
