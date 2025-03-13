@@ -24,8 +24,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Awake()
     {
-        cameraMoving= "Main Camera".GetComponentNameDFS<CameraMoving>();
-        weaponHandler = cameraMoving.GetComponentInChildren<WeaponHandler>();
+        weaponHandler = "WeaponPivot".GetComponentNameDFS<WeaponHandler>();
         animator = weaponHandler.GetComponent<Animator>();
     }
 

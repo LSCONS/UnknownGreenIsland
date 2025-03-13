@@ -13,7 +13,7 @@ public class IconCapture : MonoBehaviour
     [SerializeField] private int iconWidth = 1024;
     [SerializeField] private int iconHeight = 1024;
     [SerializeField] private string iconName = "test";
-
+#if SONGJEWOO
     [Button]
     public void CaptureIcon()
     {
@@ -40,6 +40,7 @@ public class IconCapture : MonoBehaviour
 
         SaveIconTexture(iconTexture, iconName);
     }
+#endif
 
 #if UNITY_EDITOR
     // 캡처한 아이콘 텍스처를 지정한 경로에 PNG 파일로 저장하는 메서드
