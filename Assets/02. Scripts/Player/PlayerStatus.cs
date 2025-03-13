@@ -86,6 +86,10 @@ public class PlayerStatus : MonoBehaviour
     public void HealthChange(float value)
     {
         curHealth = curHealth.PlusAndClamp(value, maxHealth);
+        if(curHealth < 0)
+        {
+            //TODO: 사망처리 필요
+        }
     }
 
 
