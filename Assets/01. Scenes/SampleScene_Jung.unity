@@ -552,8 +552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc66e96741b0e934dafef6916910b919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiple: 15
-  defaultGravity: 2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -11763,7 +11761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2369990325898495873
 Transform:
   m_ObjectHideFlags: 0
@@ -17997,7 +17995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemToGive: {fileID: 8002124638250225200}
   quantityPerHit: 1
-  capacity: 2
+  capacity: 5
 --- !u!65 &3757876270658519374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32491,7 +32489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &7258054760335975118
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,10 +30,12 @@ public class PlayerControl : MonoBehaviour
         _checkAngle = "PlayerObject".GetComponentNameDFS<PlayerCheckAngle>();
     }
 
+
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
+
 
     private void FixedUpdate()
     {       
@@ -65,6 +67,7 @@ public class PlayerControl : MonoBehaviour
         RotateCharacter();
     }
 
+
     private void LateUpdate()
     {
         transform.position = Vector3.Lerp(transform.position, _chrConPlayer.transform.position + _difValue, Time.deltaTime * 20);
@@ -83,6 +86,7 @@ public class PlayerControl : MonoBehaviour
             ));
         _chrConPlayer.Move(_checkAngle.repForce * Time.fixedDeltaTime);
     }
+
 
     //마우스 포지션에 따라 플레이어를 회전시키는 메서드
     private void RotateCharacter()
