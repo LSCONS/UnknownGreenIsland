@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour
     PlayerInputSystem playerinput;
     WeaponHandler weaponHandler;
     CameraMoving cameraMoving;
+    Animator animator;
 
     public float moveSpeed = 10f;
 
@@ -25,6 +26,8 @@ public class PlayerInput : MonoBehaviour
     {
         cameraMoving= "Main Camera".GetComponentNameDFS<CameraMoving>();
         weaponHandler = cameraMoving.GetComponentInChildren<WeaponHandler>();
+        animator = weaponHandler.GetComponent<Animator>();
+
     }
 
     private void OnEnable()
@@ -37,7 +40,7 @@ public class PlayerInput : MonoBehaviour
         playerinput.Player.MousePosition.canceled += StopMousePosition;
         playerinput.Player.Jump.started += OnJump;
         playerinput.Player.Jump.canceled += StopJump;
-        playerinput.Player.Action.started += OnAction; 
+        playerinput.Player.Action.started += OnAction;
         playerinput.Player.Action.canceled += StopAction;
 
 
@@ -90,13 +93,13 @@ public class PlayerInput : MonoBehaviour
     {
         isJump = false;
     }
-
-    private void OnAction(InputAction.CallbackContext context) 
+    private void OnAction(InputAction.CallbackContext context)
     {
+        animator.SetBool("IsAttack", true);
         weaponHandler.Attack();
     }
     private void StopAction(InputAction.CallbackContext context)
     {
-        weaponHandler.StopAttack();
+        animator.SetBool("IsAttack", false);
     }
 }
