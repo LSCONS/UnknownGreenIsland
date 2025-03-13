@@ -1,34 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public enum Weapontype
+public enum WeaponType
 {
     Resources,
-    Attack
+    Combat
 }
 
 public class WeaponHandler : MonoBehaviour
 {
-    CameraMoving cameraMoving;
-    Animator animator;
+    
+    Camera camera;
+
+    public WeaponType weaponType;
+    public int attackDistance; //공격 사거리
 
     private void Awake()
     {
-        cameraMoving = "Main Camera".GetComponentNameDFS<CameraMoving>();
-        animator = GetComponentInChildren<Animator>();
-    }
-    private void LateUpdate()
-    {
-        transform.position = new Vector3(cameraMoving.transform.position.x + 0.75f, cameraMoving.transform.position.y - 0.5f, cameraMoving.transform.position.z + 1.2f);
+        camera = Camera.main;
     }
 
     public void Attack()
     {
-        animator.SetBool("IsAttack", true);
-    }
-    public void StopAttack()
-    {
-        animator.SetBool("IsAttack", false);
+
+        Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2 + 1.5f , 0 ));
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, attackDistance, ReadonlyData.ResourceObjectLayerMask | ReadonlyData.EnemyLayerMask))
+        {
+            if (hit.collider.TryGetComponent(out ResourceObject resource) && WeaponType.Resources == weaponType)
+            {
+                resource.Gather(hit.point, hit.normal);
+            }
+            else if(hit.collider.TryGetComponent(out EnemyObject Enemy) && WeaponType.Combat == weaponType)
+            {
+                Enemy.HealthChange(hit.point, hit.normal);
+            }
+        }
     }
 }
