@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour
 {
     PlayerInputSystem playerinput;
     WeaponHandler weaponHandler;
+    CameraMoving cameraMoving;
 
     public float moveSpeed = 10f;
 
@@ -20,7 +21,8 @@ public class PlayerInput : MonoBehaviour
 
     private void Awake()
     {
-        weaponHandler = "WeaponPivot".GetComponentNameDFS<WeaponHandler>();
+        cameraMoving= "Main Camera".GetComponentNameDFS<CameraMoving>();
+        weaponHandler = cameraMoving.GetComponentInChildren<WeaponHandler>();
     }
 
     private void OnEnable()
@@ -46,7 +48,6 @@ public class PlayerInput : MonoBehaviour
         playerinput.Player.MousePosition.canceled -= StopMousePosition;
         playerinput.Player.Action.started -= OnAction;
         playerinput.Player.Action.canceled -= StopAction;
-
 
 
         playerinput.Disable();
@@ -80,6 +81,5 @@ public class PlayerInput : MonoBehaviour
     private void StopAction(InputAction.CallbackContext context)
     {
         weaponHandler.StopAttack();
-
     }
 }
