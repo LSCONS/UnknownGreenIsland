@@ -44,7 +44,6 @@ public class BuildingManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             RemoveBuild();
-            Debug.Log("Destroy");
         }
 
         if (isBuilding)
