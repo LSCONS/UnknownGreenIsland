@@ -100,13 +100,22 @@ public class PlayerStatus : MonoBehaviour
     public void HungerChange(float value)
     {
         curHunger = curHunger.PlusAndClamp(value, maxHunger);
+        SetAbnormal(AbnormalStatus.Starvation, curHunger < 20f);
+        SetAbnormal(AbnormalStatus.Hunger, curHunger < 40f);
+        SetAbnormal(AbnormalStatus.Eat, curHunger >= 60f);
+        SetAbnormal(AbnormalStatus.EatFull, curHunger >= 80f);
     }
+
 
 
     //목마름 값에 변동을 주는 메서드
     public void ThirstyChange(float value)
     {
         curThirsty = curThirsty.PlusAndClamp(value, maxThirsty);
+        SetAbnormal(AbnormalStatus.Dehydrration, curHunger < 20f);
+        SetAbnormal(AbnormalStatus.Thirsty, curHunger < 40f);
+        SetAbnormal(AbnormalStatus.Drink, curHunger >= 60f);
+        SetAbnormal(AbnormalStatus.PlentyWater, curHunger >= 80f);
     }
 
 
@@ -122,5 +131,4 @@ public class PlayerStatus : MonoBehaviour
             curAbnormal = curAbnormal & ~status;
         }
     }
-
 }
