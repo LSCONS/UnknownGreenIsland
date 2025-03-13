@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemObject : MonoBehaviour
+public interface IInteractable
+{
+    public string GetInteractPrompt();
+    public void OnInteract();
+}
+
+public class ItemObject : MonoBehaviour, IInteractable
 {
     public ItemData data;
-    // Start is called before the first frame update
-    void Start()
+
+    public string GetInteractPrompt()
     {
-        
+        string str = $"{data.ItemName}\n{data.description}"; //Player 포인트 시점 출력 Data
+        return str;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnInteract()
     {
-        
+        CharacterManager.Instance.Player.itemData = data;
+        CharacterManager.Instance.Player.addItem?.Invoke();
+        Destroy(gameObject);
     }
 }
+
