@@ -96,7 +96,6 @@ public class PlayerInput : MonoBehaviour
     private void OnAction(InputAction.CallbackContext context)
     {
         animator.SetBool("IsAttack", true);
-        weaponHandler.Attack();
     }
     private void StopAction(InputAction.CallbackContext context)
     {
