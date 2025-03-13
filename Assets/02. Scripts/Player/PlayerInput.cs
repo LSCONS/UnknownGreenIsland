@@ -17,6 +17,8 @@ public class PlayerInput : MonoBehaviour
 
     private Vector2 mousePositionDir;
     public Vector2 MousePositionDir { get => mousePositionDir; }
+    private bool isJump = false;
+    public bool IsJump { get =>  isJump; }
 
 
     private void Awake()
@@ -28,10 +30,13 @@ public class PlayerInput : MonoBehaviour
     private void OnEnable()
     {
         playerinput = new PlayerInputSystem();
+
         playerinput.Player.Move.performed += OnMove;
         playerinput.Player.Move.canceled += StopMove;
         playerinput.Player.MousePosition.performed += OnMousePosition;
         playerinput.Player.MousePosition.canceled += StopMousePosition;
+        playerinput.Player.Jump.started += OnJump;
+        playerinput.Player.Jump.canceled += StopJump;
         playerinput.Player.Action.started += OnAction; 
         playerinput.Player.Action.canceled += StopAction;
 
@@ -46,6 +51,8 @@ public class PlayerInput : MonoBehaviour
         playerinput.Player.Move.canceled -= StopMove;
         playerinput.Player.MousePosition.performed -= OnMousePosition;
         playerinput.Player.MousePosition.canceled -= StopMousePosition;
+        playerinput.Player.Jump.started -= OnJump;
+        playerinput.Player.Jump.canceled -= StopJump;
         playerinput.Player.Action.started -= OnAction;
         playerinput.Player.Action.canceled -= StopAction;
 
@@ -72,6 +79,16 @@ public class PlayerInput : MonoBehaviour
     private void StopMousePosition(InputAction.CallbackContext context)
     {
         mousePositionDir = Vector2.zero;
+    }
+
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        isJump = true;
+    }
+
+    private void StopJump(InputAction.CallbackContext context)
+    {
+        isJump = false;
     }
 
     private void OnAction(InputAction.CallbackContext context) 
