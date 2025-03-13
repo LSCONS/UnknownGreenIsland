@@ -25,6 +25,8 @@ public class ItemDataConsumabale
     public ConsumableType type; //타입 설정
     public float value; //아이템 사용 후 증가 값
 }
+
+[CreateAssetMenu(fileName = "Item", menuName = "New Item")]
 public class ItemData : ScriptableObject
 {
     [Header("Info")]
