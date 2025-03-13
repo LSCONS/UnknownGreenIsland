@@ -21,7 +21,7 @@ public class CameraMoving : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, _playerTransform.position + Vector3.up * 1.5f, Time.deltaTime * _cameraLerpSpeed);
+        transform.position = Vector3.Lerp(transform.position, _playerTransform.position + Vector3.up *0.5f, Time.deltaTime * _cameraLerpSpeed);
         _curCameraXRot += _playerInput.MousePositionDir.y * _playerStatus.Sensitivity;
         _curCameraXRot = Mathf.Clamp(_curCameraXRot, _playerStatus.MinCurXRot, _playerStatus.MaxCurXRot);
         Vector3 resultEuler = Vector3.up * _playerTransform.eulerAngles.y - _curCameraXRot * Vector3.right;

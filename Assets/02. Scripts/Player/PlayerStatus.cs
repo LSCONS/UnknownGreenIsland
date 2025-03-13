@@ -16,12 +16,12 @@ public class PlayerStatus : MonoBehaviour
     private float maxPositionY;
     private float staminaRecoverySpeed = 20f;
     [ShowInInspector]
-    private bool isGround = false;
     public float playerMass = 20f;
     public float newJumpForce = 5f;
     public float NewJumpForce { get => newJumpForce; }
 
     private LayerMask _excludeLayerMask;
+    private CharacterController _chrcon;
 
     //TODO: 추후에 해당 변수들 이동 필요 
     private float sensitivity = 0.1f;
@@ -36,7 +36,6 @@ public class PlayerStatus : MonoBehaviour
     public float CurHealth { get => curHealth; }
     public float MaxStamina { get => maxStamina; }
     public float CurStamina { get => curStamina; }
-    public bool IsGround { get => isGround; }
     public float PlayerMass { get => playerMass; }
 
     //TODO: 추후에 해당 변수들 이동 필요 
@@ -47,7 +46,8 @@ public class PlayerStatus : MonoBehaviour
 
     private void OnValidate()
     {
-        _excludeLayerMask = ~(ReadonlyData.EnemyLayerMask | ReadonlyData.PlayerLayerMask); 
+        _excludeLayerMask = ~(ReadonlyData.EnemyLayerMask | ReadonlyData.PlayerLayerMask);
+        _chrcon = "Controller_Player".GetComponentNameDFS<CharacterController>();
     }
 
     //체력의 값에 변동을 주는 메서드 
@@ -64,37 +64,14 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
-    //플레이어가 땅에 닿고 있는지 확인하고 반환하는 메서드 
-    public void CheckIsGround()
-    {
-        Ray[] ray = new Ray[]
-        {
-            new Ray(transform.position + Vector3.forward * 0.3f, Vector3.down),
-            new Ray(transform.position + Vector3.back * 0.3f, Vector3.down),
-            new Ray(transform.position + Vector3.right * 0.3f, Vector3.down),
-            new Ray(transform.position + Vector3.left * 0.3f, Vector3.down)
-        };
-
-        for (int i = 0; i < ray.Length; i++)
-        {
-            if (Physics.Raycast(ray[i], 0.02f, _excludeLayerMask))
-            {
-                isGround = true;
-                return;
-            }
-        }
-        isGround = false;
-    }
-
-
     private void OnDrawGizmos()
     {
         Ray[] ray = new Ray[]
 {
-            new Ray(transform.position + Vector3.forward * 0.3f, Vector3.down),
-            new Ray(transform.position + Vector3.back * 0.3f, Vector3.down),
-            new Ray(transform.position + Vector3.right * 0.3f, Vector3.down),
-            new Ray(transform.position + Vector3.left * 0.3f, Vector3.down)
+            new Ray(_chrcon.transform.position + Vector3.forward * 0.3f, Vector3.down),
+            new Ray(_chrcon.transform.position + Vector3.back * 0.3f, Vector3.down),
+            new Ray(_chrcon.transform.position + Vector3.right * 0.3f, Vector3.down),
+            new Ray(_chrcon.transform.position + Vector3.left * 0.3f, Vector3.down)
 };
 
         for (int i = 0; i < ray.Length; i++)
