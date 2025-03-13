@@ -102,11 +102,43 @@ public static class Util
     }
 
 
+    /// <summary>
+    /// 해당 Transform의 자식들을 검사해서 특정 컴포넌트를 가져오는 메서드
+    /// </summary>
+    /// <typeparam name="T">가져오고 싶은 컴포넌트</typeparam>
+    /// <param name="parent">검사할 부모 오브젝트</param>
+    /// <param name="isDebug">디버그 유무. 기본 값은 출력</param>
+    /// <returns>있다면 반환. 없다면 null반환</returns>
     public static T GetChildComponentDebug<T>(this Transform parent, bool isDebug = true ) where T : Component
     {
         T tempT = parent.GetComponentInChildren<T>();
         if (tempT == null && isDebug) Debug.LogError($"{typeof(T)} is null");
         return tempT;
+    }
+
+
+    /// <summary>
+    /// 해당 실수를 더한 후 값을 제한하여 반환합니다.
+    /// </summary>
+    /// <param name="nowValue">현재 값</param>
+    /// <param name="addValue">추가할 값</param>
+    /// <param name="min">최소값</param>
+    /// <param name="max">최대값</param>
+    /// <returns>min <= nowValue + addValue <= min 반환</returns>
+    public static float PlusAndClamp(this float nowValue, float addValue, float min, float max)
+    {
+        return Mathf.Clamp(nowValue + addValue, min, max);
+    }
+    /// <summary>
+    /// 해당 실수를 더한 후 값을 제한하여 반환합니다.
+    /// </summary>
+    /// <param name="nowValue">현재 값</param>
+    /// <param name="addValue">추가할 값</param>
+    /// <param name="max">최대값</param>
+    /// <returns>0 <= nowValue + addValue <= min 반환</returns>
+    public static float PlusAndClamp(this float nowValue, float addValue, float max)
+    {
+        return Mathf.Clamp(nowValue + addValue, 0, max);
     }
 
 

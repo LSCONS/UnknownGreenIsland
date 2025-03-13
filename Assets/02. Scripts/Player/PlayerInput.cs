@@ -27,7 +27,6 @@ public class PlayerInput : MonoBehaviour
         cameraMoving= "Main Camera".GetComponentNameDFS<CameraMoving>();
         weaponHandler = cameraMoving.GetComponentInChildren<WeaponHandler>();
         animator = weaponHandler.GetComponent<Animator>();
-
     }
 
     private void OnEnable()

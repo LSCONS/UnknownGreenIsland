@@ -15,14 +15,10 @@ public class PlayerControl : MonoBehaviour
     private Vector3 _playerVelocity;
     [ShowInInspector]
     private float nowJumpForce = 0f;
-    public float multiple = 0f;
-    public float defaultGravity;
-    private float NowJumpForce { get => nowJumpForce; }     //현재 받고 있는 점프의 힘을 저장하는 변수
+    private float multiple = 15f;
+    private float defaultGravity = 2;
 
     private Vector3 _difValue;
-
-    private float playerMaxY = 0;
-    private bool isOut = false;
 
     private void OnValidate()
     {
@@ -34,10 +30,12 @@ public class PlayerControl : MonoBehaviour
         _checkAngle = "PlayerObject".GetComponentNameDFS<PlayerCheckAngle>();
     }
 
+
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
+
 
     private void FixedUpdate()
     {       
@@ -66,20 +64,9 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
-        if (!(_playerIsgrounded.Isgrounded))
-        {
-            playerMaxY = Mathf.Max(playerMaxY, transform.position.y);
-            isOut = true;
-        }
-        else
-        {
-            if (isOut) Debug.Log(playerMaxY);
-            isOut = false;
-            playerMaxY = 0f;
-        }
-
         RotateCharacter();
     }
+
 
     private void LateUpdate()
     {
@@ -87,6 +74,7 @@ public class PlayerControl : MonoBehaviour
     }
 
 
+    //플레이어를 이동시키는 메서드
     private void Move()
     {
         _playerVelocity.y += (_playerStatus.PlayerMass *_gravity) * Time.fixedDeltaTime + nowJumpForce;
@@ -95,10 +83,12 @@ public class PlayerControl : MonoBehaviour
             (_input.PlayerMoveDir.x * Time.fixedDeltaTime * transform.right +
             _input.PlayerMoveDir.y * Time.fixedDeltaTime * transform.forward +
             _playerVelocity.y * Time.fixedDeltaTime * transform.up
-            )+ _checkAngle.repForce * Time.fixedDeltaTime);
+            ));
+        _chrConPlayer.Move(_checkAngle.repForce * Time.fixedDeltaTime);
     }
 
-    //플레이어를 회전시킴
+
+    //마우스 포지션에 따라 플레이어를 회전시키는 메서드
     private void RotateCharacter()
     {
         transform.eulerAngles += _input.MousePositionDir.x * _playerStatus.Sensitivity * Vector3.up;
