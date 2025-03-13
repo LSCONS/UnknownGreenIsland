@@ -16,7 +16,7 @@ public class Connector : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = isConnectedToFloor ? (isConnectedToWall ? Color.red : Color.green) : (!isConnectedToWall ? Color.green : Color.yellow);
+        Gizmos.color = isConnectedToFloor ? (isConnectedToWall ? Color.red : Color.blue) : (!isConnectedToWall ? Color.green : Color.yellow);
         Gizmos.DrawWireSphere(transform.position, transform.lossyScale.x / 2f);
     }
 

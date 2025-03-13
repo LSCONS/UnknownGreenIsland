@@ -639,6 +639,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4252255b5bec238479c932374f23c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floorObjects:
+  - {fileID: 3731645353567254866, guid: dde820ff1df43054ab89b79798e319fb, type: 3}
+  wallObjects:
+  - {fileID: 4595439678827867627, guid: e2e11e3bcb0cc354489b181b48b4b08e, type: 3}
+  - {fileID: 4595439678827867627, guid: 3a41cac1d0977c0428191f8f807fca5b, type: 3}
+  currentBuildType: 0
+  connectorLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ghostMaterialValid: {fileID: 2100000, guid: 40ef4a56637430241b96e22a57399b6f, type: 2}
+  ghostMaterialInvalid: {fileID: 2100000, guid: cd6c77215d9224149a85d3840e9c9599, type: 2}
+  connectorOverlapRadius: 1
+  maxGroundAngle: 45
+  isBuilding: 0
+  currentBuildingIndex: 0
 --- !u!1001 &399018294046240803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -647,6 +662,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4987237520419785140, guid: a45a6f377cbe038449be99470ce4c7cb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 4987237520419785140, guid: a45a6f377cbe038449be99470ce4c7cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
