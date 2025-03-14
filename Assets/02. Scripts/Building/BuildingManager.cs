@@ -15,7 +15,7 @@ public class BuildingManager : MonoBehaviour
     [Header("Ghost Settings")]
     [SerializeField] private Material ghostMaterialValid;
     [SerializeField] private Material ghostMaterialInvalid;
-    [SerializeField] private float connectorOverlapRadius = 5f;
+    [SerializeField] private float connectorOverlapRadius = 2f;
     [SerializeField] private float maxGroundAngle = 45f;
 
     [Header("Internal State")]
