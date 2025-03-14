@@ -171,11 +171,9 @@ public class PlayerStatus : MonoBehaviour
                 break;
 
             case AbnormalStatus.Fracture:
-                //TODO: 달리기 금지 추가 필요 할지도?
                 break;
 
             case AbnormalStatus.Dehydrration:
-                //TODO: 달리기 금지 추가 필요 할지도?
                 moveSpeed += (isSet ? -1 : 1);
                 break;
 
@@ -259,7 +257,7 @@ public class PlayerStatus : MonoBehaviour
 
 
     /// <summary>
-    /// 아이템을 사용해서 지속시간을 없애는 경우 해당 메서드로 상태이상을 없애면 됨
+    /// 아이템을 사용해서 지속시간을 없애는 경우 해당 메서드로 호출.
     /// </summary>
     /// <param name="state">삭제시킬 상태이상</param>
     public void RemoveAbnormalTimer(AbnormalStatus state)
