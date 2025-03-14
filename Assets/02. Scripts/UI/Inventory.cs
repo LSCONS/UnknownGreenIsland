@@ -8,12 +8,12 @@ public class Inventory : MonoBehaviour
     public void AddItem(ItemData newItem)
     {
         items.Add(newItem);
-        Debug.Log(newItem + "이 추가되었습니다!"); // 아이템이 가지고 있는 이름이 있다면 출력
+        Debug.Log(newItem /*.itemName*/ + "이 추가되었습니다!"); // 아이템이 가지고 있는 이름이 있다면 출력
     }
 
     public void RemoveItem(ItemData item)
     {
-        items.Remove (item);
-        Debug.Log(item +"이 삭제되었습니다!"); // 아이템이 가지고 있는 이름이 있다면 출력
+        items.Remove(item);
+        Debug.Log(item /*.itemName*/ + "이 삭제되었습니다!"); // 아이템이 가지고 있는 이름이 있다면 출력
     }
 }
