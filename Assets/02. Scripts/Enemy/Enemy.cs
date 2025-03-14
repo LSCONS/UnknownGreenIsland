@@ -109,6 +109,11 @@ public class Enemy : MonoBehaviour
                 agent.speed = runSpeed;
                 agent.isStopped = false;
                 break;
+            case AIState.Runaway:
+                agent.speed = runSpeed;
+                agent.isStopped = false;
+                break;
+
         }
 
         //animator.speed = agent.speed / walkSpeed;
@@ -122,13 +127,13 @@ public class Enemy : MonoBehaviour
             Invoke("WanderToNewLocation", Random.Range(minWanderWaitTime, maxWanderWaitTime));
         }
 
-        if(playerDistance < attackDistance)
+        if (playerDistance < detectDistance)
         {
             AiTendencyChk();
         }
     }
 
-    void AiTendencyChk()
+    void AiTendencyChk() // 성향체크
     {
         switch (aiTendency)
         {
@@ -147,7 +152,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void AttackingUpdate()
+    void AttackingUpdate() //공격
     {
         if (playerDistance < attackDistance && IsPlayerInFieldOfView())
         {
@@ -155,7 +160,6 @@ public class Enemy : MonoBehaviour
             {
                 agent.isStopped = true;
                 lastAttackTime = Time.time;
-                transform.position += new Vector3(0, 1, 0);
                 playerStatus.HealthChange(-damage);
                 Debug.Log(playerStatus.CurHealth);
             }
@@ -186,18 +190,19 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void RunawayUpdate()
+    void RunawayUpdate() // 도망
     {
         NavMeshHit hit;
 
-        if (playerDistance < attackDistance)
+        if (playerDistance < detectDistance)
         {
-            transform.rotation = Player.transform.rotation;
-            NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
+            agent.SetDestination((detectDistance + 2) * transform.position - Player.transform.position);
         }
         else
         {
-
+            agent.SetDestination(transform.position);
+            agent.isStopped = true;
+            SetState(AIState.Wandering);
         }
     }
 
@@ -209,7 +214,7 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(GetWanderLocation());
     }
 
-    Vector3 GetWanderLocation() // 탐지범위
+    Vector3 GetWanderLocation() // 목적지 설정
     {
         NavMeshHit hit;
 
@@ -234,7 +239,7 @@ public class Enemy : MonoBehaviour
         return angle < fieldOfView * 0.5f;
     }
 
-    public void HealthChange(int damage)
+    public void HealthChange(int damage) // 피격시 변화
     {
         Debug.Log("시작");
         curHealth = Util.PlusAndClamp(curHealth, damage, Health);
@@ -247,12 +252,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void death()
+    private void death() // 사망
     {
         int RnadomNum = Random.RandomRange(0, dropItem.Length);
-        for (int j = 0; j < dropItem.Length; j++)
+        for (int j = 0; j < 1; j++)
         {
-            Instantiate(dropItem[j], transform.position + Vector3.up, Quaternion.identity);
+            Instantiate(dropItem[j].dropPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
         }
 
         Destroy(gameObject);
