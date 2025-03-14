@@ -44,7 +44,8 @@ public class PlayerInput : MonoBehaviour
         inputSystem.Player.Jump.canceled += StopJump;
         inputSystem.Player.Action.started += OnAction;
         inputSystem.Player.Action.canceled += StopAction;
-
+        inputSystem.Player.Run.started += OnRun;
+        inputSystem.Player.Run.canceled += StopRun;
 
         inputSystem.Enable();
     }
@@ -60,7 +61,8 @@ public class PlayerInput : MonoBehaviour
         inputSystem.Player.Jump.canceled -= StopJump;
         inputSystem.Player.Action.started -= OnAction;
         inputSystem.Player.Action.canceled -= StopAction;
-
+        inputSystem.Player.Run.started -= OnRun;
+        inputSystem.Player.Run.canceled -= StopRun;
 
         inputSystem.Disable();
     }
@@ -105,7 +107,8 @@ public class PlayerInput : MonoBehaviour
     }
     private void OnRun(InputAction.CallbackContext context)
     {
-        
+        isRun = true;
+        playerStatus.CanRun();
     }
     private void StopRun(InputAction.CallbackContext context)
     {

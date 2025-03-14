@@ -314,7 +314,8 @@ public class PlayerStatus : MonoBehaviour
         //플레이어가 방향키의 입력으로 받고 있는 방향벡터가 있는지 확인해야함.
         //플레이어가 사용할 수 있는 스태미나가 있는지 확인해야함.
         //플레이어가 땅에 붙어있는 상태여야함.
-        if(curAbnormal == (curAbnormal & ~cantRunAbnormal) &&
+        if(playerInput.IsRun &&
+            curAbnormal == (curAbnormal & ~cantRunAbnormal) &&
             playerInput.PlayerMoveDir != Vector2.zero &&
             curStamina >= 0.1f)
         {

@@ -30,7 +30,6 @@ public class PlayerIsgrounded : MonoBehaviour
     {
         if (_excludeLayerMaslk == (_excludeLayerMaslk | 1 << other.gameObject.layer))
         {
-            Debug.Log($"¹þ¾î³µ¾î¿ä{other.gameObject}");
             isgrounded = false;
         }
     }
