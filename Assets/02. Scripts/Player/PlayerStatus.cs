@@ -144,7 +144,6 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
-
     //목마름 값에 변동을 주는 메서드
     public void ThirstyChange(float value)
     {

@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
-    PlayerInputSystem playerinput;
-    WeaponHandler weaponHandler;
-    CameraMoving cameraMoving;
-    Animator animator;
+    private PlayerInputSystem inputSystem;
+    private WeaponHandler weaponHandler;
+    private Animator animator;
+    private PlayerStatus playerStatus;
 
     private Vector2 playerMoveDir;
     public Vector2 PlayerMoveDir { get => playerMoveDir; }
@@ -17,6 +17,13 @@ public class PlayerInput : MonoBehaviour
     public Vector2 MousePositionDir { get => mousePositionDir; }
     private bool isJump = false;
     public bool IsJump { get =>  isJump; }
+    private bool isRun = false;
+    public bool IsRun { get => isRun; }
+
+    private void OnValidate()
+    {
+        playerStatus = transform.GetComponentDebug<PlayerStatus>();
+    }
 
 
     private void Awake()
@@ -27,35 +34,35 @@ public class PlayerInput : MonoBehaviour
 
     private void OnEnable()
     {
-        playerinput = new PlayerInputSystem();
+        inputSystem = new PlayerInputSystem();
 
-        playerinput.Player.Move.performed += OnMove;
-        playerinput.Player.Move.canceled += StopMove;
-        playerinput.Player.MousePosition.performed += OnMousePosition;
-        playerinput.Player.MousePosition.canceled += StopMousePosition;
-        playerinput.Player.Jump.started += OnJump;
-        playerinput.Player.Jump.canceled += StopJump;
-        playerinput.Player.Action.started += OnAction;
-        playerinput.Player.Action.canceled += StopAction;
+        inputSystem.Player.Move.performed += OnMove;
+        inputSystem.Player.Move.canceled += StopMove;
+        inputSystem.Player.MousePosition.performed += OnMousePosition;
+        inputSystem.Player.MousePosition.canceled += StopMousePosition;
+        inputSystem.Player.Jump.started += OnJump;
+        inputSystem.Player.Jump.canceled += StopJump;
+        inputSystem.Player.Action.started += OnAction;
+        inputSystem.Player.Action.canceled += StopAction;
 
 
-        playerinput.Enable();
+        inputSystem.Enable();
     }
 
 
     private void OnDisable()
     {
-        playerinput.Player.Move.performed -= OnMove;
-        playerinput.Player.Move.canceled -= StopMove;
-        playerinput.Player.MousePosition.performed -= OnMousePosition;
-        playerinput.Player.MousePosition.canceled -= StopMousePosition;
-        playerinput.Player.Jump.started -= OnJump;
-        playerinput.Player.Jump.canceled -= StopJump;
-        playerinput.Player.Action.started -= OnAction;
-        playerinput.Player.Action.canceled -= StopAction;
+        inputSystem.Player.Move.performed -= OnMove;
+        inputSystem.Player.Move.canceled -= StopMove;
+        inputSystem.Player.MousePosition.performed -= OnMousePosition;
+        inputSystem.Player.MousePosition.canceled -= StopMousePosition;
+        inputSystem.Player.Jump.started -= OnJump;
+        inputSystem.Player.Jump.canceled -= StopJump;
+        inputSystem.Player.Action.started -= OnAction;
+        inputSystem.Player.Action.canceled -= StopAction;
 
 
-        playerinput.Disable();
+        inputSystem.Disable();
     }
 
 
@@ -95,5 +102,13 @@ public class PlayerInput : MonoBehaviour
     private void StopAction(InputAction.CallbackContext context)
     {
         animator.SetBool("IsAttack", false);
+    }
+    private void OnRun(InputAction.CallbackContext context)
+    {
+        
+    }
+    private void StopRun(InputAction.CallbackContext context)
+    {
+        isRun = false;
     }
 }

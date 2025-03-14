@@ -16,9 +16,11 @@ public class PlayerControl : MonoBehaviour
     [ShowInInspector]
     private float nowJumpForce = 0f;
     private float multiple = 15f;
-    private float defaultGravity = 2;
+    private float defaultGravity = -2;
 
     private Vector3 _difValue;
+
+
 
     private void OnValidate()
     {
@@ -33,26 +35,68 @@ public class PlayerControl : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Util.CursorisLock(true);    //커서 상태를 잠그는 메서드
     }
 
 
     private void FixedUpdate()
-    {       
+    {
+        ResetYVelocityOnGround();   //접지 상태일 때 Y의 Velocity를 defaultGravity로 초기화하는 메서드
+        TryJump();                  //점프를 시도하는 메서드
+        Move();                     //플레이어를 이동시키는 메서드
+        ReduceJumpForce();          //점프를 하는 힘이 남아있다면 줄여주는 메서드
+    }
+
+
+    private void Update()
+    {
+        RotateCharacter();          //마우스 포지션에 따라 플레이어를 회전시키는 메서드
+    }
+
+
+    private void LateUpdate()
+    {
+        FollowToCollider();         //콜라이더를 따라 Lerp로 보간하며 움직이는 메서드
+    }
+
+
+    //콜라이더를 따라 Lerp로 보간하며 움직이는 메서드
+    private void FollowToCollider()
+    {
+        transform.position = Vector3.Lerp
+        (
+            transform.position,
+            _chrConPlayer.transform.position + _difValue,
+            Time.deltaTime * 40f
+        );
+    }
+
+
+    //접지 상태일 때 Y의 Velocity를 defaultGravity로 초기화하는 메서드
+    private void ResetYVelocityOnGround()
+    {
         // 접지 상태일 때 y 속도 초기화
         if (_playerIsgrounded.Isgrounded && _playerVelocity.y <= 0)
         {
-            _playerVelocity.y = -defaultGravity;
+            _playerVelocity.y = defaultGravity;
         }
+    }
 
+
+    //점프를 시도하는 메서드
+    private void TryJump()
+    {
         // 점프 입력 처리
-        if (_playerIsgrounded.Isgrounded && _input.IsJump && nowJumpForce == 0f && _playerVelocity.y == -defaultGravity)
+        if (_playerIsgrounded.Isgrounded && _input.IsJump && nowJumpForce == 0f && _playerVelocity.y == defaultGravity)
         {
             nowJumpForce = _playerStatus.NewJumpForce;
         }
+    }
 
-        Move();
 
+    //점프를 하는 힘이 남아있다면 줄여주는 메서드
+    private void ReduceJumpForce()
+    {
         // 점프 힘 감소 처리
         if (nowJumpForce > 0f)
         {
@@ -62,22 +106,10 @@ public class PlayerControl : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        RotateCharacter();
-    }
-
-
-    private void LateUpdate()
-    {
-        transform.position = Vector3.Lerp(transform.position, _chrConPlayer.transform.position + _difValue, Time.deltaTime * 20);
-    }
-
-
     //플레이어를 이동시키는 메서드
     private void Move()
     {
-        _playerVelocity.y += (_playerStatus.PlayerMass *_gravity) * Time.fixedDeltaTime + nowJumpForce;
+        _playerVelocity.y += (_playerStatus.PlayerMass * _gravity) * Time.fixedDeltaTime + nowJumpForce;
 
         _chrConPlayer.Move(
             (_input.PlayerMoveDir.x * _playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.right +
@@ -93,5 +125,4 @@ public class PlayerControl : MonoBehaviour
     {
         transform.eulerAngles += _input.MousePositionDir.x * _playerStatus.Sensitivity * Vector3.up;
     }
-
 }

@@ -157,4 +157,12 @@ public static class Util
             (list[n], list[k]) = (list[k], list[n]);
         }
     }
+
+
+    //커서 상태를 결정하는 메서드
+    public static void CursorisLock(bool isLock)
+    {
+        if (isLock) Cursor.lockState = CursorLockMode.Locked;
+        else Cursor.lockState = CursorLockMode.None;
+    }
 }
