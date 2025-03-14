@@ -16,6 +16,7 @@ public class WeaponHandler : MonoBehaviour
 
     public WeaponType weaponType;
     public int attackDistance; //공격 사거리
+    public int attackDamage;
 
     private void Awake()
     {
@@ -34,9 +35,9 @@ public class WeaponHandler : MonoBehaviour
             {
                 resource.Gather(hit.point, hit.normal);
             }
-            else if(hit.collider.TryGetComponent(out EnemyObject Enemy) && WeaponType.Combat == weaponType)
+            else if(hit.collider.TryGetComponent(out Enemy Enemy) && WeaponType.Combat == weaponType)
             {
-                Enemy.HealthChange(hit.point, hit.normal);
+                Enemy.HealthChange(-attackDamage);
             }
         }
     }

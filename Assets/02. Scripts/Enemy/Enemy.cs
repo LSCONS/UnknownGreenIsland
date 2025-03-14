@@ -6,20 +6,31 @@ public enum AIState
 {
     Idle,
     Wandering,
-    Attacking
+    Attacking,
+    Runaway
 }
+
+public enum AITendency
+{
+    hostile,
+    neutral,
+    friendly
+}
+
 public class Enemy : MonoBehaviour
 {
     [Header("Stats")]
-    public int health;
+    public float Health;
+    public float curHealth;
     public float walkSpeed;
     public float runSpeed;
-    public ItemData[] dropOnDeath;
+    public ItemData[] dropItem;
 
-    [Header("AI")]
+    [Header("Ai")]
     private NavMeshAgent agent;
     public float detectDistance;
     private AIState aiState;
+    public AITendency aiTendency;
 
     [Header("Wandering")]
     public float minWanderDistance;
@@ -37,17 +48,19 @@ public class Enemy : MonoBehaviour
 
     public float fieldOfView = 120f;
 
-    private Transform playerTransform;
+    private Transform Player;
 
     //private Animator animator;
     private SkinnedMeshRenderer[] meshRenderers;
+    PlayerStatus playerStatus;
 
     private void Awake()
     {
+        playerStatus = "Player".GetComponentNameDFS<PlayerStatus>();
         agent = GetComponent<NavMeshAgent>();
         //animator = GetComponentInChildren<Animator>();
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
-        playerTransform = "Player".GetComponentNameDFS<Transform>();
+        Player = "Player".GetComponentNameDFS<Transform>();
     }
 
     private void Start()
@@ -57,7 +70,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        playerDistance = Vector3.Distance(transform.position, playerTransform.transform.position); // Distance : a와 b 사이에 거리를 측정해 반환하는 함수
+        playerDistance = Vector3.Distance(transform.position, Player.transform.position); // Distance : a와 b 사이에 거리를 측정해 반환하는 함수
 
         //animator.SetBool("Moving", aiState != AIState.Idle);
 
@@ -70,6 +83,10 @@ public class Enemy : MonoBehaviour
                 PassiveUpdate();
                 break;
             case AIState.Attacking:
+                AttackingUpdate();
+                break;
+            case AIState.Runaway:
+                RunawayUpdate();
                 break;
         }
     }
@@ -95,7 +112,7 @@ public class Enemy : MonoBehaviour
         }
 
         //animator.speed = agent.speed / walkSpeed;
-    }
+    } //상태변화
 
     void PassiveUpdate()
     {
@@ -105,9 +122,82 @@ public class Enemy : MonoBehaviour
             Invoke("WanderToNewLocation", Random.Range(minWanderWaitTime, maxWanderWaitTime));
         }
 
-        if (playerDistance < detectDistance) // 플레이어 거리가 공격범위 거리보다 작을때
+        if(playerDistance < attackDistance)
         {
-            SetState(AIState.Attacking);
+            AiTendencyChk();
+        }
+    }
+
+    void AiTendencyChk()
+    {
+        switch (aiTendency)
+        {
+            case AITendency.hostile:
+                SetState(AIState.Attacking);
+                break;
+            case AITendency.neutral:
+                if (curHealth < Health)
+                {
+                    SetState(AIState.Attacking);
+                }
+                break;
+            case AITendency.friendly:
+                SetState(AIState.Runaway);
+                break;
+        }
+    }
+
+    void AttackingUpdate()
+    {
+        if (playerDistance < attackDistance && IsPlayerInFieldOfView())
+        {
+            if (Time.time - lastAttackTime > attackRate) // 공격
+            {
+                agent.isStopped = true;
+                lastAttackTime = Time.time;
+                transform.position += new Vector3(0, 1, 0);
+                playerStatus.HealthChange(-damage);
+                Debug.Log(playerStatus.CurHealth);
+            }
+        }
+        else
+        {
+            if (playerDistance < detectDistance)
+            {
+                agent.isStopped = false;
+                NavMeshPath path = new NavMeshPath();
+                if (agent.CalculatePath(Player.transform.position, path))
+                {
+                    agent.SetDestination(Player.transform.position);
+                }
+                else
+                {
+                    agent.SetDestination(transform.position);
+                    agent.isStopped = true;
+                    SetState(AIState.Wandering);
+                }
+            }
+            else
+            {
+                agent.SetDestination(transform.position);
+                agent.isStopped = true;
+                SetState(AIState.Wandering);
+            }
+        }
+    }
+
+    void RunawayUpdate()
+    {
+        NavMeshHit hit;
+
+        if (playerDistance < attackDistance)
+        {
+            transform.rotation = Player.transform.rotation;
+            NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
+        }
+        else
+        {
+
         }
     }
 
@@ -135,5 +225,36 @@ public class Enemy : MonoBehaviour
         }
 
         return hit.position;
+    }
+
+    bool IsPlayerInFieldOfView() // 플레이어가 있는 방향
+    {
+        Vector3 directionToPlayer = Player.transform.position - transform.position;
+        float angle = Vector3.Angle(transform.forward, directionToPlayer);
+        return angle < fieldOfView * 0.5f;
+    }
+
+    public void HealthChange(int damage)
+    {
+        Debug.Log("시작");
+        curHealth = Util.PlusAndClamp(curHealth, damage, Health);
+        Debug.Log(curHealth);
+        if (curHealth <= 0)
+        {
+            death();
+            //TODO: 사망처리 필요
+            Debug.Log(name + " : 죽었다");
+        }
+    }
+
+    private void death()
+    {
+        int RnadomNum = Random.RandomRange(0, dropItem.Length);
+        for (int j = 0; j < dropItem.Length; j++)
+        {
+            Instantiate(dropItem[j], transform.position + Vector3.up, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
 }
