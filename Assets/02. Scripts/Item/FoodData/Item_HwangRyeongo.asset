@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
-  m_Name: BaekBan
+  m_Name: Item_HwangRyeongo
   m_EditorClassIdentifier: 
-  ItemName: "\uBC31\uBC18"
-  description: "\uB3D9\uC758\uBCF4\uAC10: \uAD11\uBB3C\uC131 \uC57D\uC7AC\uC774\uB2E4."
+  ItemName: "\uD669\uB828"
+  description: "\uC0C1\uCC98\uD68C\uBCF5, \uD574\uB3C5\uD6A8\uACFC"
   type: 0
   icon: {fileID: 21300000, guid: 9bf2bb0fa8d8eee499c4edd4152b8a3c, type: 3}
   dropPrefab: {fileID: 3493624513989498013, guid: c3d86be5d5c8c584285903e88e1139aa, type: 3}
