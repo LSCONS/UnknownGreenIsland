@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746470642342616081}
   - component: {fileID: 1616879896416429859}
-  - component: {fileID: 6638864585057370440}
+  - component: {fileID: 8080795606840350023}
   m_Layer: 7
   m_Name: Mountain
   m_TagString: Untagged
@@ -146,8 +146,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1167335752500013255}
   m_Enabled: 1
---- !u!154 &6638864585057370440
-TerrainCollider:
+--- !u!64 &8080795606840350023
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -161,11 +161,13 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4631218923837637262, guid: 02f3ba417b7abbc439a9a211fef766e2, type: 3}
 --- !u!1 &2501551100509338513
 GameObject:
   m_ObjectHideFlags: 0
