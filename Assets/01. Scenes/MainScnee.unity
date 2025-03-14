@@ -1278,15 +1278,15 @@ MonoBehaviour:
   - {fileID: 3731645353567254866, guid: d04f4ba2bf677d64cb131eb5f1079bd0, type: 3}
   wallObjects:
   - {fileID: 4595439678827867627, guid: cdfcd91acf98a8047943b8f077bab149, type: 3}
-  - {fileID: 4595439678827867627, guid: 3a41cac1d0977c0428191f8f807fca5b, type: 3}
-  - {fileID: 4595439678827867627, guid: e2e11e3bcb0cc354489b181b48b4b08e, type: 3}
+  - {fileID: 4595439678827867627, guid: fb6fd4e74d374b14ca8b909a64631180, type: 3}
+  - {fileID: 4595439678827867627, guid: e7220eab7b72f404994dde317ff54349, type: 3}
   currentBuildType: 0
   connectorLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   ghostMaterialValid: {fileID: 2100000, guid: 40ef4a56637430241b96e22a57399b6f, type: 2}
   ghostMaterialInvalid: {fileID: 2100000, guid: cd6c77215d9224149a85d3840e9c9599, type: 2}
-  connectorOverlapRadius: 5
+  connectorOverlapRadius: 2
   maxGroundAngle: 45
   isBuilding: 0
   currentBuildingIndex: 0
