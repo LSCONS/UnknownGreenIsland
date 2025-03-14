@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: YellowHerb
   m_EditorClassIdentifier: 
   ItemName: "\uD669\uB828"
-  description: "\uB3D9\uC758\uBCF4\uAC10\uC5D0 \uB098\uC624\uB294\uBFCC\uB9AC\uAC00
-    \uD55C\uC57D\uC7AC\uB8CC\uB85C \uC0AC\uC6A9\uB41C\uB2E4."
+  description: "\uB3D9\uC758\uBCF4\uAC10\uC5D0: \uBFCC\uB9AC\uAC00 \uD55C\uC57D \uC7AC\uB8CC\uB85C
+    \uC0AC\uC6A9\uB41C\uB2E4."
   type: 0
   icon: {fileID: 21300000, guid: 9bf2bb0fa8d8eee499c4edd4152b8a3c, type: 3}
   dropPrefab: {fileID: 5529291046337209692, guid: b32a8b731d1d20146a2599ee23a54c74, type: 3}

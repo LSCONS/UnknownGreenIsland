@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
-  m_Name: Item_GreenTeaLeaves
+  m_Name: Jaungo
   m_EditorClassIdentifier: 
-  ItemName: "\uB179\uCC28\uC78E"
-  description: "\uB3D9\uC758 \uBCF4\uAC10: \uD56D\uC0B0\uD654, \uD56D\uC554 \uD6A8\uACFC\uAC00\uC788\uB2E4."
+  ItemName: "\uC790\uC6B4\uACE0"
+  description: 
   type: 0
   icon: {fileID: 21300000, guid: 9bf2bb0fa8d8eee499c4edd4152b8a3c, type: 3}
-  dropPrefab: {fileID: 8641947552343189888, guid: 8a1a809e975cccb45b7c88070042af0f, type: 3}
+  dropPrefab: {fileID: 6174412903304687525, guid: dda4bdb288051234e869f2e7af115a94, type: 3}
   canStack: 1
   maxStackAmount: 1000
   consumabale: []
