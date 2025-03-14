@@ -80,8 +80,8 @@ public class PlayerControl : MonoBehaviour
         _playerVelocity.y += (_playerStatus.PlayerMass *_gravity) * Time.fixedDeltaTime + nowJumpForce;
 
         _chrConPlayer.Move(
-            (_input.PlayerMoveDir.x * Time.fixedDeltaTime * transform.right +
-            _input.PlayerMoveDir.y * Time.fixedDeltaTime * transform.forward +
+            (_input.PlayerMoveDir.x * _playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.right +
+            _input.PlayerMoveDir.y * _playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.forward +
             _playerVelocity.y * Time.fixedDeltaTime * transform.up
             ));
         _chrConPlayer.Move(_checkAngle.repForce * Time.fixedDeltaTime);
