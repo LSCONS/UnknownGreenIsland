@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyObject : MonoBehaviour
@@ -13,18 +14,20 @@ public class EnemyObject : MonoBehaviour
 
         if (Hp <= 0)
         {
-            int RnadomNum = Random.RandomRange(0, itemToGive.Count);
-            Util.ShuffleList<GameObject>(itemToGive);
-            for (int j = 0; j < RnadomNum; j++)
-            {
-                Instantiate(itemToGive[j], hitPoint + Vector3.up, Quaternion.LookRotation(hitNormal, Vector3.up));
-            }
+
             death();
         }
     }
 
     private void death()
     {
+        int RnadomNum = Random.RandomRange(0, itemToGive.Count);
+        Util.ShuffleList<GameObject>(itemToGive);
+        for (int j = 0; j < RnadomNum; j++)
+        {
+            Instantiate(itemToGive[j], transform.position + Vector3.up, Quaternion.LookRotation(Vector3.forward,Vector3.up));
+        }
+
         Destroy(gameObject);
     }
 }
