@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-   public List<ItemData> items = new List<ItemData> ();
+   public List<ItemData> items = new List<ItemData> (); // 리스트에 아이템 저장
 
     public void AddItem(ItemData newItem)
     {
