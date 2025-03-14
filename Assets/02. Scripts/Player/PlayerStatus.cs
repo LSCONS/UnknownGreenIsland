@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
@@ -39,6 +40,7 @@ public class PlayerStatus : MonoBehaviour
     #region 플레이어 기본 수치 선언
     [ShowInInspector]
     private float moveSpeed = 5f;           //플레이어가 움직일 때 스피드 보정 값
+    private float runMultiple = 1f;         //플레이어가 달릴 때 스피드 곱
     private float maxHealth = 100f;         //플레이어 최대 체력
     private float curHealth = 100f;         //플레이어 현재 체력
     private float maxStamina = 100f;        //플레이어 최대 스태미나
@@ -47,8 +49,8 @@ public class PlayerStatus : MonoBehaviour
     private float curHunger = 100f;         //플레이어 현재 배고픔
     private float maxThirsty = 100f;        //플레이어 최대 목마름
     private float curThirsty = 100f;        //플레이어 현재 목마름
-    private float healthChangeValue = 0;    //플레이어의 초당 체력 변화량
-    private float staminaChangeValue = 3;   //플레이어의 초당 스태미나 변화량
+    private int healthChangeValue = 0;    //플레이어의 초당 체력 변화량
+    private int staminaChangeValue = 3;   //플레이어의 초당 스태미나 변화량
     private float damageValue = 5;          //플레이어 데미지 배수
     private Dictionary<AbnormalStatus, int> abnormalTimers = new Dictionary<AbnormalStatus, int>();
 
@@ -67,7 +69,7 @@ public class PlayerStatus : MonoBehaviour
     #endregion
 
     #region 플레이어 기본 수치 접근
-    public float MoveSpeed { get => moveSpeed; }
+    public float MoveSpeed { get => moveSpeed * runMultiple; }
     public float MaxHealth { get => maxHealth; }
     public float CurHealth { get => curHealth; }
     public float MaxStamina { get => maxStamina; }
@@ -79,8 +81,8 @@ public class PlayerStatus : MonoBehaviour
     public float CurThirsty { get => curThirsty; }
     public float NewJumpForce { get => newJumpForce; }
     public AbnormalStatus CurAbnormal { get => curAbnormal; }
-    public float HealthChangeValue { get => healthChangeValue; }
-    public float StaminaChangeValue { get => staminaChangeValue; }
+    public int HealthChangeValue { get => healthChangeValue; }
+    public int StaminaChangeValue { get => staminaChangeValue; }
     public float DamageValue { get => damageValue; }
     public Dictionary<AbnormalStatus, int> AbnormalTimers { get => abnormalTimers; }
 
@@ -94,11 +96,19 @@ public class PlayerStatus : MonoBehaviour
 
     #endregion
 
+    private PlayerInput playerInput;
     private List<AbnormalStatus> removeStateKey = new List<AbnormalStatus>();
     private List<AbnormalStatus> copyStateKey = new List<AbnormalStatus>();
     private WaitForSeconds abnormalWait = new WaitForSeconds(0.1f);
     private Coroutine abnormalCoroutine = null;
-    //private AbnormalStatus cantRunAbnormal = (AbnormalStatus.)
+    private Coroutine runCoroutine = null;
+    private AbnormalStatus cantRunAbnormal = 
+        (AbnormalStatus.Fracture | AbnormalStatus.Dehydrration);//달릴 수 없는 상태이상들
+
+    private void OnValidate()
+    {
+        playerInput = transform.GetComponentDebug<PlayerInput>();
+    }
 
 
     //체력의 값에 변동을 주는 메서드 
@@ -262,9 +272,11 @@ public class PlayerStatus : MonoBehaviour
     //상태이상의 효과를 적용시키는 메서드
     private void ApplyAbnormal()
     {
-        if (healthChangeValue > 0) curHealth = (curHealth * 10 - healthChangeValue) / 10;
-        if (staminaChangeValue > 0) curStamina = (curStamina * 10 - staminaChangeValue) / 10;
+        //체력, 스태미나 변화값이 0이 아닌경우 효과 적용
+        if (healthChangeValue != 0) HealthChange(0.1f * healthChangeValue);
+        if (staminaChangeValue != 0) StaminaChange(0.1f * staminaChangeValue);
 
+        //현재 상태이상 리스트가 존재할 경우
         if (abnormalTimers.Count > 0)
         {
             copyStateKey.Clear();
@@ -300,18 +312,48 @@ public class PlayerStatus : MonoBehaviour
     //플레이어가 달릴 수 있는 상태인지 확인하고 스태미나를 깎는 메서드
     public bool CanRun()
     {
+        //해당 메서드는 1회만 호출 되어야함.
         //일단 상태이상으로 달릴 수 없는 상태이상인지 확인해야함,
         //플레이어가 방향키의 입력으로 받고 있는 방향벡터가 있는지 확인해야함.
         //플레이어가 사용할 수 있는 스태미나가 있는지 확인해야함.
-        return false;
+        //플레이어가 땅에 붙어있는 상태여야함.
+        if(curAbnormal == (curAbnormal & ~cantRunAbnormal) &&
+            playerInput.PlayerMoveDir != Vector2.zero &&
+            curStamina >= 0.1f)
+        {
+            StaminaChange(-0.1f);
+            if (runCoroutine == null) runCoroutine = StartCoroutine(RunCoroutine());
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 
     //플레이어가 점프할 수 있는 상태인지 확인하고 스태미나를 깎는 메서드
     public bool CanJump()
     {
+        if (curStamina >= 10f)
+        {
+            StaminaChange(-10f);
+            return true;
+        }
+        else return false;
+    }
 
-        return false;
+    
+    //특정 시간동안 플레이어의 속도를 높여주는 코루틴
+    private IEnumerator RunCoroutine()
+    {
+        runMultiple = 2;
+        while (CanRun())
+        {
+            yield return abnormalWait;
+        }
+        runMultiple = 1;
+        runCoroutine = null;
     }
 
 
