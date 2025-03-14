@@ -10,9 +10,6 @@ public class PlayerInput : MonoBehaviour
     CameraMoving cameraMoving;
     Animator animator;
 
-    public float moveSpeed = 10f;
-
-
     private Vector2 playerMoveDir;
     public Vector2 PlayerMoveDir { get => playerMoveDir; }
 
@@ -64,7 +61,7 @@ public class PlayerInput : MonoBehaviour
 
     private void OnMove(InputAction.CallbackContext context)
     {
-        playerMoveDir = context.ReadValue<Vector2>().normalized * moveSpeed;
+        playerMoveDir = context.ReadValue<Vector2>().normalized;
     }
 
     private void StopMove(InputAction.CallbackContext context)
