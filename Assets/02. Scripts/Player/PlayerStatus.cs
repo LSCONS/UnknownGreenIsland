@@ -12,11 +12,13 @@ public enum AbnormalStatus
     None = 0,               //상태이상 없음
     Bleeding = 1 << 0,      //출혈            //초당 데미지
     Poisoning = 1 << 1,     //중독            //초당 데미지
-    Fracture = 1 << 2,      //골절            //달리기 금지            
+    Fracture = 1 << 2,      //골절            //달리기 금지
+                            
     Dehydrration = 1 << 3,  //탈수            //달리기 불가능, 이동속도 감소
     Thirsty = 1 << 4,       //목마름          //스태미너 회복량 감소
     Drink = 1 << 5,         //물마심          //스태미너 회복량 증가
     PlentyWater = 1 << 6,   //수분 많음       //이동속도 증가, 최대 스태미너 증가
+
     Starvation = 1 << 7,    //아사            //공격력 감소, 최대 체력 감소
     Hunger = 1 << 8,        //배고픔          //초당 데미지
     Eat = 1 << 9,           //밥먹음          //초당 회복
@@ -32,10 +34,10 @@ public enum PlayerAction
     Die = 4
 }
 
-
 public class PlayerStatus : MonoBehaviour
 {
     #region 플레이어 기본 수치 선언
+    [ShowInInspector]
     private float moveSpeed = 5f;           //플레이어가 움직일 때 스피드 보정 값
     private float maxHealth = 100f;         //플레이어 최대 체력
     private float curHealth = 100f;         //플레이어 현재 체력
@@ -45,9 +47,10 @@ public class PlayerStatus : MonoBehaviour
     private float curHunger = 100f;         //플레이어 현재 배고픔
     private float maxThirsty = 100f;        //플레이어 최대 목마름
     private float curThirsty = 100f;        //플레이어 현재 목마름
-    private float healthChangeValue = 0;    //플레이어의 체력 변화량
-    private float staminaChangeValue = 3;   //플레이어의 스태미나 변화량
+    private float healthChangeValue = 0;    //플레이어의 초당 체력 변화량
+    private float staminaChangeValue = 3;   //플레이어의 초당 스태미나 변화량
     private float damageValue = 5;          //플레이어 데미지 배수
+    private Dictionary<AbnormalStatus, int> abnormalTimers = new Dictionary<AbnormalStatus, int>();
 
     private AbnormalStatus curAbnormal = AbnormalStatus.None;    //플레이어 현재 상태이상
 
@@ -79,6 +82,7 @@ public class PlayerStatus : MonoBehaviour
     public float HealthChangeValue { get => healthChangeValue; }
     public float StaminaChangeValue { get => staminaChangeValue; }
     public float DamageValue { get => damageValue; }
+    public Dictionary<AbnormalStatus, int> AbnormalTimers { get => abnormalTimers; }
 
 
 
@@ -90,12 +94,20 @@ public class PlayerStatus : MonoBehaviour
 
     #endregion
 
+    private List<AbnormalStatus> removeStateKey = new List<AbnormalStatus>();
+    private List<AbnormalStatus> copyStateKey = new List<AbnormalStatus>();
+    private WaitForSeconds abnormalWait = new WaitForSeconds(0.1f);
+    private Coroutine abnormalCoroutine = null;
+    //private AbnormalStatus cantRunAbnormal = (AbnormalStatus.)
+
 
     //체력의 값에 변동을 주는 메서드 
     public void HealthChange(float value)
     {
         curHealth = curHealth.PlusAndClamp(value, maxHealth);
-        if (curHealth < 0)
+        //TODO: UI 갱신 필요
+
+        if (curHealth <= 0)
         {
             //TODO: 사망처리 필요
         }
@@ -106,6 +118,7 @@ public class PlayerStatus : MonoBehaviour
     public void StaminaChange(float value)
     {
         curStamina = curStamina.PlusAndClamp(value, maxStamina);
+        //TODO: UI 갱신 필요
     }
 
 
@@ -117,6 +130,7 @@ public class PlayerStatus : MonoBehaviour
         SetAbnormal(AbnormalStatus.Hunger, curHunger < 40f);
         SetAbnormal(AbnormalStatus.Eat, curHunger >= 60f);
         SetAbnormal(AbnormalStatus.EatFull, curHunger >= 80f);
+        //TODO: UI 갱신 필요
     }
 
 
@@ -125,25 +139,11 @@ public class PlayerStatus : MonoBehaviour
     public void ThirstyChange(float value)
     {
         curThirsty = curThirsty.PlusAndClamp(value, maxThirsty);
-        SetAbnormal(AbnormalStatus.Dehydrration, curHunger < 20f);
-        SetAbnormal(AbnormalStatus.Thirsty, curHunger < 40f);
-        SetAbnormal(AbnormalStatus.Drink, curHunger >= 60f);
-        SetAbnormal(AbnormalStatus.PlentyWater, curHunger >= 80f);
-    }
-
-
-    //플레이어에게 특정 상태이상을 주는 메서드
-    public void SetAbnormal(AbnormalStatus status, bool isSet)
-    {
-        AbnormalStatus prevAbnormal = curAbnormal;
-
-        if (isSet) curAbnormal |= status;      //상태이상 추가
-        else curAbnormal &= ~status;          //상태이상 제거
-
-        if (prevAbnormal != curAbnormal)   //상태이상이 추가 또는 제거가 된 것이 확실하다면
-        {
-            ApplyAbnormalEffects(status, isSet);
-        }
+        SetAbnormal(AbnormalStatus.Dehydrration, curThirsty < 20f);
+        SetAbnormal(AbnormalStatus.Thirsty, curThirsty < 40f);
+        SetAbnormal(AbnormalStatus.Drink, curThirsty >= 60f);
+        SetAbnormal(AbnormalStatus.PlentyWater, curThirsty >= 80f);
+        //TODO: UI 갱신 필요
     }
 
 
@@ -204,14 +204,125 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
+    /// <summary>
+    ///플레이어에게 특정 상태이상을 주는 메서드
+    /// </summary>
+    /// <param name="status">설정할 상태이상</param>
+    /// <param name="isSet">설정할지 해제할지 결정</param>
+    public void SetAbnormal(AbnormalStatus status, bool isSet)
+    {
+        AbnormalStatus prevAbnormal = curAbnormal;
+
+        if (isSet) curAbnormal |= status;      //상태이상 추가
+        else curAbnormal &= ~status;          //상태이상 제거
+
+        if (prevAbnormal != curAbnormal)   //상태이상이 추가 또는 제거가 된 것이 확실하다면 효과 적용
+        {
+            ApplyAbnormalEffects(status, isSet);
+            //TODO: 상태이상 UI 갱신 필요
+        }
+    }
+
+
+    /// <summary>
+    /// 해당 메서드를 통해 특정 상태이상과 지속 시간을 동시에 추가할 수 있음.
+    /// </summary>
+    /// <param name="state">추가할 상태이상</param>
+    /// <param name="time">해당 상태이상의 시간, 1당 0.1초의 지속시간</param>
+    public void AddAbnormalTimer(AbnormalStatus state, int time)
+    {
+        if (abnormalTimers.ContainsKey(state))
+        {
+            abnormalTimers[state] += time;
+        }
+        else        //새로 생성된 경우라면 해당 상태이상을 true로 추가함.
+        {
+            abnormalTimers.Add(state, time);
+            SetAbnormal(state, true);
+
+            if(abnormalCoroutine == null)
+            {
+                abnormalCoroutine = StartCoroutine(AbnormalCoroutine());
+            }
+        }
+    }
+
+
+    /// <summary>
+    /// 아이템을 사용해서 지속시간을 없애는 경우 해당 메서드로 상태이상을 없애면 됨
+    /// </summary>
+    /// <param name="state">삭제시킬 상태이상</param>
+    public void RemoveAbnormalTimer(AbnormalStatus state)
+    {
+        abnormalTimers.Remove(state);
+        SetAbnormal(state, false);
+    }
+
+
+    //상태이상의 효과를 적용시키는 메서드
+    private void ApplyAbnormal()
+    {
+        if (healthChangeValue > 0) curHealth = (curHealth * 10 - healthChangeValue) / 10;
+        if (staminaChangeValue > 0) curStamina = (curStamina * 10 - staminaChangeValue) / 10;
+
+        if (abnormalTimers.Count > 0)
+        {
+            copyStateKey.Clear();
+            copyStateKey.AddRange(abnormalTimers.Keys);
+            removeStateKey.Clear();
+
+            foreach (AbnormalStatus state in copyStateKey)
+            {
+                abnormalTimers[state] -= 1;
+                if (abnormalTimers[state] == 0) removeStateKey.Add(state);
+            }
+
+            foreach (AbnormalStatus state in removeStateKey)
+            {
+                RemoveAbnormalTimer(state);
+            }
+        }
+    }
+
+
+    //상태이상의 효과를 0.1초마다 줄 메서드
+    IEnumerator AbnormalCoroutine()
+    {
+        while(abnormalTimers.Count > 0)
+        {
+            ApplyAbnormal();
+            yield return abnormalWait;
+        }
+        abnormalCoroutine = null;
+    }
+
+
+    //플레이어가 달릴 수 있는 상태인지 확인하고 스태미나를 깎는 메서드
+    public bool CanRun()
+    {
+        //일단 상태이상으로 달릴 수 없는 상태이상인지 확인해야함,
+        //플레이어가 방향키의 입력으로 받고 있는 방향벡터가 있는지 확인해야함.
+        //플레이어가 사용할 수 있는 스태미나가 있는지 확인해야함.
+        return false;
+    }
+
+
+    //플레이어가 점프할 수 있는 상태인지 확인하고 스태미나를 깎는 메서드
+    public bool CanJump()
+    {
+
+        return false;
+    }
+
+
 #if UNITY_EDITOR
     //효과 적용 테스트 에디터
     [Button]
     public void PlentyWaterOnOFF()
     {
-        bool isPlently = (curAbnormal & AbnormalStatus.PlentyWater) == AbnormalStatus.PlentyWater;
-        SetAbnormal(AbnormalStatus.PlentyWater, !isPlently);
-        Debug.Log(!isPlently);
+        Debug.Log("상태이상 추가");
+        AddAbnormalTimer(AbnormalStatus.PlentyWater, 50);
+        Debug.Log(abnormalTimers[AbnormalStatus.PlentyWater]);
     }
 
     [Button]
