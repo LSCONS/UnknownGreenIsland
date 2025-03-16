@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Condition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Image barImage;
+
+    private void OnValidate()
     {
-        
+        barImage = transform.GetComponentForTransformFindName<Image>("Bar");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateBar(float value)
     {
-        
+        barImage.fillAmount = value;
     }
 }

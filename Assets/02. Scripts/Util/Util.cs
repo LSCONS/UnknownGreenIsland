@@ -72,9 +72,9 @@ public static class Util
     /// <param name="isDebug">디버깅 유무, 기본값은 출력</param>
     /// <param name="SearchDisable">비활성화 오브젝트 탐색 여부, 기본값은 탐색</param>
     /// <returns></returns>
-    public static T TransformFindAndGetComponent<T>(this Transform parent, string name, bool isDebug = true, bool SearchDisable = true) where T : Component
+    public static T GetComponentForTransformFindName<T>(this Transform parent, string name, bool isDebug = true, bool SearchDisable = true) where T : Component
     {
-        Transform transform = parent.Find(name);
+        Transform transform = parent.GetGameObjectSameNameDFS(name);
         if(transform == null)
         {
             if (isDebug) Debug.LogError($"{name} is null");
