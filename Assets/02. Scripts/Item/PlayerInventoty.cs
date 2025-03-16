@@ -6,9 +6,6 @@ using VInspector;
 
 public class PlayerInventoty : MonoBehaviour
 {
-    //TODO: 역할
-    //플레이어 인벤토리 토글 기능
-    //플레이어 인벤토리와 연결
     [ShowInInspector, ReadOnly]
     private InventorySlot[] inventorySlots;
     public int selectItemSlotIndex = -1;
@@ -24,7 +21,10 @@ public class PlayerInventoty : MonoBehaviour
     }
 
 
-    //넣을 수 있는 아이템 칸이 있는지 확인하고 아이템을 집어넣는 메서드
+    /// <summary>
+    /// 넣을 수 있는 아이템 칸이 있는지 확인하고 아이템을 집어넣는 메서드
+    /// </summary>
+    /// <param name="itemObject">집어넣을 아이템 오브젝트</param>
     public void CheckItemSlot(ItemObject itemObject)
     {
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -40,7 +40,10 @@ public class PlayerInventoty : MonoBehaviour
     }
 
 
-    //아이템이 선택된 경우 상호작용이 가능한 버튼을 활성화하고 해당 아이템 슬롯의 번호를 지정하는 메서드
+    /// <summary>
+    /// 아이템이 선택된 경우 상호작용이 가능한 버튼을 활성화하고 해당 아이템 슬롯의 번호를 지정하는 메서드
+    /// </summary>
+    /// <param name="index">해당 명령을 실행할 아이템슬롯의 index번호</param>
     public void SelectedItemSlot(int index)
     {
         selectItemSlotIndex = index;
@@ -49,6 +52,7 @@ public class PlayerInventoty : MonoBehaviour
         titleText.gameObject.SetActive(true);
         infoText.gameObject.SetActive(true);
     }
+
 
     /// <summary>
     /// 현재 선택된 아이템 칸의 아이템을 사용하는 메서드

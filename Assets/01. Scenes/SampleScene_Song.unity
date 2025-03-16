@@ -1933,10 +1933,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 520013196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 877bcc3626d82be409b5ce0ea99afb4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 47be75b726bc6364d9b41d9fedc4dda9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditionHandler: {fileID: 0}
 --- !u!1001 &579310833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4154,6 +4153,7 @@ GameObject:
   - component: {fileID: 1145883318}
   - component: {fileID: 1145883320}
   - component: {fileID: 1145883319}
+  - component: {fileID: 1145883321}
   m_Layer: 0
   m_Name: CrossHairHeight
   m_TagString: Untagged
@@ -4218,6 +4218,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145883317}
   m_CullTransparentMesh: 1
+--- !u!114 &1145883321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145883317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1151501876
 GameObject:
   m_ObjectHideFlags: 0
@@ -7550,6 +7565,7 @@ GameObject:
   - component: {fileID: 1952806242}
   - component: {fileID: 1952806244}
   - component: {fileID: 1952806243}
+  - component: {fileID: 1952806245}
   m_Layer: 0
   m_Name: CrossHairWidth
   m_TagString: Untagged
@@ -7614,6 +7630,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952806241}
   m_CullTransparentMesh: 1
+--- !u!114 &1952806245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952806241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1978942579
 GameObject:
   m_ObjectHideFlags: 0

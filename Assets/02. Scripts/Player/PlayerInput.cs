@@ -40,6 +40,7 @@ public class PlayerInput : MonoBehaviour
         animator = weaponHandler.GetComponent<Animator>();
     }
 
+
     private void OnEnable()
     {
         inputSystem = new PlayerInputSystem();

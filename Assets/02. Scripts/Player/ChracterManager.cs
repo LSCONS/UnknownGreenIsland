@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class CharacterManager : MonoBehaviour //½Ì±ÛÅæ ÆĞÅÏ Ä³¸¯ÅÍ Á¤º¸°ü¸®
+public class CharacterManager : MonoBehaviour //ì‹±ê¸€í†¤ íŒ¨í„´ ìºë¦­í„° ì •ë³´ê´€ë¦¬
 {
-    private static CharacterManager _instance; //static ¼±¾ğ
-    public static CharacterManager Instance //½Ì±ÛÅæ ÀÎ½ºÅÏ½º °¡Á®¿Ã¼öÀÖ´Â ÇÁ·ÎÆÛÆ¼
+    private static CharacterManager _instance; //static ì„ ì–¸
+    public static CharacterManager Instance //ì‹±ê¸€í†¤ ì¸ìŠ¤í„´ìŠ¤ ê°€ì ¸ì˜¬ìˆ˜ìˆëŠ” í”„ë¡œí¼í‹°
     {
         get
         {
@@ -15,13 +15,6 @@ public class CharacterManager : MonoBehaviour //½Ì±ÛÅæ ÆĞÅÏ Ä³¸¯ÅÍ Á¤º¸°ü¸®
         }
     }
 
-    public Player Player //ÇÃ·¹ÀÌ¾î Á¤º¸ ÀúÀå
-    {
-        get { return _player; }
-        set { _player = value; }
-    }
-    private Player _player;
-
     private void Awake()
     {
         if (_instance == null)
@@ -31,7 +24,7 @@ public class CharacterManager : MonoBehaviour //½Ì±ÛÅæ ÆĞÅÏ Ä³¸¯ÅÍ Á¤º¸°ü¸®
         }
         else
         {
-            if (_instance != this) //Áßº¹ °´Ã¼ »èÁ¦
+            if (_instance != this) //ì¤‘ë³µ ê°ì²´ ì‚­ì œ
             {
                 Destroy(gameObject);
             }
