@@ -5,16 +5,16 @@ using System;
 
 public enum ItemType
 {
-    Equipable, //ÀåÂø ¾ÆÀÌÅÛ
-    Consumable, //¼Òºñ ¾ÆÀÌÅÛ
-    Resource, //ÀÚ¿ø ¾ÆÀÌÅÛ
+    Equipable, //ì¥ì°© ì•„ì´í…œ
+    Consumable, //ì†Œë¹„ ì•„ì´í…œ
+    Resource, //ìì› ì•„ì´í…œ
 }
 
 public enum ConsumableType
 {
-    Health, //Ã¼·Â
-    Hunger, //¹è°íÇÄ
-    Stamina, //½ºÅÂ¹Ì³ª
+    Health, //ì²´ë ¥
+    Hunger, //ë°°ê³ í””
+    Stamina, //ìŠ¤íƒœë¯¸ë‚˜
 
 }
 
@@ -22,24 +22,25 @@ public enum ConsumableType
 
 public class ItemDataConsumabale
 {
-    public ConsumableType type; //Å¸ÀÔ ¼³Á¤
-    public float value; //¾ÆÀÌÅÛ »ç¿ë ÈÄ Áõ°¡ °ª
+    public ConsumableType type; //íƒ€ì… ì„¤ì •
+    public float value; //ì•„ì´í…œ ì‚¬ìš© í›„ ì¦ê°€ ê°’
 }
 
 [CreateAssetMenu(fileName = "Item", menuName = "New Item")]
 public class ItemData : ScriptableObject
 {
     [Header("Info")]
-    public string ItemName; //¾ÆÀÌÅÛ ÀÌ¸§
-    public string description; //¾ÆÀÌÅÛ ¼³¸í
-    public ItemType type; //¾ÆÀÌÅÛ Å¸ÀÔ
-    public Sprite icon; //¾ÆÀÌÅÛ ¾ÆÀÌÄÜ
-    public GameObject dropPrefab; //µå·ÓÇßÀ» ¶§ ³ªÅ¸³ª´Â 3D ¿ÀºêÁ§Æ®
+    public string ItemName; //ì•„ì´í…œ ì´ë¦„
+    public string description; //ì•„ì´í…œ ì„¤ëª…
+    public string interaction_information;  //ìƒí˜¸ì‘ìš© ì •ë³´
+    public ItemType type; //ì•„ì´í…œ íƒ€ì…
+    public Sprite icon; //ì•„ì´í…œ ì•„ì´ì½˜
+    public GameObject dropPrefab; //ë“œë¡­í–ˆì„ ë•Œ ë‚˜íƒ€ë‚˜ëŠ” 3D ì˜¤ë¸Œì íŠ¸
 
     [Header("QuantityLimit")]
-    public bool canStack; //´ÙÁß º¸À¯°¡´É À¯¹« true= ´ÙÁß, false=ÇÑ°³¸¸
-    public int maxStackAmount; //ÃÖ´ë º¸À¯¼ö·®
+    public bool canStack; //ë‹¤ì¤‘ ë³´ìœ ê°€ëŠ¥ ìœ ë¬´ true= ë‹¤ì¤‘, false=í•œê°œë§Œ
+    public int maxStackAmount; //ìµœëŒ€ ë³´ìœ ìˆ˜ëŸ‰
 
     [Header("Consumable")]
-    public ItemDataConsumabale[] consumabale; //¾ÆÀÌÅÛ È¿°ú°ª ¹è¿­·Î ¸¸µë
+    public ItemDataConsumabale[] consumabale; //ì•„ì´í…œ íš¨ê³¼ê°’ ë°°ì—´ë¡œ ë§Œë“¬ 
 }

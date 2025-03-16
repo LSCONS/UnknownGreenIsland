@@ -118,6 +118,21 @@ public static class Util
 
 
     /// <summary>
+    ///  GetcomponentInparent와 똑같지만 Debug만 추가됨.
+    /// </summary>
+    /// <typeparam name="T">가져오고 싶은 컴포넌트</typeparam>
+    /// <param name="parent">찾기를 시작할 Transform</param>
+    /// <param name="isDebug">디버그 출력 유무, 기본값은 출력</param>
+    /// <returns></returns>
+    public static T GetComponentInparentDebug<T>(this Transform parent, bool isDebug = true) where T : Component
+    {
+        T tempT = parent.GetComponentInParent<T>();
+        if (tempT == null && isDebug) Debug.Log($"{typeof(T)} is null");
+        return tempT;
+    }
+
+
+    /// <summary>
     /// 해당 실수를 더한 후 값을 제한하여 반환합니다.
     /// </summary>
     /// <param name="nowValue">현재 값</param>

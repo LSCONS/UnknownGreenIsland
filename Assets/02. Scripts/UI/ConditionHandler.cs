@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VInspector;
 
-public class ConditionHandler : MonoBehaviour, IInitUI
+public class ConditionHandler : MonoBehaviour
 {
     [ReadOnly, ShowInInspector]
     private Condition conditionHP;
@@ -25,11 +25,5 @@ public class ConditionHandler : MonoBehaviour, IInitUI
         conditionstamina = transform.GetComponentForTransformFindName<Condition>("ConditionStamina");
         conditionHunger = transform.GetComponentForTransformFindName<Condition>("ConditionHunger");
         conditionThirsty = transform.GetComponentForTransformFindName<Condition>("ConditionThirst");
-    }
-
-
-    public void InitUI()
-    {
-        UIManager.Instance.ConditionHandler = this;
     }
 }

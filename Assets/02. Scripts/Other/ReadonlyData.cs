@@ -4,17 +4,19 @@ using UnityEngine;
 
 public static class ReadonlyData
 {
-    //Ãß°¡ÇÑ ·¹ÀÌ¾îÀÇ ÀÌ¸§À» public static readonly stringÀÇ ÇüÅÂ·Î °íÁ¤ÇØ¼­ ÀúÀå.
+    //ì¶”ê°€í•œ ë ˆì´ì–´ì˜ ì´ë¦„ì„ public static readonly stringì˜ í˜•íƒœë¡œ ê³ ì •í•´ì„œ ì €ì¥.
     public static readonly string PlayerLayer = "Player";
     public static readonly string GroundLayer = "Ground";
     public static readonly string ResourceObjectLayer = "ResourceObject";
     public static readonly string EnemyLayer = "Enemy";
     public static readonly string BuildingLayer = "Building";
+    public static readonly string InteractionLayer = "Interaction"; 
 
-    //Ãß°¡ÇÑ ·¹ÀÌ¾îÀÇ ÀÌ¸§À» ±â¹İÀ¸·Î LayerMask¸¦ »ı¼ºÇÒ °æ¿ì ¾Æ·¡¿Í °°ÀÌ ¼±¾ğÇØ¼­ ÀúÀå.
+    //ì¶”ê°€í•œ ë ˆì´ì–´ì˜ ì´ë¦„ì„ ê¸°ë°˜ìœ¼ë¡œ LayerMaskë¥¼ ìƒì„±í•  ê²½ìš° ì•„ë˜ì™€ ê°™ì´ ì„ ì–¸í•´ì„œ ì €ì¥.
     public static readonly LayerMask PlayerLayerMask = 1 << LayerMask.NameToLayer(PlayerLayer);
     public static readonly LayerMask GroundLayerMask = 1 << LayerMask.NameToLayer(GroundLayer);
     public static readonly LayerMask ResourceObjectLayerMask = 1 << LayerMask.NameToLayer(ResourceObjectLayer);
     public static readonly LayerMask EnemyLayerMask = 1 << LayerMask.NameToLayer(EnemyLayer);
     public static readonly LayerMask BuildingLayerMask = 1 << LayerMask.NameToLayer(BuildingLayer);
+    public static readonly LayerMask InteractionLayerMask = 1 << LayerMask.NameToLayer(InteractionLayer);
 }

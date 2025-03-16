@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class PlayerInput : MonoBehaviour
     private WeaponHandler weaponHandler;
     private Animator animator;
     private PlayerStatus playerStatus;
+    private PlayerInteraction playerInteraction;
 
     private Vector2 playerMoveDir;
     public Vector2 PlayerMoveDir { get => playerMoveDir; }
@@ -19,10 +21,16 @@ public class PlayerInput : MonoBehaviour
     public bool IsJump { get =>  isJump; }
     private bool isRun = false;
     public bool IsRun { get => isRun; }
+    private bool isInventory = false;
+    public bool IsInventory { get => isInventory; }
+
+    public Action inventoryAction;
+    public Action interactionAction;
 
     private void OnValidate()
     {
         playerStatus = transform.GetComponentDebug<PlayerStatus>();
+        playerInteraction = transform.GetComponentDebug<PlayerInteraction>();
     }
 
 
@@ -46,6 +54,8 @@ public class PlayerInput : MonoBehaviour
         inputSystem.Player.Action.canceled += StopAction;
         inputSystem.Player.Run.started += OnRun;
         inputSystem.Player.Run.canceled += StopRun;
+        inputSystem.Player.Inventory.started += ToggleInventory;
+        inputSystem.Player.Interaction.started += InteractionStart;
 
         inputSystem.Enable();
     }
@@ -63,6 +73,8 @@ public class PlayerInput : MonoBehaviour
         inputSystem.Player.Action.canceled -= StopAction;
         inputSystem.Player.Run.started -= OnRun;
         inputSystem.Player.Run.canceled -= StopRun;
+        inputSystem.Player.Inventory.started -= ToggleInventory;
+        inputSystem.Player.Interaction.started -= InteractionStart;
 
         inputSystem.Disable();
     }
@@ -72,27 +84,22 @@ public class PlayerInput : MonoBehaviour
     {
         playerMoveDir = context.ReadValue<Vector2>().normalized;
     }
-
     private void StopMove(InputAction.CallbackContext context)
     {
         playerMoveDir = Vector2.zero;
     }
-
     private void OnMousePosition(InputAction.CallbackContext context)
     {
         mousePositionDir = context.ReadValue<Vector2>();
     }
-
     private void StopMousePosition(InputAction.CallbackContext context)
     {
         mousePositionDir = Vector2.zero;
     }
-
     private void OnJump(InputAction.CallbackContext context)
     {
         isJump = true;
     }
-
     private void StopJump(InputAction.CallbackContext context)
     {
         isJump = false;
@@ -113,5 +120,14 @@ public class PlayerInput : MonoBehaviour
     private void StopRun(InputAction.CallbackContext context)
     {
         isRun = false;
+    }
+    private void InteractionStart(InputAction.CallbackContext context)
+    {
+        playerInteraction.InteractionStart();
+    }
+    private void ToggleInventory(InputAction.CallbackContext context)
+    {
+        isInventory = !isInventory;
+        inventoryAction?.Invoke();
     }
 }

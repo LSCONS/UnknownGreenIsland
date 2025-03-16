@@ -6,13 +6,13 @@ using VInspector;
 
 public class PlayerControl : MonoBehaviour
 {
-    private PlayerInput _input;
-    private CharacterController _chrConPlayer;
-    private PlayerStatus _playerStatus;
-    private PlayerIsgrounded _playerIsgrounded;
-    private PlayerCheckAngle _checkAngle;
-    private float _gravity = -9.81f;
-    private Vector3 _playerVelocity;
+    private PlayerInput input;
+    private CharacterController chrConPlayer;
+    private PlayerStatus playerStatus;
+    private PlayerIsgrounded playerIsgrounded;
+    private PlayerCheckAngle checkAngle;
+    private float gravity = -9.81f;
+    private Vector3 playerVelocity;
     [ShowInInspector]
     private float nowJumpForce = 0f;
     private float multiple = 15f;
@@ -24,80 +24,83 @@ public class PlayerControl : MonoBehaviour
 
     private void OnValidate()
     {
-        _input = transform.GetComponentDebug<PlayerInput>();
-        _chrConPlayer = "PlayerObject".GetComponentNameDFS<CharacterController>();
-        _playerStatus = transform.GetComponentDebug<PlayerStatus>();
-        _difValue = transform.position - _chrConPlayer.transform.position;
-        _playerIsgrounded = "PlayerObject".GetComponentNameDFS<PlayerIsgrounded>();
-        _checkAngle = "PlayerObject".GetComponentNameDFS<PlayerCheckAngle>();
+        input = transform.GetComponentDebug<PlayerInput>();
+        chrConPlayer = "PlayerObject".GetComponentNameDFS<CharacterController>();
+        playerStatus = transform.GetComponentDebug<PlayerStatus>();
+        _difValue = transform.position - chrConPlayer.transform.position;
+        playerIsgrounded = "PlayerObject".GetComponentNameDFS<PlayerIsgrounded>();
+        checkAngle = "PlayerObject".GetComponentNameDFS<PlayerCheckAngle>();
     }
 
 
     private void Awake()
     {
-        Util.CursorisLock(true);    //Ä¿¼­ »óÅÂ¸¦ Àá±×´Â ¸Ş¼­µå
-    }
+        Util.CursorisLock(true);    //ì»¤ì„œ ìƒíƒœë¥¼ ì ê·¸ëŠ” ë©”ì„œë“œ
+    } 
 
 
     private void FixedUpdate()
     {
-        ResetYVelocityOnGround();   //Á¢Áö »óÅÂÀÏ ¶§ YÀÇ Velocity¸¦ defaultGravity·Î ÃÊ±âÈ­ÇÏ´Â ¸Ş¼­µå
-        TryJump();                  //Á¡ÇÁ¸¦ ½ÃµµÇÏ´Â ¸Ş¼­µå
-        Move();                     //ÇÃ·¹ÀÌ¾î¸¦ ÀÌµ¿½ÃÅ°´Â ¸Ş¼­µå
-        ReduceJumpForce();          //Á¡ÇÁ¸¦ ÇÏ´Â ÈûÀÌ ³²¾ÆÀÖ´Ù¸é ÁÙ¿©ÁÖ´Â ¸Ş¼­µå
+        ResetYVelocityOnGround();   //ì ‘ì§€ ìƒíƒœì¼ ë•Œ Yì˜ Velocityë¥¼ defaultGravityë¡œ ì´ˆê¸°í™”í•˜ëŠ” ë©”ì„œë“œ
+        TryJump();                  //ì í”„ë¥¼ ì‹œë„í•˜ëŠ” ë©”ì„œë“œ
+        Move();                     //í”Œë ˆì´ì–´ë¥¼ ì´ë™ì‹œí‚¤ëŠ” ë©”ì„œë“œ
+        ReduceJumpForce();          //ì í”„ë¥¼ í•˜ëŠ” í˜ì´ ë‚¨ì•„ìˆë‹¤ë©´ ì¤„ì—¬ì£¼ëŠ” ë©”ì„œë“œ
     }
 
 
     private void Update()
     {
-        RotateCharacter();          //¸¶¿ì½º Æ÷Áö¼Ç¿¡ µû¶ó ÇÃ·¹ÀÌ¾î¸¦ È¸Àü½ÃÅ°´Â ¸Ş¼­µå
+        RotateCharacter();          //ë§ˆìš°ìŠ¤ í¬ì§€ì…˜ì— ë”°ë¼ í”Œë ˆì´ì–´ë¥¼ íšŒì „ì‹œí‚¤ëŠ” ë©”ì„œë“œ
     }
 
 
     private void LateUpdate()
     {
-        FollowToCollider();         //Äİ¶óÀÌ´õ¸¦ µû¶ó Lerp·Î º¸°£ÇÏ¸ç ¿òÁ÷ÀÌ´Â ¸Ş¼­µå
+        FollowToCollider();         //ì½œë¼ì´ë”ë¥¼ ë”°ë¼ Lerpë¡œ ë³´ê°„í•˜ë©° ì›€ì§ì´ëŠ” ë©”ì„œë“œ
     }
 
 
-    //Äİ¶óÀÌ´õ¸¦ µû¶ó Lerp·Î º¸°£ÇÏ¸ç ¿òÁ÷ÀÌ´Â ¸Ş¼­µå
+    //ì½œë¼ì´ë”ë¥¼ ë”°ë¼ Lerpë¡œ ë³´ê°„í•˜ë©° ì›€ì§ì´ëŠ” ë©”ì„œë“œ
     private void FollowToCollider()
     {
         transform.position = Vector3.Lerp
         (
             transform.position,
-            _chrConPlayer.transform.position + _difValue,
+            chrConPlayer.transform.position + _difValue,
             Time.deltaTime * 40f
         );
     }
 
 
-    //Á¢Áö »óÅÂÀÏ ¶§ YÀÇ Velocity¸¦ defaultGravity·Î ÃÊ±âÈ­ÇÏ´Â ¸Ş¼­µå
+    //ì ‘ì§€ ìƒíƒœì¼ ë•Œ Yì˜ Velocityë¥¼ defaultGravityë¡œ ì´ˆê¸°í™”í•˜ëŠ” ë©”ì„œë“œ
     private void ResetYVelocityOnGround()
     {
-        // Á¢Áö »óÅÂÀÏ ¶§ y ¼Óµµ ÃÊ±âÈ­
-        if (_playerIsgrounded.Isgrounded && _playerVelocity.y <= 0)
+        // ì ‘ì§€ ìƒíƒœì¼ ë•Œ y ì†ë„ ì´ˆê¸°í™”
+        if (playerIsgrounded.Isgrounded && playerVelocity.y <= 0)
         {
-            _playerVelocity.y = defaultGravity;
+            playerVelocity.y = defaultGravity;
         }
     }
 
 
-    //Á¡ÇÁ¸¦ ½ÃµµÇÏ´Â ¸Ş¼­µå
+    //ì í”„ë¥¼ ì‹œë„í•˜ëŠ” ë©”ì„œë“œ
     private void TryJump()
     {
-        // Á¡ÇÁ ÀÔ·Â Ã³¸®
-        if (_playerIsgrounded.Isgrounded && _input.IsJump && nowJumpForce == 0f && _playerVelocity.y == defaultGravity)
+        // ì í”„ ì…ë ¥ ì²˜ë¦¬
+        if (playerIsgrounded.Isgrounded &&
+            input.IsJump && nowJumpForce == 0f &&
+            playerVelocity.y == defaultGravity &&
+            playerStatus.CanJump())
         {
-            nowJumpForce = _playerStatus.NewJumpForce;
+            nowJumpForce = playerStatus.NewJumpForce;
         }
     }
 
 
-    //Á¡ÇÁ¸¦ ÇÏ´Â ÈûÀÌ ³²¾ÆÀÖ´Ù¸é ÁÙ¿©ÁÖ´Â ¸Ş¼­µå
+    //ì í”„ë¥¼ í•˜ëŠ” í˜ì´ ë‚¨ì•„ìˆë‹¤ë©´ ì¤„ì—¬ì£¼ëŠ” ë©”ì„œë“œ
     private void ReduceJumpForce()
     {
-        // Á¡ÇÁ Èû °¨¼Ò Ã³¸®
+        // ì í”„ í˜ ê°ì†Œ ì²˜ë¦¬
         if (nowJumpForce > 0f)
         {
             nowJumpForce -= Time.fixedDeltaTime * multiple;
@@ -106,23 +109,23 @@ public class PlayerControl : MonoBehaviour
     }
 
 
-    //ÇÃ·¹ÀÌ¾î¸¦ ÀÌµ¿½ÃÅ°´Â ¸Ş¼­µå
+    //í”Œë ˆì´ì–´ë¥¼ ì´ë™ì‹œí‚¤ëŠ” ë©”ì„œë“œ
     private void Move()
     {
-        _playerVelocity.y += (_playerStatus.PlayerMass * _gravity) * Time.fixedDeltaTime + nowJumpForce;
+        playerVelocity.y += (playerStatus.PlayerMass * gravity) * Time.fixedDeltaTime + nowJumpForce;
 
-        _chrConPlayer.Move(
-            (_input.PlayerMoveDir.x * _playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.right +
-            _input.PlayerMoveDir.y * _playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.forward +
-            _playerVelocity.y * Time.fixedDeltaTime * transform.up
+        chrConPlayer.Move(
+            (input.PlayerMoveDir.x * playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.right +
+            input.PlayerMoveDir.y * playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.forward +
+            playerVelocity.y * Time.fixedDeltaTime * transform.up
             ));
-        _chrConPlayer.Move(_checkAngle.repForce * Time.fixedDeltaTime);
+        chrConPlayer.Move(checkAngle.repForce * Time.fixedDeltaTime);
     }
 
 
-    //¸¶¿ì½º Æ÷Áö¼Ç¿¡ µû¶ó ÇÃ·¹ÀÌ¾î¸¦ È¸Àü½ÃÅ°´Â ¸Ş¼­µå
+    //ë§ˆìš°ìŠ¤ í¬ì§€ì…˜ì— ë”°ë¼ í”Œë ˆì´ì–´ë¥¼ íšŒì „ì‹œí‚¤ëŠ” ë©”ì„œë“œ
     private void RotateCharacter()
     {
-        transform.eulerAngles += _input.MousePositionDir.x * _playerStatus.Sensitivity * Vector3.up;
+        transform.eulerAngles += input.MousePositionDir.x * playerStatus.Sensitivity * Vector3.up;
     }
 }

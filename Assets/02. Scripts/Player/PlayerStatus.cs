@@ -14,7 +14,7 @@ public enum AbnormalStatus
     Bleeding = 1 << 0,      //출혈            //초당 데미지
     Poisoning = 1 << 1,     //중독            //초당 데미지
     Fracture = 1 << 2,      //골절            //달리기 금지
-                            
+
     Dehydrration = 1 << 3,  //탈수            //달리기 불가능, 이동속도 감소
     Thirsty = 1 << 4,       //목마름          //스태미너 회복량 감소
     Drink = 1 << 5,         //물마심          //스태미너 회복량 증가
@@ -97,17 +97,24 @@ public class PlayerStatus : MonoBehaviour
     #endregion
 
     private PlayerInput playerInput;
+    private ConditionHandler conditionHandler;
     private List<AbnormalStatus> removeStateKey = new List<AbnormalStatus>();
     private List<AbnormalStatus> copyStateKey = new List<AbnormalStatus>();
     private WaitForSeconds abnormalWait = new WaitForSeconds(0.1f);
     private Coroutine abnormalCoroutine = null;
     private Coroutine runCoroutine = null;
-    private AbnormalStatus cantRunAbnormal = 
+    private AbnormalStatus cantRunAbnormal =
         (AbnormalStatus.Fracture | AbnormalStatus.Dehydrration);//달릴 수 없는 상태이상들
 
     private void OnValidate()
     {
         playerInput = transform.GetComponentDebug<PlayerInput>();
+        conditionHandler = transform.GetComponentForTransformFindName<ConditionHandler>("UI_Condition_Canvas");
+    }
+
+    private void Start()
+    {
+        abnormalCoroutine = StartCoroutine(AbnormalCoroutine());
     }
 
 
@@ -115,7 +122,7 @@ public class PlayerStatus : MonoBehaviour
     public void HealthChange(float value)
     {
         curHealth = curHealth.PlusAndClamp(value, maxHealth);
-        //TODO: UI 갱신 필요
+        conditionHandler.ConditionHP.UpdateBar(curHealth / maxHealth);
 
         if (curHealth <= 0)
         {
@@ -128,7 +135,7 @@ public class PlayerStatus : MonoBehaviour
     public void StaminaChange(float value)
     {
         curStamina = curStamina.PlusAndClamp(value, maxStamina);
-        //TODO: UI 갱신 필요
+        conditionHandler.Conditionstamina.UpdateBar(curStamina / maxStamina);
     }
 
 
@@ -140,7 +147,7 @@ public class PlayerStatus : MonoBehaviour
         SetAbnormal(AbnormalStatus.Hunger, curHunger < 40f);
         SetAbnormal(AbnormalStatus.Eat, curHunger >= 60f);
         SetAbnormal(AbnormalStatus.EatFull, curHunger >= 80f);
-        //TODO: UI 갱신 필요
+        conditionHandler.ConditionHunger.UpdateBar(curHunger / maxHunger);
     }
 
 
@@ -152,7 +159,7 @@ public class PlayerStatus : MonoBehaviour
         SetAbnormal(AbnormalStatus.Thirsty, curThirsty < 40f);
         SetAbnormal(AbnormalStatus.Drink, curThirsty >= 60f);
         SetAbnormal(AbnormalStatus.PlentyWater, curThirsty >= 80f);
-        //TODO: UI 갱신 필요
+        conditionHandler.ConditionThirsty.UpdateBar(curThirsty / maxThirsty);
     }
 
 
@@ -246,11 +253,6 @@ public class PlayerStatus : MonoBehaviour
         {
             abnormalTimers.Add(state, time);
             SetAbnormal(state, true);
-
-            if(abnormalCoroutine == null)
-            {
-                abnormalCoroutine = StartCoroutine(AbnormalCoroutine());
-            }
         }
     }
 
@@ -269,6 +271,7 @@ public class PlayerStatus : MonoBehaviour
     //상태이상의 효과를 적용시키는 메서드
     private void ApplyAbnormal()
     {
+        Debug.Log("상태이상 실행 중");
         //체력, 스태미나 변화값이 0이 아닌경우 효과 적용
         if (healthChangeValue != 0) HealthChange(0.1f * healthChangeValue);
         if (staminaChangeValue != 0) StaminaChange(0.1f * staminaChangeValue);
@@ -297,12 +300,11 @@ public class PlayerStatus : MonoBehaviour
     //상태이상의 효과를 0.1초마다 줄 메서드
     IEnumerator AbnormalCoroutine()
     {
-        while(abnormalTimers.Count > 0)
+        while (true)
         {
             ApplyAbnormal();
             yield return abnormalWait;
         }
-        abnormalCoroutine = null;
     }
 
 
@@ -314,12 +316,13 @@ public class PlayerStatus : MonoBehaviour
         //플레이어가 방향키의 입력으로 받고 있는 방향벡터가 있는지 확인해야함.
         //플레이어가 사용할 수 있는 스태미나가 있는지 확인해야함.
         //플레이어가 땅에 붙어있는 상태여야함.
-        if(playerInput.IsRun &&
+        if (playerInput.IsRun &&
             curAbnormal == (curAbnormal & ~cantRunAbnormal) &&
             playerInput.PlayerMoveDir != Vector2.zero &&
-            curStamina >= 0.1f)
+            curStamina >= 1f)
         {
-            StaminaChange(-0.1f);
+            Debug.Log("플레이어 달리는 중");
+            StaminaChange(-1f);
             if (runCoroutine == null) runCoroutine = StartCoroutine(RunCoroutine());
             return true;
         }
@@ -341,14 +344,15 @@ public class PlayerStatus : MonoBehaviour
         else return false;
     }
 
-    
+
     //특정 시간동안 플레이어의 속도를 높여주는 코루틴
     private IEnumerator RunCoroutine()
     {
         runMultiple = 2;
-        while (CanRun())
+        while (true)
         {
             yield return abnormalWait;
+            if (!(CanRun())) break;
         }
         runMultiple = 1;
         runCoroutine = null;
