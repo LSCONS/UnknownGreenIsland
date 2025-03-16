@@ -118,48 +118,56 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
-    //체력의 값에 변동을 주는 메서드 
-    public void HealthChange(float value)
+    //상태이상의 효과를 적용시키는 메서드
+    private void ApplyAbnormal()
     {
-        curHealth = curHealth.PlusAndClamp(value, maxHealth);
-        conditionHandler.ConditionHP.UpdateBar(curHealth / maxHealth);
+        //체력, 스태미나 변화값이 0이 아닌경우 효과 적용
+        if (healthChangeValue != 0) HealthChange(0.1f * healthChangeValue);
+        if (staminaChangeValue != 0) StaminaChange(0.1f * staminaChangeValue);
 
-        if (curHealth <= 0)
+        //현재 상태이상 리스트가 존재할 경우
+        if (abnormalTimers.Count > 0)
         {
-            //TODO: 사망처리 필요
+            copyStateKey.Clear();
+            copyStateKey.AddRange(abnormalTimers.Keys);
+            removeStateKey.Clear();
+
+            foreach (AbnormalStatus state in copyStateKey)
+            {
+                abnormalTimers[state] -= 1;
+                if (abnormalTimers[state] == 0) removeStateKey.Add(state);
+            }
+
+            foreach (AbnormalStatus state in removeStateKey)
+            {
+                RemoveAbnormalTimer(state);
+            }
         }
     }
 
 
-    //스태미나의 값에 변동을 주는 메서드 
-    public void StaminaChange(float value)
+    //상태이상의 효과를 0.1초마다 줄 메서드
+    private IEnumerator AbnormalCoroutine()
     {
-        curStamina = curStamina.PlusAndClamp(value, maxStamina);
-        conditionHandler.Conditionstamina.UpdateBar(curStamina / maxStamina);
+        while (true)
+        {
+            ApplyAbnormal();
+            yield return abnormalWait;
+        }
     }
 
 
-    //배고픔 값에 변동을 주는 메서드
-    public void HungerChange(float value)
+    //특정 시간동안 플레이어의 속도를 높여주는 코루틴
+    private IEnumerator RunCoroutine()
     {
-        curHunger = curHunger.PlusAndClamp(value, maxHunger);
-        SetAbnormal(AbnormalStatus.Starvation, curHunger < 20f);
-        SetAbnormal(AbnormalStatus.Hunger, curHunger < 40f);
-        SetAbnormal(AbnormalStatus.Eat, curHunger >= 60f);
-        SetAbnormal(AbnormalStatus.EatFull, curHunger >= 80f);
-        conditionHandler.ConditionHunger.UpdateBar(curHunger / maxHunger);
-    }
-
-
-    //목마름 값에 변동을 주는 메서드
-    public void ThirstyChange(float value)
-    {
-        curThirsty = curThirsty.PlusAndClamp(value, maxThirsty);
-        SetAbnormal(AbnormalStatus.Dehydrration, curThirsty < 20f);
-        SetAbnormal(AbnormalStatus.Thirsty, curThirsty < 40f);
-        SetAbnormal(AbnormalStatus.Drink, curThirsty >= 60f);
-        SetAbnormal(AbnormalStatus.PlentyWater, curThirsty >= 80f);
-        conditionHandler.ConditionThirsty.UpdateBar(curThirsty / maxThirsty);
+        runMultiple = 2;
+        while (true)
+        {
+            yield return abnormalWait;
+            if (!(CanRun())) break;
+        }
+        runMultiple = 1;
+        runCoroutine = null;
     }
 
 
@@ -268,46 +276,67 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
-    //상태이상의 효과를 적용시키는 메서드
-    private void ApplyAbnormal()
+    /// <summary>
+    /// 체력을 변환할 때 실행하는 메서드
+    /// </summary>
+    /// <param name="value">추가할 체력. 뺄 경우 -로 기입</param>
+    public void HealthChange(float value)
     {
-        //체력, 스태미나 변화값이 0이 아닌경우 효과 적용
-        if (healthChangeValue != 0) HealthChange(0.1f * healthChangeValue);
-        if (staminaChangeValue != 0) StaminaChange(0.1f * staminaChangeValue);
+        curHealth = curHealth.PlusAndClamp(value, maxHealth);
+        conditionHandler.ConditionHP.UpdateBar(curHealth / maxHealth);
 
-        //현재 상태이상 리스트가 존재할 경우
-        if (abnormalTimers.Count > 0)
+        if (curHealth <= 0)
         {
-            copyStateKey.Clear();
-            copyStateKey.AddRange(abnormalTimers.Keys);
-            removeStateKey.Clear();
-
-            foreach (AbnormalStatus state in copyStateKey)
-            {
-                abnormalTimers[state] -= 1;
-                if (abnormalTimers[state] == 0) removeStateKey.Add(state);
-            }
-
-            foreach (AbnormalStatus state in removeStateKey)
-            {
-                RemoveAbnormalTimer(state);
-            }
+            //TODO: 사망처리 필요
         }
     }
 
 
-    //상태이상의 효과를 0.1초마다 줄 메서드
-    IEnumerator AbnormalCoroutine()
+    /// <summary>
+    /// 스태미나를 변환할 때 실행하는 메서드
+    /// </summary>
+    /// <param name="value">추가할 스태미나. 뺄 경우 -로 기입</param> 
+    public void StaminaChange(float value)
     {
-        while (true)
-        {
-            ApplyAbnormal();
-            yield return abnormalWait;
-        }
+        curStamina = curStamina.PlusAndClamp(value, maxStamina);
+        conditionHandler.Conditionstamina.UpdateBar(curStamina / maxStamina);
     }
 
 
-    //플레이어가 달릴 수 있는 상태인지 확인하고 스태미나를 깎는 메서드
+    /// <summary>
+    /// 배고픔을 변환할 때 실행하는 메서드
+    /// </summary>
+    /// <param name="value">추가할 배고픔. 뺄 경우 -로 기입</param>
+    public void HungerChange(float value)
+    {
+        curHunger = curHunger.PlusAndClamp(value, maxHunger);
+        SetAbnormal(AbnormalStatus.Starvation, curHunger < 20f);
+        SetAbnormal(AbnormalStatus.Hunger, curHunger < 40f);
+        SetAbnormal(AbnormalStatus.Eat, curHunger >= 60f);
+        SetAbnormal(AbnormalStatus.EatFull, curHunger >= 80f);
+        conditionHandler.ConditionHunger.UpdateBar(curHunger / maxHunger);
+    }
+
+
+    /// <summary>
+    /// 목마름을 변환할 때 실행하는 메서드
+    /// </summary>
+    /// <param name="value">추가할 목마름. 뺄 경우 -로 기입</param>
+    public void ThirstyChange(float value)
+    {
+        curThirsty = curThirsty.PlusAndClamp(value, maxThirsty);
+        SetAbnormal(AbnormalStatus.Dehydrration, curThirsty < 20f);
+        SetAbnormal(AbnormalStatus.Thirsty, curThirsty < 40f);
+        SetAbnormal(AbnormalStatus.Drink, curThirsty >= 60f);
+        SetAbnormal(AbnormalStatus.PlentyWater, curThirsty >= 80f);
+        conditionHandler.ConditionThirsty.UpdateBar(curThirsty / maxThirsty);
+    }
+
+
+    /// <summary>
+    /// 플레이어가 달릴 수 있는 상태인지 확인하고 스태미나를 깎는 메서드
+    /// </summary>
+    /// <returns>달릴 수 있는지 bool값으로 반환</returns>
     public bool CanRun()
     {
         //해당 메서드는 1회만 호출 되어야함.
@@ -332,7 +361,10 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
-    //플레이어가 점프할 수 있는 상태인지 확인하고 스태미나를 깎는 메서드
+    /// <summary>
+    /// 플레이어가 점프할 수 있는 상태인지 확인하고 스태미나를 깎는 메서드
+    /// </summary>
+    /// <returns>점프할 수 있는지 bool값으로 반환</returns>
     public bool CanJump()
     {
         if (curStamina >= 10f)
@@ -341,20 +373,6 @@ public class PlayerStatus : MonoBehaviour
             return true;
         }
         else return false;
-    }
-
-
-    //특정 시간동안 플레이어의 속도를 높여주는 코루틴
-    private IEnumerator RunCoroutine()
-    {
-        runMultiple = 2;
-        while (true)
-        {
-            yield return abnormalWait;
-            if (!(CanRun())) break;
-        }
-        runMultiple = 1;
-        runCoroutine = null;
     }
 
 

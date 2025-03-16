@@ -9,12 +9,19 @@ public class PlayerInventoty : MonoBehaviour
     //TODO: 역할
     //플레이어 인벤토리 토글 기능
     //플레이어 인벤토리와 연결
-    private PlayerInput input;
     [ShowInInspector, ReadOnly]
     private InventorySlot[] inventorySlots;
     public int selectItemSlotIndex = -1;
     private TextMeshProUGUI titleText;
     private TextMeshProUGUI infoText;
+
+
+    private void OnValidate()
+    {
+        inventorySlots = transform.GetComponentsInChildren<InventorySlot>();
+        titleText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
+        infoText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
+    }
 
 
     //넣을 수 있는 아이템 칸이 있는지 확인하고 아이템을 집어넣는 메서드
@@ -43,8 +50,9 @@ public class PlayerInventoty : MonoBehaviour
         infoText.gameObject.SetActive(true);
     }
 
-
-    //현재 선택된 아이템 칸의 아이템을 사용하는 메서드
+    /// <summary>
+    /// 현재 선택된 아이템 칸의 아이템을 사용하는 메서드
+    /// </summary>
     public void UseItem()
     {
         if (selectItemSlotIndex != -1)
@@ -58,10 +66,30 @@ public class PlayerInventoty : MonoBehaviour
         }
     }
 
-
-    //TODO: 아이템 던지는 메서드 추가 예정
-    public void ThrowItem(int index)
+    
+    /// <summary>
+    /// 선택한 아이템을 장비하는 메서드
+    /// </summary>
+    public void EquippedItem()
     {
+        //TODO: 선택한 아이템을 장비 필요
+    }
 
+
+    /// <summary>
+    /// 선택한 장비를 해제하는 메서드
+    /// </summary>
+    public void UnEquippedItem()
+    {
+        //TODO: 장비한 아이템 해제 필요
+    }
+
+
+    /// <summary>
+    /// 선택한 아이템을 버리는 메서드
+    /// </summary>
+    public void DiscardItem()
+    {
+        //TODO: 아이템 삭제 및 버리기 추가 필요
     }
 }

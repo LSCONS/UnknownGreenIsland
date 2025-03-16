@@ -133,6 +133,29 @@ public static class Util
 
 
     /// <summary>
+    /// 부모오브젝트를 재귀적으로 찾으며 특정 이름의 Transform을 찾아오는 메서드
+    /// </summary>
+    /// <param name="parent">검색을 시작할 오브젝트</param>
+    /// <param name="name">검색할 이름</param>
+    /// <param name="isDebug">못 찾을 시 출력 유무. 기본 값은 출력</param>
+    /// <returns>찾은 부모 오브젝트의 Transform 반환</returns>
+    public static Transform GetTransformInParent(this Transform parent, string name, bool isDebug = true)
+    {
+        if(parent.name == name) return parent;
+
+        if(parent.parent != null)
+        {
+            return parent.parent.GetTransformInParent(name);
+        }
+        else
+        {
+            if(isDebug) Debug.LogError($"{name}을 찾을 수 없습니다.");
+            return null;
+        }
+    }
+
+
+    /// <summary>
     /// 해당 실수를 더한 후 값을 제한하여 반환합니다.
     /// </summary>
     /// <param name="nowValue">현재 값</param>
