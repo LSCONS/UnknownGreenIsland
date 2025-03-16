@@ -81,9 +81,11 @@ public class PlayerInput : MonoBehaviour
     }
 
 
+    //TODO: 플레이어가 인벤토리를 킨 상태로 WASD 입력을 한 상태로 false로 갈 경우 입력 값이 남아있을 수 있도록 변환.
     private void OnMove(InputAction.CallbackContext context)
     {
-        playerMoveDir = context.ReadValue<Vector2>().normalized;
+        if(!(IsInventory)) playerMoveDir = context.ReadValue<Vector2>().normalized;
+        else { playerMoveDir = Vector2.zero; }
     }
     private void StopMove(InputAction.CallbackContext context)
     {
@@ -129,6 +131,7 @@ public class PlayerInput : MonoBehaviour
     private void ToggleInventory(InputAction.CallbackContext context)
     {
         isInventory = !isInventory;
+        if(isInventory) { playerMoveDir = Vector2.zero; }
         inventoryAction?.Invoke();
     }
 }

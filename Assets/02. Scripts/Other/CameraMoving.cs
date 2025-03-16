@@ -5,45 +5,49 @@ using UnityEngine.InputSystem;
 
 public class CameraMoving : MonoBehaviour
 {
-    private Transform _playerTransform;
-    private PlayerInput _playerInput;
-    private PlayerStatus _playerStatus;
-    private float _curCameraXRot;
-    private float _cameraLerpSpeed = 20f;
+    private Transform playerTransform;
+    private PlayerInput playerInput;
+    private PlayerStatus playerStatus;
+    private float curCameraXRot;
+    private float cameraLerpSpeed = 20f;
 
     private void OnValidate()
     {
-        _playerTransform = "Player".GetComponentNameDFS<Transform>();
-        _playerInput = "Player".GetComponentNameDFS<PlayerInput>();
-        _playerStatus = "Player".GetComponentNameDFS<PlayerStatus>();
+        playerTransform = "Player".GetComponentNameDFS<Transform>();
+        playerInput = "Player".GetComponentNameDFS<PlayerInput>();
+        playerStatus = "Player".GetComponentNameDFS<PlayerStatus>();
     }
 
 
     private void LateUpdate()
     {
-        FollowToPlayer();           //ÇÃ·¹ÀÌ¾îÀÇ transformÀ» LerpÇü½ÄÀ¸·Î º¸°£ÇÏ¸ç µû¶ó°¡´Â ¸Ş¼­µå
-        SetRotation();              //Ä«¸Ş¶óÀÇ È¸Àü°ªÀ» °è»êÇØ¼­ Àû¿ë½ÃÅ°´Â ¸Ş¼­µå
+        FollowToPlayer();           //í”Œë ˆì´ì–´ì˜ transformì„ Lerpí˜•ì‹ìœ¼ë¡œ ë³´ê°„í•˜ë©° ë”°ë¼ê°€ëŠ” ë©”ì„œë“œ
+        if (!(playerInput.IsInventory))
+        {
+            SetRotation();          //ì¹´ë©”ë¼ì˜ íšŒì „ê°’ì„ ê³„ì‚°í•´ì„œ ì ìš©ì‹œí‚¤ëŠ” ë©”ì„œë“œ
+        }
+
     }
 
 
-    //ÇÃ·¹ÀÌ¾îÀÇ transformÀ» LerpÇü½ÄÀ¸·Î º¸°£ÇÏ¸ç µû¶ó°¡´Â ¸Ş¼­µå
+    //í”Œë ˆì´ì–´ì˜ transformì„ Lerpí˜•ì‹ìœ¼ë¡œ ë³´ê°„í•˜ë©° ë”°ë¼ê°€ëŠ” ë©”ì„œë“œ
     private void FollowToPlayer()
     {
         transform.position = Vector3.Lerp
         (
             transform.position,
-            _playerTransform.position + Vector3.up * 0.5f,
-            Time.deltaTime * _cameraLerpSpeed
+            playerTransform.position + Vector3.up * 0.5f,
+            Time.deltaTime * cameraLerpSpeed
         );
     }
 
 
-    //Ä«¸Ş¶óÀÇ È¸Àü°ªÀ» °è»êÇØ¼­ Àû¿ë½ÃÅ°´Â ¸Ş¼­µå
+    //ì¹´ë©”ë¼ì˜ íšŒì „ê°’ì„ ê³„ì‚°í•´ì„œ ì ìš©ì‹œí‚¤ëŠ” ë©”ì„œë“œ
     private void SetRotation()
     {
-        _curCameraXRot += _playerInput.MousePositionDir.y * _playerStatus.Sensitivity;
-        _curCameraXRot = Mathf.Clamp(_curCameraXRot, _playerStatus.MinCurXRot, _playerStatus.MaxCurXRot);
+        curCameraXRot += playerInput.MousePositionDir.y * playerStatus.Sensitivity;
+        curCameraXRot = Mathf.Clamp(curCameraXRot, playerStatus.MinCurXRot, playerStatus.MaxCurXRot);
         transform.rotation = Quaternion.Euler
-            (Vector3.up * _playerTransform.eulerAngles.y - _curCameraXRot * Vector3.right);
+            (Vector3.up * playerTransform.eulerAngles.y - curCameraXRot * Vector3.right);
     }
 }

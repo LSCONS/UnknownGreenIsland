@@ -87,10 +87,14 @@ public class PlayerControl : MonoBehaviour
     private void TryJump()
     {
         // 점프 입력 처리
-        if (playerIsgrounded.Isgrounded &&
-            input.IsJump && nowJumpForce == 0f &&
-            playerVelocity.y == defaultGravity &&
-            playerStatus.CanJump())
+        if (
+                playerIsgrounded.Isgrounded &&
+                input.IsJump && 
+                !(input.IsInventory) &&
+                nowJumpForce == 0f &&
+                playerVelocity.y == defaultGravity &&
+                playerStatus.CanJump()
+            )
         {
             nowJumpForce = playerStatus.NewJumpForce;
         }
@@ -113,12 +117,14 @@ public class PlayerControl : MonoBehaviour
     private void Move()
     {
         playerVelocity.y += (playerStatus.PlayerMass * gravity) * Time.fixedDeltaTime + nowJumpForce;
-
-        chrConPlayer.Move(
-            (input.PlayerMoveDir.x * playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.right +
-            input.PlayerMoveDir.y * playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.forward +
-            playerVelocity.y * Time.fixedDeltaTime * transform.up
-            ));
+        //입력에 의해 움직이는 Move
+        chrConPlayer.Move
+        (
+            input.PlayerMoveDir.x * playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.right +
+            playerVelocity.y * Time.fixedDeltaTime * transform.up +
+            input.PlayerMoveDir.y * playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.forward
+        );
+        //경로로 인해 밀어지는 힘을 주는 Move
         chrConPlayer.Move(checkAngle.repForce * Time.fixedDeltaTime);
     }
 
