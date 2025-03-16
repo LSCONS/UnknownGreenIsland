@@ -26,8 +26,8 @@ public class UIInteraction : MonoBehaviour
         Debug.Log("UI 업데이트");
         if(itemObject != null)
         {
-            interactionText.text = itemObject.data.interaction_information;
-            image.sprite = itemObject.data.icon;
+            interactionText.text = itemObject.data.interaction_Information;
+            image.sprite = itemObject.data.inventory_icon;
             gameObject.SetActive(true);
         }
         else

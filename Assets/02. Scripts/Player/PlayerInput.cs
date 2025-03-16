@@ -123,7 +123,7 @@ public class PlayerInput : MonoBehaviour
     }
     private void InteractionStart(InputAction.CallbackContext context)
     {
-        playerInteraction.InteractionStart();
+        interactionAction?.Invoke();
     }
     private void ToggleInventory(InputAction.CallbackContext context)
     {

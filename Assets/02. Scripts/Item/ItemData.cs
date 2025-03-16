@@ -15,11 +15,9 @@ public enum ConsumableType
     Health, //체력
     Hunger, //배고픔
     Stamina, //스태미나
-
 }
 
 [Serializable]
-
 public class ItemDataConsumabale
 {
     public ConsumableType type; //타입 설정
@@ -30,11 +28,13 @@ public class ItemDataConsumabale
 public class ItemData : ScriptableObject
 {
     [Header("Info")]
+    public int ItemID; //아이템 번호
     public string ItemName; //아이템 이름
     public string description; //아이템 설명
-    public string interaction_information;  //상호작용 정보
+    public string interaction_Information;  //상호작용 정보
     public ItemType type; //아이템 타입
-    public Sprite icon; //아이템 아이콘
+    public Sprite inventory_icon; //인벤토리 아이콘
+    public Sprite interaction_Icon; //상호작용 아이콘
     public GameObject dropPrefab; //드롭했을 때 나타나는 3D 오브젝트
 
     [Header("QuantityLimit")]

@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public Action interaction;
     private Camera _camera;
     private GameObject currentObject;
     private float distanceMax = 5f;
@@ -25,6 +24,7 @@ public class PlayerInteraction : MonoBehaviour
         _camera = Camera.main;
     }
 
+
     private void Update()
     {
         tempime += Time.deltaTime;
@@ -33,12 +33,6 @@ public class PlayerInteraction : MonoBehaviour
             ShootingLayCastForCamera();
             tempime = 0;
         }
-    }
-
-
-    public void InteractionStart()
-    {
-        interaction?.Invoke();
     }
 
 
@@ -87,6 +81,20 @@ public class PlayerInteraction : MonoBehaviour
 
     //인벤토리에 남은 칸을 확인하고 아이템을 집어넣는 메서드
     private void CheckItemSlot(ItemObject item)
+    {
+
+    }
+
+
+    //문과 상호작용을 할 경우 실행할 메서드
+    private void ToggleFabric()
+    {
+
+    }
+
+
+    //상자와 상호작용을 할 경우 실행할 메서드
+    private void ToggleChest()
     {
 
     }
