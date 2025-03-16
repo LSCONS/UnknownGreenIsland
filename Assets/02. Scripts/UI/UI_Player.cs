@@ -25,6 +25,7 @@ public class UI_Player : MonoBehaviour
     }
 
 
+    //인벤토리를 끄고 키면서 마우스 커서의 Lock을 바꾸는 메서드
     private void InventorySetAcitve()
     {
         inventoryCanvas.gameObject.SetActive(input.IsInventory);

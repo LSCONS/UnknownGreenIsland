@@ -24,6 +24,11 @@ public class PlayerInteraction : MonoBehaviour
         _camera = Camera.main;
     }
 
+    private void Start()
+    {
+        uiInteraction.UpdateData(itemObject);
+    }
+
 
     private void Update()
     {
