@@ -18,15 +18,16 @@ public class UIInteraction : MonoBehaviour
 
 
     /// <summary>
-    /// »óÈ£ÀÛ¿ë½Ã ¾ÆÀÌÅÛÀÇ ¾ÆÀÌÄÜ°ú Á¤º¸¸¦ ÃÊ±âÈ­ÇÏ´Â ¸Ş¼­µå
+    /// ìƒí˜¸ì‘ìš©ì‹œ ì•„ì´í…œì˜ ì•„ì´ì½˜ê³¼ ì •ë³´ë¥¼ ì´ˆê¸°í™”í•˜ëŠ” ë©”ì„œë“œ
     /// </summary>
-    /// <param name="itemData">Ãâ·ÂÇÒ Á¤º¸°¡ ´ã±ä ItemData</param>
-    public void UpdateData(ItemData itemData)
+    /// <param name="itemData">ì¶œë ¥í•  ì •ë³´ê°€ ë‹´ê¸´ ItemData</param>
+    public void UpdateData(ItemObject itemObject)
     {
-        if(itemData != null)
+        Debug.Log("UI ì—…ë°ì´íŠ¸");
+        if(itemObject != null)
         {
-            interactionText.text = itemData.interaction_information;
-            image.sprite = itemData.icon;
+            interactionText.text = itemObject.data.interaction_information;
+            image.sprite = itemObject.data.icon;
             gameObject.SetActive(true);
         }
         else

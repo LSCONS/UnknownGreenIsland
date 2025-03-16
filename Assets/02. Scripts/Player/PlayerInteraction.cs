@@ -13,12 +13,14 @@ public class PlayerInteraction : MonoBehaviour
     private LayerMask interactionLayerMask;
     private ItemObject itemObject;
     private PlayerInput playerInput;
-    private float tempime;
+    private UIInteraction uiInteraction;
+    private float tempime = 0;
 
 
     private void OnValidate()
     {
         playerInput = transform.GetComponentDebug<PlayerInput>();
+        uiInteraction  = transform.GetComponentForTransformFindName<UIInteraction>("UIInteraction");
         interactionLayerMask = ReadonlyData.InteractionLayerMask;
         _camera = Camera.main;
     }
@@ -55,7 +57,7 @@ public class PlayerInteraction : MonoBehaviour
                 if (itemObject == null) Debug.LogError("itemObject is null");
                 playerInput.interactionAction -= InteractionHandler;
                 playerInput.interactionAction += InteractionHandler;
-                //TODO: UI업데이트 필요
+                uiInteraction.UpdateData(itemObject);
             }
         }
         else
@@ -69,7 +71,7 @@ public class PlayerInteraction : MonoBehaviour
             if (currentObject != null)
             {
                 currentObject = null;
-                //TODO: UI업데이트 필요
+                uiInteraction.UpdateData(itemObject);
             }
         }
     }

@@ -271,7 +271,6 @@ public class PlayerStatus : MonoBehaviour
     //상태이상의 효과를 적용시키는 메서드
     private void ApplyAbnormal()
     {
-        Debug.Log("상태이상 실행 중");
         //체력, 스태미나 변화값이 0이 아닌경우 효과 적용
         if (healthChangeValue != 0) HealthChange(0.1f * healthChangeValue);
         if (staminaChangeValue != 0) StaminaChange(0.1f * staminaChangeValue);
