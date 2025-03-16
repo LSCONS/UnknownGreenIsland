@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_Player : MonoBehaviour
+public class UIPlayer : MonoBehaviour
 {
     private Transform conditionCanvas;
     private Transform inventoryCanvas;
     private Transform interactionCanvas;
-    private PlayerInput input;
+    private PlayerInput input; 
 
-    private void OnValidate()
+    private void OnValidate() 
     {
         conditionCanvas = transform.GetGameObjectSameNameDFS("UI_Condition_Canvas");
         inventoryCanvas = transform.GetGameObjectSameNameDFS("UI_Inventory_Canvas");
