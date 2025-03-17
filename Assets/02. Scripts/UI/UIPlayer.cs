@@ -33,11 +33,12 @@ public class UIPlayer : MonoBehaviour
 
     private void CraftingSetActive()
     {
-        if (!(input.IsInventory))
+        if (input.IsInventory)
         {
-            //TODO: inventoryBG 위치 조정 필요
+            inventoryBG.GetComponent<RectTransform>().anchoredPosition = Vector3.left * 250;
             combinationBG.gameObject.SetActive(true);
             inventoryBG.gameObject.SetActive(true);
+            Util.CursorisLock(false);
         }
     }
 

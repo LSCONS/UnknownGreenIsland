@@ -35,7 +35,6 @@ public class PlayerInventoty : MonoBehaviour
     }
 
 
-
     /// <summary>
     /// 넣을 수 있는 아이템 칸이 있는지 확인하고 아이템을 집어넣는 메서드
     /// </summary>
@@ -50,7 +49,6 @@ public class PlayerInventoty : MonoBehaviour
                 return;
             }
         }
-
         //TODO: 아이템 칸이 꽉 차서 아이템 칸을 찾을 수 없는 경우의 예외처리 명령어 필요 
     }
 

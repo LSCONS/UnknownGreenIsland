@@ -24,7 +24,7 @@ public class PlayerInteraction : MonoBehaviour
         playerInventoty = transform.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
         playerInput = transform.GetComponentDebug<PlayerInput>();
         uiInteraction  = transform.GetComponentForTransformFindName<UIInteraction>("UIInteraction");
-        interactionLayerMask = ReadonlyData.InteractionLayerMask;
+        interactionLayerMask = ReadonlyData.InteractionLayerMask | ReadonlyData.InteractionCookLayerMask | ReadonlyData.InteractionWorkLayerMask;
         _camera = Camera.main;
     }
 
@@ -83,11 +83,24 @@ public class PlayerInteraction : MonoBehaviour
     //레이어에 따라 상호작용을 나눠서 적용시킴.
     private void InteractionHandler()
     {
-        //아이템 오브젝트 인 경우
-        InteractionItem(itemObject);
+        if (currentObject != null)
+        {
+            Debug.Log(currentObject.layer);
+            LayerMask nowLayer = 1 << currentObject.layer;
 
-        //TODO: 조합대 인 경우
-
+            if(nowLayer == ReadonlyData.InteractionLayerMask)
+            {
+                InteractionItem(itemObject);
+            } 
+            else if (nowLayer == ReadonlyData.InteractionCookLayerMask)
+            {
+                InteractionCookingTable();
+            }
+            else if (nowLayer == ReadonlyData.InteractionWorkLayerMask)
+            {
+                InteractionCraftingTable();
+            }
+        }
     }
 
 
