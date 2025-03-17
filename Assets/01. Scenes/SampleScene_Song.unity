@@ -3243,6 +3243,7 @@ MonoBehaviour:
   includeLayerMask:
     serializedVersion: 2
     m_Bits: 4480
+  isgrounded: 0
 --- !u!114 &2121482928704634886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5413,6 +5414,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2119458653310025345, guid: 3f6dd1cbbfb0c664fb9fcc3f0ec00422, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2491991008275706279, guid: 3f6dd1cbbfb0c664fb9fcc3f0ec00422, type: 3}
       propertyPath: m_Layer
       value: 15
@@ -5468,6 +5473,10 @@ PrefabInstance:
     - target: {fileID: 6222919728727503175, guid: 3f6dd1cbbfb0c664fb9fcc3f0ec00422, type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279943961241705647, guid: 3f6dd1cbbfb0c664fb9fcc3f0ec00422, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6646232138602144268, guid: 3f6dd1cbbfb0c664fb9fcc3f0ec00422, type: 3}
       propertyPath: m_IsActive

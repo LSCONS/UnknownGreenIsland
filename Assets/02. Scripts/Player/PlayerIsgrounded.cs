@@ -23,7 +23,6 @@ public class PlayerIsgrounded : MonoBehaviour
     {
         if(includeLayerMask == (includeLayerMask | 1 << other.gameObject.layer))
         {
-            Debug.Log("stay gameObject = " +  other.gameObject);
             isgrounded = true;
         }
     }
@@ -34,7 +33,6 @@ public class PlayerIsgrounded : MonoBehaviour
     {
         if (includeLayerMask == (includeLayerMask | 1 << other.gameObject.layer))
         {
-            Debug.Log("exit gameObject = " + other.gameObject);
             isgrounded = false;
         }
     }

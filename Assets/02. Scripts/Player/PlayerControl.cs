@@ -122,11 +122,12 @@ public class PlayerControl : MonoBehaviour
         chrConPlayer.Move
         (
             input.PlayerMoveDir.x * playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.right +
-            playerVelocity.y * Time.fixedDeltaTime * transform.up +
+            playerVelocity.y * Time.fixedDeltaTime * Vector3.up +
             input.PlayerMoveDir.y * playerStatus.MoveSpeed * Time.fixedDeltaTime * transform.forward
         );
         //경로로 인해 밀어지는 힘을 주는 Move
         chrConPlayer.Move(checkAngle.repForce * Time.fixedDeltaTime);
+        Debug.Log(playerVelocity.y);
     }
 
 
