@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -9,8 +10,9 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private List<GameObject> wallObjects = new List<GameObject>();
 
     [Header("Build Settings")]
-    [SerializeField] private SelectedBuildingType currentBuildType;
+    public SelectedBuildingType currentBuildType;
     [SerializeField] private LayerMask connectorLayer;
+    public GameObject buildingUI;
 
     [Header("Ghost Settings")]
     [SerializeField] private Material ghostMaterialValid;
@@ -19,8 +21,8 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private float maxGroundAngle = 45f;
 
     [Header("Internal State")]
-    [SerializeField] private bool isBuilding = false;
-    [SerializeField] private int currentBuildingIndex;
+    public bool isBuilding = false;
+    public int currentBuildingIndex;
     private GameObject ghostBuildGameobject;
     private bool isGhostInValidPosition = false;
     private Transform ModelParent = null;
@@ -29,6 +31,20 @@ public class BuildingManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
             isBuilding = !isBuilding;
+
+        if (isBuilding && Input.GetMouseButtonDown((1)))
+        {
+            isBuilding = false;
+            buildingUI.SetActive(true);
+            Util.CursorisLock(false);
+        }
+
+        if (Input.GetMouseButtonUp((1)))
+        {
+            isBuilding = true;
+            buildingUI.SetActive(false);
+            Util.CursorisLock(true);
+        }
 
         if (isBuilding && Input.GetKeyDown(KeyCode.C))
         {
@@ -49,6 +65,13 @@ public class BuildingManager : MonoBehaviour
         if (isBuilding)
         {
             GhostBuild();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                if (currentBuildType == SelectedBuildingType.wall && currentBuildingIndex == 3)
+                {
+                    ghostBuildGameobject.gameObject.transform.Rotate(90, 0, 0);
+                }
+            }
 
             if (Input.GetMouseButtonDown(0))
                 PlaceBuild();
@@ -83,6 +106,7 @@ public class BuildingManager : MonoBehaviour
             }
         }
     }
+
 
     private void GhostBuild()
     {
@@ -193,7 +217,6 @@ public class BuildingManager : MonoBehaviour
 
             if (target.layer == targetlayer)
             {
-                Debug.Log("111");
                 Destroy(objectToDestroy);
             }
         }
