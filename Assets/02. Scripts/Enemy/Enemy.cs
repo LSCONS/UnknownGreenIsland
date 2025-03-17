@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+
 public enum AIState
 {
     Idle,
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Ai")]
     private NavMeshAgent agent;
-    public float detectDistance;
+    public float detectDistance = 5f;
     private AIState aiState;
     public AITendency aiTendency;
 
@@ -50,7 +51,7 @@ public class Enemy : MonoBehaviour
 
     private Transform Player;
 
-    //private Animator animator;
+    private Animator animator;
     private SkinnedMeshRenderer[] meshRenderers;
     PlayerStatus playerStatus;
 
@@ -58,7 +59,7 @@ public class Enemy : MonoBehaviour
     {
         playerStatus = "Player".GetComponentNameDFS<PlayerStatus>();
         agent = GetComponent<NavMeshAgent>();
-        //animator = GetComponentInChildren<Animator>();
+        animator = GetComponent<Animator>();
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
         Player = "Player".GetComponentNameDFS<Transform>();
     }
@@ -70,9 +71,10 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        playerDistance = Vector3.Distance(transform.position, Player.transform.position); // Distance : a¿Í b »çÀÌ¿¡ °Å¸®¸¦ ÃøÁ¤ÇØ ¹İÈ¯ÇÏ´Â ÇÔ¼ö
+        playerDistance = Vector3.Distance(transform.position, Player.transform.position); // Distance : aì™€ b ì‚¬ì´ì— ê±°ë¦¬ë¥¼ ì¸¡ì •í•´ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
 
-        //animator.SetBool("Moving", aiState != AIState.Idle);
+        animator.SetFloat("Vert", AIState.Idle == aiState ? 0f : 1f);
+        
 
         switch (aiState)
         {
@@ -116,12 +118,12 @@ public class Enemy : MonoBehaviour
 
         }
 
-        //animator.speed = agent.speed / walkSpeed;
-    } //»óÅÂº¯È­
+        animator.SetFloat("State", agent.speed == walkSpeed ? 0f : 1f);
+    } //ìƒíƒœë³€í™”
 
     void PassiveUpdate()
     {
-        if (aiState == AIState.Wandering && agent.remainingDistance < 0.1f) // ai»óÅÂ°¡ ·£´õ¸µÀÌ¸ç, ·£´õ¸µ °Å¸®°¡ 0.1f ÀÌÇÏÀÏ¶§
+        if (aiState == AIState.Wandering && agent.remainingDistance < 0.1f) // aiìƒíƒœê°€ ëœë”ë§ì´ë©°, ëœë”ë§ ê±°ë¦¬ê°€ 0.1f ì´í•˜ì¼ë•Œ
         {
             SetState(AIState.Idle);
             Invoke("WanderToNewLocation", Random.Range(minWanderWaitTime, maxWanderWaitTime));
@@ -133,7 +135,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void AiTendencyChk() // ¼ºÇâÃ¼Å©
+    void AiTendencyChk() // ì„±í–¥ì²´í¬
     {
         switch (aiTendency)
         {
@@ -152,11 +154,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void AttackingUpdate() //°ø°İ
+    void AttackingUpdate() //ê³µê²©
     {
         if (playerDistance < attackDistance && IsPlayerInFieldOfView())
         {
-            if (Time.time - lastAttackTime > attackRate) // °ø°İ
+            if (Time.time - lastAttackTime > attackRate) // ê³µê²©
             {
                 agent.isStopped = true;
                 lastAttackTime = Time.time;
@@ -190,13 +192,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void RunawayUpdate() // µµ¸Á
+    void RunawayUpdate() // ë„ë§
     {
-        NavMeshHit hit;
-
         if (playerDistance < detectDistance)
         {
-            agent.SetDestination((detectDistance + 2) * transform.position - Player.transform.position);
+            agent.SetDestination(2 * transform.position - Player.transform.position);
+            agent.isStopped = false;
+            SetState(AIState.Runaway);
         }
         else
         {
@@ -206,7 +208,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void WanderToNewLocation() // »õ·Î¿î À§Ä¡·Î ÀÌµ¿
+    void WanderToNewLocation() // ìƒˆë¡œìš´ ìœ„ì¹˜ë¡œ ì´ë™
     {
         if (aiState != AIState.Idle) return;
 
@@ -214,45 +216,42 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(GetWanderLocation());
     }
 
-    Vector3 GetWanderLocation() // ¸ñÀûÁö ¼³Á¤
+    Vector3 GetWanderLocation() // ëª©ì ì§€ ì„¤ì •
     {
         NavMeshHit hit;
 
-        // Random.onUnitSphere : ¹İÁö¸§ÀÌ 1ÀÎ ±¸ À§ÀÇ Á¡ À§Ä¡¸¦ Vector3·Î °¡Á®¿È
-        NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
-
+        // Random.onUnitSphere : ë°˜ì§€ë¦„ì´ 1ì¸ êµ¬ ìœ„ì˜ ì  ìœ„ì¹˜ë¥¼ Vector3ë¡œ ê°€ì ¸ì˜´
         int i = 0;
-        while (Vector3.Distance(transform.position, hit.position) < detectDistance)
+        do
         {
             NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
-            i++;
-            if (i == 30) break;
-        }
+
+        } while (Vector3.Distance(transform.position, hit.position) < detectDistance || i++ == 30);
 
         return hit.position;
     }
 
-    bool IsPlayerInFieldOfView() // ÇÃ·¹ÀÌ¾î°¡ ÀÖ´Â ¹æÇâ
+    bool IsPlayerInFieldOfView() // í”Œë ˆì´ì–´ê°€ ìˆëŠ” ë°©í–¥
     {
         Vector3 directionToPlayer = Player.transform.position - transform.position;
         float angle = Vector3.Angle(transform.forward, directionToPlayer);
         return angle < fieldOfView * 0.5f;
     }
 
-    public void HealthChange(int damage) // ÇÇ°İ½Ã º¯È­
+    public void HealthChange(int damage) // í”¼ê²©ì‹œ ë³€í™”
     {
-        Debug.Log("½ÃÀÛ");
+        Debug.Log("ì‹œì‘");
         curHealth = Util.PlusAndClamp(curHealth, damage, Health);
         Debug.Log(curHealth);
         if (curHealth <= 0)
         {
             death();
-            //TODO: »ç¸ÁÃ³¸® ÇÊ¿ä
-            Debug.Log(name + " : Á×¾ú´Ù");
+            //TODO: ì‚¬ë§ì²˜ë¦¬ í•„ìš”
+            Debug.Log(name + " : ì£½ì—ˆë‹¤");
         }
     }
 
-    private void death() // »ç¸Á
+    private void death() // ì‚¬ë§
     {
         int RnadomNum = Random.RandomRange(0, dropItem.Length);
         for (int j = 0; j < 1; j++)
