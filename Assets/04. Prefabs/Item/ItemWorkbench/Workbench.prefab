@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5242916112983104162}
   - component: {fileID: 7485420150665795800}
   - component: {fileID: 7944863310830765814}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Workbench
   m_TagString: Untagged
   m_Icon: {fileID: 0}

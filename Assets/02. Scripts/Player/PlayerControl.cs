@@ -127,7 +127,6 @@ public class PlayerControl : MonoBehaviour
         );
         //경로로 인해 밀어지는 힘을 주는 Move
         chrConPlayer.Move(checkAngle.repForce * Time.fixedDeltaTime);
-        Debug.Log(playerVelocity.y);
     }
 
 

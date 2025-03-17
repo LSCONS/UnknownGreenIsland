@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6435458187973628696}
   - component: {fileID: 1081002303168477407}
   - component: {fileID: 3056212001027037721}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: KitchenProps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7505965056387916968}
   - component: {fileID: 5406013427135523074}
   - component: {fileID: 7758243719141909047}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: rawmeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 6961656558344948169}
   - component: {fileID: 6277240454525306384}
   - component: {fileID: 7135168190394014978}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Bonfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 7808213632961565963}
   - component: {fileID: 6486085162630435368}
   - component: {fileID: 4256323059352982561}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 6080234973569469857}
   - component: {fileID: 5134510243620314916}
   - component: {fileID: 37061433456164953}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 7779887048055304805}
   - component: {fileID: 5338485927318350363}
   - component: {fileID: 5632570224307341308}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Michelin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 6141670778740441572}
   - component: {fileID: 5371472445776394280}
   - component: {fileID: 7113100881557669251}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Snow_Stonehenge_Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 4814980765427812395}
   - component: {fileID: 6458499606149058276}
   - component: {fileID: 394384396998953617}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: KitchenProps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
