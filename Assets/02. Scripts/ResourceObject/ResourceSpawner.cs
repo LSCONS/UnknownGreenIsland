@@ -7,7 +7,7 @@ public class ResourceSpawner : MonoBehaviour
    public class ResourceSpawnPoint
     {
         public GameObject resourceObject; // 자원 오브젝트 지정
-        public float respawnTime; // 다시 돌아오는 시간
+        public float respawnTime = 3; // 다시 돌아오는 시간
     }
 
     public List<ResourceSpawnPoint> resourceSpawnPoints = new List<ResourceSpawnPoint>(); // 리스트에 자원 오브젝트 저장 
