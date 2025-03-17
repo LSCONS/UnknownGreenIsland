@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -392,6 +393,11 @@ public class PlayerStatus : MonoBehaviour
         bool Dehydrration = (curAbnormal & AbnormalStatus.Dehydrration) == AbnormalStatus.Dehydrration;
         SetAbnormal(AbnormalStatus.Dehydrration, !Dehydrration);
         Debug.Log(!Dehydrration);
+    }
+
+    internal void UpdateStatus(ConsumableType type, float value)
+    {
+        throw new NotImplementedException();
     }
 #endif
 }

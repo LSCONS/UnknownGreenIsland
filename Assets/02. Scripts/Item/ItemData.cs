@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
+
 public enum ItemType
 {
     Equipable, //장착 아이템
@@ -33,6 +35,7 @@ public class ItemData : ScriptableObject
     public string ItemName; //아이템 이름
     public string description; //아이템 설명
     public string interaction_Information;  //상호작용 정보
+    public AbnormalStatus abnormalStatus; //디버프 설정
     public ItemType type; //아이템 타입
     public Sprite inventory_icon; //인벤토리 아이콘
     public Sprite interaction_Icon; //상호작용 아이콘
@@ -44,4 +47,11 @@ public class ItemData : ScriptableObject
 
     [Header("Consumable")]
     public ItemDataConsumabale[] consumabale; //아이템 효과값 배열로 만듬 
+
+    public class Consumable
+    {
+        public ConsumableType type;  // 회복 종류 (배고픔, 체력 등)
+        public float value;          // 회복량
+    }
 }
+

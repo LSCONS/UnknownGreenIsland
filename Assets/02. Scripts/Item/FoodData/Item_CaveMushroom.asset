@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
   m_Name: Item_CaveMushroom
   m_EditorClassIdentifier: 
+  ItemID: 0
   ItemName: "\uB3D9\uAD74\uBC84\uC12F"
   description: "\uB3C5\uC774 \uC5C6\uB294 \uBC84\uC12F\uC774\uB2E4. \uC8FC\uB85C
     \uB3D9\uAD74\uC5D0\uC11C \uC790\uB780\uB2E4."
+  interaction_Information: 
   type: 0
-  icon: {fileID: 21300000, guid: 9bf2bb0fa8d8eee499c4edd4152b8a3c, type: 3}
+  inventory_icon: {fileID: 0}
+  interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 5751896517601217034, guid: 03ef59c027c90004b96f4071b163c357, type: 3}
   canStack: 1
   maxStackAmount: 1000
-  consumabale: []
+  consumabale:
+  - type: 1
+    value: 6
