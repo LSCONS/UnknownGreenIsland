@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 40
-  curHealth: 30
+  curHealth: 40
   walkSpeed: 2
   runSpeed: 4
   dropItem:
