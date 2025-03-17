@@ -7,18 +7,27 @@ using VInspector;
 public class PlayerInventoty : MonoBehaviour
 {
     [ShowInInspector, ReadOnly]
+    private Transform inventoryCanvas;
     private InventorySlot[] inventorySlots;
     public int selectItemSlotIndex = -1;
     private TextMeshProUGUI titleText;
     private TextMeshProUGUI infoText;
+    private InventoryButton inventoryButton;
 
 
     private void OnValidate()
     {
+        inventoryCanvas = transform.GetTransformInParent("UI_Inventory_Canvas");
+        inventoryButton = inventoryCanvas.GetComponentForTransformFindName<InventoryButton>("Button");
         inventorySlots = transform.GetComponentsInChildren<InventorySlot>();
+        for(int i = 0; i < inventorySlots.Length; i++)
+        {
+            inventorySlots[i].slotIndex = i;
+        }
         titleText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
         infoText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
     }
+
 
 
     /// <summary>
@@ -51,6 +60,8 @@ public class PlayerInventoty : MonoBehaviour
         infoText.text = inventorySlots[selectItemSlotIndex].itemObject.data.description;
         titleText.gameObject.SetActive(true);
         infoText.gameObject.SetActive(true);
+
+        inventoryButton.ButtonCheckType(inventorySlots[selectItemSlotIndex].itemObject.data.type);
     }
 
 
@@ -94,6 +105,15 @@ public class PlayerInventoty : MonoBehaviour
     /// </summary>
     public void DiscardItem()
     {
+        if (selectItemSlotIndex != -1)
+        {
+            inventorySlots[selectItemSlotIndex].RemoveItem();
+            if (inventorySlots[selectItemSlotIndex].itemObject == null)
+            {
+                titleText.text = "";
+                infoText.text = "";
+            }
+        }
         //TODO: 아이템 삭제 및 버리기 추가 필요
     }
 }

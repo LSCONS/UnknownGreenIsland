@@ -23,7 +23,6 @@ public class UIInteraction : MonoBehaviour
     /// <param name="itemData">출력할 정보가 담긴 ItemData</param>
     public void UpdateData(ItemObject itemObject)
     {
-        Debug.Log("UI 업데이트");
         if(itemObject != null)
         {
             interactionText.text = itemObject.data.interaction_Information;

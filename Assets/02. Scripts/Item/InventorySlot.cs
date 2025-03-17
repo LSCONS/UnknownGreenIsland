@@ -17,15 +17,15 @@ public class InventorySlot : MonoBehaviour
     private GameObject _objectPool;
     private Button button;
     [ShowInInspector, ReadOnly]
-    private PlayerInventoty inventorySlotGrid;
+    private PlayerInventoty playerInventory;
 
     private void OnValidate()
     {
-        text = transform.GetComponentForTransformFindName<TextMeshProUGUI>("StackCount");
+        text = transform.GetComponentForTransformFindName<TextMeshProUGUI>("QuantityText");
         icon = transform.GetComponentForTransformFindName<Image>("Icon");
         _objectPool = transform.GetComponentForTransformFindName<Transform>("ObjectPool").gameObject;
         button = transform.GetComponentDebug<Button>();
-        inventorySlotGrid = GetComponentInParent<PlayerInventoty>();
+        playerInventory = GetComponentInParent<PlayerInventoty>();
     }
 
 
@@ -89,7 +89,7 @@ public class InventorySlot : MonoBehaviour
     //아이템 슬롯을 선택할 때 실행할 메서드
     private void SelectedSlot()
     {
-        inventorySlotGrid.SelectedItemSlot(slotIndex);
+        playerInventory.SelectedItemSlot(slotIndex);
     }
 
 
@@ -99,15 +99,22 @@ public class InventorySlot : MonoBehaviour
         if (itemObject.data.canStack)
         {
             itemAmount--;
-            UpdateAmountText();
         }
 
         if (itemAmount == 0)
         {
-            itemObject = null;
-            UpdateIcon();
-            button.onClick.RemoveListener(SelectedSlot);
+            RemoveItem();
         }
+    }
+
+
+    public void RemoveItem()
+    {
+        itemAmount = 0;
+        itemObject = null;
+        UpdateIcon();
+        UpdateAmountText();
+        button.onClick.RemoveListener(SelectedSlot);
     }
 
 
