@@ -13,8 +13,9 @@ public enum ItemType
 public enum ConsumableType
 {
     Health, //체력
-    Hunger, //배고픔
     Stamina, //스태미나
+    Hunger, //배고픔
+    Thirsty //목마름
 }
 
 [Serializable]

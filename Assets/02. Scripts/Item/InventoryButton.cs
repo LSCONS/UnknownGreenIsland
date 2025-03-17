@@ -51,7 +51,7 @@ public class InventoryButton : MonoBehaviour
     }
 
 
-    private void ButtonSetActive(bool equip, bool unequip, bool use, bool discard)
+    public void ButtonSetActive(bool equip, bool unequip, bool use, bool discard)
     {
         equipButton.gameObject.SetActive(equip);
         unEquipButton.gameObject.SetActive(unequip);

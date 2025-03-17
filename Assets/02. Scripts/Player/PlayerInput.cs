@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class PlayerInput : MonoBehaviour
 
     public Action inventoryAction;
     public Action interactionAction;
+    public Action inventoryExitAction;
 
     private void OnValidate()
     {
@@ -126,12 +128,30 @@ public class PlayerInput : MonoBehaviour
     }
     private void InteractionStart(InputAction.CallbackContext context)
     {
-        interactionAction?.Invoke();
+        if (!(IsInventory))
+        {
+            interactionAction?.Invoke();
+        }
     }
     private void ToggleInventory(InputAction.CallbackContext context)
     {
+        IsInventoryToggle();
+        if (IsInventory) 
+        {
+            playerMoveDir = Vector2.zero;
+            inventoryAction?.Invoke();
+        }
+        else
+        {
+            inventoryExitAction?.Invoke();
+            Util.CursorisLock(!(IsInventory));
+        }
+    }
+
+
+    //인벤토리의 현재 상태를 바꿀 때 접근하는 메서드
+    public void IsInventoryToggle()
+    {
         isInventory = !isInventory;
-        if(isInventory) { playerMoveDir = Vector2.zero; }
-        inventoryAction?.Invoke();
     }
 }
