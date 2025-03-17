@@ -18,6 +18,12 @@ public class UIBuilding : MonoBehaviour
     public int buildItem;
     private int oldBuildItem;
 
+
+    private void Awake()
+    {
+        buildingManager = GetComponentInParent<BuildingManager>();
+    }
+
     private void Start()
     {
         buildItem = buttons.Count;
@@ -29,7 +35,6 @@ public class UIBuilding : MonoBehaviour
         oldBuildItem = 0;
     }
     
-
     public void GetCurrentBuild()
     {
         mousePosition = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
@@ -56,71 +61,29 @@ public class UIBuilding : MonoBehaviour
         buttons[curBuildItem].sceneImage.color = buttons[curBuildItem].PressedColor;
         if (curBuildItem == 0)
         {
-            print("1 button");
             buildingManager.currentBuildType = SelectedBuildingType.floor;
             buildingManager.currentBuildingIndex = 0;
         }
         if (curBuildItem == 1)
         {
-            print("2 button");
             buildingManager.currentBuildType = SelectedBuildingType.wall;
             buildingManager.currentBuildingIndex = 1;
         }
         if (curBuildItem == 2)
         {
-            print("3 button");
             buildingManager.currentBuildType = SelectedBuildingType.wall;
             buildingManager.currentBuildingIndex = 2;
         }
         if (curBuildItem == 3)
         {
-            print("4 button");
             buildingManager.currentBuildType = SelectedBuildingType.wall;
             buildingManager.currentBuildingIndex = 0;
         }
         if (curBuildItem == 4)
         {
-            print("5 button");
             buildingManager.currentBuildType = SelectedBuildingType.wall;
             buildingManager.currentBuildingIndex = 3;
         }
-
-
-    }
-
-    private void Awake()
-    {
-        buildingManager = GetComponentInParent<BuildingManager>();
-    }
-
-    public void ChangetoFloor()
-    {
-        buildingManager.currentBuildType = SelectedBuildingType.floor;
-        buildingManager.currentBuildingIndex = 0;
-    }
-
-    public void ChangetoWall()
-    {
-        buildingManager.currentBuildType = SelectedBuildingType.wall;
-        buildingManager.currentBuildingIndex = 1;
-    }
-
-    public void ChangetoHalfWall()
-    {
-        buildingManager.currentBuildType = SelectedBuildingType.wall;
-        buildingManager.currentBuildingIndex = 2;
-    }
-
-    public void ChangetoDoorWall()
-    {
-        buildingManager.currentBuildType = SelectedBuildingType.wall;
-        buildingManager.currentBuildingIndex = 0;
-    }
-
-    public void ChangetoRoofWall()
-    {
-        buildingManager.currentBuildType = SelectedBuildingType.wall;
-        buildingManager.currentBuildingIndex = 3;
     }
 }
 
