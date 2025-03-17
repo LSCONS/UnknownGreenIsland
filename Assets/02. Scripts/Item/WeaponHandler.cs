@@ -14,8 +14,14 @@ public class WeaponHandler : MonoBehaviour
     
     Camera camera;
 
+    
     public WeaponType weaponType;
-    public int attackDistance; //°ø°Ý »ç°Å¸®
+
+    [Header("Resource")]
+    public ResourceObjectType Resourcetype;
+
+    [Header("Combat")]
+    public int attackDistance; //ê³µê²© ì‚¬ê±°ë¦¬
     public int attackDamage;
 
     private void Awake()
@@ -33,7 +39,7 @@ public class WeaponHandler : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out ResourceObject resource) && WeaponType.Resources == weaponType)
             {
-                resource.Gather(hit.point, hit.normal);
+                resource.Gather(hit.point, hit.normal, Resourcetype);
             }
             else if(hit.collider.TryGetComponent(out Enemy Enemy) && WeaponType.Combat == weaponType)
             {
