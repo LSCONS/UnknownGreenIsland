@@ -28,11 +28,7 @@ public class UIBuilding : MonoBehaviour
         curBuildItem = 0;
         oldBuildItem = 0;
     }
-
-    private void Update()
-    {
-        
-    }
+    
 
     public void GetCurrentBuild()
     {
