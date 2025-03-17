@@ -17,11 +17,11 @@ public class ResourceSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(time / 3);
         transform.GetChild(0).gameObject.SetActive(true);
-        transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        transform.GetChild(0).localScale = new Vector3(0.3f, 0.3f, 0.3f); 
         yield return new WaitForSeconds(time / 3);
-        transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+        transform.GetChild(0).localScale = new Vector3(0.6f, 0.6f, 0.6f);
         yield return new WaitForSeconds(time / 3);
-        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        transform.GetChild(0).localScale = new Vector3(1.0f, 1.0f, 1.0f);
         GetComponentInChildren<ResourceObject>().capacity = OriginCapacity;
     }
 }
