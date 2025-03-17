@@ -10,7 +10,8 @@ public static class ReadonlyData
     public static readonly string ResourceObjectLayer = "ResourceObject";
     public static readonly string EnemyLayer = "Enemy";
     public static readonly string BuildingLayer = "Building";
-    public static readonly string InteractionLayer = "Interaction"; 
+    public static readonly string InteractionLayer = "Interaction";
+    public static readonly string WeaponLayer = "Weapon";
 
     //추가한 레이어의 이름을 기반으로 LayerMask를 생성할 경우 아래와 같이 선언해서 저장.
     public static readonly LayerMask PlayerLayerMask = 1 << LayerMask.NameToLayer(PlayerLayer);
@@ -19,4 +20,5 @@ public static class ReadonlyData
     public static readonly LayerMask EnemyLayerMask = 1 << LayerMask.NameToLayer(EnemyLayer);
     public static readonly LayerMask BuildingLayerMask = 1 << LayerMask.NameToLayer(BuildingLayer);
     public static readonly LayerMask InteractionLayerMask = 1 << LayerMask.NameToLayer(InteractionLayer);
+    public static readonly LayerMask WeaponLayerMask = 1 << LayerMask.NameToLayer(WeaponLayer);
 }

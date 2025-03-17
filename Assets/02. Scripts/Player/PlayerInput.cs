@@ -100,7 +100,7 @@ public class PlayerInput : MonoBehaviour
         mousePositionDir = Vector2.zero;
     }
     private void OnJump(InputAction.CallbackContext context)
-    {
+    {                                 
         isJump = true;
     }
     private void StopJump(InputAction.CallbackContext context)

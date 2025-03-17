@@ -6,23 +6,22 @@ using VInspector;
 public class PlayerIsgrounded : MonoBehaviour
 {
     
-    public LayerMask _excludeLayerMask;
+    public LayerMask includeLayerMask;
 
-    [ShowInInspector]
-    private bool isgrounded;
+     public bool isgrounded;
     public bool Isgrounded { get => isgrounded; }
 
     private void OnValidate()
     {
         //적 레이어와 플레이어 레이어가 아닌 경우
-        _excludeLayerMask = ~(ReadonlyData.EnemyLayerMask | ReadonlyData.PlayerLayerMask);
+        includeLayerMask = (ReadonlyData.GroundLayerMask | ReadonlyData.InteractionLayerMask | ReadonlyData.ResourceObjectLayerMask);
     }
 
 
     //지속적으로 닿고 있는 레이어가 _excludeLayerMask와 같을 경우 땅에 닿고 있음을 표시
     private void OnTriggerStay(Collider other)
     {
-        if(_excludeLayerMask == (_excludeLayerMask | 1 << other.gameObject.layer))
+        if(includeLayerMask == (includeLayerMask | 1 << other.gameObject.layer))
         {
             isgrounded = true;
         }
@@ -32,7 +31,7 @@ public class PlayerIsgrounded : MonoBehaviour
     //_excludeLayerMask 레이어에서 벗어난 경우 땅에서 벗어남을 표시
     private void OnTriggerExit(Collider other)
     {
-        if (_excludeLayerMask == (_excludeLayerMask | 1 << other.gameObject.layer))
+        if (includeLayerMask == (includeLayerMask | 1 << other.gameObject.layer))
         {
             isgrounded = false;
         }
