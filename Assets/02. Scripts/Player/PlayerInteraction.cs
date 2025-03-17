@@ -13,11 +13,13 @@ public class PlayerInteraction : MonoBehaviour
     private ItemObject itemObject;
     private PlayerInput playerInput;
     private UIInteraction uiInteraction;
+    private PlayerInventoty playerInventoty;
     private float tempime = 0;
 
 
     private void OnValidate()
     {
+        playerInventoty = transform.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
         playerInput = transform.GetComponentDebug<PlayerInput>();
         uiInteraction  = transform.GetComponentForTransformFindName<UIInteraction>("UIInteraction");
         interactionLayerMask = ReadonlyData.InteractionLayerMask;
@@ -79,27 +81,26 @@ public class PlayerInteraction : MonoBehaviour
     //레이어에 따라 상호작용을 나눠서 적용시킴.
     private void InteractionHandler()
     {
-        //TODO: 레이어에 따라 상호작용을 나눔.
         CheckItemSlot(itemObject);
     }
 
 
     //인벤토리에 남은 칸을 확인하고 아이템을 집어넣는 메서드
-    private void CheckItemSlot(ItemObject item)
+    public void CheckItemSlot(ItemObject itemObject)
     {
-
+        playerInventoty.CheckItemSlot(itemObject);
     }
 
 
     //문과 상호작용을 할 경우 실행할 메서드
-    private void ToggleFabric()
+    public void ToggleFabric()
     {
 
     }
 
 
     //상자와 상호작용을 할 경우 실행할 메서드
-    private void ToggleChest()
+    public void ToggleChest()
     {
 
     }

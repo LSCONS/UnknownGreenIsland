@@ -15,7 +15,6 @@ public class PlayerCheckAngle : MonoBehaviour
     //현재 부딪히고 있는 바닥의 각도가 45도 이상일 경우 플레이어를 밀어서 떨어뜨리는 메서드
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-
         float angle = Vector3.Angle(hit.normal, Vector3.up);
         if (angle > 45)
         {
