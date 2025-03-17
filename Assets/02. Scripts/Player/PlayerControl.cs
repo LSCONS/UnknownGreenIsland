@@ -96,6 +96,7 @@ public class PlayerControl : MonoBehaviour
                 playerStatus.CanJump()
             )
         {
+            Debug.Log("점프중");
             nowJumpForce = playerStatus.NewJumpForce;
         }
     }

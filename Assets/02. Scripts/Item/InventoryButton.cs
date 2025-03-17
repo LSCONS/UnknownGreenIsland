@@ -26,4 +26,36 @@ public class InventoryButton : MonoBehaviour
         useButton.onClick.AddListener(playerInventoty.UseItem);
         discardButton.onClick.AddListener(playerInventoty.DiscardItem);
     }
+
+
+    private void OnEnable()
+    {
+        ButtonSetActive(false, false, false, false);
+    }
+
+
+    public void ButtonCheckType(ItemType type)
+    {
+        switch(type)
+        {
+            case ItemType.Equipable:
+                ButtonSetActive(true, false, false, true);
+                break;
+            case ItemType.Resource:
+                ButtonSetActive(false, false, false, true);
+                break;
+            case ItemType.Consumable:
+                ButtonSetActive(false, false, true, true);
+                break;
+        }
+    }
+
+
+    private void ButtonSetActive(bool equip, bool unequip, bool use, bool discard)
+    {
+        equipButton.gameObject.SetActive(equip);
+        unEquipButton.gameObject.SetActive(unequip);
+        useButton.gameObject.SetActive(use);
+        discardButton.gameObject.SetActive(discard);
+    }
 }
