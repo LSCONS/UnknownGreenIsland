@@ -6,6 +6,11 @@ public class ResourceObject : MonoBehaviour
     public int quantityPerHit = 1;
     public int capacity;
 
+    private void Start()
+    {
+        capacity = GetComponentInParent<ResourceSpawner>().OriginCapacity;
+    }
+
     public void Gather(Vector3 hitPoint, Vector3 hitNormal)
     {
         for (int i = 0; i < quantityPerHit; i++)
@@ -18,8 +23,12 @@ public class ResourceObject : MonoBehaviour
 
         if (capacity <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
+    public void OnDisable()
+    {
+        GetComponentInParent<ResourceSpawner>().SpawnStart();
+    }
 }
