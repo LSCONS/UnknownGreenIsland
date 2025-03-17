@@ -81,26 +81,33 @@ public class PlayerInteraction : MonoBehaviour
     //레이어에 따라 상호작용을 나눠서 적용시킴.
     private void InteractionHandler()
     {
-        CheckItemSlot(itemObject);
+        InteractionItem(itemObject);
     }
 
 
     //인벤토리에 남은 칸을 확인하고 아이템을 집어넣는 메서드
-    public void CheckItemSlot(ItemObject itemObject)
+    public void InteractionItem(ItemObject itemObject)
     {
         playerInventoty.CheckItemSlot(itemObject);
     }
 
 
     //문과 상호작용을 할 경우 실행할 메서드
-    public void ToggleFabric()
+    public void InteractionFabic()
     {
 
     }
 
 
-    //상자와 상호작용을 할 경우 실행할 메서드
-    public void ToggleChest()
+    //조합대와 상호작용을 할 경우 실행할 메서드
+    public void InteractionCraftingTable()
+    {
+        //조합대 관련된 UI와 연결
+    }
+
+
+    //조리대와 상호작용을 할 경우 실행할 메서드
+    public void InteractionCookingTable()
     {
 
     }
