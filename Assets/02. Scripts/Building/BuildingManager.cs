@@ -26,36 +26,46 @@ public class BuildingManager : MonoBehaviour
     private GameObject ghostBuildGameobject;
     private bool isGhostInValidPosition = false;
     private Transform ModelParent = null;
+    private UIBuilding uiBuilding;
+
+    private void Awake()
+    {
+        uiBuilding = GetComponentInChildren<UIBuilding>();
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
             isBuilding = !isBuilding;
 
-        if (isBuilding && Input.GetMouseButtonDown((1)))
+        if (isBuilding)
         {
-            isBuilding = false;
-            buildingUI.SetActive(true);
-            Util.CursorisLock(false);
-        }
-
-        if (Input.GetMouseButtonUp((1)))
-        {
-            isBuilding = true;
-            buildingUI.SetActive(false);
-            Util.CursorisLock(true);
-        }
-
-        if (isBuilding && Input.GetKeyDown(KeyCode.C))
-        {
-            if (ghostBuildGameobject != null)
+            if (Input.GetMouseButtonDown(1)) // Right-click to open the UI
             {
-                Destroy(ghostBuildGameobject);
-                ghostBuildGameobject = null;
+                isBuilding = false;
+                buildingUI.SetActive(true);
+                Util.CursorisLock(false);
             }
-            SwitchBuildObject();
-            GhostBuild();
         }
+        else if (buildingUI.activeSelf) 
+        {
+            if (Input.GetMouseButtonUp(1)) 
+            {
+                isBuilding = true;
+                buildingUI.SetActive(false);
+                Util.CursorisLock(true);
+            }
+        }
+
+        if (buildingUI.activeSelf)
+        {
+            uiBuilding.GetCurrentBuild();
+            if (Input.GetMouseButtonDown(0))
+            {
+                uiBuilding.ButtonAction();
+            }
+        }
+
 
         if (Input.GetKeyDown(KeyCode.N))
         {
