@@ -16,7 +16,7 @@ MonoBehaviour:
   ItemName: "\uC2A4\uD14C\uC774\uD06C"
   description: "\uC774\uB7F0 \uBB34\uC778\uB3C4\uC5D0\uC11C \uB108\uBB34 \uD638\uD654\uB86D\uB2E4
     \uC0DD\uAC01\uD55C\uB2E4."
-  interaction_Information: 
+  interaction_Information: "\uC90D\uAE30"
   abnormalStatus: 0
   resourceType: 0
   type: 1
