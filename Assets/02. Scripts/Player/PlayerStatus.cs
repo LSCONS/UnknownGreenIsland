@@ -16,16 +16,30 @@ public enum AbnormalStatus
     Poisoning = 1 << 1,     //중독            //초당 데미지
     Fracture = 1 << 2,      //골절            //달리기 금지
 
-    Dehydrration = 1 << 3,  //탈수            //달리기 불가능, 이동속도 감소
+    Dehydrration = 1 << 3,  //탈수            //이동속도 감소
     Thirsty = 1 << 4,       //목마름          //스태미너 회복량 감소
     Drink = 1 << 5,         //물마심          //스태미너 회복량 증가
-    PlentyWater = 1 << 6,   //수분 많음       //이동속도 증가, 최대 스태미너 증가
+    PlentyWater = 1 << 6,   //수분 많음       //이동속도 증가
 
-    Starvation = 1 << 7,    //아사            //공격력 감소, 최대 체력 감소
+    Starvation = 1 << 7,    //아사            //공격력 감소
     Hunger = 1 << 8,        //배고픔          //초당 데미지
     Eat = 1 << 9,           //밥먹음          //초당 회복
-    EatFull = 1 << 10,      //배부름          //최대 체력 증가, 공격력 버프
+    EatFull = 1 << 10,      //배부름          //공격력 버프
 }
+
+//출혈 상태이상 -> 출혈이미지
+//중독 상태이상 -> 독 이미지
+//골절 상태이상 -> 뼈 이미지
+//달리기 불가능 상태이상  -> 뼈 이미지
+//이동속도 감소 -> 늪 이미지
+//이동속도 증가 -> 신발 이미지
+//스태미나 회복량 감소 -> 
+
+
+//음식 잘못 먹으면 posion
+//데미지 입으면 확률 bleeding
+//높은 곳에서 떨어지면 fracture
+
 
 public enum PlayerAction
 {
@@ -50,8 +64,10 @@ public class PlayerStatus : MonoBehaviour
     private float curHunger = 100f;         //플레이어 현재 배고픔
     private float maxThirsty = 100f;        //플레이어 최대 목마름
     private float curThirsty = 100f;        //플레이어 현재 목마름
-    private int healthChangeValue = 0;    //플레이어의 초당 체력 변화량
-    private int staminaChangeValue = 3;   //플레이어의 초당 스태미나 변화량
+    private int healthChangeValue = 0;      //플레이어의 초당 체력 변화량
+    private int staminaChangeValue = 8;     //플레이어의 초당 스태미나 변화량
+    private int hungerChangeValue = -3;     //플레이어의 초당 배고픔 변화량
+    private int thirstyChagneValue = -5;    //플레이어의 초당 수분 변화량
     private float damageValue = 5;          //플레이어 데미지 배수
     private bool isWeapon = false;          //플레이어의 장비 유무;
     private Dictionary<AbnormalStatus, int> abnormalTimers = new Dictionary<AbnormalStatus, int>();
@@ -129,6 +145,8 @@ public class PlayerStatus : MonoBehaviour
         //체력, 스태미나 변화값이 0이 아닌경우 효과 적용
         if (healthChangeValue != 0) HealthChange(0.1f * healthChangeValue);
         if (staminaChangeValue != 0) StaminaChange(0.1f * staminaChangeValue);
+        if (hungerChangeValue != 0) HungerChange(0.1f  * hungerChangeValue);
+        if (thirstyChagneValue != 0) ThirstyChange(0.1f * thirstyChagneValue);
 
         //현재 상태이상 리스트가 존재할 경우
         if (abnormalTimers.Count > 0)

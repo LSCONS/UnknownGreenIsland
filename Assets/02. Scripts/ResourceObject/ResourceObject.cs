@@ -46,6 +46,6 @@ public class ResourceObject : MonoBehaviour
 
     public void OnDisable()
     {
-        GetComponentInParent<ResourceSpawner>().SpawnStart();
+        GetComponentInParent<ResourceSpawner>()?.SpawnStart();
     }
 }
