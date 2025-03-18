@@ -35,7 +35,7 @@ public class WeaponHandler : MonoBehaviour
         Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2 + 1.5f , 0 ));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, attackDistance, ReadonlyData.ResourceObjectLayerMask | ReadonlyData.EnemyLayerMask))
+        if (Physics.Raycast(ray, out hit, attackDistance, ReadonlyDataLayer.ResourceObjectLayerMask | ReadonlyDataLayer.EnemyLayerMask))
         {
             if (hit.collider.TryGetComponent(out ResourceObject resource) && WeaponType.Resources == weaponType)
             {

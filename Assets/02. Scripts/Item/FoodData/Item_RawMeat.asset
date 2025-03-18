@@ -12,12 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
   m_Name: Item_RawMeat
   m_EditorClassIdentifier: 
+  ItemID: 0
   ItemName: "\uC0DD\uACE0\uAE30"
   description: "\uB2F9\uC2E0\uC774 \uC778\uAC04\uC774\uB77C\uBA74 \uAD6C\uC6CC\uBA39\uC790,
     \uC694\uB9AC\uAC00 \uAC00\uB2A5\uD558\uB2E4."
+  interaction_Information: 
+  abnormalStatus: 0
   type: 1
-  icon: {fileID: 21300000, guid: 083e493933cb9954695ce113fee68a00, type: 3}
+  inventory_icon: {fileID: 0}
+  interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 8277029271889899090, guid: 9f2e6767e6abbf540b942c7331b43c5e, type: 3}
   canStack: 1
   maxStackAmount: 1000
-  consumabale: []
+  consumabale:
+  - type: 1
+    value: 10

@@ -14,15 +14,19 @@ public class PlayerInteraction : MonoBehaviour
     private PlayerInput playerInput;
     private UIInteraction uiInteraction;
     private PlayerInventoty playerInventoty;
+    private CombinationController combinationController;
     private float tempime = 0;
+
+    public Action craftingToggle;
 
 
     private void OnValidate()
     {
+        combinationController = transform.GetComponentForTransformFindName<CombinationController>("CombinationControl");
         playerInventoty = transform.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
         playerInput = transform.GetComponentDebug<PlayerInput>();
         uiInteraction  = transform.GetComponentForTransformFindName<UIInteraction>("UIInteraction");
-        interactionLayerMask = ReadonlyData.InteractionLayerMask;
+        interactionLayerMask = ReadonlyDataLayer.InteractionLayerMask | ReadonlyDataLayer.InteractionCookLayerMask | ReadonlyDataLayer.InteractionWorkLayerMask;
         _camera = Camera.main;
     }
 
@@ -81,7 +85,24 @@ public class PlayerInteraction : MonoBehaviour
     //레이어에 따라 상호작용을 나눠서 적용시킴.
     private void InteractionHandler()
     {
-        InteractionItem(itemObject);
+        if (currentObject != null)
+        {
+            Debug.Log(currentObject.layer);
+            LayerMask nowLayer = 1 << currentObject.layer;
+
+            if(nowLayer == ReadonlyDataLayer.InteractionLayerMask)
+            {
+                InteractionItem(itemObject);
+            } 
+            else if (nowLayer == ReadonlyDataLayer.InteractionCookLayerMask)
+            {
+                InteractionCookingTable();
+            }
+            else if (nowLayer == ReadonlyDataLayer.InteractionWorkLayerMask)
+            {
+                InteractionCraftingTable();
+            }
+        }
     }
 
 
@@ -103,12 +124,24 @@ public class PlayerInteraction : MonoBehaviour
     public void InteractionCraftingTable()
     {
         //조합대 관련된 UI와 연결
+        //인벤토리 토글 상태 변경
+        playerInput.IsInventoryToggle();
+
+        //TODO: 해당 오브젝트와 관련된 조합 식 업로드
+        combinationController.CreateCombinationSlot(ResourceManager.Instance.CraftRecipe);
+
+        craftingToggle?.Invoke();
     }
 
 
     //조리대와 상호작용을 할 경우 실행할 메서드
     public void InteractionCookingTable()
     {
+        //인벤토리 토글 상태 변경
+        playerInput.IsInventoryToggle();
 
+        //TODO: 해당 오브젝트와 관련된 조합 식 업로드
+
+        craftingToggle?.Invoke();
     }
 }

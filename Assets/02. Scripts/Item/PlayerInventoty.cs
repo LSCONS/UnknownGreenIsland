@@ -29,6 +29,11 @@ public class PlayerInventoty : MonoBehaviour
     }
 
 
+    private void OnEnable()
+    {
+        ResetActive();
+    }
+
 
     /// <summary>
     /// 넣을 수 있는 아이템 칸이 있는지 확인하고 아이템을 집어넣는 메서드
@@ -44,7 +49,6 @@ public class PlayerInventoty : MonoBehaviour
                 return;
             }
         }
-
         //TODO: 아이템 칸이 꽉 차서 아이템 칸을 찾을 수 없는 경우의 예외처리 명령어 필요 
     }
 
@@ -75,8 +79,7 @@ public class PlayerInventoty : MonoBehaviour
             inventorySlots[selectItemSlotIndex].UseItem();
             if (inventorySlots[selectItemSlotIndex].itemObject == null)
             {
-                titleText.text = "";
-                infoText.text = "";
+                ResetActive();
             }
         }
     }
@@ -110,10 +113,15 @@ public class PlayerInventoty : MonoBehaviour
             inventorySlots[selectItemSlotIndex].RemoveItem();
             if (inventorySlots[selectItemSlotIndex].itemObject == null)
             {
-                titleText.text = "";
-                infoText.text = "";
+                ResetActive();
             }
         }
-        //TODO: 아이템 삭제 및 버리기 추가 필요
+    }
+
+    private void ResetActive()
+    {
+        titleText.gameObject.SetActive(false);
+        infoText.gameObject.SetActive(false);
+        inventoryButton.ButtonSetActive(false, false, false, false);
     }
 }

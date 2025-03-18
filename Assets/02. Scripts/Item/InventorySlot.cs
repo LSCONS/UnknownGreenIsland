@@ -8,29 +8,31 @@ using VInspector;
 
 public class InventorySlot : MonoBehaviour
 {
-    public int slotIndex;
-    [ShowInInspector, ReadOnly]
     private Image icon;
     private TextMeshProUGUI text;
-    public ItemObject itemObject;
-    private int itemAmount = 0;
-    private GameObject _objectPool;
+    private GameObject objectPool;
     private Button button;
-    [ShowInInspector, ReadOnly]
     private PlayerInventoty playerInventory;
+    private PlayerStatus playerStatus;
+    private int itemAmount = 0;
+
+
+    public ItemObject itemObject;
+    public int slotIndex;
 
     private void OnValidate()
     {
         text = transform.GetComponentForTransformFindName<TextMeshProUGUI>("QuantityText");
         icon = transform.GetComponentForTransformFindName<Image>("Icon");
-        _objectPool = transform.GetComponentForTransformFindName<Transform>("ObjectPool").gameObject;
+        objectPool = transform.GetComponentForTransformFindName<Transform>("ObjectPool").gameObject;
         button = transform.GetComponentDebug<Button>();
-        playerInventory = GetComponentInParent<PlayerInventoty>();
     }
 
 
     private void Awake()
     {
+        playerInventory = transform.GetComponentInparentDebug<PlayerInventoty>();
+        playerStatus = transform.GetComponentInparentDebug<PlayerStatus>();
         UpdateAmountText();
         UpdateIcon();
     }
@@ -53,7 +55,7 @@ public class InventorySlot : MonoBehaviour
             UpdateAmountText();
         }
 
-        inputItemObject.transform.SetParent(_objectPool.transform);
+        inputItemObject.transform.SetParent(objectPool.transform);
     }
 
 
@@ -105,15 +107,39 @@ public class InventorySlot : MonoBehaviour
         {
             RemoveItem();
         }
+        UpdateAmountText();
     }
 
 
+    //입력받은 타입과 value를 Status에 적용시키는 메서드
+    private void ChangeValue(ConsumableType type, float value)
+    {
+        switch (type)
+        {
+            case ConsumableType.Health:
+                playerStatus.HealthChange(value);
+                break;
+            case ConsumableType.Stamina:
+                playerStatus.StaminaChange(value);
+                break;
+            case ConsumableType.Hunger:
+                playerStatus.HungerChange(value);
+                break;
+            case ConsumableType.Thirsty:
+                playerStatus.ThirstyChange(value);
+                break;
+        }
+    }
+
+
+    /// <summary>
+    /// 아이템을 삭제할 때 사용하는 메서드
+    /// </summary>
     public void RemoveItem()
     {
         itemAmount = 0;
         itemObject = null;
         UpdateIcon();
-        UpdateAmountText();
         button.onClick.RemoveListener(SelectedSlot);
     }
 
@@ -142,7 +168,13 @@ public class InventorySlot : MonoBehaviour
     /// </summary>
     public void UseItem()
     {
-        //TODO: 사용 아이템 사용하는 명령어 필요
+        if(itemObject.data.consumabale.Length > 0)
+        {
+            for(int i = 0; i < itemObject.data.consumabale.Length; i++)
+            {
+                ChangeValue(itemObject.data.consumabale[i].type, itemObject.data.consumabale[i].value);
+            }
+        }
         ReduceItem();
     }
 }

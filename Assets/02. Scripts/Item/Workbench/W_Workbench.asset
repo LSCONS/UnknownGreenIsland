@@ -16,7 +16,8 @@ MonoBehaviour:
   ItemName: "\uC544\uC774\uD15C \uC81C\uC791\uB300"
   description: "\uB2E4\uC591\uD55C \uB3C4\uAD6C\uB97C \uC81C\uC791 \uD560\uC218\uC788\uB2E4."
   interaction_Information: 
-  type: 0
+  abnormalStatus: 0
+  type: 1
   inventory_icon: {fileID: 0}
   interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 7076512031768099464, guid: 155ae6c3c89345c4e8f81435806a543d, type: 3}

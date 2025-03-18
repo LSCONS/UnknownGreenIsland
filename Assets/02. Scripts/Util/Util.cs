@@ -127,7 +127,7 @@ public static class Util
     public static T GetComponentInparentDebug<T>(this Transform parent, bool isDebug = true) where T : Component
     {
         T tempT = parent.GetComponentInParent<T>();
-        if (tempT == null && isDebug) Debug.Log($"{typeof(T)} is null");
+        if (tempT == null && isDebug) Debug.LogError($"{typeof(T)} is null");
         return tempT;
     }
 
