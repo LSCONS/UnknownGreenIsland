@@ -10,18 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
-  m_Name: BlueFree
+  m_Name: LogWood
   m_EditorClassIdentifier: 
-  ItemID: 0
-  ItemName: "\uD478\uB978\uAD11\uBB3C"
-  description: "\uAD11\uBB3C\uC774 \uBB3C\uC744 \uD761\uC218\uD558\uBA74 \uC190\uC73C\uB85C
-    \uC27D\uAC8C \uBCC0\uD615\uC744 \uC904\uC218\uC788\uB294 \uAD11\uBB3C\uC774\uB2E4."
+  ItemID: 3003
+  ItemName: "\uD1B5\uB098\uBB34"
+  description: "\uD3C9\uBC88\uD55C \uD1B5\uB098\uBB34\uC774\uB2E4."
   interaction_Information: 
   abnormalStatus: 0
+  resourceType: 0
   type: 0
   inventory_icon: {fileID: 0}
   interaction_Icon: {fileID: 0}
-  dropPrefab: {fileID: 5529291046337209692, guid: b32a8b731d1d20146a2599ee23a54c74, type: 3}
+  dropPrefab: {fileID: 8074136572240263345, guid: 86a429ad88169fc4ca9b597d502a403f, type: 3}
   canStack: 1
   maxStackAmount: 1000
-  consumabale: []
+  consumabale:
+  - type: 0
+    value: 8
+  resources: []

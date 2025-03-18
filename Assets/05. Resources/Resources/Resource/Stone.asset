@@ -14,15 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemID: 3001
   ItemName: "\uB3CC"
-  description: "\uB3CC\uC785\uB2C8\uB2E4"
-  interaction_Information: "\uC90D\uAE30"
+  description: "\uAD6C\uC11D\uAE30 \uC2DC\uB300\uC5D0 \uB3CC\uB85C \uB0B4\uB824\uCCD0
+    \uC0AC\uB0E5\uC744 \uD588\uB2E4\uD55C\uB2E4. \uBB34\uAE30\uAC00 \uB420\uC218\uB3C4?"
+  interaction_Information: 
   abnormalStatus: 0
-  resourceType: 2
-  type: 2
-  inventory_icon: {fileID: 21300000, guid: b2cfb673dc7502744a03e06d2bf5e23d, type: 3}
-  interaction_Icon: {fileID: 21300000, guid: b2cfb673dc7502744a03e06d2bf5e23d, type: 3}
-  dropPrefab: {fileID: 3265458777652993643, guid: bd226a4649dde4f41b1c3a1f6f874095, type: 3}
+  resourceType: 0
+  type: 0
+  inventory_icon: {fileID: 0}
+  interaction_Icon: {fileID: 0}
+  dropPrefab: {fileID: 2059436689234067844, guid: 08e33400aa466244290a33be690e280d, type: 3}
   canStack: 1
-  maxStackAmount: 20
-  consumabale: []
+  maxStackAmount: 1000
+  consumabale:
+  - type: 0
+    value: 8
   resources: []
