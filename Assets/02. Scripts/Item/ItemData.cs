@@ -12,6 +12,7 @@ public enum ItemType
     Resource, //자원 아이템
 }
 
+
 public enum ConsumableType
 {
     Health, //체력
@@ -19,6 +20,26 @@ public enum ConsumableType
     Hunger, //배고픔
     Thirsty //목마름
 }
+
+
+//재료가 될 수 있는 아이템들을 정리
+public enum Resource
+{
+    None, //설정 없음
+    Wood, //나무 아이템
+    Stone, //돌 아이템
+    Rice, //쌀 아이템
+    Meal, //밀 아이템
+}
+
+
+[Serializable]
+public class CrafitingResource
+{
+    public Resource type; //조합하는데 필요한 아이템 재료
+    public float Amount; //해당 아이템의 수
+}
+
 
 [Serializable]
 public class ItemDataConsumabale
@@ -36,6 +57,7 @@ public class ItemData : ScriptableObject
     public string description; //아이템 설명
     public string interaction_Information;  //상호작용 정보
     public AbnormalStatus abnormalStatus; //디버프 설정
+    public Resource resourceType;       //해당 아이템의 재료 타입
     public ItemType type; //아이템 타입
     public Sprite inventory_icon; //인벤토리 아이콘
     public Sprite interaction_Icon; //상호작용 아이콘
@@ -47,6 +69,7 @@ public class ItemData : ScriptableObject
 
     [Header("Consumable")]
     public ItemDataConsumabale[] consumabale; //아이템 효과값 배열로 만듬 
+    public CrafitingResource[] resources; //조합하기 위한 재료 아이템들
 
     public class Consumable
     {
