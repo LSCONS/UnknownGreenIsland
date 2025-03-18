@@ -8,19 +8,19 @@ using UnityEngine.UI;
 
 public class CombinationSlot : MonoBehaviour
 {
-    private Image image;
-    private TextMeshProUGUI titleText;
-    private TextMeshProUGUI description;
-    private TextMeshProUGUI recipeText;
+
+    public Image image;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI description;
+    public TextMeshProUGUI recipeText;
     public ItemObject itemObject;
 
-    private void Awake()
+    private void OnValidate()
     {
         image = transform.GetComponentForTransformFindName<Image>("Icon");
         titleText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
         description = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
         recipeText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("Recipe");
-        UpdateData(itemObject);
     }
 
     public void UpdateData(ItemObject itemObject)

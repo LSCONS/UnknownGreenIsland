@@ -482,6 +482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d74836e77fb66a46b4b1cd7f8142472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 2321074530377602999}
+  titleText: {fileID: 2177468126165209628}
+  description: {fileID: 8467936971074661474}
+  recipeText: {fileID: 5526383144418084169}
+  itemObject: {fileID: 0}
 --- !u!1 &5704373988381546759
 GameObject:
   m_ObjectHideFlags: 0
