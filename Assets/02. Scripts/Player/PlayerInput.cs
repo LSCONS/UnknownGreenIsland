@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour
     private PlayerInputSystem inputSystem;
     private PlayerStatus playerStatus;
     private PlayerInteraction playerInteraction;
+    private Animator playerAnimator;
 
     private Vector2 playerMoveDir;
     public Vector2 PlayerMoveDir { get => playerMoveDir; }
@@ -32,6 +33,7 @@ public class PlayerInput : MonoBehaviour
     {
         playerStatus = transform.GetComponentDebug<PlayerStatus>();
         playerInteraction = transform.GetComponentDebug<PlayerInteraction>();
+        playerAnimator = transform.GetComponentDebug<Animator>();
     }
 
 
@@ -109,6 +111,10 @@ public class PlayerInput : MonoBehaviour
     private void OnAction(InputAction.CallbackContext context)
     {
         Attack?.Invoke(ReadonlyAnimator.Attack, true);
+    }
+    private void StopAction(InputAction.CallbackContext context)
+    {
+        Attack?.Invoke(ReadonlyAnimator.Attack, false);
     }
     private void OnRun(InputAction.CallbackContext context)
     {
