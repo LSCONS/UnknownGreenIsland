@@ -11,10 +11,7 @@ public enum WeaponType
 
 public class WeaponHandler : MonoBehaviour
 {
-    
     Camera camera;
-
-    
     public WeaponType weaponType;
 
     [Header("Resource")]

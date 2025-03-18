@@ -55,11 +55,11 @@ public static class ReadonlyDataItem
     public static readonly int MeatSoup = 1004;
     public static readonly int CookMeat = 1005;
     public static readonly int CookGreenMeat = 1006;
-    public static readonly int Budaejjigae = 1006;
+    public static readonly int Budaejjigae = 1007;
+}
 
 
-
-
-
-
+public static class ReadonlyAnimator
+{
+    public static readonly string Attack = "IsAttack";
 }

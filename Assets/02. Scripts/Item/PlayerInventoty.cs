@@ -13,6 +13,9 @@ public class PlayerInventoty : MonoBehaviour
     private TextMeshProUGUI titleText;
     private TextMeshProUGUI infoText;
     private InventoryButton inventoryButton;
+    private Dictionary<Resource, int> ResourceAmount = new Dictionary<Resource, int>();
+    private Transform weaponPivot;
+    private PlayerStatus playerStatus;
 
 
     private void OnValidate()
@@ -26,12 +29,23 @@ public class PlayerInventoty : MonoBehaviour
         }
         titleText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
         infoText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
+        weaponPivot = Camera.main.transform.GetGameObjectSameNameDFS("WeaponPivot");
+        playerStatus = transform.GetComponentInparentDebug<PlayerStatus>();
     }
 
 
     private void OnEnable()
     {
         ResetActive();
+    }
+
+
+    //모든 상태를 false로 만드는 메서드
+    private void ResetActive()
+    {
+        titleText.gameObject.SetActive(false);
+        infoText.gameObject.SetActive(false);
+        inventoryButton.ButtonSetActive(false, false, false);
     }
 
 
@@ -46,6 +60,7 @@ public class PlayerInventoty : MonoBehaviour
             if (inventorySlots[i].CheckInputItem(itemObject))
             {
                 itemObject.gameObject.SetActive(false);
+                CountResource();
                 return;
             }
         }
@@ -81,6 +96,7 @@ public class PlayerInventoty : MonoBehaviour
             {
                 ResetActive();
             }
+            CountResource();
         }
     }
 
@@ -90,7 +106,26 @@ public class PlayerInventoty : MonoBehaviour
     /// </summary>
     public void EquippedItem()
     {
-        //TODO: 선택한 아이템을 장비 필요
+        if(selectItemSlotIndex != -1)
+        {
+            //TODO: 선택한 아이템을 장비 필요
+            if (playerStatus.IsWeapon)
+            {
+                //이미 장착하고 있는 아이템이 있는 경우 해제
+                UnEquippedItem();
+            }
+
+            //아이템 index에 접속해서 ItemObject를 가져옴
+            //해당 itemObject를 WeaponPivot의 자식으로 보냄.
+            //공격버튼에 핸들러 등록함.
+            inventorySlots[selectItemSlotIndex].EquippedItem(weaponPivot);
+
+
+
+            //playerStatus에 isWeapon true상태로 변경.
+            playerStatus.SetIsWeapon(true);
+            inventoryButton.CheckEquippedWeapon();
+        }
     }
 
 
@@ -100,6 +135,15 @@ public class PlayerInventoty : MonoBehaviour
     public void UnEquippedItem()
     {
         //TODO: 장비한 아이템 해제 필요
+
+        //끼고 있는 아이템을 인벤토리로 추가.
+        ItemObject itemObject = weaponPivot.GetComponentInChildren<ItemObject>();
+        Animator animator = itemObject.GetComponent<Animator>();
+        animator.SetBool(ReadonlyAnimator.Attack, false);
+        CheckItemSlot(itemObject);
+        //playerStatus에 isWeapon false상태로 변경.
+        playerStatus.SetIsWeapon(false);
+        inventoryButton.CheckEquippedWeapon();
     }
 
 
@@ -115,13 +159,92 @@ public class PlayerInventoty : MonoBehaviour
             {
                 ResetActive();
             }
+            CountResource();
         }
     }
 
-    private void ResetActive()
+
+    //플레이어의 모든 인벤토리 칸을 순회하며 Resource 데이터의 총 합을 가져오는 메서드
+    public void CountResource()
     {
-        titleText.gameObject.SetActive(false);
-        infoText.gameObject.SetActive(false);
-        inventoryButton.ButtonSetActive(false, false, false, false);
+        ResourceAmount = new Dictionary<Resource, int>();
+
+        for(int i = 0; i < inventorySlots.Length; i++)
+        {
+            if(inventorySlots[i].itemObject != null &&
+                inventorySlots[i].itemObject.data.resourceType != Resource.None)
+            {
+                if (ResourceAmount.ContainsKey(inventorySlots[i].itemObject.data.resourceType))
+                {
+                    ResourceAmount[inventorySlots[i].itemObject.data.resourceType] += inventorySlots[i].itemAmount;
+                }
+                else
+                {
+                    ResourceAmount.Add(inventorySlots[i].itemObject.data.resourceType, inventorySlots[i].itemAmount);
+                }
+            }
+        }
+    }
+
+    public bool CreateItem(ItemData data)
+    {
+        //생성 가능한 상태인지 확인하기
+        for(int i = 0; i < data.resources.Length; i++)
+        {
+            if (!(ResourceAmount.ContainsKey(data.resources[i].type)) ||
+                ResourceAmount[data.resources[i].type] < data.resources[i].Amount)
+            {
+                Debug.Log("돌아갔나요?");
+                return false;
+            }
+        }
+
+        //아이템 슬롯에서 해당하는 Resource를 확인하고 삭제하기
+        for(int i = 0; i < data.resources.Length; i++)
+        {
+            Debug.Log("탐색하나요?");
+            int reduceCount = data.resources[i].Amount;
+            while(reduceCount > 0)
+            {
+                int index = FindResourceIndex(data.resources[i].type);
+                if (index == -1) 
+                {
+                    Debug.LogError("index를 찾지 못하는 오류 발생");
+                    return false;
+                }
+                inventorySlots[index].ReduceItem();
+                reduceCount--;
+            }
+        }
+
+        //아이템 하나를 생산해서 Inventory에 추가하기
+        GameObject item;
+        if(data.dropPrefab != null)
+        {
+            item = Instantiate(data.dropPrefab);
+            item.AddComponent<ItemObject>().data = data;
+        }
+        else
+        {
+            item = new GameObject("item");
+            item.AddComponent<ItemObject>().data = data;
+        }
+        CheckItemSlot(item.GetComponent<ItemObject>());
+
+        return true;
+    }
+
+
+    private int FindResourceIndex(Resource resource)
+    {
+        for(int i = 0; i < inventorySlots.Length; i++)
+        {
+            if (inventorySlots[i].itemObject?.data.resourceType == resource)
+            {
+                return i;
+            }
+        }
+
+        return -1;
     }
 }

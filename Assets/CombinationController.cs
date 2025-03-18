@@ -11,6 +11,11 @@ public class CombinationController : MonoBehaviour
         foreach(var key in dict.Keys)
         {
             GameObject temp = Instantiate(combinationSlot, transform);
+            CombinationSlot tempComb = temp.GetComponent<CombinationSlot>();
+            if (tempComb != null)
+            {
+                tempComb.UpdateData(dict[key]);
+            }
         }
     }
 }

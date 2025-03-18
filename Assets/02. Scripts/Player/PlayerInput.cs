@@ -8,11 +8,9 @@ using UnityEngine.Windows;
 public class PlayerInput : MonoBehaviour
 {
     private PlayerInputSystem inputSystem;
-    private WeaponHandler weaponHandler;
-    private Animator animator;
-    private Animator playerAnimator;
     private PlayerStatus playerStatus;
     private PlayerInteraction playerInteraction;
+    private Animator playerAnimator;
 
     private Vector2 playerMoveDir;
     public Vector2 PlayerMoveDir { get => playerMoveDir; }
@@ -29,19 +27,13 @@ public class PlayerInput : MonoBehaviour
     public Action inventoryAction;
     public Action interactionAction;
     public Action inventoryExitAction;
+    public Action<string, bool> Attack;
 
     private void OnValidate()
     {
         playerStatus = transform.GetComponentDebug<PlayerStatus>();
         playerInteraction = transform.GetComponentDebug<PlayerInteraction>();
-    }
-
-
-    private void Awake()
-    {
-        playerAnimator = GetComponentInChildren<Animator>();
-        weaponHandler = "WeaponPivot".GetComponentNameDFS<WeaponHandler>();
-        animator = weaponHandler.GetComponent<Animator>();
+        playerAnimator = transform.GetComponentForTransformFindName<Animator>("Character");
     }
 
 
@@ -118,11 +110,11 @@ public class PlayerInput : MonoBehaviour
     }
     private void OnAction(InputAction.CallbackContext context)
     {
-        animator.SetBool("IsAttack", true);
+        Attack?.Invoke(ReadonlyAnimator.Attack, true);
     }
     private void StopAction(InputAction.CallbackContext context)
     {
-        animator.SetBool("IsAttack", false);
+        Attack?.Invoke(ReadonlyAnimator.Attack, false);
     }
     private void OnRun(InputAction.CallbackContext context)
     {

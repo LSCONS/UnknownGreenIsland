@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class InventoryButton : MonoBehaviour
 {
     private PlayerInventoty playerInventoty;
+    private PlayerStatus playerStatus;
     private Transform inventoryCanvas;
     private Button equipButton;
     private Button unEquipButton;
@@ -16,6 +17,7 @@ public class InventoryButton : MonoBehaviour
     {
         inventoryCanvas = transform.GetTransformInParent("UI_Inventory_Canvas");
         playerInventoty = inventoryCanvas.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
+        playerStatus = transform.GetComponentInparentDebug<PlayerStatus>();
         equipButton = transform.GetComponentForTransformFindName<Button>("EquipButton");
         unEquipButton = transform.GetComponentForTransformFindName<Button>("UnEquipButton");
         useButton = transform.GetComponentForTransformFindName<Button>("UseButton");
@@ -30,7 +32,20 @@ public class InventoryButton : MonoBehaviour
 
     private void OnEnable()
     {
-        ButtonSetActive(false, false, false, false);
+        CheckEquippedWeapon();
+    }
+
+    public void CheckEquippedWeapon()
+    {
+        ButtonSetActive(false, false, false);
+        if (playerStatus.IsWeapon)
+        {
+            unEquipButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            unEquipButton.gameObject.SetActive(false);
+        }
     }
 
 
@@ -39,22 +54,21 @@ public class InventoryButton : MonoBehaviour
         switch(type)
         {
             case ItemType.Equipable:
-                ButtonSetActive(true, false, false, true);
+                ButtonSetActive(true, false, true);
                 break;
             case ItemType.Resource:
-                ButtonSetActive(false, false, false, true);
+                ButtonSetActive(false, false, true);
                 break;
             case ItemType.Consumable:
-                ButtonSetActive(false, false, true, true);
+                ButtonSetActive(false, true, true);
                 break;
         }
     }
 
 
-    public void ButtonSetActive(bool equip, bool unequip, bool use, bool discard)
+    public void ButtonSetActive(bool equip, bool use, bool discard)
     {
         equipButton.gameObject.SetActive(equip);
-        unEquipButton.gameObject.SetActive(unequip);
         useButton.gameObject.SetActive(use);
         discardButton.gameObject.SetActive(discard);
     }

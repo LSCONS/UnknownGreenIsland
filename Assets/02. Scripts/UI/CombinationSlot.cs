@@ -8,24 +8,27 @@ using UnityEngine.UI;
 
 public class CombinationSlot : MonoBehaviour
 {
-    private Image image;
-    private TextMeshProUGUI titleText;
-    private TextMeshProUGUI description;
-    private TextMeshProUGUI recipeText;
-    public ItemObject itemObject;
 
-    private void Awake()
+    public Image image;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI description;
+    public TextMeshProUGUI recipeText;
+    public ItemObject itemObject;
+    public Button button;
+
+    private void OnValidate()
     {
         image = transform.GetComponentForTransformFindName<Image>("Icon");
         titleText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
         description = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
         recipeText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("Recipe");
-        UpdateData(itemObject);
+        button = transform.GetChildComponentDebug<Button>();
     }
 
-    public void UpdateData(ItemObject itemObject)
+    public void UpdateData(ItemObject item)
     {
-        ItemData data = itemObject.data;
+        itemObject = item;
+        ItemData data = item.data;
 
         image.sprite = data.inventory_icon;
         titleText.text = data.ItemName;
@@ -36,6 +39,22 @@ public class CombinationSlot : MonoBehaviour
             recipeTextStringBuilder.Append(data.resources[i].type.ToString() + data.resources[i].Amount.ToString() + "개/");
         }
         recipeText.text = recipeTextStringBuilder.ToString();
+        button.onClick.AddListener(TryCreateItem);
+    }
+
+
+    //아이템 생성을 시도하는 메서드
+    private void TryCreateItem()
+    {
+        Transform inventoryCanvas = transform.GetTransformInParent("UI_Player");
+        if (inventoryCanvas.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory").CreateItem(itemObject.data))
+        {
+            Debug.Log("생성 성공");
+        }
+        else
+        {
+            Debug.Log("생성 실패");
+        }
     }
 
     private void OnDisable()

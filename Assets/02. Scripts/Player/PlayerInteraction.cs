@@ -32,7 +32,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
-        uiInteraction.UpdateData(itemObject);
+        uiInteraction.UpdateData(itemObject?.data);
     }
 
 
@@ -62,7 +62,7 @@ public class PlayerInteraction : MonoBehaviour
                 if (itemObject == null) Debug.LogError("itemObject is null");
                 playerInput.interactionAction -= InteractionHandler;
                 playerInput.interactionAction += InteractionHandler;
-                uiInteraction.UpdateData(itemObject);
+                uiInteraction.UpdateData(itemObject?.data);
             }
         }
         else
@@ -76,7 +76,7 @@ public class PlayerInteraction : MonoBehaviour
             if (currentObject != null)
             {
                 currentObject = null;
-                uiInteraction.UpdateData(itemObject);
+                uiInteraction.UpdateData(itemObject?.data);
             }
         }
     }
@@ -127,7 +127,6 @@ public class PlayerInteraction : MonoBehaviour
         //인벤토리 토글 상태 변경
         playerInput.IsInventoryToggle();
 
-        //TODO: 해당 오브젝트와 관련된 조합 식 업로드
         combinationController.CreateCombinationSlot(ResourceManager.Instance.CraftRecipe);
 
         craftingToggle?.Invoke();
@@ -140,7 +139,7 @@ public class PlayerInteraction : MonoBehaviour
         //인벤토리 토글 상태 변경
         playerInput.IsInventoryToggle();
 
-        //TODO: 해당 오브젝트와 관련된 조합 식 업로드
+        combinationController.CreateCombinationSlot(ResourceManager.Instance.CookRecipe);
 
         craftingToggle?.Invoke();
     }
