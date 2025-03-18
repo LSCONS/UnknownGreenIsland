@@ -27,4 +27,6 @@ MonoBehaviour:
   consumabale:
   - type: 1
     value: 20
-  resources: []
+  resources:
+  - type: 10
+    Amount: 1

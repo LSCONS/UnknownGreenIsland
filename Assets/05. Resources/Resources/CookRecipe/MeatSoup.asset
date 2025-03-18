@@ -19,8 +19,8 @@ MonoBehaviour:
   abnormalStatus: 0
   resourceType: 0
   type: 1
-  inventory_icon: {fileID: 0}
-  interaction_Icon: {fileID: 0}
+  inventory_icon: {fileID: 21300000, guid: 89f859660d2dec144982d6ba08565a4a, type: 3}
+  interaction_Icon: {fileID: 21300000, guid: ec4ded1b9c1ce994dac2163fc3d48744, type: 3}
   dropPrefab: {fileID: 7184613397124284792, guid: 7d09f43a4bf353144b91ade9bfaef8dd, type: 3}
   canStack: 1
   maxStackAmount: 1000
@@ -29,4 +29,8 @@ MonoBehaviour:
     value: 40
   - type: 3
     value: 20
-  resources: []
+  resources:
+  - type: 9
+    Amount: 1
+  - type: 21
+    Amount: 1
