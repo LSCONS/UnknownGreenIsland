@@ -6851,7 +6851,7 @@ GameObject:
   - component: {fileID: 448609227}
   - component: {fileID: 448609230}
   m_Layer: 6
-  m_Name: Bleeding
+  m_Name: BleedingImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6971,8 +6971,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 448609226}
+  rect: {fileID: 1854315244}
   text: "\uCD9C\uD608"
+  fillAmount1: {fileID: 1193799462}
+  fillAmount2: {fileID: 225654188}
 --- !u!1001 &454496062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10253,7 +10255,7 @@ GameObject:
   - component: {fileID: 589887297}
   - component: {fileID: 589887300}
   m_Layer: 6
-  m_Name: StaminaUp
+  m_Name: StaminaUpImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10373,8 +10375,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 589887296}
+  rect: {fileID: 1691105299}
   text: "\uC2A4\uD0DC\uBBF8\uB098 \uD68C\uBCF5\uC18D\uB3C4 \uC99D\uAC00"
+  fillAmount1: {fileID: 1742919185}
+  fillAmount2: {fileID: 1921697171}
 --- !u!1 &590470483
 GameObject:
   m_ObjectHideFlags: 0
@@ -11036,7 +11040,7 @@ GameObject:
   - component: {fileID: 628275430}
   - component: {fileID: 628275433}
   m_Layer: 6
-  m_Name: SpeedUp
+  m_Name: SpeedUpImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11156,8 +11160,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 628275429}
+  rect: {fileID: 1606139066}
   text: "\uC18D\uB3C4 \uC99D\uAC00"
+  fillAmount1: {fileID: 264152110}
+  fillAmount2: {fileID: 301291563}
 --- !u!1 &629830176
 GameObject:
   m_ObjectHideFlags: 0
@@ -11172,7 +11178,7 @@ GameObject:
   - component: {fileID: 629830178}
   - component: {fileID: 629830181}
   m_Layer: 6
-  m_Name: PowerDown
+  m_Name: PowerDownImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11292,8 +11298,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 629830177}
+  rect: {fileID: 1645959727}
   text: "\uACF5\uACA9\uB825 \uAC10\uC18C"
+  fillAmount1: {fileID: 1400882632}
+  fillAmount2: {fileID: 1378680154}
 --- !u!1 &630624027
 GameObject:
   m_ObjectHideFlags: 0
@@ -18585,7 +18593,7 @@ GameObject:
   - component: {fileID: 960807526}
   - component: {fileID: 960807529}
   m_Layer: 6
-  m_Name: PowerUp
+  m_Name: PowerUpImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18705,8 +18713,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 960807525}
+  rect: {fileID: 1972941567}
   text: "\uACF5\uACA9\uB825 \uC99D\uAC00"
+  fillAmount1: {fileID: 2116055005}
+  fillAmount2: {fileID: 2129631816}
 --- !u!1001 &978026929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19648,7 +19658,7 @@ GameObject:
   - component: {fileID: 1018129252}
   - component: {fileID: 1018129255}
   m_Layer: 6
-  m_Name: HealthUp
+  m_Name: HealthUpImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19768,8 +19778,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 1018129251}
+  rect: {fileID: 1100210452}
   text: "\uCC44\uB825 \uC7AC\uC0DD"
+  fillAmount1: {fileID: 203825459}
+  fillAmount2: {fileID: 1189260526}
 --- !u!1 &1018677316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4373080667063482954, guid: 8205d36f5448674429e263cd4800fd0a, type: 3}
@@ -21951,7 +21963,7 @@ GameObject:
   - component: {fileID: 1120290150}
   - component: {fileID: 1120290153}
   m_Layer: 6
-  m_Name: StaminaDown
+  m_Name: StaminaDownImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22071,8 +22083,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 1120290149}
+  rect: {fileID: 585263654}
   text: "\uC2A4\uD0DC\uBBF8\uB098 \uD68C\uBCF5\uC18D\uB3C4 \uAC10\uC18C"
+  fillAmount1: {fileID: 423840957}
+  fillAmount2: {fileID: 1820204460}
 --- !u!1 &1120403451
 GameObject:
   m_ObjectHideFlags: 0
@@ -31394,7 +31408,7 @@ GameObject:
   - component: {fileID: 1726167839}
   - component: {fileID: 1726167842}
   m_Layer: 6
-  m_Name: HealthDown
+  m_Name: HealthDownImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31514,8 +31528,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 1726167838}
+  rect: {fileID: 1142578475}
   text: "\uCC44\uB825 \uAC10\uC18C"
+  fillAmount1: {fileID: 2097533490}
+  fillAmount2: {fileID: 1650477950}
 --- !u!1 &1730739306
 GameObject:
   m_ObjectHideFlags: 0
@@ -33454,7 +33470,7 @@ GameObject:
   - component: {fileID: 1838879850}
   - component: {fileID: 1838879853}
   m_Layer: 6
-  m_Name: Posioning
+  m_Name: PosioningImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33574,8 +33590,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 1838879849}
+  rect: {fileID: 33445157}
   text: "\uB3C5"
+  fillAmount1: {fileID: 850142021}
+  fillAmount2: {fileID: 1049345802}
 --- !u!1001 &1843050456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39335,7 +39353,7 @@ GameObject:
   - component: {fileID: 2073259521}
   - component: {fileID: 2073259524}
   m_Layer: 6
-  m_Name: Facture
+  m_Name: FactureImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39455,8 +39473,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 2073259520}
+  rect: {fileID: 2036402470}
   text: "\uACE8\uC808"
+  fillAmount1: {fileID: 559580296}
+  fillAmount2: {fileID: 1938906967}
 --- !u!1001 &2074417966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41157,7 +41177,7 @@ GameObject:
   - component: {fileID: 2145861244}
   - component: {fileID: 2145861247}
   m_Layer: 6
-  m_Name: SpeedDown
+  m_Name: SpeedDownImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41277,8 +41297,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSizeSetting: {fileID: 467205299}
-  rect: {fileID: 2145861243}
+  rect: {fileID: 1230916534}
   text: "\uC18D\uB3C4 \uAC10\uC18C"
+  fillAmount1: {fileID: 1551460803}
+  fillAmount2: {fileID: 1907283661}
 --- !u!1 &2147387916
 GameObject:
   m_ObjectHideFlags: 0

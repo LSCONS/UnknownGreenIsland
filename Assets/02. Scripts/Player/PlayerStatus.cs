@@ -27,20 +27,6 @@ public enum AbnormalStatus
     EatFull = 1 << 10,      //배부름          //공격력 버프
 }
 
-//출혈 상태이상 -> 출혈이미지
-//중독 상태이상 -> 독 이미지
-//골절 상태이상 -> 뼈 이미지
-//달리기 불가능 상태이상  -> 뼈 이미지
-//이동속도 감소 -> 늪 이미지
-//이동속도 증가 -> 신발 이미지
-//스태미나 회복량 감소 -> 
-
-
-//음식 잘못 먹으면 posion
-//데미지 입으면 확률 bleeding
-//높은 곳에서 떨어지면 fracture
-
-
 public enum PlayerAction
 {
     Idle = 0,
@@ -82,7 +68,7 @@ public class PlayerStatus : MonoBehaviour
     private float sensitivity = 0.1f;       //플레이어 마우스 감도
     private float maxCurXRot = 90;          //플레이어 시야 위 아래 최대 각도
     private float minCurXRot = -90f;        //플레이어 시야 위 아래 최소 각도
-                                            //
+ 
 
     #endregion
 
@@ -166,6 +152,9 @@ public class PlayerStatus : MonoBehaviour
                 RemoveAbnormalTimer(state);
             }
         }
+
+        //상태이상 및 플레이어 스테이터스 초기화
+
     }
 
 
