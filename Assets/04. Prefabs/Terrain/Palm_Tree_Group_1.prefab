@@ -47,9 +47,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4763278806329572142}
     m_Modifications:
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91,6 +115,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -109,9 +169,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4763278806329572142}
     m_Modifications:
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -153,6 +237,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -171,9 +291,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4763278806329572142}
     m_Modifications:
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,6 +359,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -233,9 +413,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4763278806329572142}
     m_Modifications:
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,6 +481,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -295,9 +535,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4763278806329572142}
     m_Modifications:
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -339,6 +603,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -357,9 +657,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4763278806329572142}
     m_Modifications:
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,6 +725,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -419,9 +779,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4763278806329572142}
     m_Modifications:
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,6 +847,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -481,9 +901,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4763278806329572142}
     m_Modifications:
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
@@ -524,6 +968,42 @@ PrefabInstance:
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: capacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: f4cbba917d69c5b4e9e7eb7670a9e784, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: resourceObjectType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
