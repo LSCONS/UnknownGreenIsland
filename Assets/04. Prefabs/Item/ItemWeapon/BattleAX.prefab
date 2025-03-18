@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 228536444051317254}
   - component: {fileID: 2475721052173741489}
   - component: {fileID: 5284821548903253708}
+  - component: {fileID: 4111443326956925659}
   m_Layer: 0
   m_Name: AssetsPack-01-NAS-axes
   m_TagString: Untagged
@@ -237,6 +238,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8197962201250402308, guid: 9ea518e8f0d16c64e913b9e21e3fb435, type: 3}
+--- !u!54 &4111443326956925659
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2360328916109065167}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3254353633155301714
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +277,7 @@ GameObject:
   - component: {fileID: 9065254935999949935}
   - component: {fileID: 8042026786822573581}
   - component: {fileID: 105661309479417715}
+  - component: {fileID: 7991852246257785823}
   m_Layer: 0
   m_Name: DoubleHeadedAxe
   m_TagString: Untagged
@@ -299,7 +328,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: adb2f20aa957c364e9a392a9214ef5d6, type: 2}
+  - {fileID: 2100000, guid: 1f982cd990c529c4b9b25040e49f8aae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -343,3 +372,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -747700217327972963, guid: 9ea518e8f0d16c64e913b9e21e3fb435, type: 3}
+--- !u!54 &7991852246257785823
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254353633155301714}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

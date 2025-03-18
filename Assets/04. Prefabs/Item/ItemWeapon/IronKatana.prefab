@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 415483565040024154}
   - component: {fileID: 2392868254907953578}
   - component: {fileID: 6753493302164271207}
+  - component: {fileID: 9033579756660972176}
   m_Layer: 0
   m_Name: AssetsPack-01-NAS-katanas-swords
   m_TagString: Untagged
@@ -67,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: adb2f20aa957c364e9a392a9214ef5d6, type: 2}
+  - {fileID: 2100000, guid: 1f982cd990c529c4b9b25040e49f8aae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,6 +112,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5545433750648339503, guid: 8eb1e219267ac2046a46b591c074bdfd, type: 3}
+--- !u!54 &9033579756660972176
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2545994096406307409}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3385560363134573115
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +234,7 @@ GameObject:
   - component: {fileID: 7344518115307082434}
   - component: {fileID: 198551135246084666}
   - component: {fileID: 2070441763324736583}
+  - component: {fileID: 7844765577354572999}
   m_Layer: 0
   m_Name: KatanaHandle.003
   m_TagString: Untagged
@@ -300,6 +329,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4405465414000434330, guid: 8eb1e219267ac2046a46b591c074bdfd, type: 3}
+--- !u!54 &7844765577354572999
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3390227172343572033}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4728446516534442078
 GameObject:
   m_ObjectHideFlags: 0
