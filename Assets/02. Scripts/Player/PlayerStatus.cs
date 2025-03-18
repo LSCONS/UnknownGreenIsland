@@ -379,6 +379,12 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
+    public void SetIsWeapon(bool isbool)
+    {
+        isWeapon = isbool;
+    }
+
+
 #if UNITY_EDITOR
     //효과 적용 테스트 에디터
     [Button]

@@ -8,8 +8,6 @@ using UnityEngine.Windows;
 public class PlayerInput : MonoBehaviour
 {
     private PlayerInputSystem inputSystem;
-    private WeaponHandler weaponHandler;
-    private Animator animator;
     private PlayerStatus playerStatus;
     private PlayerInteraction playerInteraction;
 
@@ -28,18 +26,12 @@ public class PlayerInput : MonoBehaviour
     public Action inventoryAction;
     public Action interactionAction;
     public Action inventoryExitAction;
+    public Action<string, bool> Attack;
 
     private void OnValidate()
     {
         playerStatus = transform.GetComponentDebug<PlayerStatus>();
         playerInteraction = transform.GetComponentDebug<PlayerInteraction>();
-    }
-
-
-    private void Awake()
-    {
-        weaponHandler = "WeaponPivot".GetComponentNameDFS<WeaponHandler>();
-        animator = weaponHandler.GetComponent<Animator>();
     }
 
 
@@ -54,7 +46,6 @@ public class PlayerInput : MonoBehaviour
         inputSystem.Player.Jump.started += OnJump;
         inputSystem.Player.Jump.canceled += StopJump;
         inputSystem.Player.Action.started += OnAction;
-        inputSystem.Player.Action.canceled += StopAction;
         inputSystem.Player.Run.started += OnRun;
         inputSystem.Player.Run.canceled += StopRun;
         inputSystem.Player.Inventory.started += ToggleInventory;
@@ -73,7 +64,6 @@ public class PlayerInput : MonoBehaviour
         inputSystem.Player.Jump.started -= OnJump;
         inputSystem.Player.Jump.canceled -= StopJump;
         inputSystem.Player.Action.started -= OnAction;
-        inputSystem.Player.Action.canceled -= StopAction;
         inputSystem.Player.Run.started -= OnRun;
         inputSystem.Player.Run.canceled -= StopRun;
         inputSystem.Player.Inventory.started -= ToggleInventory;
@@ -111,11 +101,7 @@ public class PlayerInput : MonoBehaviour
     }
     private void OnAction(InputAction.CallbackContext context)
     {
-        animator.SetBool("IsAttack", true);
-    }
-    private void StopAction(InputAction.CallbackContext context)
-    {
-        animator.SetBool("IsAttack", false);
+        Attack?.Invoke(ReadonlyAnimator.Attack, true);
     }
     private void OnRun(InputAction.CallbackContext context)
     {

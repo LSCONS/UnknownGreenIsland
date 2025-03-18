@@ -41,3 +41,9 @@ public static class ReadonlyDataItem
     public static readonly int Tofu = 1000;
 
 }
+
+
+public static class ReadonlyAnimator
+{
+    public static readonly string Attack = "IsAttack";
+}

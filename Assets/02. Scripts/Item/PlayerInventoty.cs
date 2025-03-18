@@ -15,7 +15,7 @@ public class PlayerInventoty : MonoBehaviour
     private InventoryButton inventoryButton;
     private Dictionary<Resource, int> ResourceAmount = new Dictionary<Resource, int>();
     private Transform weaponPivot;
-    private PlayerStatus status;
+    private PlayerStatus playerStatus;
 
 
     private void OnValidate()
@@ -30,7 +30,7 @@ public class PlayerInventoty : MonoBehaviour
         titleText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
         infoText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
         weaponPivot = Camera.main.transform.GetGameObjectSameNameDFS("WeaponPivot");
-        status = transform.GetComponentInparentDebug<PlayerStatus>();
+        playerStatus = transform.GetComponentInparentDebug<PlayerStatus>();
     }
 
 
@@ -106,18 +106,25 @@ public class PlayerInventoty : MonoBehaviour
     /// </summary>
     public void EquippedItem()
     {
-        //TODO: 선택한 아이템을 장비 필요
-        if (status.IsWeapon)
+        if(selectItemSlotIndex != -1)
         {
-            //이미 장착하고 있는 아이템이 있는 경우 바꿔낄 수 있도록 함.
-            UnEquippedItem();
-        }
-        else
-        {
-            //처음 장착하고 있는 아이템일 경우 그냥 옮김.
-        }
+            //TODO: 선택한 아이템을 장비 필요
+            if (playerStatus.IsWeapon)
+            {
+                //이미 장착하고 있는 아이템이 있는 경우 해제
+                UnEquippedItem();
+            }
 
-        //playerStatus에 isWeapon true상태로 변경.
+            //아이템 index에 접속해서 ItemObject를 가져옴
+            //해당 itemObject를 WeaponPivot의 자식으로 보냄.
+            //공격버튼에 핸들러 등록함.
+            inventorySlots[selectItemSlotIndex].EquippedItem(weaponPivot);
+
+
+
+            //playerStatus에 isWeapon true상태로 변경.
+            playerStatus.SetIsWeapon(true);
+        }
     }
 
 
@@ -130,9 +137,11 @@ public class PlayerInventoty : MonoBehaviour
 
         //끼고 있는 아이템을 인벤토리로 추가.
         ItemObject itemObject = weaponPivot.GetComponentInChildren<ItemObject>();
+        Animator animator = itemObject.GetComponent<Animator>();
+        animator.SetBool(ReadonlyAnimator.Attack, false);
         CheckItemSlot(itemObject);
         //playerStatus에 isWeapon false상태로 변경.
-
+        playerStatus.SetIsWeapon(false);
     }
 
 
@@ -207,9 +216,17 @@ public class PlayerInventoty : MonoBehaviour
         }
 
         //아이템 하나를 생산해서 Inventory에 추가하기
-        GameObject item = new GameObject("item");
-        item.AddComponent<ItemObject>().data = data;
-
+        GameObject item;
+        if(data.dropPrefab != null)
+        {
+            item = Instantiate(data.dropPrefab);
+            item.AddComponent<ItemObject>().data = data;
+        }
+        else
+        {
+            item = new GameObject("item");
+            item.AddComponent<ItemObject>().data = data;
+        }
         CheckItemSlot(item.GetComponent<ItemObject>());
 
         return true;

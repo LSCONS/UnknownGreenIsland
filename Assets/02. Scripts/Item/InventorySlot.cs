@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using VInspector;
 
@@ -13,6 +14,7 @@ public class InventorySlot : MonoBehaviour
     private GameObject objectPool;
     private Button button;
     private PlayerInventoty playerInventory;
+    private PlayerInput playerinput;
     private PlayerStatus playerStatus;
     public int itemAmount = 0;
 
@@ -31,10 +33,24 @@ public class InventorySlot : MonoBehaviour
 
     private void Awake()
     {
+        playerinput = transform.GetComponentInparentDebug<PlayerInput>();
         playerInventory = transform.GetComponentInparentDebug<PlayerInventoty>();
         playerStatus = transform.GetComponentInparentDebug<PlayerStatus>();
         UpdateAmountText();
         UpdateIcon();
+    }
+
+
+    //아이템을 장비 아이템으로 옮기고 해당 아이템 칸을 비움.
+    public void EquippedItem(Transform weaponPivot)
+    {
+        itemObject.transform.parent = weaponPivot;
+        Animator animator = itemObject.GetComponent<Animator>();
+        playerinput.Attack += animator.SetBool;
+        itemObject.transform.localPosition = new Vector3(0, 0.1f, -0.2f);
+        itemObject.transform.localRotation = Quaternion.Euler(-15, -100, -10);
+        itemObject.gameObject.SetActive(true);
+        RemoveItem();
     }
 
 
@@ -46,6 +62,7 @@ public class InventorySlot : MonoBehaviour
             itemObject = inputItemObject;
             icon.sprite = itemObject.data.inventory_icon;
             button.onClick.AddListener(SelectedSlot);
+            itemObject.gameObject.SetActive(false);
             UpdateIcon();
         }
 
@@ -101,13 +118,13 @@ public class InventorySlot : MonoBehaviour
         if (itemObject.data.canStack)
         {
             itemAmount--;
+            UpdateAmountText();
         }
 
         if (itemAmount == 0)
         {
             RemoveItem();
         }
-        UpdateAmountText();
     }
 
 
@@ -140,6 +157,7 @@ public class InventorySlot : MonoBehaviour
         itemAmount = 0;
         itemObject = null;
         UpdateIcon();
+        UpdateAmountText();
         button.onClick.RemoveListener(SelectedSlot);
     }
 
@@ -168,9 +186,9 @@ public class InventorySlot : MonoBehaviour
     /// </summary>
     public void UseItem()
     {
-        if(itemObject.data.consumabale.Length > 0)
+        if (itemObject.data.consumabale.Length > 0)
         {
-            for(int i = 0; i < itemObject.data.consumabale.Length; i++)
+            for (int i = 0; i < itemObject.data.consumabale.Length; i++)
             {
                 ChangeValue(itemObject.data.consumabale[i].type, itemObject.data.consumabale[i].value);
             }

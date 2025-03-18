@@ -32,7 +32,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
-        uiInteraction.UpdateData(itemObject.data);
+        uiInteraction.UpdateData(itemObject?.data);
     }
 
 

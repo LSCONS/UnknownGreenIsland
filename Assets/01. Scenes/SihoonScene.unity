@@ -3211,6 +3211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 10
 --- !u!114 &270055292
@@ -3349,6 +3350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 12
 --- !u!114 &270268347
@@ -4266,6 +4268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 11
 --- !u!114 &340269329
@@ -6347,6 +6350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 5
 --- !u!114 &439361602
@@ -6849,6 +6853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 16
 --- !u!114 &464907408
@@ -8393,6 +8398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 18
 --- !u!114 &600539521
@@ -8974,6 +8980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 2
 --- !u!114 &638389126
@@ -12791,6 +12798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 23
 --- !u!114 &841478842
@@ -13877,6 +13885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 6
 --- !u!114 &888785781
@@ -14725,6 +14734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 8
 --- !u!114 &925368319
@@ -17908,6 +17918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 9
 --- !u!114 &1095067123
@@ -18448,6 +18459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 21
 --- !u!114 &1115569329
@@ -19326,6 +19338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 7
 --- !u!114 &1198733619
@@ -20114,6 +20127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 17
 --- !u!114 &1243516718
@@ -20498,6 +20512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 0
 --- !u!114 &1259956279
@@ -21250,6 +21265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 19
 --- !u!114 &1298633366
@@ -21892,6 +21908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 1
 --- !u!114 &1324449971
@@ -23207,6 +23224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 15
 --- !u!114 &1404064916
@@ -24644,6 +24662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 3
 --- !u!114 &1448561451
@@ -25492,6 +25511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 20
 --- !u!114 &1509168688
@@ -28443,6 +28463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 14
 --- !u!114 &1745631269
@@ -28581,6 +28602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 4
 --- !u!114 &1759415413
@@ -31087,6 +31109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 22
 --- !u!114 &1930840400
@@ -31806,6 +31829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ee1e2612c69f42b2ae81538231c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAmount: 0
   itemObject: {fileID: 0}
   slotIndex: 13
 --- !u!114 &1954549398
