@@ -11,14 +11,11 @@ public enum WeaponType
 
 public class WeaponHandler : MonoBehaviour
 {
-    
     Camera camera;
-
-    
     public WeaponType weaponType;
 
     [Header("Resource")]
-    //public ResourceObjectType Resourcetype;
+    public ResourceObjectType Resourcetype;
 
     [Header("Combat")]
     public int attackDistance; //공격 사거리
@@ -39,7 +36,7 @@ public class WeaponHandler : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out ResourceObject resource) && WeaponType.Resources == weaponType)
             {
-                //resource.Gather(hit.point, hit.normal, Resourcetype);
+                resource.Gather(hit.point, hit.normal, Resourcetype);
             }
             else if(hit.collider.TryGetComponent(out Enemy Enemy) && WeaponType.Combat == weaponType)
             {

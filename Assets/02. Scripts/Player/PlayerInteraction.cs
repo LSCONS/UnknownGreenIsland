@@ -32,7 +32,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
-        uiInteraction.UpdateData(itemObject);
+        uiInteraction.UpdateData(itemObject.data);
     }
 
 
@@ -62,7 +62,7 @@ public class PlayerInteraction : MonoBehaviour
                 if (itemObject == null) Debug.LogError("itemObject is null");
                 playerInput.interactionAction -= InteractionHandler;
                 playerInput.interactionAction += InteractionHandler;
-                uiInteraction.UpdateData(itemObject);
+                uiInteraction.UpdateData(itemObject?.data);
             }
         }
         else
@@ -76,7 +76,7 @@ public class PlayerInteraction : MonoBehaviour
             if (currentObject != null)
             {
                 currentObject = null;
-                uiInteraction.UpdateData(itemObject);
+                uiInteraction.UpdateData(itemObject?.data);
             }
         }
     }

@@ -14,6 +14,8 @@ public class PlayerInventoty : MonoBehaviour
     private TextMeshProUGUI infoText;
     private InventoryButton inventoryButton;
     private Dictionary<Resource, int> ResourceAmount = new Dictionary<Resource, int>();
+    private Transform weaponPivot;
+    private PlayerStatus status;
 
 
     private void OnValidate()
@@ -27,6 +29,8 @@ public class PlayerInventoty : MonoBehaviour
         }
         titleText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
         infoText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
+        weaponPivot = Camera.main.transform.GetGameObjectSameNameDFS("WeaponPivot");
+        status = transform.GetComponentInparentDebug<PlayerStatus>();
     }
 
 
@@ -41,7 +45,7 @@ public class PlayerInventoty : MonoBehaviour
     {
         titleText.gameObject.SetActive(false);
         infoText.gameObject.SetActive(false);
-        inventoryButton.ButtonSetActive(false, false, false, false);
+        inventoryButton.ButtonSetActive(false, false, false);
     }
 
 
@@ -103,6 +107,17 @@ public class PlayerInventoty : MonoBehaviour
     public void EquippedItem()
     {
         //TODO: 선택한 아이템을 장비 필요
+        if (status.IsWeapon)
+        {
+            //이미 장착하고 있는 아이템이 있는 경우 바꿔낄 수 있도록 함.
+            UnEquippedItem();
+        }
+        else
+        {
+            //처음 장착하고 있는 아이템일 경우 그냥 옮김.
+        }
+
+        //playerStatus에 isWeapon true상태로 변경.
     }
 
 
@@ -112,6 +127,12 @@ public class PlayerInventoty : MonoBehaviour
     public void UnEquippedItem()
     {
         //TODO: 장비한 아이템 해제 필요
+
+        //끼고 있는 아이템을 인벤토리로 추가.
+        ItemObject itemObject = weaponPivot.GetComponentInChildren<ItemObject>();
+        CheckItemSlot(itemObject);
+        //playerStatus에 isWeapon false상태로 변경.
+
     }
 
 
@@ -160,8 +181,9 @@ public class PlayerInventoty : MonoBehaviour
         for(int i = 0; i < data.resources.Length; i++)
         {
             if (!(ResourceAmount.ContainsKey(data.resources[i].type)) ||
-                ResourceAmount[data.resources[i].type] >= data.resources[i].Amount)
+                ResourceAmount[data.resources[i].type] < data.resources[i].Amount)
             {
+                Debug.Log("돌아갔나요?");
                 return false;
             }
         }
@@ -169,6 +191,7 @@ public class PlayerInventoty : MonoBehaviour
         //아이템 슬롯에서 해당하는 Resource를 확인하고 삭제하기
         for(int i = 0; i < data.resources.Length; i++)
         {
+            Debug.Log("탐색하나요?");
             int reduceCount = data.resources[i].Amount;
             while(reduceCount > 0)
             {
@@ -197,7 +220,7 @@ public class PlayerInventoty : MonoBehaviour
     {
         for(int i = 0; i < inventorySlots.Length; i++)
         {
-            if (inventorySlots[i].itemObject.data.resourceType == resource)
+            if (inventorySlots[i].itemObject?.data.resourceType == resource)
             {
                 return i;
             }
