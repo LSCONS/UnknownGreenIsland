@@ -40,7 +40,7 @@ public class BuildingManager : MonoBehaviour
 
         if (isBuilding)
         {
-            if (Input.GetMouseButtonDown(1)) // Right-click to open the UI
+            if (Input.GetMouseButtonDown(1)) 
             {
                 isBuilding = false;
                 buildingUI.SetActive(true);
@@ -92,31 +92,6 @@ public class BuildingManager : MonoBehaviour
             ghostBuildGameobject = null;
         }
     }
-
-    private void SwitchBuildObject()
-    {
-        if (currentBuildType == SelectedBuildingType.wall)
-        {
-            if (currentBuildingIndex < wallObjects.Count - 1)
-            {
-                currentBuildingIndex++;
-            }
-            else
-            {
-                currentBuildingIndex = 0;
-                currentBuildType = (SelectedBuildingType)(((int)currentBuildType + 1) % System.Enum.GetValues(typeof(SelectedBuildingType)).Length);
-            }
-        }
-        else
-        {
-            if (currentBuildType == SelectedBuildingType.floor)
-            {
-                Debug.Log("current floor");
-                currentBuildType = (SelectedBuildingType)(((int)currentBuildType + 1) % System.Enum.GetValues(typeof(SelectedBuildingType)).Length);
-            }
-        }
-    }
-
 
     private void GhostBuild()
     {
@@ -218,19 +193,48 @@ public class BuildingManager : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+
         if (Physics.Raycast(ray, out hit))
         {
             GameObject target = hit.collider.gameObject;
             Transform parentTransform = target.transform.root;
             GameObject objectToDestroy = parentTransform.gameObject;
-            LayerMask targetlayer = LayerMask.NameToLayer("BuildingPre");
+            LayerMask targetLayer = LayerMask.NameToLayer("BuildingPre");
 
-            if (target.layer == targetlayer)
+            if (target.layer == targetLayer)
             {
+                float searchRadius = 5f;
+
+                
+                Collider[] nearbyColliders = Physics.OverlapSphere(objectToDestroy.transform.position, searchRadius, connectorLayer);
+                List<Connector> nearbyConnectors = new List<Connector>();
+
+                foreach (Collider collider in nearbyColliders)
+                {
+                    Connector nearbyConnector = collider.GetComponent<Connector>();
+                    if (nearbyConnector != null)
+                    {
+                        nearbyConnectors.Add(nearbyConnector);
+                    }
+                }
+
+               
                 Destroy(objectToDestroy);
+
+                
+                StartCoroutine(UpdateConnectorsNextFrame(nearbyConnectors));
             }
         }
-       
+    }
+
+    private IEnumerator UpdateConnectorsNextFrame(List<Connector> nearbyConnectors)
+    {
+        yield return null; 
+
+        foreach (Connector connector in nearbyConnectors)
+        {
+            connector.UpdateConnectors(true);
+        }
     }
 
     private void GhostSeparateBuild()
