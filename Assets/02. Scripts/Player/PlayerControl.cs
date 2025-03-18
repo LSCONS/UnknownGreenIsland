@@ -6,6 +6,7 @@ using VInspector;
 
 public class PlayerControl : MonoBehaviour
 {
+    private Animator animator;
     private PlayerInput input;
     private CharacterController chrConPlayer;
     private PlayerStatus playerStatus;
@@ -24,6 +25,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnValidate()
     {
+        animator = GetComponentInChildren<Animator>();
         input = transform.GetComponentDebug<PlayerInput>();
         chrConPlayer = "PlayerObject".GetComponentNameDFS<CharacterController>();
         playerStatus = transform.GetComponentDebug<PlayerStatus>();
