@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class ReadonlyData
+public static class ReadonlyDataLayer
 {
     //추가한 레이어의 이름을 public static readonly string의 형태로 고정해서 저장.
     public static readonly string PlayerLayer = "Player";
@@ -25,4 +25,19 @@ public static class ReadonlyData
     public static readonly LayerMask WeaponLayerMask = 1 << LayerMask.NameToLayer(WeaponLayer);
     public static readonly LayerMask InteractionCookLayerMask = 1 << LayerMask.NameToLayer(InteractionCookLayer);
     public static readonly LayerMask InteractionWorkLayerMask = 1 << LayerMask.NameToLayer(InteractionWorkLayer);
+}
+
+public static class ReadonlyDataItem
+{
+    //자원 아이템 정리 (3000 ~ 3999)
+    public static readonly int Wood = 3000;
+    public static readonly int Stone = 3001;
+
+
+    //제작 아이템 정리 (2000 ~ 2999)
+    public static readonly int Axe = 2000;
+
+    //음식 아이템 정리 (1000 ~ 1999)
+    public static readonly int Tofu = 1000;
+
 }

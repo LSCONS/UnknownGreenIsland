@@ -14,6 +14,7 @@ public class PlayerInteraction : MonoBehaviour
     private PlayerInput playerInput;
     private UIInteraction uiInteraction;
     private PlayerInventoty playerInventoty;
+    private CombinationController combinationController;
     private float tempime = 0;
 
     public Action craftingToggle;
@@ -21,10 +22,11 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnValidate()
     {
+        combinationController = transform.GetComponentForTransformFindName<CombinationController>("CombinationControl");
         playerInventoty = transform.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
         playerInput = transform.GetComponentDebug<PlayerInput>();
         uiInteraction  = transform.GetComponentForTransformFindName<UIInteraction>("UIInteraction");
-        interactionLayerMask = ReadonlyData.InteractionLayerMask | ReadonlyData.InteractionCookLayerMask | ReadonlyData.InteractionWorkLayerMask;
+        interactionLayerMask = ReadonlyDataLayer.InteractionLayerMask | ReadonlyDataLayer.InteractionCookLayerMask | ReadonlyDataLayer.InteractionWorkLayerMask;
         _camera = Camera.main;
     }
 
@@ -88,15 +90,15 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log(currentObject.layer);
             LayerMask nowLayer = 1 << currentObject.layer;
 
-            if(nowLayer == ReadonlyData.InteractionLayerMask)
+            if(nowLayer == ReadonlyDataLayer.InteractionLayerMask)
             {
                 InteractionItem(itemObject);
             } 
-            else if (nowLayer == ReadonlyData.InteractionCookLayerMask)
+            else if (nowLayer == ReadonlyDataLayer.InteractionCookLayerMask)
             {
                 InteractionCookingTable();
             }
-            else if (nowLayer == ReadonlyData.InteractionWorkLayerMask)
+            else if (nowLayer == ReadonlyDataLayer.InteractionWorkLayerMask)
             {
                 InteractionCraftingTable();
             }
@@ -126,6 +128,7 @@ public class PlayerInteraction : MonoBehaviour
         playerInput.IsInventoryToggle();
 
         //TODO: 해당 오브젝트와 관련된 조합 식 업로드
+        combinationController.CreateCombinationSlot(ResourceManager.Instance.CraftRecipe);
 
         craftingToggle?.Invoke();
     }
