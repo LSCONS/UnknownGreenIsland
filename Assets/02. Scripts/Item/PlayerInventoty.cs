@@ -154,25 +154,25 @@ public class PlayerInventoty : MonoBehaviour
         }
     }
 
-    public bool CreateItem(ItemObject itemObject)
+    public bool CreateItem(ItemData data)
     {
         //생성 가능한 상태인지 확인하기
-        for(int i = 0; i < itemObject.data.resources.Length; i++)
+        for(int i = 0; i < data.resources.Length; i++)
         {
-            if (!(ResourceAmount.ContainsKey(itemObject.data.resources[i].type)) ||
-                ResourceAmount[itemObject.data.resources[i].type] >= itemObject.data.resources[i].Amount)
+            if (!(ResourceAmount.ContainsKey(data.resources[i].type)) ||
+                ResourceAmount[data.resources[i].type] >= data.resources[i].Amount)
             {
                 return false;
             }
         }
 
         //아이템 슬롯에서 해당하는 Resource를 확인하고 삭제하기
-        for(int i = 0; i < itemObject.data.resources.Length; i++)
+        for(int i = 0; i < data.resources.Length; i++)
         {
-            int reduceCount = itemObject.data.resources[i].Amount;
+            int reduceCount = data.resources[i].Amount;
             while(reduceCount > 0)
             {
-                int index = FindResourceIndex(itemObject.data.resources[i].type);
+                int index = FindResourceIndex(data.resources[i].type);
                 if (index == -1) 
                 {
                     Debug.LogError("index를 찾지 못하는 오류 발생");
@@ -184,7 +184,10 @@ public class PlayerInventoty : MonoBehaviour
         }
 
         //아이템 하나를 생산해서 Inventory에 추가하기
-        CheckItemSlot(itemObject);
+        GameObject item = new GameObject("item");
+        item.AddComponent<ItemObject>().data = data;
+
+        CheckItemSlot(item.GetComponent<ItemObject>());
 
         return true;
     }

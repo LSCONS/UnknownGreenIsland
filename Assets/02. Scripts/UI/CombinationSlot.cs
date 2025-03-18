@@ -23,12 +23,12 @@ public class CombinationSlot : MonoBehaviour
         description = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
         recipeText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("Recipe");
         button = transform.GetChildComponentDebug<Button>();
-        button.onClick.AddListener(TryCreateItem);
     }
 
-    public void UpdateData(ItemObject itemObject)
+    public void UpdateData(ItemObject item)
     {
-        ItemData data = itemObject.data;
+        itemObject = item;
+        ItemData data = item.data;
 
         image.sprite = data.inventory_icon;
         titleText.text = data.ItemName;
@@ -39,13 +39,15 @@ public class CombinationSlot : MonoBehaviour
             recipeTextStringBuilder.Append(data.resources[i].type.ToString() + data.resources[i].Amount.ToString() + "개/");
         }
         recipeText.text = recipeTextStringBuilder.ToString();
+        button.onClick.AddListener(TryCreateItem);
     }
 
 
     //아이템 생성을 시도하는 메서드
     private void TryCreateItem()
     {
-        if (transform.GetComponentInparentDebug<PlayerInventoty>().CreateItem(itemObject))
+        Transform inventoryCanvas = transform.GetTransformInParent("UI_Player");
+        if (inventoryCanvas.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory").CreateItem(itemObject.data))
         {
             Debug.Log("생성 성공");
         }
