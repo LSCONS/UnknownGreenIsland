@@ -211,7 +211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToGive:
-  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  - {fileID: 11400000, guid: 78ffe10dfab648141bc4f45e9be2c7b7, type: 2}
+  - {fileID: 11400000, guid: 3f132738ccc98ed4a94aee87a2f004f0, type: 2}
   quantityPerHit: 1
   capacity: 8
   resourceObjectType: 2
@@ -319,7 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToGive:
-  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  - {fileID: 11400000, guid: 78ffe10dfab648141bc4f45e9be2c7b7, type: 2}
+  - {fileID: 11400000, guid: 3f132738ccc98ed4a94aee87a2f004f0, type: 2}
   quantityPerHit: 1
   capacity: 8
   resourceObjectType: 2
@@ -483,7 +485,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToGive:
-  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  - {fileID: 11400000, guid: 78ffe10dfab648141bc4f45e9be2c7b7, type: 2}
+  - {fileID: 11400000, guid: 3f132738ccc98ed4a94aee87a2f004f0, type: 2}
   quantityPerHit: 1
   capacity: 8
   resourceObjectType: 2

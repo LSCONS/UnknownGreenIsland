@@ -59,6 +59,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (6)
@@ -75,6 +87,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.23
@@ -127,6 +151,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -139,6 +175,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -151,6 +199,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3892928946707561456, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
@@ -185,6 +245,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (7)
@@ -201,6 +273,14 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.95
@@ -253,6 +333,14 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -265,6 +353,14 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -277,6 +373,14 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3892928946707561456, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
@@ -311,6 +415,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (4)
@@ -327,6 +443,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.57
@@ -379,6 +507,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -391,6 +531,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -403,6 +555,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3892928946707561456, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
@@ -437,6 +601,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees
@@ -453,6 +629,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41
@@ -505,6 +693,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -517,6 +717,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -529,6 +741,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3892928946707561456, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
@@ -563,6 +787,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (5)
@@ -579,6 +815,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.57
@@ -631,6 +879,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -643,6 +903,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -655,6 +927,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3892928946707561456, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
@@ -689,6 +973,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (8)
@@ -705,6 +1001,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.13
@@ -757,6 +1065,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -769,6 +1089,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -781,6 +1113,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3892928946707561456, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
@@ -815,6 +1159,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (3)
@@ -831,6 +1187,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.84
@@ -883,6 +1251,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -895,6 +1275,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -907,6 +1299,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3892928946707561456, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
@@ -941,6 +1345,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 1382418317056706814, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 2025702438130760371, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_Name
       value: Palm_Trees (2)
@@ -957,6 +1373,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 2349793246181921870, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 3138155382559657549, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.81
@@ -1009,6 +1437,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 6263560949597738450, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -1021,6 +1461,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 8095163556539444489, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
       propertyPath: capacity
       value: 5
@@ -1033,6 +1485,18 @@ PrefabInstance:
       propertyPath: resourceObjectType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c4e45b11a99554fae36c5089950dc1, type: 2}
+    - target: {fileID: 8414949418897669617, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
+      propertyPath: itemToGive.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c658e00a923ab449d00abe6d0e04d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3892928946707561456, guid: a83e894310dbfca46ad6bc6008998232, type: 3}
