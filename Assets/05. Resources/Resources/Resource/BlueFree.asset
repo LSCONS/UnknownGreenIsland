@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
   m_Name: BlueFree
   m_EditorClassIdentifier: 
-  ItemID: 0
+  ItemID: 3006
   ItemName: "\uD478\uB978\uAD11\uBB3C"
   description: "\uAD11\uBB3C\uC774 \uBB3C\uC744 \uD761\uC218\uD558\uBA74 \uC190\uC73C\uB85C
     \uC27D\uAC8C \uBCC0\uD615\uC744 \uC904\uC218\uC788\uB294 \uAD11\uBB3C\uC774\uB2E4."
   interaction_Information: 
   abnormalStatus: 0
+  resourceType: 0
   type: 0
   inventory_icon: {fileID: 0}
   interaction_Icon: {fileID: 0}
-  dropPrefab: {fileID: 5529291046337209692, guid: b32a8b731d1d20146a2599ee23a54c74, type: 3}
+  dropPrefab: {fileID: 3922853837546006820, guid: 9fffb868cd752ee46a714232a24eb516, type: 3}
   canStack: 1
   maxStackAmount: 1000
   consumabale: []
+  resources: []
