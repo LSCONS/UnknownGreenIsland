@@ -2,13 +2,14 @@ using UnityEngine;
 
 public enum ResourceObjectType
 {
+    None,
     Tree,
     Rock
 }
 
 public class ResourceObject : MonoBehaviour
 {
-    public GameObject itemToGive;
+    public ItemData itemToGive;
     public int quantityPerHit = 1;
     public int capacity;
     public ResourceObjectType resourceObjectType;
@@ -27,7 +28,7 @@ public class ResourceObject : MonoBehaviour
                 if (capacity <= 0) break;
 
                 capacity -= 1;
-                Instantiate(itemToGive, hitPoint + Vector3.up, Quaternion.LookRotation(hitNormal, Vector3.up));
+                Instantiate(itemToGive.dropPrefab, hitPoint + Vector3.up, Quaternion.LookRotation(hitNormal, Vector3.up));
             }
 
             if (capacity <= 0)
