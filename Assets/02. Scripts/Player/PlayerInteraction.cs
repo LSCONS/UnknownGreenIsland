@@ -127,7 +127,6 @@ public class PlayerInteraction : MonoBehaviour
         //인벤토리 토글 상태 변경
         playerInput.IsInventoryToggle();
 
-        //TODO: 해당 오브젝트와 관련된 조합 식 업로드
         combinationController.CreateCombinationSlot(ResourceManager.Instance.CraftRecipe);
 
         craftingToggle?.Invoke();
@@ -140,7 +139,7 @@ public class PlayerInteraction : MonoBehaviour
         //인벤토리 토글 상태 변경
         playerInput.IsInventoryToggle();
 
-        //TODO: 해당 오브젝트와 관련된 조합 식 업로드
+        combinationController.CreateCombinationSlot(ResourceManager.Instance.CookRecipe);
 
         craftingToggle?.Invoke();
     }

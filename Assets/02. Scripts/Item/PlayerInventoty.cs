@@ -13,6 +13,7 @@ public class PlayerInventoty : MonoBehaviour
     private TextMeshProUGUI titleText;
     private TextMeshProUGUI infoText;
     private InventoryButton inventoryButton;
+    private Dictionary<Resource, int> ResourceAmount = new Dictionary<Resource, int>();
 
 
     private void OnValidate()
@@ -35,6 +36,15 @@ public class PlayerInventoty : MonoBehaviour
     }
 
 
+    //모든 상태를 false로 만드는 메서드
+    private void ResetActive()
+    {
+        titleText.gameObject.SetActive(false);
+        infoText.gameObject.SetActive(false);
+        inventoryButton.ButtonSetActive(false, false, false, false);
+    }
+
+
     /// <summary>
     /// 넣을 수 있는 아이템 칸이 있는지 확인하고 아이템을 집어넣는 메서드
     /// </summary>
@@ -46,6 +56,7 @@ public class PlayerInventoty : MonoBehaviour
             if (inventorySlots[i].CheckInputItem(itemObject))
             {
                 itemObject.gameObject.SetActive(false);
+                CountResource();
                 return;
             }
         }
@@ -81,6 +92,7 @@ public class PlayerInventoty : MonoBehaviour
             {
                 ResetActive();
             }
+            CountResource();
         }
     }
 
@@ -115,13 +127,79 @@ public class PlayerInventoty : MonoBehaviour
             {
                 ResetActive();
             }
+            CountResource();
         }
     }
 
-    private void ResetActive()
+
+    //플레이어의 모든 인벤토리 칸을 순회하며 Resource 데이터의 총 합을 가져오는 메서드
+    public void CountResource()
     {
-        titleText.gameObject.SetActive(false);
-        infoText.gameObject.SetActive(false);
-        inventoryButton.ButtonSetActive(false, false, false, false);
+        ResourceAmount = new Dictionary<Resource, int>();
+
+        for(int i = 0; i < inventorySlots.Length; i++)
+        {
+            if(inventorySlots[i].itemObject != null &&
+                inventorySlots[i].itemObject.data.resourceType != Resource.None)
+            {
+                if (ResourceAmount.ContainsKey(inventorySlots[i].itemObject.data.resourceType))
+                {
+                    ResourceAmount[inventorySlots[i].itemObject.data.resourceType] += inventorySlots[i].itemAmount;
+                }
+                else
+                {
+                    ResourceAmount.Add(inventorySlots[i].itemObject.data.resourceType, inventorySlots[i].itemAmount);
+                }
+            }
+        }
+    }
+
+    public bool CreateItem(ItemObject itemObject)
+    {
+        //생성 가능한 상태인지 확인하기
+        for(int i = 0; i < itemObject.data.resources.Length; i++)
+        {
+            if (!(ResourceAmount.ContainsKey(itemObject.data.resources[i].type)) ||
+                ResourceAmount[itemObject.data.resources[i].type] >= itemObject.data.resources[i].Amount)
+            {
+                return false;
+            }
+        }
+
+        //아이템 슬롯에서 해당하는 Resource를 확인하고 삭제하기
+        for(int i = 0; i < itemObject.data.resources.Length; i++)
+        {
+            int reduceCount = itemObject.data.resources[i].Amount;
+            while(reduceCount > 0)
+            {
+                int index = FindResourceIndex(itemObject.data.resources[i].type);
+                if (index == -1) 
+                {
+                    Debug.LogError("index를 찾지 못하는 오류 발생");
+                    return false;
+                }
+                inventorySlots[index].ReduceItem();
+                reduceCount--;
+            }
+        }
+
+        //아이템 하나를 생산해서 Inventory에 추가하기
+        CheckItemSlot(itemObject);
+
+        return true;
+    }
+
+
+    private int FindResourceIndex(Resource resource)
+    {
+        for(int i = 0; i < inventorySlots.Length; i++)
+        {
+            if (inventorySlots[i].itemObject.data.resourceType == resource)
+            {
+                return i;
+            }
+        }
+
+        return -1;
     }
 }

@@ -14,6 +14,7 @@ public class CombinationSlot : MonoBehaviour
     public TextMeshProUGUI description;
     public TextMeshProUGUI recipeText;
     public ItemObject itemObject;
+    public Button button;
 
     private void OnValidate()
     {
@@ -21,6 +22,8 @@ public class CombinationSlot : MonoBehaviour
         titleText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
         description = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
         recipeText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("Recipe");
+        button = transform.GetChildComponentDebug<Button>();
+        button.onClick.AddListener(TryCreateItem);
     }
 
     public void UpdateData(ItemObject itemObject)
@@ -36,6 +39,20 @@ public class CombinationSlot : MonoBehaviour
             recipeTextStringBuilder.Append(data.resources[i].type.ToString() + data.resources[i].Amount.ToString() + "개/");
         }
         recipeText.text = recipeTextStringBuilder.ToString();
+    }
+
+
+    //아이템 생성을 시도하는 메서드
+    private void TryCreateItem()
+    {
+        if (transform.GetComponentInparentDebug<PlayerInventoty>().CreateItem(itemObject))
+        {
+            Debug.Log("생성 성공");
+        }
+        else
+        {
+            Debug.Log("생성 실패");
+        }
     }
 
     private void OnDisable()

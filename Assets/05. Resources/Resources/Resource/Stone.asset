@@ -25,4 +25,6 @@ MonoBehaviour:
   canStack: 1
   maxStackAmount: 20
   consumabale: []
-  resources: []
+  resources:
+  - type: 0
+    Amount: 0

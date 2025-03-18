@@ -14,7 +14,7 @@ public class InventorySlot : MonoBehaviour
     private Button button;
     private PlayerInventoty playerInventory;
     private PlayerStatus playerStatus;
-    private int itemAmount = 0;
+    public int itemAmount = 0;
 
 
     public ItemObject itemObject;
@@ -96,7 +96,7 @@ public class InventorySlot : MonoBehaviour
 
 
     //아이템을 제거할 때 실행할 메서드
-    private void ReduceItem()
+    public void ReduceItem()
     {
         if (itemObject.data.canStack)
         {

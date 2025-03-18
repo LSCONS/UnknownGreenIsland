@@ -37,7 +37,7 @@ public enum Resource
 public class CrafitingResource
 {
     public Resource type; //조합하는데 필요한 아이템 재료
-    public float Amount; //해당 아이템의 수
+    public int Amount; //해당 아이템의 수
 }
 
 
