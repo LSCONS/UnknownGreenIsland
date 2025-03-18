@@ -18,7 +18,7 @@ MonoBehaviour:
     \uB3C4\uB07C\uC785\uB2C8\uB2E4."
   interaction_Information: "\uC90D\uAE30"
   abnormalStatus: 0
-  resourceType: 1
+  resourceType: 0
   type: 0
   inventory_icon: {fileID: 21300000, guid: 9adbd715b12427e41af1f311cd75d0eb, type: 3}
   interaction_Icon: {fileID: 21300000, guid: b2cfb673dc7502744a03e06d2bf5e23d, type: 3}
