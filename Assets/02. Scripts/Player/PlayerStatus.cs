@@ -52,8 +52,8 @@ public class PlayerStatus : MonoBehaviour
     private float curThirsty = 100f;        //플레이어 현재 목마름
     private int healthChangeValue = 0;      //플레이어의 초당 체력 변화량
     private int staminaChangeValue = 8;     //플레이어의 초당 스태미나 변화량
-    private int hungerChangeValue = -3;     //플레이어의 초당 배고픔 변화량
-    private int thirstyChagneValue = -5;    //플레이어의 초당 수분 변화량
+    private int hungerChangeValue = -1;     //플레이어의 초당 배고픔 변화량
+    private int thirstyChagneValue = -2;    //플레이어의 초당 수분 변화량
     private float damageValue = 5;          //플레이어 데미지 배수
     private bool isWeapon = false;          //플레이어의 장비 유무;
     private Dictionary<AbnormalStatus, int> abnormalTimers = new Dictionary<AbnormalStatus, int>();
@@ -212,13 +212,11 @@ public class PlayerStatus : MonoBehaviour
                 break;
 
             case AbnormalStatus.PlentyWater:
-                maxStamina += (isSet ? 50 : -50);
                 moveSpeed += (isSet ? 2 : -2);
                 break;
 
             case AbnormalStatus.Starvation:
                 damageValue += (isSet ? -2 : 2);
-                maxHealth += (isSet ? -50 : 50);
                 break;
 
             case AbnormalStatus.Hunger:
@@ -230,7 +228,6 @@ public class PlayerStatus : MonoBehaviour
                 break;
 
             case AbnormalStatus.EatFull:
-                maxHealth += (isSet ? 50 : -50);
                 damageValue += (isSet ? 2 : -2);
                 break;
 

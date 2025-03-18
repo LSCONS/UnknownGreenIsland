@@ -75,7 +75,12 @@ public class ImageSizeSettingForText : MonoBehaviour
         };
     }
 
-    public void UpdateAbnormalUI()
+    private void OnEnable()
+    {
+        parentImage.gameObject.SetActive(false);
+    }
+
+    public void UpdateAbnormalUI(Dictionary<AbnormalStatus, int> dict)
     {
 
     }
