@@ -21,12 +21,12 @@ public class UIInteraction : MonoBehaviour
     /// 상호작용시 아이템의 아이콘과 정보를 초기화하는 메서드
     /// </summary>
     /// <param name="itemData">출력할 정보가 담긴 ItemData</param>
-    public void UpdateData(ItemObject itemObject)
+    public void UpdateData(ItemData data)
     {
-        if(itemObject != null)
+        if(data != null)
         {
-            interactionText.text = itemObject.data.interaction_Information;
-            image.sprite = itemObject.data.inventory_icon;
+            interactionText.text = data.interaction_Information;
+            image.sprite = data.inventory_icon;
             gameObject.SetActive(true);
         }
         else

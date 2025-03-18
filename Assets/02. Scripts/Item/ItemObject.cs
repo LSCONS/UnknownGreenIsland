@@ -5,10 +5,5 @@ using UnityEngine;
 public class ItemObject : MonoBehaviour
 {
     public ItemData data;
-
-    private void OnValidate()
-    {
-        data = Resources.Load<ItemData>($"ItemData/{gameObject.name}"); 
-    }
 }
 

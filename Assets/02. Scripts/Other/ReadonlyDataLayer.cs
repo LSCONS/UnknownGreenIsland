@@ -32,10 +32,20 @@ public static class ReadonlyDataItem
     //자원 아이템 정리 (3000 ~ 3999)
     public static readonly int Wood = 3000;
     public static readonly int Stone = 3001;
+    public static readonly int Obsidian = 3002;
+    public static readonly int LogWood = 3003;
+    public static readonly int Leather = 3004;
+    public static readonly int IronStone = 3005;
+    public static readonly int Fiber = 3006;
+    public static readonly int BlueFree = 3007;
+
 
 
     //제작 아이템 정리 (2000 ~ 2999)
     public static readonly int Axe = 2000;
+    public static readonly int Knife = 2001;
+    public static readonly int SWORD = 2002;
+
 
     //음식 아이템 정리 (1000 ~ 1999)
     public static readonly int Tofu = 1000;
@@ -45,11 +55,11 @@ public static class ReadonlyDataItem
     public static readonly int MeatSoup = 1004;
     public static readonly int CookMeat = 1005;
     public static readonly int CookGreenMeat = 1006;
-    public static readonly int Budaejjigae = 1006;
+    public static readonly int Budaejjigae = 1007;
+}
 
 
-
-
-
-
+public static class ReadonlyAnimator
+{
+    public static readonly string Attack = "IsAttack";
 }

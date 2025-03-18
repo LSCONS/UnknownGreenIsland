@@ -53,6 +53,7 @@ public class PlayerStatus : MonoBehaviour
     private int healthChangeValue = 0;    //플레이어의 초당 체력 변화량
     private int staminaChangeValue = 3;   //플레이어의 초당 스태미나 변화량
     private float damageValue = 5;          //플레이어 데미지 배수
+    private bool isWeapon = false;          //플레이어의 장비 유무;
     private Dictionary<AbnormalStatus, int> abnormalTimers = new Dictionary<AbnormalStatus, int>();
 
     private AbnormalStatus curAbnormal = AbnormalStatus.None;    //플레이어 현재 상태이상
@@ -81,6 +82,7 @@ public class PlayerStatus : MonoBehaviour
     public float MaxThirsty { get => maxThirsty; }
     public float CurThirsty { get => curThirsty; }
     public float NewJumpForce { get => newJumpForce; }
+    public bool IsWeapon { get => isWeapon; }
     public AbnormalStatus CurAbnormal { get => curAbnormal; }
     public int HealthChangeValue { get => healthChangeValue; }
     public int StaminaChangeValue { get => staminaChangeValue; }
@@ -383,6 +385,12 @@ public class PlayerStatus : MonoBehaviour
             return true;
         }
         else return false;
+    }
+
+
+    public void SetIsWeapon(bool isbool)
+    {
+        isWeapon = isbool;
     }
 
 
