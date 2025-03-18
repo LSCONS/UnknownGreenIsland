@@ -154,7 +154,8 @@ GameObject:
   - component: {fileID: 1973505}
   - component: {fileID: 1973504}
   - component: {fileID: 1973503}
-  m_Layer: 0
+  - component: {fileID: 1973506}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,6 +249,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973501}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1973506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &7262765
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +449,8 @@ GameObject:
   - component: {fileID: 39229753}
   - component: {fileID: 39229752}
   - component: {fileID: 39229751}
-  m_Layer: 0
+  - component: {fileID: 39229754}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,6 +544,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39229749}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &39229754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39229749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &40578134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -643,7 +679,8 @@ GameObject:
   - component: {fileID: 50926102}
   - component: {fileID: 50926101}
   - component: {fileID: 50926100}
-  m_Layer: 0
+  - component: {fileID: 50926103}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,6 +774,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50926098}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &50926103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50926098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &54664042
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +803,8 @@ GameObject:
   - component: {fileID: 54664046}
   - component: {fileID: 54664045}
   - component: {fileID: 54664044}
-  m_Layer: 0
+  - component: {fileID: 54664047}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,6 +898,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54664042}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &54664047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54664042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 0
 --- !u!1 &56840622
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +999,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1109956439}
-  m_Layer: 0
+  - component: {fileID: 1109956440}
+  m_Layer: 8
   m_Name: Rocks (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1076,8 @@ GameObject:
   - component: {fileID: 63011725}
   - component: {fileID: 63011724}
   - component: {fileID: 63011723}
-  m_Layer: 0
+  - component: {fileID: 63011726}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,6 +1171,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63011721}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &63011726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63011721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!4 &70338942
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,7 +1251,8 @@ GameObject:
   - component: {fileID: 76946446}
   - component: {fileID: 76946445}
   - component: {fileID: 76946444}
-  m_Layer: 0
+  - component: {fileID: 76946447}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1254,6 +1346,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76946442}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &76946447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76946442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &81801450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,7 +1606,8 @@ GameObject:
   - component: {fileID: 134869243}
   - component: {fileID: 134869242}
   - component: {fileID: 134869241}
-  m_Layer: 0
+  - component: {fileID: 134869244}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1591,6 +1701,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134869239}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &134869244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134869239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &135657359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,9 +1802,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1905,9 +2052,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1962,9 +2129,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2042,7 +2229,8 @@ GameObject:
   - component: {fileID: 164529461}
   - component: {fileID: 164529460}
   - component: {fileID: 164529459}
-  m_Layer: 0
+  - component: {fileID: 164529462}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2136,6 +2324,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164529457}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &164529462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164529457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &170170201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2390,8 @@ GameObject:
   - component: {fileID: 190772178}
   - component: {fileID: 190772177}
   - component: {fileID: 190772176}
-  m_Layer: 0
+  - component: {fileID: 190772179}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2279,6 +2485,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190772174}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &190772179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190772174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &193750835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2856,7 +3079,8 @@ GameObject:
   - component: {fileID: 226515202}
   - component: {fileID: 226515201}
   - component: {fileID: 226515200}
-  m_Layer: 0
+  - component: {fileID: 226515203}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2950,6 +3174,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226515198}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &226515203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226515198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &255955879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2962,7 +3203,8 @@ GameObject:
   - component: {fileID: 255955883}
   - component: {fileID: 255955882}
   - component: {fileID: 255955881}
-  m_Layer: 0
+  - component: {fileID: 255955884}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3056,6 +3298,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255955879}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &255955884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255955879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!4 &256320325
 Transform:
   m_ObjectHideFlags: 0
@@ -3548,7 +3807,8 @@ GameObject:
   - component: {fileID: 276645198}
   - component: {fileID: 276645197}
   - component: {fileID: 276645196}
-  m_Layer: 0
+  - component: {fileID: 276645199}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3642,6 +3902,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276645194}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &276645199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276645194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &282245721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3650,9 +3927,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3803,13 +4100,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256320325}
-  m_Layer: 0
+  - component: {fileID: 302789637}
+  m_Layer: 8
   m_Name: Rocks (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &302789637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302789636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &314093483
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,9 +4670,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4610,7 +4942,8 @@ GameObject:
   - component: {fileID: 364315165}
   - component: {fileID: 364315164}
   - component: {fileID: 364315163}
-  m_Layer: 0
+  - component: {fileID: 364315166}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4704,6 +5037,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364315161}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &364315166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364315161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!4 &365323383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1746470642342616081, guid: e9b67cd0cad019442a5e4003fb6cef46, type: 3}
@@ -4984,7 +5334,8 @@ GameObject:
   - component: {fileID: 391540362}
   - component: {fileID: 391540361}
   - component: {fileID: 391540360}
-  m_Layer: 0
+  - component: {fileID: 391540363}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5078,6 +5429,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391540358}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &391540363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391540358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &395124723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5151,9 +5519,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5397,7 +5785,8 @@ GameObject:
   - component: {fileID: 401115850}
   - component: {fileID: 401115849}
   - component: {fileID: 401115848}
-  m_Layer: 0
+  - component: {fileID: 401115851}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5491,6 +5880,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401115846}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &401115851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401115846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &401211136
 GameObject:
   m_ObjectHideFlags: 0
@@ -5503,7 +5909,8 @@ GameObject:
   - component: {fileID: 401211140}
   - component: {fileID: 401211139}
   - component: {fileID: 401211138}
-  m_Layer: 0
+  - component: {fileID: 401211141}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5597,6 +6004,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401211136}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &401211141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401211136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &404227305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5671,7 +6095,8 @@ GameObject:
   - component: {fileID: 409376981}
   - component: {fileID: 409376980}
   - component: {fileID: 409376979}
-  m_Layer: 0
+  - component: {fileID: 409376982}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5765,6 +6190,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409376977}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &409376982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409376977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &418261916
 GameObject:
   m_ObjectHideFlags: 0
@@ -7140,7 +7582,8 @@ GameObject:
   - component: {fileID: 501966606}
   - component: {fileID: 501966605}
   - component: {fileID: 501966604}
-  m_Layer: 0
+  - component: {fileID: 501966607}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7234,6 +7677,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501966602}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &501966607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501966602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &507531405
 GameObject:
   m_ObjectHideFlags: 0
@@ -7243,7 +7703,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425280204}
-  m_Layer: 0
+  - component: {fileID: 1425280205}
+  m_Layer: 8
   m_Name: Rocks (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7327,9 +7788,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7403,9 +7884,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7679,7 +8180,8 @@ GameObject:
   - component: {fileID: 544670589}
   - component: {fileID: 544670588}
   - component: {fileID: 544670587}
-  m_Layer: 0
+  - component: {fileID: 544670590}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7773,6 +8275,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544670585}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &544670590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544670585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &551598924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 750932949965454928, guid: 2960e5a0de98b014ba069b62322b54e3, type: 3}
@@ -7917,7 +8436,8 @@ GameObject:
   - component: {fileID: 560174073}
   - component: {fileID: 560174072}
   - component: {fileID: 560174071}
-  m_Layer: 0
+  - component: {fileID: 560174074}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8011,6 +8531,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560174069}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &560174074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560174069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 1
 --- !u!1 &560412588
 GameObject:
   m_ObjectHideFlags: 0
@@ -8489,7 +9026,8 @@ GameObject:
   - component: {fileID: 608103257}
   - component: {fileID: 608103256}
   - component: {fileID: 608103255}
-  m_Layer: 0
+  - component: {fileID: 608103258}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8583,6 +9121,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608103253}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &608103258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608103253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &608104587
 GameObject:
   m_ObjectHideFlags: 0
@@ -8592,13 +9147,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 536511003}
-  m_Layer: 0
+  - component: {fileID: 608104588}
+  m_Layer: 8
   m_Name: Rocks (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &608104588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608104587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &619569059
 GameObject:
   m_ObjectHideFlags: 0
@@ -8611,7 +9181,8 @@ GameObject:
   - component: {fileID: 619569063}
   - component: {fileID: 619569062}
   - component: {fileID: 619569061}
-  m_Layer: 0
+  - component: {fileID: 619569064}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8705,6 +9276,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619569059}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &619569064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619569059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &620582911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9070,7 +9658,8 @@ GameObject:
   - component: {fileID: 647299115}
   - component: {fileID: 647299114}
   - component: {fileID: 647299113}
-  m_Layer: 0
+  - component: {fileID: 647299116}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9164,6 +9753,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647299111}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &647299116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647299111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &652591389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9284,7 +9890,8 @@ GameObject:
   - component: {fileID: 654153774}
   - component: {fileID: 654153773}
   - component: {fileID: 654153772}
-  m_Layer: 0
+  - component: {fileID: 654153775}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9378,6 +9985,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654153770}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &654153775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654153770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &656010376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9464,7 +10088,8 @@ GameObject:
   - component: {fileID: 690575469}
   - component: {fileID: 690575468}
   - component: {fileID: 690575467}
-  m_Layer: 0
+  - component: {fileID: 690575470}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9558,6 +10183,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690575465}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &690575470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690575465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &691543262
 GameObject:
   m_ObjectHideFlags: 0
@@ -9791,7 +10433,8 @@ GameObject:
   - component: {fileID: 708160531}
   - component: {fileID: 708160530}
   - component: {fileID: 708160529}
-  m_Layer: 0
+  - component: {fileID: 708160532}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9885,6 +10528,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708160527}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &708160532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708160527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &710967727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10116,7 +10776,8 @@ GameObject:
   - component: {fileID: 724350750}
   - component: {fileID: 724350749}
   - component: {fileID: 724350748}
-  m_Layer: 0
+  - component: {fileID: 724350751}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10210,6 +10871,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724350746}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &724350751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724350746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &724395951
 GameObject:
   m_ObjectHideFlags: 0
@@ -10222,7 +10900,8 @@ GameObject:
   - component: {fileID: 724395955}
   - component: {fileID: 724395954}
   - component: {fileID: 724395953}
-  m_Layer: 0
+  - component: {fileID: 724395956}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10316,6 +10995,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724395951}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &724395956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724395951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &726031746
 GameObject:
   m_ObjectHideFlags: 0
@@ -10328,7 +11024,8 @@ GameObject:
   - component: {fileID: 726031750}
   - component: {fileID: 726031749}
   - component: {fileID: 726031748}
-  m_Layer: 0
+  - component: {fileID: 726031751}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10422,6 +11119,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726031746}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &726031751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726031746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 0
 --- !u!1 &728705507
 GameObject:
   m_ObjectHideFlags: 0
@@ -10809,9 +11523,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10972,7 +11706,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059052306}
-  m_Layer: 0
+  - component: {fileID: 2059052307}
+  m_Layer: 8
   m_Name: Rocks (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11347,7 +12082,8 @@ GameObject:
   - component: {fileID: 781866398}
   - component: {fileID: 781866397}
   - component: {fileID: 781866396}
-  m_Layer: 0
+  - component: {fileID: 781866399}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11441,6 +12177,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781866394}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &781866399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781866394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &782545948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11515,7 +12268,8 @@ GameObject:
   - component: {fileID: 783943898}
   - component: {fileID: 783943897}
   - component: {fileID: 783943896}
-  m_Layer: 0
+  - component: {fileID: 783943899}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11609,6 +12363,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783943894}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &783943899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783943894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &788600296
 GameObject:
   m_ObjectHideFlags: 0
@@ -11621,7 +12392,8 @@ GameObject:
   - component: {fileID: 788600300}
   - component: {fileID: 788600299}
   - component: {fileID: 788600298}
-  m_Layer: 0
+  - component: {fileID: 788600301}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11715,6 +12487,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788600296}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &788600301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788600296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &793516770
 GameObject:
   m_ObjectHideFlags: 0
@@ -11802,7 +12591,8 @@ GameObject:
   - component: {fileID: 796552013}
   - component: {fileID: 796552012}
   - component: {fileID: 796552011}
-  m_Layer: 0
+  - component: {fileID: 796552014}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11896,6 +12686,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796552009}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &796552014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796552009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!4 &797842076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4763278806329572142, guid: 4b3b5879121f05d45a6a901e54f87d68, type: 3}
@@ -12181,7 +12988,8 @@ GameObject:
   - component: {fileID: 806172398}
   - component: {fileID: 806172397}
   - component: {fileID: 806172396}
-  m_Layer: 0
+  - component: {fileID: 806172399}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12275,6 +13083,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806172394}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &806172399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806172394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &808355379
 GameObject:
   m_ObjectHideFlags: 0
@@ -12408,7 +13233,8 @@ GameObject:
   - component: {fileID: 825388043}
   - component: {fileID: 825388042}
   - component: {fileID: 825388041}
-  m_Layer: 0
+  - component: {fileID: 825388044}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12502,6 +13328,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825388039}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &825388044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825388039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &827334893
 GameObject:
   m_ObjectHideFlags: 0
@@ -13029,7 +13872,8 @@ GameObject:
   - component: {fileID: 845760413}
   - component: {fileID: 845760412}
   - component: {fileID: 845760411}
-  m_Layer: 0
+  - component: {fileID: 845760414}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13123,6 +13967,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845760409}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &845760414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845760409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 1
 --- !u!1 &846048084
 GameObject:
   m_ObjectHideFlags: 0
@@ -13475,7 +14336,8 @@ GameObject:
   - component: {fileID: 860600548}
   - component: {fileID: 860600547}
   - component: {fileID: 860600546}
-  m_Layer: 0
+  - component: {fileID: 860600549}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13569,6 +14431,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860600544}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &860600549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860600544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &869655352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13729,9 +14608,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14101,7 +15000,8 @@ GameObject:
   - component: {fileID: 899194476}
   - component: {fileID: 899194475}
   - component: {fileID: 899194474}
-  m_Layer: 0
+  - component: {fileID: 899194477}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14195,6 +15095,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899194472}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &899194477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899194472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &901815698
 GameObject:
   m_ObjectHideFlags: 0
@@ -14207,7 +15124,8 @@ GameObject:
   - component: {fileID: 901815702}
   - component: {fileID: 901815701}
   - component: {fileID: 901815700}
-  m_Layer: 0
+  - component: {fileID: 901815703}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14301,6 +15219,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901815698}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &901815703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901815698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &910904737
 GameObject:
   m_ObjectHideFlags: 0
@@ -14498,7 +15433,8 @@ GameObject:
   - component: {fileID: 912325630}
   - component: {fileID: 912325629}
   - component: {fileID: 912325628}
-  m_Layer: 0
+  - component: {fileID: 912325631}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14592,6 +15528,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912325626}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &912325631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912325626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &921573640
 GameObject:
   m_ObjectHideFlags: 0
@@ -14792,13 +15745,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1741699}
-  m_Layer: 0
+  - component: {fileID: 927242436}
+  m_Layer: 8
   m_Name: Rocks (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &927242436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927242435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1001 &933940936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15223,7 +16191,8 @@ GameObject:
   - component: {fileID: 953180186}
   - component: {fileID: 953180185}
   - component: {fileID: 953180184}
-  m_Layer: 0
+  - component: {fileID: 953180187}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15317,6 +16286,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953180182}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &953180187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953180182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 1
 --- !u!4 &954398662
 Transform:
   m_ObjectHideFlags: 0
@@ -15482,7 +16468,8 @@ GameObject:
   - component: {fileID: 955647094}
   - component: {fileID: 955647093}
   - component: {fileID: 955647092}
-  m_Layer: 0
+  - component: {fileID: 955647095}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15576,6 +16563,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955647090}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &955647095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955647090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 1
 --- !u!1 &965560262
 GameObject:
   m_ObjectHideFlags: 0
@@ -15735,9 +16739,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16060,7 +17084,8 @@ GameObject:
   - component: {fileID: 987496899}
   - component: {fileID: 987496898}
   - component: {fileID: 987496897}
-  m_Layer: 0
+  - component: {fileID: 987496900}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16154,6 +17179,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987496895}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &987496900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987496895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &989861591
 GameObject:
   m_ObjectHideFlags: 0
@@ -16166,7 +17208,8 @@ GameObject:
   - component: {fileID: 989861595}
   - component: {fileID: 989861594}
   - component: {fileID: 989861593}
-  m_Layer: 0
+  - component: {fileID: 989861596}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16260,6 +17303,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989861591}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &989861596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989861591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &992657825
 GameObject:
   m_ObjectHideFlags: 0
@@ -16272,7 +17332,8 @@ GameObject:
   - component: {fileID: 992657829}
   - component: {fileID: 992657828}
   - component: {fileID: 992657827}
-  m_Layer: 0
+  - component: {fileID: 992657830}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16366,6 +17427,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992657825}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &992657830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992657825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &998355810
 GameObject:
   m_ObjectHideFlags: 0
@@ -16789,7 +17867,8 @@ GameObject:
   - component: {fileID: 1013158922}
   - component: {fileID: 1013158921}
   - component: {fileID: 1013158920}
-  m_Layer: 0
+  - component: {fileID: 1013158923}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16883,6 +17962,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013158918}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &1013158923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013158918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1018677316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4373080667063482954, guid: 8205d36f5448674429e263cd4800fd0a, type: 3}
@@ -16927,7 +18023,8 @@ GameObject:
   - component: {fileID: 1018938321}
   - component: {fileID: 1018938320}
   - component: {fileID: 1018938319}
-  m_Layer: 0
+  - component: {fileID: 1018938322}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17021,6 +18118,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018938317}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &1018938322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018938317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1021351172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17540,9 +18654,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17636,7 +18770,8 @@ GameObject:
   - component: {fileID: 1086296292}
   - component: {fileID: 1086296291}
   - component: {fileID: 1086296290}
-  m_Layer: 0
+  - component: {fileID: 1086296293}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17730,6 +18865,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086296288}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1086296293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086296288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1095016482
 GameObject:
   m_ObjectHideFlags: 0
@@ -18035,7 +19187,8 @@ GameObject:
   - component: {fileID: 1102805309}
   - component: {fileID: 1102805308}
   - component: {fileID: 1102805307}
-  m_Layer: 0
+  - component: {fileID: 1102805310}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18129,6 +19282,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102805305}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1102805310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102805305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1105526607
 GameObject:
   m_ObjectHideFlags: 0
@@ -18141,7 +19311,8 @@ GameObject:
   - component: {fileID: 1105526611}
   - component: {fileID: 1105526610}
   - component: {fileID: 1105526609}
-  m_Layer: 0
+  - component: {fileID: 1105526612}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18235,6 +19406,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105526607}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1105526612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105526607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1106428653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18243,9 +19431,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18300,9 +19508,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18368,6 +19596,20 @@ Transform:
   - {fileID: 912325627}
   m_Father: {fileID: 1001012892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1109956440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57104292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1115569326
 GameObject:
   m_ObjectHideFlags: 0
@@ -18518,7 +19760,8 @@ GameObject:
   - component: {fileID: 1120403455}
   - component: {fileID: 1120403454}
   - component: {fileID: 1120403453}
-  m_Layer: 0
+  - component: {fileID: 1120403456}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18612,6 +19855,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120403451}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1120403456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120403451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!4 &1123334144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2668050525969400005, guid: 4acb801e657016e48a3985388b074f58, type: 3}
@@ -18884,13 +20144,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 805536906}
-  m_Layer: 0
+  - component: {fileID: 1151018556}
+  m_Layer: 8
   m_Name: Rocks (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1151018556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151018555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1155416714
 GameObject:
   m_ObjectHideFlags: 0
@@ -18903,7 +20178,8 @@ GameObject:
   - component: {fileID: 1155416718}
   - component: {fileID: 1155416717}
   - component: {fileID: 1155416716}
-  m_Layer: 0
+  - component: {fileID: 1155416719}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18997,6 +20273,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155416714}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1155416719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155416714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1159528076
 GameObject:
   m_ObjectHideFlags: 0
@@ -19009,7 +20302,8 @@ GameObject:
   - component: {fileID: 1159528080}
   - component: {fileID: 1159528079}
   - component: {fileID: 1159528078}
-  m_Layer: 0
+  - component: {fileID: 1159528081}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19103,6 +20397,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159528076}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1159528081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159528076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1160317968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19611,7 +20922,8 @@ GameObject:
   - component: {fileID: 1210120961}
   - component: {fileID: 1210120960}
   - component: {fileID: 1210120959}
-  m_Layer: 0
+  - component: {fileID: 1210120962}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19705,6 +21017,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210120957}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1210120962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210120957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1211310450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19774,7 +21103,8 @@ GameObject:
   - component: {fileID: 1219938775}
   - component: {fileID: 1219938774}
   - component: {fileID: 1219938773}
-  m_Layer: 0
+  - component: {fileID: 1219938776}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19868,6 +21198,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219938771}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1219938776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219938771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1225325643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19940,7 +21287,8 @@ GameObject:
   - component: {fileID: 1227775658}
   - component: {fileID: 1227775657}
   - component: {fileID: 1227775656}
-  m_Layer: 0
+  - component: {fileID: 1227775659}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20034,6 +21382,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227775654}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1227775659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227775654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1243516715
 GameObject:
   m_ObjectHideFlags: 0
@@ -20640,13 +22005,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 882712524}
-  m_Layer: 0
+  - component: {fileID: 1268012728}
+  m_Layer: 8
   m_Name: Rocks (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1268012728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268012727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1272186455
 GameObject:
   m_ObjectHideFlags: 0
@@ -21028,7 +22408,8 @@ GameObject:
   - component: {fileID: 1293476280}
   - component: {fileID: 1293476279}
   - component: {fileID: 1293476278}
-  m_Layer: 0
+  - component: {fileID: 1293476281}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21122,6 +22503,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293476276}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1293476281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293476276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 0
 --- !u!1 &1294551819
 GameObject:
   m_ObjectHideFlags: 0
@@ -21131,7 +22529,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1857901281}
-  m_Layer: 0
+  - component: {fileID: 1857901282}
+  m_Layer: 8
   m_Name: Rocks (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21441,7 +22840,8 @@ GameObject:
   - component: {fileID: 1317487291}
   - component: {fileID: 1317487290}
   - component: {fileID: 1317487289}
-  m_Layer: 0
+  - component: {fileID: 1317487292}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21535,6 +22935,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317487287}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1317487292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317487287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1317677661
 GameObject:
   m_ObjectHideFlags: 0
@@ -21547,7 +22964,8 @@ GameObject:
   - component: {fileID: 1317677665}
   - component: {fileID: 1317677664}
   - component: {fileID: 1317677663}
-  m_Layer: 0
+  - component: {fileID: 1317677666}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21641,6 +23059,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317677661}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1317677666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317677661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1320112466
 GameObject:
   m_ObjectHideFlags: 0
@@ -22361,7 +23796,8 @@ GameObject:
   - component: {fileID: 1343690136}
   - component: {fileID: 1343690135}
   - component: {fileID: 1343690134}
-  m_Layer: 0
+  - component: {fileID: 1343690137}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22455,6 +23891,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343690132}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1343690137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343690132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1349954778
 GameObject:
   m_ObjectHideFlags: 0
@@ -22539,13 +23992,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 534101534}
-  m_Layer: 0
+  - component: {fileID: 1354418421}
+  m_Layer: 8
   m_Name: Rocks (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1354418421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354418420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1358413419
 GameObject:
   m_ObjectHideFlags: 0
@@ -22641,7 +24109,8 @@ GameObject:
   - component: {fileID: 1375677054}
   - component: {fileID: 1375677053}
   - component: {fileID: 1375677052}
-  m_Layer: 0
+  - component: {fileID: 1375677055}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22735,6 +24204,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375677050}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1375677055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375677050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1380541102
 GameObject:
   m_ObjectHideFlags: 0
@@ -22912,7 +24398,8 @@ GameObject:
   - component: {fileID: 1385949752}
   - component: {fileID: 1385949751}
   - component: {fileID: 1385949750}
-  m_Layer: 0
+  - component: {fileID: 1385949753}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23006,6 +24493,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385949748}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &1385949753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385949748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1399052540
 GameObject:
   m_ObjectHideFlags: 0
@@ -23330,7 +24834,8 @@ GameObject:
   - component: {fileID: 1404568294}
   - component: {fileID: 1404568293}
   - component: {fileID: 1404568292}
-  m_Layer: 0
+  - component: {fileID: 1404568295}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23424,6 +24929,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404568290}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1404568295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404568290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1407205332
 GameObject:
   m_ObjectHideFlags: 0
@@ -23471,7 +24993,8 @@ GameObject:
   - component: {fileID: 1407658718}
   - component: {fileID: 1407658717}
   - component: {fileID: 1407658716}
-  m_Layer: 0
+  - component: {fileID: 1407658719}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23565,6 +25088,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407658714}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1407658719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407658714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1409138858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24102,9 +25642,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24170,6 +25730,20 @@ Transform:
   - {fileID: 501966603}
   m_Father: {fileID: 1001012892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1425280205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507531405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1001 &1435293629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24373,7 +25947,8 @@ GameObject:
   - component: {fileID: 1436793354}
   - component: {fileID: 1436793353}
   - component: {fileID: 1436793352}
-  m_Layer: 0
+  - component: {fileID: 1436793355}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24467,6 +26042,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436793350}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1436793355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436793350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1445728163
 GameObject:
   m_ObjectHideFlags: 0
@@ -24956,7 +26548,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2037768800}
-  m_Layer: 0
+  - component: {fileID: 2037768801}
+  m_Layer: 8
   m_Name: Rocks (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25075,7 +26668,8 @@ GameObject:
   - component: {fileID: 1479796445}
   - component: {fileID: 1479796444}
   - component: {fileID: 1479796443}
-  m_Layer: 0
+  - component: {fileID: 1479796446}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25169,6 +26763,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479796441}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1479796446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479796441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1490094098
 GameObject:
   m_ObjectHideFlags: 0
@@ -25181,7 +26792,8 @@ GameObject:
   - component: {fileID: 1490094102}
   - component: {fileID: 1490094101}
   - component: {fileID: 1490094100}
-  m_Layer: 0
+  - component: {fileID: 1490094103}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25275,6 +26887,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490094098}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1490094103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490094098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1494207550
 GameObject:
   m_ObjectHideFlags: 0
@@ -25733,7 +27362,8 @@ GameObject:
   - component: {fileID: 1530430253}
   - component: {fileID: 1530430252}
   - component: {fileID: 1530430251}
-  m_Layer: 0
+  - component: {fileID: 1530430254}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25827,6 +27457,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530430249}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1530430254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530430249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1538854254
 GameObject:
   m_ObjectHideFlags: 0
@@ -25839,7 +27486,8 @@ GameObject:
   - component: {fileID: 1538854258}
   - component: {fileID: 1538854257}
   - component: {fileID: 1538854256}
-  m_Layer: 0
+  - component: {fileID: 1538854259}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25933,6 +27581,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538854254}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1538854259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538854254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1549489771
 GameObject:
   m_ObjectHideFlags: 0
@@ -25982,13 +27647,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 954398662}
-  m_Layer: 0
+  - component: {fileID: 1568781355}
+  m_Layer: 8
   m_Name: Rocks (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1568781355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568781354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1571257181
 GameObject:
   m_ObjectHideFlags: 0
@@ -26073,13 +27753,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 70338942}
-  m_Layer: 0
+  - component: {fileID: 1571645458}
+  m_Layer: 8
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1571645458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571645457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1577502246
 GameObject:
   m_ObjectHideFlags: 0
@@ -26089,13 +27784,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1375499081}
-  m_Layer: 0
+  - component: {fileID: 1577502247}
+  m_Layer: 8
   m_Name: Rocks (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1577502247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577502246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1579450788
 GameObject:
   m_ObjectHideFlags: 0
@@ -26108,7 +27818,8 @@ GameObject:
   - component: {fileID: 1579450792}
   - component: {fileID: 1579450791}
   - component: {fileID: 1579450790}
-  m_Layer: 0
+  - component: {fileID: 1579450793}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26202,6 +27913,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579450788}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1579450793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579450788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1585263266
 GameObject:
   m_ObjectHideFlags: 0
@@ -26627,9 +28355,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26824,7 +28572,8 @@ GameObject:
   - component: {fileID: 1594335220}
   - component: {fileID: 1594335219}
   - component: {fileID: 1594335218}
-  m_Layer: 0
+  - component: {fileID: 1594335221}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26918,6 +28667,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594335216}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1594335221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594335216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1613838710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27113,7 +28879,8 @@ GameObject:
   - component: {fileID: 1633105918}
   - component: {fileID: 1633105917}
   - component: {fileID: 1633105916}
-  m_Layer: 0
+  - component: {fileID: 1633105919}
+  m_Layer: 8
   m_Name: Rock_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27207,6 +28974,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633105914}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1633105919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633105914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1654817272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27276,13 +29060,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 978026930}
-  m_Layer: 0
+  - component: {fileID: 1656923533}
+  m_Layer: 8
   m_Name: Rocks (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1656923533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656923532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1673588283
 GameObject:
   m_ObjectHideFlags: 0
@@ -27947,7 +29746,8 @@ GameObject:
   - component: {fileID: 1730739310}
   - component: {fileID: 1730739309}
   - component: {fileID: 1730739308}
-  m_Layer: 0
+  - component: {fileID: 1730739311}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28041,6 +29841,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730739306}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1730739311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730739306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1732351786
 GameObject:
   m_ObjectHideFlags: 0
@@ -28053,7 +29870,8 @@ GameObject:
   - component: {fileID: 1732351790}
   - component: {fileID: 1732351789}
   - component: {fileID: 1732351788}
-  m_Layer: 0
+  - component: {fileID: 1732351791}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28147,6 +29965,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732351786}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1732351791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732351786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1733627250
 GameObject:
   m_ObjectHideFlags: 0
@@ -28831,7 +30666,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111542724}
-  m_Layer: 0
+  - component: {fileID: 2111542725}
+  m_Layer: 8
   m_Name: Rocks (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28938,13 +30774,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 282245722}
-  m_Layer: 0
+  - component: {fileID: 1767467021}
+  m_Layer: 8
   m_Name: Rocks (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1767467021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767467020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1001 &1774284036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29881,9 +31732,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29949,6 +31820,20 @@ Transform:
   - {fileID: 76946443}
   m_Father: {fileID: 1001012892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1857901282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294551819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1867826808
 GameObject:
   m_ObjectHideFlags: 0
@@ -29958,13 +31843,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 163400936}
-  m_Layer: 0
+  - component: {fileID: 1867826809}
+  m_Layer: 8
   m_Name: Rocks (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1867826809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867826808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1873097707
 GameObject:
   m_ObjectHideFlags: 0
@@ -29974,7 +31874,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2090145535}
-  m_Layer: 0
+  - component: {fileID: 2090145536}
+  m_Layer: 8
   m_Name: Rocks (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29989,9 +31890,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30050,7 +31971,8 @@ GameObject:
   - component: {fileID: 1890944512}
   - component: {fileID: 1890944511}
   - component: {fileID: 1890944510}
-  m_Layer: 0
+  - component: {fileID: 1890944513}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30144,6 +32066,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890944508}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1890944513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890944508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1893549459
 GameObject:
   m_ObjectHideFlags: 0
@@ -30290,7 +32229,8 @@ GameObject:
   - component: {fileID: 1897678827}
   - component: {fileID: 1897678826}
   - component: {fileID: 1897678825}
-  m_Layer: 0
+  - component: {fileID: 1897678828}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30384,6 +32324,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897678823}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &1897678828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897678823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 0
 --- !u!1001 &1901892373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30612,7 +32569,8 @@ GameObject:
   - component: {fileID: 1912007695}
   - component: {fileID: 1912007694}
   - component: {fileID: 1912007693}
-  m_Layer: 0
+  - component: {fileID: 1912007696}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30706,6 +32664,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912007691}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &1912007696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912007691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1919994602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30772,13 +32747,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 343261405}
-  m_Layer: 0
+  - component: {fileID: 1922202331}
+  m_Layer: 8
   m_Name: Rocks (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1922202331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922202330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &1930109264
 GameObject:
   m_ObjectHideFlags: 0
@@ -30791,7 +32781,8 @@ GameObject:
   - component: {fileID: 1930109268}
   - component: {fileID: 1930109267}
   - component: {fileID: 1930109266}
-  m_Layer: 0
+  - component: {fileID: 1930109269}
+  m_Layer: 8
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30885,6 +32876,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930109264}
   m_Mesh: {fileID: -317926821362609642, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
+--- !u!114 &1930109269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930109264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1930146049
 GameObject:
   m_ObjectHideFlags: 0
@@ -31244,7 +33252,8 @@ GameObject:
   - component: {fileID: 1934847831}
   - component: {fileID: 1934847830}
   - component: {fileID: 1934847829}
-  m_Layer: 0
+  - component: {fileID: 1934847832}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31338,6 +33347,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934847827}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1934847832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934847827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1937009659
 GameObject:
   m_ObjectHideFlags: 0
@@ -31585,7 +33611,8 @@ GameObject:
   - component: {fileID: 1944307990}
   - component: {fileID: 1944307989}
   - component: {fileID: 1944307988}
-  m_Layer: 0
+  - component: {fileID: 1944307991}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31679,6 +33706,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944307986}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1944307991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944307986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1954549395
 GameObject:
   m_ObjectHideFlags: 0
@@ -31829,7 +33873,8 @@ GameObject:
   - component: {fileID: 1955689298}
   - component: {fileID: 1955689297}
   - component: {fileID: 1955689296}
-  m_Layer: 0
+  - component: {fileID: 1955689299}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31923,6 +33968,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955689294}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1955689299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955689294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &1958249532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31997,7 +34059,8 @@ GameObject:
   - component: {fileID: 1964018820}
   - component: {fileID: 1964018819}
   - component: {fileID: 1964018818}
-  m_Layer: 0
+  - component: {fileID: 1964018821}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32091,6 +34154,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964018816}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1964018821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964018816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1969300535
 GameObject:
   m_ObjectHideFlags: 0
@@ -32103,7 +34183,8 @@ GameObject:
   - component: {fileID: 1969300539}
   - component: {fileID: 1969300538}
   - component: {fileID: 1969300537}
-  m_Layer: 0
+  - component: {fileID: 1969300540}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32197,6 +34278,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969300535}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1969300540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969300535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1973784451
 GameObject:
   m_ObjectHideFlags: 0
@@ -32299,7 +34397,8 @@ GameObject:
   - component: {fileID: 1980713080}
   - component: {fileID: 1980713079}
   - component: {fileID: 1980713078}
-  m_Layer: 0
+  - component: {fileID: 1980713081}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32393,6 +34492,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980713076}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &1980713081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980713076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &1983400574
 GameObject:
   m_ObjectHideFlags: 0
@@ -32635,7 +34751,8 @@ GameObject:
   - component: {fileID: 2011809444}
   - component: {fileID: 2011809443}
   - component: {fileID: 2011809442}
-  m_Layer: 0
+  - component: {fileID: 2011809445}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32729,6 +34846,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011809440}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &2011809445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011809440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &2015893835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32868,13 +35002,28 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 398737501}
-  m_Layer: 0
+  - component: {fileID: 2032592096}
+  m_Layer: 8
   m_Name: Rocks (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2032592096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032592095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &2036870560
 GameObject:
   m_ObjectHideFlags: 0
@@ -32919,9 +35068,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32987,6 +35156,20 @@ Transform:
   - {fileID: 1013158919}
   m_Father: {fileID: 1001012892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2037768801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473028347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1001 &2038139091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33510,6 +35693,20 @@ Transform:
   - {fileID: 1385949749}
   m_Father: {fileID: 1001012892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059052307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751103864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &2062669842
 GameObject:
   m_ObjectHideFlags: 0
@@ -33843,7 +36040,8 @@ GameObject:
   - component: {fileID: 2083611639}
   - component: {fileID: 2083611638}
   - component: {fileID: 2083611637}
-  m_Layer: 0
+  - component: {fileID: 2083611640}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33937,6 +36135,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083611635}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &2083611640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083611635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &2083794478
 GameObject:
   m_ObjectHideFlags: 0
@@ -33946,7 +36161,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2103149799}
-  m_Layer: 0
+  - component: {fileID: 2103149800}
+  m_Layer: 8
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33996,9 +36212,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34064,6 +36300,20 @@ Transform:
   - {fileID: 364315162}
   m_Father: {fileID: 1001012892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2090145536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873097707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &2093877075
 GameObject:
   m_ObjectHideFlags: 0
@@ -34282,6 +36532,20 @@ Transform:
   - {fileID: 1912007692}
   m_Father: {fileID: 1001012892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2103149800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083794478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &2105196257
 GameObject:
   m_ObjectHideFlags: 0
@@ -34330,7 +36594,8 @@ GameObject:
   - component: {fileID: 2106403355}
   - component: {fileID: 2106403354}
   - component: {fileID: 2106403353}
-  m_Layer: 0
+  - component: {fileID: 2106403356}
+  m_Layer: 8
   m_Name: Rock_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34424,6 +36689,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106403351}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &2106403356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106403351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &2107777449
 GameObject:
   m_ObjectHideFlags: 0
@@ -34617,9 +36899,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34685,6 +36987,20 @@ Transform:
   - {fileID: 955647091}
   m_Father: {fileID: 1001012892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111542725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764712129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad0acc3673c6b645b086e0b735b57f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 5
+  OriginCapacity: 5
 --- !u!1 &2117123885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 750932949965454928, guid: 2960e5a0de98b014ba069b62322b54e3, type: 3}
@@ -34811,7 +37127,8 @@ GameObject:
   - component: {fileID: 2124377797}
   - component: {fileID: 2124377796}
   - component: {fileID: 2124377795}
-  m_Layer: 0
+  - component: {fileID: 2124377798}
+  m_Layer: 8
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34905,6 +37222,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124377793}
   m_Mesh: {fileID: -2605931710798131250, guid: 8919eff7f119a594ab3feb52a672fc25, type: 3}
+--- !u!114 &2124377798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124377793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
+  quantityPerHit: 1
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1 &2125049445
 GameObject:
   m_ObjectHideFlags: 0
@@ -35755,7 +38089,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 10ba0e2a7b3e70f4d98880e38f88b33d, type: 2}
+  - {fileID: 2100000, guid: 08c4b67273e724941900639ca93caabc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35913,7 +38247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1935181841872175642
 Transform:
   m_ObjectHideFlags: 0
@@ -36272,7 +38606,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 00bdc46dacab83e44b18a99283242ae6, type: 2}
+  - {fileID: 2100000, guid: adb2f20aa957c364e9a392a9214ef5d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36486,8 +38820,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3598996255806783488}
   - {fileID: 243739443984248540}
+  - {fileID: 3598996255806783488}
   m_Father: {fileID: 986812636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5353387499772564146
@@ -36686,8 +39020,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e39b34ca81aed4981eec75c163ed5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponType: 1
-  Resourcetype: 0
+  weaponType: 0
+  Resourcetype: 2
   attackDistance: 3
   attackDamage: 10
 --- !u!33 &6581892023472619491
@@ -36717,7 +39051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &7219412756954091237
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36905,9 +39239,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001012892}
     m_Modifications:
+    - target: {fileID: 2132816729724002974, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407138184836679253, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_Name
       value: Rocks
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448512190760184842, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550455554676759259, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151071193147063596, guid: 85562473730c688459298e6f078bd960, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767076660032536613, guid: 85562473730c688459298e6f078bd960, type: 3}
       propertyPath: m_LocalPosition.x

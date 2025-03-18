@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8944598359780965596}
   - component: {fileID: 5254009395436067938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rocks_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
-  OriginCapacity: 5
+  OriginCapacity: 3
 --- !u!1001 &1073952646183404819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,6 +102,10 @@ PrefabInstance:
     - target: {fileID: 2943164917710984441, guid: b042955ef1e1c6d41a9aa4831e8e8844, type: 3}
       propertyPath: m_Name
       value: Rock_Pebbles_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943164917710984441, guid: b042955ef1e1c6d41a9aa4831e8e8844, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -177,6 +181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8781515429325012481, guid: 0746f8c1d083a704cacfc55579c7871a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -202,10 +210,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 0}
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
   quantityPerHit: 1
-  capacity: 0
-  resourceObjectType: 0
+  capacity: 8
+  resourceObjectType: 2
 --- !u!4 &7645516315185916945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8256757748976788667, guid: 0746f8c1d083a704cacfc55579c7871a, type: 3}
@@ -275,6 +284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8781515429325012481, guid: 0746f8c1d083a704cacfc55579c7871a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -305,10 +318,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 0}
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
   quantityPerHit: 1
-  capacity: 0
-  resourceObjectType: 0
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &6122881034103523168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360,6 +374,10 @@ PrefabInstance:
     - target: {fileID: 2943164917710984441, guid: b042955ef1e1c6d41a9aa4831e8e8844, type: 3}
       propertyPath: m_Name
       value: Rock_Pebbles_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943164917710984441, guid: b042955ef1e1c6d41a9aa4831e8e8844, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -435,6 +453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_4
       objectReference: {fileID: 0}
+    - target: {fileID: 8781515429325012481, guid: 0746f8c1d083a704cacfc55579c7871a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -460,10 +482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 0}
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
   quantityPerHit: 1
-  capacity: 0
-  resourceObjectType: 0
+  capacity: 8
+  resourceObjectType: 2
 --- !u!4 &924195288968306954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8256757748976788667, guid: 0746f8c1d083a704cacfc55579c7871a, type: 3}

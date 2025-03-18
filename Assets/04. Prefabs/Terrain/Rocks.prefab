@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7767076660032536613}
   - component: {fileID: 462890317771936724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1828705593730191540, guid: 4db94f8a322270b4b9c74eda44af6ae5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -144,10 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 0}
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
   quantityPerHit: 1
-  capacity: 0
-  resourceObjectType: 0
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &3902448434804872929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1828705593730191540, guid: 4db94f8a322270b4b9c74eda44af6ae5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -242,10 +251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 0}
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
   quantityPerHit: 1
-  capacity: 0
-  resourceObjectType: 0
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &5460328222486824539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257,6 +267,10 @@ PrefabInstance:
     - target: {fileID: 486906070384778368, guid: 6f4dd562375583e42b117568b4186933, type: 3}
       propertyPath: m_Name
       value: Rock_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 486906070384778368, guid: 6f4dd562375583e42b117568b4186933, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 975599765590132282, guid: 6f4dd562375583e42b117568b4186933, type: 3}
       propertyPath: m_LocalScale.x
@@ -340,10 +354,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 0}
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
   quantityPerHit: 1
-  capacity: 0
-  resourceObjectType: 0
+  capacity: 8
+  resourceObjectType: 2
 --- !u!1001 &5493301540651658648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408,6 +423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1828705593730191540, guid: 4db94f8a322270b4b9c74eda44af6ae5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -433,10 +452,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dcc5eaf9e1ad24197889ce1640392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 0}
+  itemToGive:
+  - {fileID: 11400000, guid: d15e08cd4d10e9b42839d0d53155811b, type: 2}
   quantityPerHit: 1
-  capacity: 0
-  resourceObjectType: 0
+  capacity: 8
+  resourceObjectType: 2
 --- !u!4 &6779938365540886422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1309156200993950222, guid: 4db94f8a322270b4b9c74eda44af6ae5, type: 3}
