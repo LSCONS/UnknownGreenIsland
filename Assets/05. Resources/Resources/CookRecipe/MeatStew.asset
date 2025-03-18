@@ -16,12 +16,12 @@ MonoBehaviour:
   ItemName: "\uACE0\uAE30\uC2A4\uD29C"
   description: "\uACE0\uAE30 \uB369\uC5B4\uB9AC\uAC00 \uB4E4\uC5B4\uAC04 \uC2A4\uD29C
     \uC774\uB2E4."
-  interaction_Information: 
+  interaction_Information: "\uC90D\uAE30"
   abnormalStatus: 0
   resourceType: 0
   type: 1
-  inventory_icon: {fileID: 0}
-  interaction_Icon: {fileID: 0}
+  inventory_icon: {fileID: 21300000, guid: 58ed88d4beaf5c34aa97d24645d66175, type: 3}
+  interaction_Icon: {fileID: 21300000, guid: ec4ded1b9c1ce994dac2163fc3d48744, type: 3}
   dropPrefab: {fileID: 8054713955342881922, guid: c7879d8756aae5e4297db82ff215bc52, type: 3}
   canStack: 1
   maxStackAmount: 1000
@@ -30,4 +30,10 @@ MonoBehaviour:
     value: 45
   - type: 3
     value: 15
-  resources: []
+  resources:
+  - type: 9
+    Amount: 2
+  - type: 17
+    Amount: 1
+  - type: 14
+    Amount: 1
