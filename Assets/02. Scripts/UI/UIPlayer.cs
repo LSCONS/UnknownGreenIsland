@@ -35,7 +35,7 @@ public class UIPlayer : MonoBehaviour
     {
         if (input.IsInventory)
         {
-            inventoryBG.GetComponent<RectTransform>().anchoredPosition = Vector3.left * 250;
+            inventoryBG.GetComponent<RectTransform>().anchoredPosition = Vector3.left * 400;
             combinationBG.gameObject.SetActive(true);
             inventoryBG.gameObject.SetActive(true);
             Util.CursorisLock(false);

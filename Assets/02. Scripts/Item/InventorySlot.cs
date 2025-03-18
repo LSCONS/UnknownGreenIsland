@@ -47,7 +47,7 @@ public class InventorySlot : MonoBehaviour
         itemObject.transform.parent = weaponPivot;
         Animator animator = itemObject.GetComponent<Animator>();
         playerinput.Attack += animator.SetBool;
-        itemObject.transform.localPosition = new Vector3(0, 0.1f, -0.2f);
+        itemObject.transform.localPosition = new Vector3(0, 0.2f, 0.5f);
         itemObject.transform.localRotation = Quaternion.Euler(-15, -100, -10);
         itemObject.gameObject.SetActive(true);
         RemoveItem();

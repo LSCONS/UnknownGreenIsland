@@ -32,6 +32,11 @@ public class InventoryButton : MonoBehaviour
 
     private void OnEnable()
     {
+        CheckEquippedWeapon();
+    }
+
+    public void CheckEquippedWeapon()
+    {
         ButtonSetActive(false, false, false);
         if (playerStatus.IsWeapon)
         {

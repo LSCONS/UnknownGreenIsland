@@ -9,7 +9,7 @@ public class CameraMoving : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerStatus playerStatus;
     private float curCameraXRot;
-    private float cameraLerpSpeed = 20f;
+    private float cameraLerpSpeed = 30f;
 
     private void OnValidate()
     {

@@ -33,7 +33,7 @@ public class PlayerInput : MonoBehaviour
     {
         playerStatus = transform.GetComponentDebug<PlayerStatus>();
         playerInteraction = transform.GetComponentDebug<PlayerInteraction>();
-        playerAnimator = transform.GetComponentDebug<Animator>();
+        playerAnimator = transform.GetComponentForTransformFindName<Animator>("Character");
     }
 
 

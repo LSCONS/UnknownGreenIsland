@@ -124,6 +124,7 @@ public class PlayerInventoty : MonoBehaviour
 
             //playerStatus에 isWeapon true상태로 변경.
             playerStatus.SetIsWeapon(true);
+            inventoryButton.CheckEquippedWeapon();
         }
     }
 
@@ -142,6 +143,7 @@ public class PlayerInventoty : MonoBehaviour
         CheckItemSlot(itemObject);
         //playerStatus에 isWeapon false상태로 변경.
         playerStatus.SetIsWeapon(false);
+        inventoryButton.CheckEquippedWeapon();
     }
 
 
