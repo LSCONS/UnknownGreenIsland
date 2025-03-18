@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
   m_Name: Item_BaekBan
   m_EditorClassIdentifier: 
+  ItemID: 0
   ItemName: "\uBC31\uBC18"
   description: "\uB3D9\uC758\uBCF4\uAC10: \uAD11\uBB3C\uC131 \uC57D\uC7AC\uC774\uB2E4."
+  interaction_Information: 
   type: 0
-  icon: {fileID: 21300000, guid: 9bf2bb0fa8d8eee499c4edd4152b8a3c, type: 3}
+  inventory_icon: {fileID: 0}
+  interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 3493624513989498013, guid: c3d86be5d5c8c584285903e88e1139aa, type: 3}
   canStack: 1
   maxStackAmount: 1000
-  consumabale: []
+  consumabale:
+  - type: 0
+    value: 0

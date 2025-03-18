@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
   m_Name: Item_CookGreenMeat
   m_EditorClassIdentifier: 
+  ItemID: 0
   ItemName: "\uAD6C\uC6B4 \uACE0\uBE14\uB9B0 \uACE0\uAE30"
   description: "\uC0DD\uAC01\uBCF4\uB2E4 \uB9DB\uC774 \uAD1C\uCC2E\uB2E4."
+  interaction_Information: 
   type: 0
-  icon: {fileID: 21300000, guid: 9bf2bb0fa8d8eee499c4edd4152b8a3c, type: 3}
+  inventory_icon: {fileID: 0}
+  interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 3438103525445539894, guid: 9ccb5dc071f764b4bbddfa33ca0b44fa, type: 3}
   canStack: 1
   maxStackAmount: 1000
-  consumabale: []
+  consumabale:
+  - type: 1
+    value: 20

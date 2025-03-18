@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -9,8 +10,9 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private List<GameObject> wallObjects = new List<GameObject>();
 
     [Header("Build Settings")]
-    [SerializeField] private SelectedBuildingType currentBuildType;
+    public SelectedBuildingType currentBuildType;
     [SerializeField] private LayerMask connectorLayer;
+    public GameObject buildingUI;
 
     [Header("Ghost Settings")]
     [SerializeField] private Material ghostMaterialValid;
@@ -19,27 +21,51 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private float maxGroundAngle = 45f;
 
     [Header("Internal State")]
-    [SerializeField] private bool isBuilding = false;
-    [SerializeField] private int currentBuildingIndex;
+    public bool isBuilding = false;
+    public int currentBuildingIndex;
     private GameObject ghostBuildGameobject;
     private bool isGhostInValidPosition = false;
     private Transform ModelParent = null;
+    private UIBuilding uiBuilding;
+
+    private void Awake()
+    {
+        uiBuilding = GetComponentInChildren<UIBuilding>();
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
             isBuilding = !isBuilding;
 
-        if (isBuilding && Input.GetKeyDown(KeyCode.C))
+        if (isBuilding)
         {
-            if (ghostBuildGameobject != null)
+            if (Input.GetMouseButtonDown(1)) // Right-click to open the UI
             {
-                Destroy(ghostBuildGameobject);
-                ghostBuildGameobject = null;
+                isBuilding = false;
+                buildingUI.SetActive(true);
+                Util.CursorisLock(false);
             }
-            SwitchBuildObject();
-            GhostBuild();
         }
+        else if (buildingUI.activeSelf) 
+        {
+            if (Input.GetMouseButtonUp(1)) 
+            {
+                isBuilding = true;
+                buildingUI.SetActive(false);
+                Util.CursorisLock(true);
+            }
+        }
+
+        if (buildingUI.activeSelf)
+        {
+            uiBuilding.GetCurrentBuild();
+            if (Input.GetMouseButtonDown(0))
+            {
+                uiBuilding.ButtonAction();
+            }
+        }
+
 
         if (Input.GetKeyDown(KeyCode.N))
         {
@@ -49,6 +75,13 @@ public class BuildingManager : MonoBehaviour
         if (isBuilding)
         {
             GhostBuild();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                if (currentBuildType == SelectedBuildingType.wall && currentBuildingIndex == 3)
+                {
+                    ghostBuildGameobject.gameObject.transform.Rotate(90, 0, 0);
+                }
+            }
 
             if (Input.GetMouseButtonDown(0))
                 PlaceBuild();
@@ -83,6 +116,7 @@ public class BuildingManager : MonoBehaviour
             }
         }
     }
+
 
     private void GhostBuild()
     {
@@ -193,7 +227,6 @@ public class BuildingManager : MonoBehaviour
 
             if (target.layer == targetlayer)
             {
-                Debug.Log("111");
                 Destroy(objectToDestroy);
             }
         }
