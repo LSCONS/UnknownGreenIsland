@@ -46,6 +46,7 @@ public class PlayerInput : MonoBehaviour
         inputSystem.Player.Jump.started += OnJump;
         inputSystem.Player.Jump.canceled += StopJump;
         inputSystem.Player.Action.started += OnAction;
+        inputSystem.Player.Action.canceled += StopAction;
         inputSystem.Player.Run.started += OnRun;
         inputSystem.Player.Run.canceled += StopRun;
         inputSystem.Player.Inventory.started += ToggleInventory;
@@ -64,6 +65,7 @@ public class PlayerInput : MonoBehaviour
         inputSystem.Player.Jump.started -= OnJump;
         inputSystem.Player.Jump.canceled -= StopJump;
         inputSystem.Player.Action.started -= OnAction;
+        inputSystem.Player.Action.canceled -= StopAction;
         inputSystem.Player.Run.started -= OnRun;
         inputSystem.Player.Run.canceled -= StopRun;
         inputSystem.Player.Inventory.started -= ToggleInventory;
@@ -76,12 +78,17 @@ public class PlayerInput : MonoBehaviour
     //TODO: 플레이어가 인벤토리를 킨 상태로 WASD 입력을 한 상태로 false로 갈 경우 입력 값이 남아있을 수 있도록 변환.
     private void OnMove(InputAction.CallbackContext context)
     {
-        if(!(IsInventory)) playerMoveDir = context.ReadValue<Vector2>().normalized;
+        if (!(IsInventory))
+        {
+            playerMoveDir = context.ReadValue<Vector2>().normalized;
+            playerAnimator.SetFloat("Blend",0.2f);
+        }
         else { playerMoveDir = Vector2.zero; }
     }
     private void StopMove(InputAction.CallbackContext context)
     {
         playerMoveDir = Vector2.zero;
+        playerAnimator.SetFloat("Blend",0f);
     }
     private void OnMousePosition(InputAction.CallbackContext context)
     {
@@ -106,11 +113,13 @@ public class PlayerInput : MonoBehaviour
     private void OnRun(InputAction.CallbackContext context)
     {
         isRun = true;
+        playerAnimator.SetFloat("Blend", 0.4f);
         playerStatus.CanRun();
     }
     private void StopRun(InputAction.CallbackContext context)
     {
         isRun = false;
+        playerAnimator.SetFloat("Blend", 0);
     }
     private void InteractionStart(InputAction.CallbackContext context)
     {

@@ -99,6 +99,7 @@ public class PlayerStatus : MonoBehaviour
 
     #endregion
 
+    private Animator animator;
     private PlayerInput playerInput;
     private ConditionHandler conditionHandler;
     private List<AbnormalStatus> removeStateKey = new List<AbnormalStatus>();
@@ -117,6 +118,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void Start()
     {
+        animator = "Character".GetComponentNameDFS<Animator>();
         abnormalCoroutine = StartCoroutine(AbnormalCoroutine());
     }
 
@@ -285,12 +287,18 @@ public class PlayerStatus : MonoBehaviour
     /// <param name="value">추가할 체력. 뺄 경우 -로 기입</param>
     public void HealthChange(float value)
     {
+        if(value < 0)
+        {
+            animator.SetTrigger("IsHit");
+        }
+
         curHealth = curHealth.PlusAndClamp(value, maxHealth);
         conditionHandler.ConditionHP.UpdateBar(curHealth / maxHealth);
 
         if (curHealth <= 0)
         {
             //TODO: 사망처리 필요
+            animator.SetTrigger("IsDie");
         }
     }
 
@@ -372,6 +380,7 @@ public class PlayerStatus : MonoBehaviour
     {
         if (curStamina >= 10f)
         {
+            animator.SetTrigger("IsJump");
             StaminaChange(-10f);
             return true;
         }

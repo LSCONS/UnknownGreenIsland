@@ -39,6 +39,18 @@ public static class ReadonlyDataItem
 
     //음식 아이템 정리 (1000 ~ 1999)
     public static readonly int Tofu = 1000;
+    public static readonly int Steak = 1001;
+    public static readonly int Skewer = 1002;
+    public static readonly int MeatStew = 1003;
+    public static readonly int MeatSoup = 1004;
+    public static readonly int CookMeat = 1005;
+    public static readonly int CookGreenMeat = 1006;
+    public static readonly int Budaejjigae = 1006;
+
+
+
+
+
 
 }
 

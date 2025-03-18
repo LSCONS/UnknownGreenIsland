@@ -160,6 +160,7 @@ public class Enemy : MonoBehaviour
         {
             if (Time.time - lastAttackTime > attackRate) // 공격
             {
+                if(animator.name == "Skeleton") animator.SetTrigger("IsAttack");
                 agent.isStopped = true;
                 lastAttackTime = Time.time;
                 playerStatus.HealthChange(-damage);
