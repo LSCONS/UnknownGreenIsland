@@ -16,19 +16,19 @@
 
 # 와이어 프레임 및 플로우 차트
 
-![Flow_0](https://github.com/user-attachments/assets/85664fed-cbb7-43c7-bb0c-40107d1f5bab)
+![Flow_01](https://github.com/user-attachments/assets/af93f7b8-6fbf-4d8c-b2a1-a55f0db7fb3b)
 
 ![Flow_Pram](https://github.com/user-attachments/assets/6dd5d7f6-43c4-4a2b-bb9b-4ea0b5ea3e47)
 
 ![Flow_NPC](https://github.com/user-attachments/assets/a064ccd6-b256-4b75-ae9d-5f096cf4e98b)
 
-![Flow_Build](https://github.com/user-attachments/assets/5fe20ad7-8b3f-4a0f-a780-d42076099862)
-
-![Flow_Weapon](https://github.com/user-attachments/assets/f7ba947f-cfeb-4de5-8c36-fa1b9f5e5dca)
+![Flow_ReBuild](https://github.com/user-attachments/assets/af3882f3-102a-4f8d-92c2-c567de922df0)
 
 ![Flow_Resoucre](https://github.com/user-attachments/assets/4ad3efcc-7502-4b92-a370-2f1915d92a2b)
 
 ![Flow_Food](https://github.com/user-attachments/assets/dca5d75d-1780-4eaf-8f27-9f0ecce669ac)
+
+![Flow_Weapon](https://github.com/user-attachments/assets/f7ba947f-cfeb-4de5-8c36-fa1b9f5e5dca)
 
 # 게임 시연 영상
 
