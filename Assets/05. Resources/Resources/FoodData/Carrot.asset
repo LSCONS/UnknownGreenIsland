@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
-  ItemID: 0
+  ItemID: 1
   ItemName: "\uB2F9\uADFC"
   description: "\uADC0\uC911\uD55C \uB2F9\uADFC\uC774\uB2E4."
-  interaction_Information: 
+  interaction_Information: "\uC90D\uAE30"
   abnormalStatus: 0
-  resourceType: 0
-  type: 0
-  inventory_icon: {fileID: 0}
-  interaction_Icon: {fileID: 0}
+  resourceType: 14
+  type: 1
+  inventory_icon: {fileID: 21300000, guid: 446dea87b4d2e0c418ffe55c0f217444, type: 3}
+  interaction_Icon: {fileID: 21300000, guid: 456d50fac16c6a047a35cbddb03f6a05, type: 3}
   dropPrefab: {fileID: 5940930023853860345, guid: daf9a207cbfb91d41bdd735d44b3ca90, type: 3}
   canStack: 1
   maxStackAmount: 1000

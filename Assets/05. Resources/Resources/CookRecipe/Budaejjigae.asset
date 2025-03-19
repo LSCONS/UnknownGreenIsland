@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemID: 1007
   ItemName: "\uBD80\uB300\uCC0C\uAC1C"
-  description: "\uC5EC\uB7EC\uAC00\uC9C0 \uC7AC\uB8CC\uAC00 \uB4E4\uC5B4\uAC04 \uBD80\uB300\uCC0C\uAC1C
-    \uB4E0\uB4E0\uD558\uAC8C \uBA39\uC744\uC218 \uC788\uB2E4."
+  description: "\uC5EC\uB7EC\uAC00\uC9C0 \uC7AC\uB8CC\uAC00 \uB4E4\uC5B4\uAC04 \uBD80\uB300\uCC0C\uAC1C."
   interaction_Information: "\uC90D\uAE30"
   abnormalStatus: 0
   resourceType: 0
@@ -36,8 +35,4 @@ MonoBehaviour:
   - type: 9
     Amount: 1
   - type: 10
-    Amount: 1
-  - type: 21
-    Amount: 1
-  - type: 13
     Amount: 1

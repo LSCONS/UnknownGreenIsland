@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 140874912921126142}
   - component: {fileID: 2286326789181659949}
   - component: {fileID: 5733163659523288705}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Berry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,4 +96,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58dc29542301c5469e4b78ea410fc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 9e4db6c9b36a39940a43eea683e0c6e7, type: 2}

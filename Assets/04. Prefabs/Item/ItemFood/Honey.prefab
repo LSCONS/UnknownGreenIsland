@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3223664920723027953}
   - component: {fileID: 8201965106018848070}
   - component: {fileID: 1621341436923080364}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Honey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58dc29542301c5469e4b78ea410fc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: fda0587b2106c4f418fe9da567bc8e85, type: 2}
 --- !u!54 &1621341436923080364
 Rigidbody:
   m_ObjectHideFlags: 0

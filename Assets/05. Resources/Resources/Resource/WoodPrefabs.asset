@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
-  m_Name: Wood
+  m_Name: WoodPrefabs
   m_EditorClassIdentifier: 
   ItemID: 3000
   ItemName: "\uB098\uBB34 \uC870\uAC01"
@@ -20,9 +20,9 @@ MonoBehaviour:
   abnormalStatus: 0
   resourceType: 1
   type: 2
-  inventory_icon: {fileID: 21300000, guid: c9016fe5f755b0541897d2cd6ec9c03e, type: 3}
-  interaction_Icon: {fileID: 21300000, guid: c9016fe5f755b0541897d2cd6ec9c03e, type: 3}
-  dropPrefab: {fileID: 1952002654061999677, guid: 775e198914328e54b9c3475658db64bf, type: 3}
+  inventory_icon: {fileID: 21300000, guid: 3fbfb4a9a9e32664789ae1b5e6b971d0, type: 3}
+  interaction_Icon: {fileID: 21300000, guid: 456d50fac16c6a047a35cbddb03f6a05, type: 3}
+  dropPrefab: {fileID: 4820550023040142136, guid: daba96c38fbfdfc4fb3a9d8f6bfe38c4, type: 3}
   canStack: 1
   maxStackAmount: 1000
   consumabale:
