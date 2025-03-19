@@ -204,7 +204,6 @@ public class BuildingManager : MonoBehaviour
             if (target.layer == targetLayer)
             {
                 float searchRadius = 5f;
-
                 
                 Collider[] nearbyColliders = Physics.OverlapSphere(objectToDestroy.transform.position, searchRadius, connectorLayer);
                 List<Connector> nearbyConnectors = new List<Connector>();
@@ -217,11 +216,7 @@ public class BuildingManager : MonoBehaviour
                         nearbyConnectors.Add(nearbyConnector);
                     }
                 }
-
-               
                 Destroy(objectToDestroy);
-
-                
                 StartCoroutine(UpdateConnectorsNextFrame(nearbyConnectors));
             }
         }
@@ -358,7 +353,7 @@ public class BuildingManager : MonoBehaviour
 
     private void PlaceBuild()
     {
-        if (ghostBuildGameobject != null & isGhostInValidPosition)
+        if (ghostBuildGameobject != null && isGhostInValidPosition)
         {
             GameObject newBuild = Instantiate(GetCurrentBuild(), ghostBuildGameobject.transform.position, ghostBuildGameobject.transform.rotation);
 

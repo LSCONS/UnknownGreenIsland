@@ -9,7 +9,7 @@ public static class ReadonlyDataLayer
     public static readonly string GroundLayer = "Ground";
     public static readonly string ResourceObjectLayer = "ResourceObject";
     public static readonly string EnemyLayer = "Enemy";
-    public static readonly string BuildingLayer = "Building";
+    public static readonly string BuildingLayer = "BuildingPre";
     public static readonly string InteractionLayer = "Interaction";
     public static readonly string WeaponLayer = "Weapon";
     public static readonly string InteractionCookLayer = "InteractionCook";

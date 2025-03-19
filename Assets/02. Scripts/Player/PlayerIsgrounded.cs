@@ -14,7 +14,7 @@ public class PlayerIsgrounded : MonoBehaviour
     private void OnValidate()
     {
         //적 레이어와 플레이어 레이어가 아닌 경우
-        includeLayerMask = (ReadonlyDataLayer.GroundLayerMask | ReadonlyDataLayer.InteractionLayerMask | ReadonlyDataLayer.ResourceObjectLayerMask);
+        includeLayerMask = (ReadonlyDataLayer.GroundLayerMask | ReadonlyDataLayer.InteractionLayerMask | ReadonlyDataLayer.ResourceObjectLayerMask | ReadonlyDataLayer.BuildingLayerMask);
     }
 
 

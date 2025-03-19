@@ -39,13 +39,19 @@ public class Connector : MonoBehaviour
                 Connector foundConnector = collider.GetComponent<Connector>();
 
                 if (foundConnector.connectorParentType == SelectedBuildingType.floor)
+                {
                     isConnectedToFloor = true;
 
+                }
                 if (foundConnector.connectorParentType == SelectedBuildingType.wall)
+                {
                     isConnectedToWall = true;
 
+                }
                 if (rootCall)
+                {
                     foundConnector.UpdateConnectors();
+                }
             }
         }
 
