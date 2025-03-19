@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3420373566524160902}
   - component: {fileID: 4069780257101898321}
   - component: {fileID: 6435030611298025563}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GreenTea
   m_TagString: Untagged
   m_Icon: {fileID: 0}

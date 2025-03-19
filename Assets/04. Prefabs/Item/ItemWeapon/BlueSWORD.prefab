@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1833474394057661753}
   - component: {fileID: 2173996680668260440}
   - component: {fileID: 6990459168135216543}
+  - component: {fileID: 5465734475487340560}
   m_Layer: 15
   m_Name: BlueSWORD
   m_TagString: Untagged
@@ -99,7 +100,7 @@ MonoBehaviour:
   weaponType: 1
   Resourcetype: 0
   attackDistance: 3
-  attackDamage: 0
+  attackDamage: 5
 --- !u!65 &6990459168135216543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121,6 +122,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.093706675, y: 0.7255669, z: 0.11529173}
   m_Center: {x: 0.20611145, y: 0.17833868, z: -0.08399693}
+--- !u!114 &5465734475487340560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6455791152709928926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc29542301c5469e4b78ea410fc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8a8d5a59775069e4198182138eda1233, type: 2}
 --- !u!1 &6622537186662955736
 GameObject:
   m_ObjectHideFlags: 0

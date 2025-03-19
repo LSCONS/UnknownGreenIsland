@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8562209530194910557}
   - component: {fileID: 79122615392583026}
   - component: {fileID: 1634935270270337737}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: JachoLeaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58dc29542301c5469e4b78ea410fc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 20c6a8637b4b28b49b596f2279a2755c, type: 2}
 --- !u!54 &1634935270270337737
 Rigidbody:
   m_ObjectHideFlags: 0

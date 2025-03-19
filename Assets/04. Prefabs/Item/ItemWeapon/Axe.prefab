@@ -170,6 +170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: 0
-  Resourcetype: 0
+  Resourcetype: 1
   attackDistance: 4
   attackDamage: 0

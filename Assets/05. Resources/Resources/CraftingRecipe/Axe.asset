@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   ItemID: 2000
-  ItemName: Axe
+  ItemName: "\uB3C4\uB07C"
   description: "\uB098\uBB34\uB97C \uCE90\uB294 \uB370\uC5D0 \uC0AC\uC6A9\uD558\uB294
     \uB3C4\uB07C\uC785\uB2C8\uB2E4."
   interaction_Information: "\uC90D\uAE30"
   abnormalStatus: 0
   resourceType: 0
   type: 0
-  inventory_icon: {fileID: 21300000, guid: 9adbd715b12427e41af1f311cd75d0eb, type: 3}
-  interaction_Icon: {fileID: 21300000, guid: b2cfb673dc7502744a03e06d2bf5e23d, type: 3}
+  inventory_icon: {fileID: 21300000, guid: afa485666c8ae334487c72a6af5342a1, type: 3}
+  interaction_Icon: {fileID: 21300000, guid: afa485666c8ae334487c72a6af5342a1, type: 3}
   dropPrefab: {fileID: 1092347861496201269, guid: 7101a7e5f96fb7945923fe69ba1f4ef8, type: 3}
   canStack: 0
   maxStackAmount: 0
   consumabale: []
   resources:
   - type: 1
-    Amount: 5
+    Amount: 2
   - type: 2
-    Amount: 5
+    Amount: 2

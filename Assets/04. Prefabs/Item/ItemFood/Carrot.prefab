@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1263824448532575108}
   - component: {fileID: 2092745481921000874}
   - component: {fileID: 5652856418800533615}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58dc29542301c5469e4b78ea410fc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 8be73d04231bff647a2c7857542bef4b, type: 2}
