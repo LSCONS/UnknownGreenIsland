@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 6701416595652094349}
   - component: {fileID: 3156755042634482942}
   m_Layer: 0
-  m_Name: 'Jaungo '
+  m_Name: Jaungo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

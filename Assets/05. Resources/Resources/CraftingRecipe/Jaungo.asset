@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728e84f084cbdff49b1f351e10e86f6d, type: 3}
   m_Name: Jaungo
   m_EditorClassIdentifier: 
-  ItemID: 0
+  ItemID: 2013
   ItemName: "\uC790\uC6B4\uACE0"
   description: "\uC0C1\uCC98\uD68C\uBCF5, \uCD9C\uD608 \uC9C0\uD608 \uD6A8\uACFC"
   interaction_Information: 
   abnormalStatus: 0
-  type: 0
+  resourceType: 0
+  type: 1
   inventory_icon: {fileID: 0}
   interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 6174412903304687525, guid: dda4bdb288051234e869f2e7af115a94, type: 3}
@@ -25,6 +26,9 @@ MonoBehaviour:
   maxStackAmount: 1000
   consumabale:
   - type: 0
-    value: 40
-  - type: 2
-    value: 20
+    value: 35
+  resources:
+  - type: 16
+    Amount: 3
+  - type: 19
+    Amount: 8
