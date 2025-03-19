@@ -21,7 +21,7 @@ MonoBehaviour:
   type: 0
   inventory_icon: {fileID: 21300000, guid: f82a965ff7bd2fb499b3a8ccfe9d292e, type: 3}
   interaction_Icon: {fileID: 21300000, guid: f82a965ff7bd2fb499b3a8ccfe9d292e, type: 3}
-  dropPrefab: {fileID: 9164977001659071345, guid: f1c7fccb039f9b14fbb37f4e01be40e6, type: 3}
+  dropPrefab: {fileID: 9164977001659071345, guid: e339338d9d9ac58489c05e2a83ed2e07, type: 3}
   canStack: 0
   maxStackAmount: 0
   consumabale: []

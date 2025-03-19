@@ -9,8 +9,8 @@ public class ResourceManager : Singleton<ResourceManager>
     private Dictionary<int, ItemObject> craftRecipe = new Dictionary<int, ItemObject>();
 
     public Dictionary<int, ItemObject> Resource { get => resource; }
-    public Dictionary<int, ItemObject> CookRecipe { get => craftRecipe; }
-    public Dictionary<int, ItemObject> CraftRecipe { get => cookRecipe; }
+    public Dictionary<int, ItemObject> CookRecipe { get => cookRecipe; }
+    public Dictionary<int, ItemObject> CraftRecipe { get => craftRecipe; }
 
     private void OnValidate()
     {
@@ -30,11 +30,16 @@ public class ResourceManager : Singleton<ResourceManager>
     private Dictionary<int, ItemObject> CreateDictionary(ItemData[] itemData)
     {
         Dictionary<int, ItemObject> tempDictionary = new Dictionary<int, ItemObject>();
-        for ( int i = 0; i < itemData.Length; i++ )
+        foreach (var item in itemData)
         {
-            ItemObject itemObject = new ItemObject();
-            itemObject.data = itemData[i];
-            tempDictionary.Add(itemData[i].ItemID, itemObject);
+            if (!tempDictionary.ContainsKey(item.ItemID))
+            {
+                tempDictionary.Add(item.ItemID, new ItemObject { data = item });
+            }
+            else
+            {
+                Debug.LogWarning($"중복된 ID: {item.ItemID} - {item.name}");
+            }
         }
         return tempDictionary;
     }
