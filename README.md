@@ -16,6 +16,22 @@
 - 팀원 정수영 : 무기 기능 구현 / 자원 수집 기능 구현 / AI 내비게이션 기능 구현 / NPC 추가
 - 팀원 최시훈 : 레벨 디자인 / 인벤토리 UI / 컨디션 UI / 인벤토리 기능 구현 / 자원 리스폰 기능 구현
 
+# 게임 시연 영상
+
+## Crafting
+![UnknownGreenIsland_Craft](https://github.com/user-attachments/assets/fa050261-f2b8-4dfa-b1cd-4161ec52b780)
+
+## Building
+![UnknownGreenIsland_Build](https://github.com/user-attachments/assets/10510867-b4e8-48a7-9551-f7a156334a7c)
+
+## Mining
+![UnknownGreenIsland-Resource](https://github.com/user-attachments/assets/106fef86-b5b9-4c13-8b62-1aec0de798f6)
+
+## Hunting
+
+
+
+
 # 와이어 프레임 및 플로우 차트
 
 ![Flow_01](https://github.com/user-attachments/assets/af93f7b8-6fbf-4d8c-b2a1-a55f0db7fb3b)
@@ -31,8 +47,6 @@
 ![Flow_Food](https://github.com/user-attachments/assets/dca5d75d-1780-4eaf-8f27-9f0ecce669ac)
 
 ![Flow_Weapon](https://github.com/user-attachments/assets/f7ba947f-cfeb-4de5-8c36-fa1b9f5e5dca)
-
-# 게임 시연 영상
 
 
 
