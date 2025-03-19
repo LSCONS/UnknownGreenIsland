@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5128726966028457319}
   - component: {fileID: 576767571984018374}
   - component: {fileID: 2787325622325400765}
-  m_Layer: 0
+  - component: {fileID: 8631311799516400391}
+  m_Layer: 12
   m_Name: CleanWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,3 +134,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8631311799516400391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145955353894519101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc29542301c5469e4b78ea410fc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7bee93a0303913840bf558239abd8334, type: 2}

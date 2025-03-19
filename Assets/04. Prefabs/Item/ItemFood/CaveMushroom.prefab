@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4439955851635977308}
   - component: {fileID: 3694178121763924374}
   - component: {fileID: 1022309592152189885}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CaveMushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58dc29542301c5469e4b78ea410fc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 440315bb7111dac41a6bcf9f07095551, type: 2}
 --- !u!54 &1022309592152189885
 Rigidbody:
   m_ObjectHideFlags: 0

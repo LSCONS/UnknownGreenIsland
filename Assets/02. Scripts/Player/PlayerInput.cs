@@ -8,10 +8,9 @@ using UnityEngine.Windows;
 public class PlayerInput : MonoBehaviour
 {
     private PlayerInputSystem inputSystem;
-    private WeaponHandler weaponHandler;
-    private Animator animator;
     private PlayerStatus playerStatus;
     private PlayerInteraction playerInteraction;
+    private Animator playerAnimator;
 
     private Vector2 playerMoveDir;
     public Vector2 PlayerMoveDir { get => playerMoveDir; }
@@ -28,18 +27,13 @@ public class PlayerInput : MonoBehaviour
     public Action inventoryAction;
     public Action interactionAction;
     public Action inventoryExitAction;
+    public Action<string, bool> Attack;
 
     private void OnValidate()
     {
         playerStatus = transform.GetComponentDebug<PlayerStatus>();
         playerInteraction = transform.GetComponentDebug<PlayerInteraction>();
-    }
-
-
-    private void Awake()
-    {
-        weaponHandler = "WeaponPivot".GetComponentNameDFS<WeaponHandler>();
-        animator = weaponHandler.GetComponent<Animator>();
+        playerAnimator = transform.GetComponentForTransformFindName<Animator>("Character");
     }
 
 
@@ -86,12 +80,17 @@ public class PlayerInput : MonoBehaviour
     //TODO: 플레이어가 인벤토리를 킨 상태로 WASD 입력을 한 상태로 false로 갈 경우 입력 값이 남아있을 수 있도록 변환.
     private void OnMove(InputAction.CallbackContext context)
     {
-        if(!(IsInventory)) playerMoveDir = context.ReadValue<Vector2>().normalized;
+        if (!(IsInventory))
+        {
+            playerMoveDir = context.ReadValue<Vector2>().normalized;
+            playerAnimator.SetFloat("Blend",0.2f);
+        }
         else { playerMoveDir = Vector2.zero; }
     }
     private void StopMove(InputAction.CallbackContext context)
     {
         playerMoveDir = Vector2.zero;
+        playerAnimator.SetFloat("Blend",0f);
     }
     private void OnMousePosition(InputAction.CallbackContext context)
     {
@@ -111,20 +110,22 @@ public class PlayerInput : MonoBehaviour
     }
     private void OnAction(InputAction.CallbackContext context)
     {
-        animator.SetBool("IsAttack", true);
+        Attack?.Invoke(ReadonlyAnimator.Attack, true);
     }
     private void StopAction(InputAction.CallbackContext context)
     {
-        animator.SetBool("IsAttack", false);
+        Attack?.Invoke(ReadonlyAnimator.Attack, false);
     }
     private void OnRun(InputAction.CallbackContext context)
     {
         isRun = true;
+        playerAnimator.SetFloat("Blend", 0.4f);
         playerStatus.CanRun();
     }
     private void StopRun(InputAction.CallbackContext context)
     {
         isRun = false;
+        playerAnimator.SetFloat("Blend", 0);
     }
     private void InteractionStart(InputAction.CallbackContext context)
     {

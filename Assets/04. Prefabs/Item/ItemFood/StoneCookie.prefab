@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1445214771112311796}
   - component: {fileID: 8472333566421105869}
   - component: {fileID: 7076734204777484202}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: StoneCookie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4188635097791437617}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58dc29542301c5469e4b78ea410fc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 3f132738ccc98ed4a94aee87a2f004f0, type: 2}

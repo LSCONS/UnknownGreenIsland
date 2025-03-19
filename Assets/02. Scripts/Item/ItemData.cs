@@ -26,10 +26,33 @@ public enum ConsumableType
 public enum Resource
 {
     None, //설정 없음
-    Wood, //나무 아이템
+    Wood, //나무조각 아이템
     Stone, //돌 아이템
-    Rice, //쌀 아이템
-    Meal, //밀 아이템
+    LogWood, //통나무 아이템
+    Leather, //가죽 아이템
+    Fiber, //식물섬유
+    Obsidian, //흑요석
+    BlueFree, //푸른광물
+    IronStone, //철광석
+
+    RawMeat, //생고기
+    GreenMeat, //고블린 생고기
+    Apple, //사과
+    GreenApple, //초록 사과
+    CaveMushroom, //동굴버섯
+    Carrot, //당근
+
+    GreenTeaLeaves, //녹잎
+    Honey, //꿀
+    Herbal, //허브
+    YellowHerb, //황련
+    JachoLeaf, //자초
+    BaekBan, //백반
+
+    CleanWater, //깨끗한 물
+    HerbalTea, //허브차
+
+
 }
 
 
@@ -37,7 +60,7 @@ public enum Resource
 public class CrafitingResource
 {
     public Resource type; //조합하는데 필요한 아이템 재료
-    public float Amount; //해당 아이템의 수
+    public int Amount; //해당 아이템의 수
 }
 
 
