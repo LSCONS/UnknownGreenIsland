@@ -18,8 +18,9 @@ MonoBehaviour:
     \uC88B\uC744\uC9C0\uB3C4?"
   interaction_Information: 
   abnormalStatus: 0
+  resourceType: 0
   type: 0
-  inventory_icon: {fileID: 0}
+  inventory_icon: {fileID: 21300000, guid: 84c60540f81d53340a67100eddb9bbc1, type: 3}
   interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 9196245483543603961, guid: c4991ac6322cef244b24b7e7107d689e, type: 3}
   canStack: 1
@@ -29,3 +30,4 @@ MonoBehaviour:
     value: 30
   - type: 0
     value: 8
+  resources: []

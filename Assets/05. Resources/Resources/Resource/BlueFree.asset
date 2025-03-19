@@ -20,7 +20,7 @@ MonoBehaviour:
   abnormalStatus: 0
   resourceType: 0
   type: 0
-  inventory_icon: {fileID: 0}
+  inventory_icon: {fileID: 21300000, guid: 690788c1d1c4a0b42815f8d3ed42836d, type: 3}
   interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 3922853837546006820, guid: 9fffb868cd752ee46a714232a24eb516, type: 3}
   canStack: 1
