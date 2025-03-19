@@ -72,9 +72,9 @@ public static class Util
     /// <param name="isDebug">디버깅 유무, 기본값은 출력</param>
     /// <param name="SearchDisable">비활성화 오브젝트 탐색 여부, 기본값은 탐색</param>
     /// <returns></returns>
-    public static T TransformFindAndGetComponent<T>(this Transform parent, string name, bool isDebug = true, bool SearchDisable = true) where T : Component
+    public static T GetComponentForTransformFindName<T>(this Transform parent, string name, bool isDebug = true, bool SearchDisable = true) where T : Component
     {
-        Transform transform = parent.Find(name);
+        Transform transform = parent.GetGameObjectSameNameDFS(name);
         if(transform == null)
         {
             if (isDebug) Debug.LogError($"{name} is null");
@@ -102,11 +102,81 @@ public static class Util
     }
 
 
+    /// <summary>
+    /// 해당 Transform의 자식들을 검사해서 특정 컴포넌트를 가져오는 메서드
+    /// </summary>
+    /// <typeparam name="T">가져오고 싶은 컴포넌트</typeparam>
+    /// <param name="parent">검사할 부모 오브젝트</param>
+    /// <param name="isDebug">디버그 유무. 기본 값은 출력</param>
+    /// <returns>있다면 반환. 없다면 null반환</returns>
     public static T GetChildComponentDebug<T>(this Transform parent, bool isDebug = true ) where T : Component
     {
         T tempT = parent.GetComponentInChildren<T>();
         if (tempT == null && isDebug) Debug.LogError($"{typeof(T)} is null");
         return tempT;
+    }
+
+
+    /// <summary>
+    ///  GetcomponentInparent와 똑같지만 Debug만 추가됨.
+    /// </summary>
+    /// <typeparam name="T">가져오고 싶은 컴포넌트</typeparam>
+    /// <param name="parent">찾기를 시작할 Transform</param>
+    /// <param name="isDebug">디버그 출력 유무, 기본값은 출력</param>
+    /// <returns></returns>
+    public static T GetComponentInparentDebug<T>(this Transform parent, bool isDebug = true) where T : Component
+    {
+        T tempT = parent.GetComponentInParent<T>();
+        if (tempT == null && isDebug) Debug.LogError($"{typeof(T)} is null");
+        return tempT;
+    }
+
+
+    /// <summary>
+    /// 부모오브젝트를 재귀적으로 찾으며 특정 이름의 Transform을 찾아오는 메서드
+    /// </summary>
+    /// <param name="parent">검색을 시작할 오브젝트</param>
+    /// <param name="name">검색할 이름</param>
+    /// <param name="isDebug">못 찾을 시 출력 유무. 기본 값은 출력</param>
+    /// <returns>찾은 부모 오브젝트의 Transform 반환</returns>
+    public static Transform GetTransformInParent(this Transform parent, string name, bool isDebug = true)
+    {
+        if(parent.name == name) return parent;
+
+        if(parent.parent != null)
+        {
+            return parent.parent.GetTransformInParent(name);
+        }
+        else
+        {
+            if(isDebug) Debug.LogError($"{name}을 찾을 수 없습니다.");
+            return null;
+        }
+    }
+
+
+    /// <summary>
+    /// 해당 실수를 더한 후 값을 제한하여 반환합니다.
+    /// </summary>
+    /// <param name="nowValue">현재 값</param>
+    /// <param name="addValue">추가할 값</param>
+    /// <param name="min">최소값</param>
+    /// <param name="max">최대값</param>
+    /// <returns>min <= nowValue + addValue <= min 반환</returns>
+    public static float PlusAndClamp(this float nowValue, float addValue, float min, float max)
+    {
+        return Mathf.Clamp(nowValue + addValue, min, max);
+    }
+    /// <summary>
+    /// 해당 실수를 더한 후 값을 제한하여 반환합니다.
+    /// </summary>
+    /// <param name="nowValue">현재 값</param>
+    /// <param name="addValue">추가할 값</param>
+    /// <param name="max">최대값</param>
+    /// <returns>0 <= nowValue + addValue <= min 반환</returns>
+    public static float PlusAndClamp(this float nowValue, float addValue, float max)
+    {
+        return Mathf.Clamp(nowValue + addValue, 0, max);
     }
 
 
@@ -124,5 +194,13 @@ public static class Util
             int k = rand.Next(n + 1);
             (list[n], list[k]) = (list[k], list[n]);
         }
+    }
+
+
+    //커서 상태를 결정하는 메서드
+    public static void CursorisLock(bool isLock)
+    {
+        if (isLock) Cursor.lockState = CursorLockMode.Locked;
+        else Cursor.lockState = CursorLockMode.None;
     }
 }
