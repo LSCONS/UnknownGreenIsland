@@ -45,6 +45,17 @@ public static class ReadonlyDataItem
     public static readonly int Axe = 2000;
     public static readonly int Knife = 2001;
     public static readonly int SWORD = 2002;
+    public static readonly int IronPickaxe = 2003;
+    public static readonly int ObsidianPickaxe = 2004;
+    public static readonly int BluePickaxe = 2005;
+    public static readonly int BattleAX = 2006;
+    public static readonly int IronKatana = 2007;
+    public static readonly int ObsidianKatana = 2008;
+    public static readonly int StoneSpear = 2009;
+    public static readonly int BlueSpear = 2010;
+
+
+
 
 
     //음식 아이템 정리 (1000 ~ 1999)

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4991887703507578470}
   - component: {fileID: 7820492695329225168}
   - component: {fileID: 3313139854880325211}
+  - component: {fileID: -3160629364947297537}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -111,3 +112,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-3160629364947297537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059436689234067844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7017027, y: 1.4779668, z: 1.976292}
+  m_Center: {x: 0.02396035, y: 0.71894455, z: -0.034890976}
