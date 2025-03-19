@@ -16,8 +16,10 @@ MonoBehaviour:
   ItemName: "\uAE68\uB057\uD55C \uBB3C"
   description: "\uB9E4\uC6B0 \uB9D1\uC740 \uBB3C\uC774\uB2E4."
   interaction_Information: 
+  abnormalStatus: 0
+  resourceType: 0
   type: 0
-  inventory_icon: {fileID: 0}
+  inventory_icon: {fileID: 21300000, guid: f91ff0ff43306d74db68765a9566534d, type: 3}
   interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 2145955353894519101, guid: 83617ca819a9eba4db7f0da1038dbf43, type: 3}
   canStack: 1
@@ -25,3 +27,4 @@ MonoBehaviour:
   consumabale:
   - type: 3
     value: 40
+  resources: []

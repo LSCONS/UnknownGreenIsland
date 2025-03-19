@@ -17,8 +17,10 @@ MonoBehaviour:
   description: "\uB3C5\uC774 \uC5C6\uB294 \uBC84\uC12F\uC774\uB2E4. \uC8FC\uB85C
     \uB3D9\uAD74\uC5D0\uC11C \uC790\uB780\uB2E4."
   interaction_Information: 
+  abnormalStatus: 0
+  resourceType: 0
   type: 0
-  inventory_icon: {fileID: 0}
+  inventory_icon: {fileID: 21300000, guid: 22748ce6ae921e140b0d9d1bba491f75, type: 3}
   interaction_Icon: {fileID: 0}
   dropPrefab: {fileID: 5751896517601217034, guid: 03ef59c027c90004b96f4071b163c357, type: 3}
   canStack: 1
@@ -26,3 +28,4 @@ MonoBehaviour:
   consumabale:
   - type: 1
     value: 6
+  resources: []

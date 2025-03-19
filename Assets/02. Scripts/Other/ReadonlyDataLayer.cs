@@ -53,6 +53,10 @@ public static class ReadonlyDataItem
     public static readonly int ObsidianKatana = 2008;
     public static readonly int StoneSpear = 2009;
     public static readonly int BlueSpear = 2010;
+    public static readonly int HoneyOintment = 2011;
+    public static readonly int HwangRyeongo = 2012;
+    public static readonly int Jaungo = 2013;
+
 
 
 
