@@ -28,7 +28,7 @@
 ![UnknownGreenIsland-Resource](https://github.com/user-attachments/assets/106fef86-b5b9-4c13-8b62-1aec0de798f6)
 
 ## Hunting
-
+![UnknownGreenIsland_Fight](https://github.com/user-attachments/assets/5182302d-d490-4195-a52b-55007740eef0)
 
 
 
