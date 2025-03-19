@@ -27,5 +27,5 @@ MonoBehaviour:
   maxStackAmount: 1000
   consumabale:
   - type: 0
-    value: 8
+    value: 5
   resources: []

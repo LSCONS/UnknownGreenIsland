@@ -25,8 +25,8 @@ MonoBehaviour:
   canStack: 1
   maxStackAmount: 10
   consumabale:
-  - type: 1
-    value: 30
+  - type: 2
+    value: 13
   resources:
   - type: 9
     Amount: 1
