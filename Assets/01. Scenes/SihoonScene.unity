@@ -11419,7 +11419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includeLayerMask:
     serializedVersion: 2
-    m_Bits: 4480
+    m_Bits: 6528
   isgrounded: 0
 --- !u!54 &613428114
 Rigidbody:
@@ -22730,7 +22730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMass: 2
-  newJumpForce: 2.4
+  newJumpForce: 2.6
 --- !u!114 &1189608044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23680,13 +23680,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1.28
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.72, z: 0}
 --- !u!1001 &1259481528
 PrefabInstance:
   m_ObjectHideFlags: 0
