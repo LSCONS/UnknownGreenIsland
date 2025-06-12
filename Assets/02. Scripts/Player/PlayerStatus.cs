@@ -40,24 +40,24 @@ public class PlayerStatus : MonoBehaviour
 {
     #region 플레이어 기본 수치 선언
     [ShowInInspector]
-    private float moveSpeed = 5f;           //플레이어가 움직일 때 스피드 보정 값
-    private float runMultiple = 1f;         //플레이어가 달릴 때 스피드 곱
-    private float maxHealth = 100f;         //플레이어 최대 체력
-    private float curHealth = 100f;         //플레이어 현재 체력
-    private float maxStamina = 100f;        //플레이어 최대 스태미나
-    private float curStamina = 100f;        //플레이어 현재 스태미나
-    private float maxHunger = 100f;         //플레이어 최대 배고픔
-    private float curHunger = 100f;         //플레이어 현재 배고픔
-    private float maxThirsty = 100f;        //플레이어 최대 목마름
-    private float curThirsty = 100f;        //플레이어 현재 목마름
-    private int healthChangeValue = 0;      //플레이어의 초당 체력 변화량
-    private int staminaChangeValue = 8;     //플레이어의 초당 스태미나 변화량
-    private int hungerChangeValue = -1;     //플레이어의 초당 배고픔 변화량
-    private int thirstyChagneValue = -2;    //플레이어의 초당 수분 변화량
-    private float damageValue = 5;          //플레이어 데미지 배수
-    private bool isWeapon = false;          //플레이어의 장비 유무;
-    private Dictionary<AbnormalStatus, int> abnormalTimers = new Dictionary<AbnormalStatus, int>();
+    private float   moveSpeed           = 5f;       //플레이어가 움직일 때 스피드 보정 값
+    private float   runMultiple         = 1f;       //플레이어가 달릴 때 스피드 곱
+    private float   maxHealth           = 100f;     //플레이어 최대 체력
+    private float   curHealth           = 100f;     //플레이어 현재 체력
+    private float   maxStamina          = 100f;     //플레이어 최대 스태미나
+    private float   curStamina          = 100f;     //플레이어 현재 스태미나
+    private float   maxHunger           = 100f;     //플레이어 최대 배고픔
+    private float   curHunger           = 100f;     //플레이어 현재 배고픔
+    private float   maxThirsty          = 100f;     //플레이어 최대 목마름
+    private float   curThirsty          = 100f;     //플레이어 현재 목마름
+    private float   damageValue         = 5;        //플레이어 데미지 배수
+    private int     healthChangeValue   = 0;        //플레이어의 초당 체력 변화량
+    private int     staminaChangeValue  = 8;        //플레이어의 초당 스태미나 변화량
+    private int     hungerChangeValue   = -1;       //플레이어의 초당 배고픔 변화량
+    private int     thirstyChagneValue  = -2;       //플레이어의 초당 수분 변화량
+    private bool    isWeapon            = false;    //플레이어의 장비 유무;
 
+    private Dictionary<AbnormalStatus, int> abnormalTimers = new Dictionary<AbnormalStatus, int>();
     private AbnormalStatus curAbnormal = AbnormalStatus.None;    //플레이어 현재 상태이상
 
     [ShowInInspector]
@@ -73,22 +73,22 @@ public class PlayerStatus : MonoBehaviour
     #endregion
 
     #region 플레이어 기본 수치 접근
-    public float MoveSpeed { get => moveSpeed * runMultiple; }
-    public float MaxHealth { get => maxHealth; }
-    public float CurHealth { get => curHealth; }
-    public float MaxStamina { get => maxStamina; }
-    public float CurStamina { get => curStamina; }
-    public float PlayerMass { get => playerMass; }
-    public float MaxHunger { get => maxHunger; }
-    public float CurHunger { get => curHunger; }
-    public float MaxThirsty { get => maxThirsty; }
-    public float CurThirsty { get => curThirsty; }
-    public float NewJumpForce { get => newJumpForce; }
-    public bool IsWeapon { get => isWeapon; }
-    public AbnormalStatus CurAbnormal { get => curAbnormal; }
-    public int HealthChangeValue { get => healthChangeValue; }
-    public int StaminaChangeValue { get => staminaChangeValue; }
-    public float DamageValue { get => damageValue; }
+    public float    MoveSpeed           { get => moveSpeed * runMultiple; }
+    public float    MaxHealth           { get => maxHealth; }
+    public float    CurHealth           { get => curHealth; }
+    public float    MaxStamina          { get => maxStamina; }
+    public float    CurStamina          { get => curStamina; }
+    public float    PlayerMass          { get => playerMass; }
+    public float    MaxHunger           { get => maxHunger; }
+    public float    CurHunger           { get => curHunger; }
+    public float    MaxThirsty          { get => maxThirsty; }
+    public float    CurThirsty          { get => curThirsty; }
+    public float    NewJumpForce        { get => newJumpForce; }
+    public float    DamageValue         { get => damageValue; }
+    public bool     IsWeapon            { get => isWeapon; }
+    public int      HealthChangeValue   { get => healthChangeValue; }
+    public int      StaminaChangeValue  { get => staminaChangeValue; }
+    public AbnormalStatus CurAbnormal   { get => curAbnormal; }
     public Dictionary<AbnormalStatus, int> AbnormalTimers { get => abnormalTimers; }
 
 
