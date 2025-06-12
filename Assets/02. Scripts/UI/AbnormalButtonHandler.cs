@@ -16,17 +16,19 @@ public class AbnormalButtonHandler : MonoBehaviour, IPointerExitHandler, IPointe
 
     private void OnValidate()
     {
-        imageSizeSetting = transform.GetComponentInparentDebug<ImageSizeSettingForText>();
-        rect = transform.parent.GetChildComponentDebug<RectTransform>();
-        fillAmount1 = transform.parent.GetComponentForTransformFindName<Image>("FillAmount1");
-        fillAmount2 = transform.parent.GetComponentForTransformFindName<Image>("FillAmount2");
+        rect                = transform.parent.GetChildComponentDebug<RectTransform>();
+        imageSizeSetting    = transform.GetComponentInparentDebug<ImageSizeSettingForText>();
+        fillAmount1         = transform.parent.GetComponentForTransformFindName<Image>("FillAmount1");
+        fillAmount2         = transform.parent.GetComponentForTransformFindName<Image>("FillAmount2");
     }
+
 
     public void ChangeFillAmount(float value)
     {
         fillAmount1.fillAmount = value / 10;
         fillAmount2.fillAmount = value / 10;
     }
+
 
     public void OnPointerExit(PointerEventData eventData)
     {

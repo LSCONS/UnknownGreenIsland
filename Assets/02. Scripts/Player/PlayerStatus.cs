@@ -11,29 +11,29 @@ using VInspector;
 [System.Flags]
 public enum AbnormalStatus
 {
-    None = 0,               //상태이상 없음
-    Bleeding = 1 << 0,      //출혈            //초당 데미지
-    Poisoning = 1 << 1,     //중독            //초당 데미지
-    Fracture = 1 << 2,      //골절            //달리기 금지
+    None            = 0,        //상태이상 없음
+    Bleeding        = 1 << 0,   //출혈            //초당 데미지
+    Poisoning       = 1 << 1,   //중독            //초당 데미지
+    Fracture        = 1 << 2,   //골절            //달리기 금지
 
-    Dehydrration = 1 << 3,  //탈수            //이동속도 감소
-    Thirsty = 1 << 4,       //목마름          //스태미너 회복량 감소
-    Drink = 1 << 5,         //물마심          //스태미너 회복량 증가
-    PlentyWater = 1 << 6,   //수분 많음       //이동속도 증가
+    Dehydrration    = 1 << 3,   //탈수            //이동속도 감소
+    Thirsty         = 1 << 4,   //목마름          //스태미너 회복량 감소
+    Drink           = 1 << 5,   //물마심          //스태미너 회복량 증가
+    PlentyWater     = 1 << 6,   //수분 많음       //이동속도 증가
 
-    Starvation = 1 << 7,    //아사            //공격력 감소
-    Hunger = 1 << 8,        //배고픔          //초당 데미지
-    Eat = 1 << 9,           //밥먹음          //초당 회복
-    EatFull = 1 << 10,      //배부름          //공격력 버프
+    Starvation      = 1 << 7,   //아사            //공격력 감소
+    Hunger          = 1 << 8,   //배고픔          //초당 데미지
+    Eat             = 1 << 9,   //밥먹음          //초당 회복
+    EatFull         = 1 << 10,  //배부름          //공격력 버프
 }
 
 public enum PlayerAction
 {
-    Idle = 0,
-    Move = 1,
-    Run = 2,
-    Jump = 3,
-    Die = 4
+    Idle    = 0,
+    Move    = 1,
+    Run     = 2,
+    Jump    = 3,
+    Die     = 4
 }
 
 public class PlayerStatus : MonoBehaviour
@@ -114,14 +114,14 @@ public class PlayerStatus : MonoBehaviour
 
     private void OnValidate()
     {
-        playerInput = transform.GetComponentDebug<PlayerInput>();
-        conditionHandler = transform.GetComponentForTransformFindName<ConditionHandler>("UI_Condition_Canvas");
+        playerInput         = transform.GetComponentDebug<PlayerInput>();
+        conditionHandler    = transform.GetComponentForTransformFindName<ConditionHandler>("UI_Condition_Canvas");
     }
 
     private void Start()
     {
-        animator = "Character".GetComponentNameDFS<Animator>();
-        abnormalCoroutine = StartCoroutine(AbnormalCoroutine());
+        animator            = "Character".GetComponentNameDFS<Animator>();
+        abnormalCoroutine   = StartCoroutine(AbnormalCoroutine());
     }
 
 
@@ -129,10 +129,10 @@ public class PlayerStatus : MonoBehaviour
     private void ApplyAbnormal()
     {
         //체력, 스태미나 변화값이 0이 아닌경우 효과 적용
-        if (healthChangeValue != 0) HealthChange(0.1f * healthChangeValue);
-        if (staminaChangeValue != 0) StaminaChange(0.1f * staminaChangeValue);
-        if (hungerChangeValue != 0) HungerChange(0.1f  * hungerChangeValue);
-        if (thirstyChagneValue != 0) ThirstyChange(0.1f * thirstyChagneValue);
+        if (healthChangeValue   != 0) HealthChange  (0.1f * healthChangeValue);
+        if (staminaChangeValue  != 0) StaminaChange (0.1f * staminaChangeValue);
+        if (hungerChangeValue   != 0) HungerChange  (0.1f * hungerChangeValue);
+        if (thirstyChagneValue  != 0) ThirstyChange (0.1f * thirstyChagneValue);
 
         //현재 상태이상 리스트가 존재할 경우
         if (abnormalTimers.Count > 0)

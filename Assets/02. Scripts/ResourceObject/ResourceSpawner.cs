@@ -8,10 +8,12 @@ public class ResourceSpawner : MonoBehaviour
     public float respawnTime = 5f;
     public int OriginCapacity = 5;
     
+
     public void SpawnStart()
     {
         StartCoroutine(RespawnResource(respawnTime));
     }
+
 
     private IEnumerator RespawnResource(float time)
     {

@@ -12,6 +12,7 @@ public class Condition : MonoBehaviour
         barImage = transform.GetComponentForTransformFindName<Image>("Bar");
     }
 
+
     public void UpdateBar(float value)
     {
         barImage.fillAmount = value;

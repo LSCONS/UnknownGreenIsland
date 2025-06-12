@@ -25,13 +25,13 @@ public class PlayerControl : MonoBehaviour
 
     private void OnValidate()
     {
-        animator = GetComponentInChildren<Animator>();
-        input = transform.GetComponentDebug<PlayerInput>();
-        chrConPlayer = "PlayerObject".GetComponentNameDFS<CharacterController>();
-        playerStatus = transform.GetComponentDebug<PlayerStatus>();
-        _difValue = transform.position - chrConPlayer.transform.position;
-        playerIsgrounded = "PlayerObject".GetComponentNameDFS<PlayerIsgrounded>();
-        checkAngle = "PlayerObject".GetComponentNameDFS<PlayerCheckAngle>();
+        _difValue           = transform.position - chrConPlayer.transform.position;
+        input               = transform.GetComponentDebug<PlayerInput>();
+        playerStatus        = transform.GetComponentDebug<PlayerStatus>();
+        chrConPlayer        = "PlayerObject".GetComponentNameDFS<CharacterController>();
+        playerIsgrounded    = "PlayerObject".GetComponentNameDFS<PlayerIsgrounded>();
+        checkAngle          = "PlayerObject".GetComponentNameDFS<PlayerCheckAngle>();
+        animator            = GetComponentInChildren<Animator>();
     }
 
 

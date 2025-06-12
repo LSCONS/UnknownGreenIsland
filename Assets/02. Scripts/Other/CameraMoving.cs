@@ -13,9 +13,9 @@ public class CameraMoving : MonoBehaviour
 
     private void OnValidate()
     {
-        playerTransform = "Player".GetComponentNameDFS<Transform>();
-        playerInput = "Player".GetComponentNameDFS<PlayerInput>();
-        playerStatus = "Player".GetComponentNameDFS<PlayerStatus>();
+        playerTransform     = "Player".GetComponentNameDFS<Transform>();
+        playerInput         = "Player".GetComponentNameDFS<PlayerInput>();
+        playerStatus        = "Player".GetComponentNameDFS<PlayerStatus>();
     }
 
 

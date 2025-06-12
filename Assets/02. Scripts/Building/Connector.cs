@@ -7,18 +7,19 @@ public class Connector : MonoBehaviour
     public ConnectorPosition connectorPosition;
     public SelectedBuildingType connectorParentType;
 
-    [HideInInspector] public bool isConnectedToFloor = false;
-    [HideInInspector] public bool isConnectedToWall = false;
-    [HideInInspector] public bool canConnectTo = true;
+    [HideInInspector] public bool isConnectedToFloor    = false;
+    [HideInInspector] public bool isConnectedToWall     = false;
+    [HideInInspector] public bool canConnectTo          = true;
 
-    [SerializeField] private bool canConnectToFloor = true;
-    [SerializeField] private bool canConnectToWall = true;
+    [SerializeField] private bool canConnectToFloor     = true;
+    [SerializeField] private bool canConnectToWall      = true;
 
     private void OnDrawGizmos()
     {
         Gizmos.color = isConnectedToFloor ? (isConnectedToWall ? Color.red : Color.blue) : (!isConnectedToWall ? Color.green : Color.yellow);
         Gizmos.DrawWireSphere(transform.position, transform.lossyScale.x / 2f);
     }
+
 
     public void UpdateConnectors(bool rootCall = false)
     {
@@ -55,6 +56,7 @@ public class Connector : MonoBehaviour
             canConnectTo = false;
     }
 }
+
 
 [System.Serializable]
 public enum ConnectorPosition

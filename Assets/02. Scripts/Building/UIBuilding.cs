@@ -24,6 +24,7 @@ public class UIBuilding : MonoBehaviour
         buildingManager = GetComponentInParent<BuildingManager>();
     }
 
+
     private void Start()
     {
         buildItem = buttons.Count;
@@ -35,6 +36,7 @@ public class UIBuilding : MonoBehaviour
         oldBuildItem = 0;
     }
     
+
     public void GetCurrentBuild()
     {
         mousePosition = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
@@ -55,6 +57,7 @@ public class UIBuilding : MonoBehaviour
             buttons[curBuildItem].sceneImage.color = buttons[curBuildItem].HighlightColor;
         }
     }
+
 
     public void ButtonAction()
     {
@@ -86,6 +89,7 @@ public class UIBuilding : MonoBehaviour
         }
     }
 }
+
 
 [System.Serializable]
 public class MenuButton

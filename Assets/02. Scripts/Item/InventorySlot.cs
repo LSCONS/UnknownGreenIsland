@@ -10,9 +10,9 @@ using VInspector;
 public class InventorySlot : MonoBehaviour
 {
     private Image icon;
-    private TextMeshProUGUI text;
-    private GameObject objectPool;
     private Button button;
+    private GameObject objectPool;
+    private TextMeshProUGUI text;
     private PlayerInventoty playerInventory;
     private PlayerInput playerinput;
     private PlayerStatus playerStatus;
@@ -24,18 +24,18 @@ public class InventorySlot : MonoBehaviour
 
     private void OnValidate()
     {
-        text = transform.GetComponentForTransformFindName<TextMeshProUGUI>("QuantityText");
-        icon = transform.GetComponentForTransformFindName<Image>("Icon");
-        objectPool = transform.GetComponentForTransformFindName<Transform>("ObjectPool").gameObject;
-        button = transform.GetComponentDebug<Button>();
+        text        = transform.GetComponentForTransformFindName<TextMeshProUGUI>("QuantityText");
+        icon        = transform.GetComponentForTransformFindName<Image>("Icon");
+        objectPool  = transform.GetComponentForTransformFindName<Transform>("ObjectPool").gameObject;
+        button      = transform.GetComponentDebug<Button>();
     }
 
 
     private void Awake()
     {
-        playerinput = transform.GetComponentInparentDebug<PlayerInput>();
+        playerinput     = transform.GetComponentInparentDebug<PlayerInput>();
         playerInventory = transform.GetComponentInparentDebug<PlayerInventoty>();
-        playerStatus = transform.GetComponentInparentDebug<PlayerStatus>();
+        playerStatus    = transform.GetComponentInparentDebug<PlayerStatus>();
         UpdateAmountText();
         UpdateIcon();
     }

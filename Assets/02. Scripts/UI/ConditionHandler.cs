@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using VInspector;
 
@@ -21,9 +19,9 @@ public class ConditionHandler : MonoBehaviour
 
     private void OnValidate()
     {
-        conditionHP = transform.GetComponentForTransformFindName<Condition>("ConditionHP");
-        conditionstamina = transform.GetComponentForTransformFindName<Condition>("ConditionStamina");
-        conditionHunger = transform.GetComponentForTransformFindName<Condition>("ConditionHunger");
-        conditionThirsty = transform.GetComponentForTransformFindName<Condition>("ConditionThirst");
+        conditionHP         = transform.GetComponentForTransformFindName<Condition>("ConditionHP");
+        conditionstamina    = transform.GetComponentForTransformFindName<Condition>("ConditionStamina");
+        conditionHunger     = transform.GetComponentForTransformFindName<Condition>("ConditionHunger");
+        conditionThirsty    = transform.GetComponentForTransformFindName<Condition>("ConditionThirst");
     }
 }

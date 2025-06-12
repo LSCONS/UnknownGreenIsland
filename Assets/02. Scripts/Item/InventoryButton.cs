@@ -15,13 +15,13 @@ public class InventoryButton : MonoBehaviour
 
     private void OnValidate()
     {
-        inventoryCanvas = transform.GetTransformInParent("UI_Inventory_Canvas");
-        playerInventoty = inventoryCanvas.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
-        playerStatus = transform.GetComponentInparentDebug<PlayerStatus>();
-        equipButton = transform.GetComponentForTransformFindName<Button>("EquipButton");
-        unEquipButton = transform.GetComponentForTransformFindName<Button>("UnEquipButton");
-        useButton = transform.GetComponentForTransformFindName<Button>("UseButton");
-        discardButton = transform.GetComponentForTransformFindName<Button>("DiscardButton");
+        inventoryCanvas     = transform.GetTransformInParent("UI_Inventory_Canvas");
+        playerInventoty     = inventoryCanvas.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
+        playerStatus        = transform.GetComponentInparentDebug<PlayerStatus>();
+        equipButton         = transform.GetComponentForTransformFindName<Button>("EquipButton");
+        unEquipButton       = transform.GetComponentForTransformFindName<Button>("UnEquipButton");
+        useButton           = transform.GetComponentForTransformFindName<Button>("UseButton");
+        discardButton       = transform.GetComponentForTransformFindName<Button>("DiscardButton");
 
         equipButton.onClick.AddListener(playerInventoty.EquippedItem);
         unEquipButton.onClick.AddListener(playerInventoty.UnEquippedItem);

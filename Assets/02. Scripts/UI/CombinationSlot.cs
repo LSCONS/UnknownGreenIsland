@@ -16,14 +16,16 @@ public class CombinationSlot : MonoBehaviour
     public ItemObject itemObject;
     public Button button;
 
+
     private void OnValidate()
     {
-        image = transform.GetComponentForTransformFindName<Image>("Icon");
-        titleText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
+        image       = transform.GetComponentForTransformFindName<Image>("Icon");
+        titleText   = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
         description = transform.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
-        recipeText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("Recipe");
-        button = transform.GetChildComponentDebug<Button>();
+        recipeText  = transform.GetComponentForTransformFindName<TextMeshProUGUI>("Recipe");
+        button      = transform.GetChildComponentDebug<Button>();
     }
+
 
     public void UpdateData(ItemObject item)
     {
@@ -56,6 +58,7 @@ public class CombinationSlot : MonoBehaviour
             Debug.Log("생성 실패");
         }
     }
+
 
     private void OnDisable()
     {

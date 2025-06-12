@@ -29,34 +29,34 @@ public class ImageSizeSettingForText : MonoBehaviour
 
     private void OnValidate()
     {
-        childText = transform.GetComponentForTransformFindName<TextMeshProUGUI>("AbnormalText");
-        parentImage = transform.GetComponentForTransformFindName<Image>("TextImage");
+        textRect            = childText.GetComponent<RectTransform>();
+        parentRect          = parentImage.GetComponent<RectTransform>();
 
-        textRect = childText.GetComponent<RectTransform>();
-        parentRect = parentImage.GetComponent<RectTransform>();
+        childText           = transform.GetComponentForTransformFindName<TextMeshProUGUI>("AbnormalText");
+        parentImage         = transform.GetComponentForTransformFindName<Image>("TextImage");
 
-        BleedingHanler = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("BleedingImage");
-        PosioningImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("PosioningImage");
-        SpeedUpImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("SpeedUpImage");
-        SpeedDownImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("SpeedDownImage");
-        FactureImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("FactureImage");
-        HealthUpImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("HealthUpImage");
-        HealthDownImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("HealthDownImage");
-        PowerUpImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("PowerUpImage");
-        PowerDownImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("PowerDownImage");
-        StaminaUpImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("StaminaUpImage");
-        StaminaDownImage = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("StaminaDownImage");
+        BleedingHanler      = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("BleedingImage");
+        PosioningImage      = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("PosioningImage");
+        SpeedUpImage        = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("SpeedUpImage");
+        SpeedDownImage      = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("SpeedDownImage");
+        FactureImage        = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("FactureImage");
+        HealthUpImage       = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("HealthUpImage");
+        HealthDownImage     = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("HealthDownImage");
+        PowerUpImage        = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("PowerUpImage");
+        PowerDownImage      = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("PowerDownImage");
+        StaminaUpImage      = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("StaminaUpImage");
+        StaminaDownImage    = transform.GetComponentForTransformFindName<AbnormalButtonHandler>("StaminaDownImage");
 
-        BleedingHanler.abnormalStatus = AbnormalStatus.Bleeding;
-        PosioningImage.abnormalStatus = AbnormalStatus.Poisoning;
-        SpeedUpImage.abnormalStatus = AbnormalStatus.PlentyWater;
-        SpeedDownImage.abnormalStatus = AbnormalStatus.Dehydrration;
-        FactureImage.abnormalStatus = AbnormalStatus.Fracture;
-        HealthUpImage.abnormalStatus = AbnormalStatus.Eat;
-        HealthDownImage.abnormalStatus = AbnormalStatus.Hunger;
-        PowerUpImage.abnormalStatus = AbnormalStatus.EatFull;
-        PowerDownImage.abnormalStatus = AbnormalStatus.Starvation;
-        StaminaUpImage.abnormalStatus = AbnormalStatus.Drink;
+        BleedingHanler.abnormalStatus   = AbnormalStatus.Bleeding;
+        PosioningImage.abnormalStatus   = AbnormalStatus.Poisoning;
+        SpeedUpImage.abnormalStatus     = AbnormalStatus.PlentyWater;
+        SpeedDownImage.abnormalStatus   = AbnormalStatus.Dehydrration;
+        FactureImage.abnormalStatus     = AbnormalStatus.Fracture;
+        HealthUpImage.abnormalStatus    = AbnormalStatus.Eat;
+        HealthDownImage.abnormalStatus  = AbnormalStatus.Hunger;
+        PowerUpImage.abnormalStatus     = AbnormalStatus.EatFull;
+        PowerDownImage.abnormalStatus   = AbnormalStatus.Starvation;
+        StaminaUpImage.abnormalStatus   = AbnormalStatus.Drink;
         StaminaDownImage.abnormalStatus = AbnormalStatus.Thirsty;
 
         abnormalButtonHandlers = new AbnormalButtonHandler[]
@@ -75,15 +75,18 @@ public class ImageSizeSettingForText : MonoBehaviour
         };
     }
 
+
     private void OnEnable()
     {
         parentImage.gameObject.SetActive(false);
     }
 
+
     public void UpdateAbnormalUI(Dictionary<AbnormalStatus, int> dict)
     {
 
     }
+
 
     public void SettingSizeImage(RectTransform position, string text)
     {

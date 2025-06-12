@@ -57,17 +57,19 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        playerStatus = "Player".GetComponentNameDFS<PlayerStatus>();
-        agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-        meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
-        Player = "Player".GetComponentNameDFS<Transform>();
+        playerStatus    = "Player".GetComponentNameDFS<PlayerStatus>();
+        Player          = "Player".GetComponentNameDFS<Transform>();
+        agent           = GetComponent<NavMeshAgent>();
+        animator        = GetComponent<Animator>();
+        meshRenderers   = GetComponentsInChildren<SkinnedMeshRenderer>();
     }
+
 
     private void Start()
     {
         SetState(AIState.Wandering);
     }
+
 
     private void Update()
     {
@@ -93,6 +95,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+
     private void SetState(AIState state)
     {
         aiState = state;
@@ -117,9 +120,9 @@ public class Enemy : MonoBehaviour
                 break;
 
         }
-
         animator.SetFloat("State", agent.speed == walkSpeed ? 0f : 1f);
     } //상태변화
+
 
     void PassiveUpdate()
     {
@@ -134,6 +137,7 @@ public class Enemy : MonoBehaviour
             AiTendencyChk();
         }
     }
+
 
     void AiTendencyChk() // 성향체크
     {
@@ -153,6 +157,7 @@ public class Enemy : MonoBehaviour
                 break;
         }
     }
+
 
     void AttackingUpdate() //공격
     {
@@ -193,6 +198,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+
     void RunawayUpdate() // 도망
     {
         if (playerDistance < detectDistance)
@@ -209,6 +215,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+
     void WanderToNewLocation() // 새로운 위치로 이동
     {
         if (aiState != AIState.Idle) return;
@@ -216,6 +223,7 @@ public class Enemy : MonoBehaviour
         SetState(AIState.Wandering);
         agent.SetDestination(GetWanderLocation());
     }
+
 
     Vector3 GetWanderLocation() // 목적지 설정
     {
@@ -232,12 +240,14 @@ public class Enemy : MonoBehaviour
         return hit.position;
     }
 
+
     bool IsPlayerInFieldOfView() // 플레이어가 있는 방향
     {
         Vector3 directionToPlayer = Player.transform.position - transform.position;
         float angle = Vector3.Angle(transform.forward, directionToPlayer);
         return angle < fieldOfView * 0.5f;
     }
+
 
     public void HealthChange(int damage) // 피격시 변화
     {
@@ -251,6 +261,7 @@ public class Enemy : MonoBehaviour
             Debug.Log(name + " : 죽었다");
         }
     }
+
 
     private void death() // 사망
     {

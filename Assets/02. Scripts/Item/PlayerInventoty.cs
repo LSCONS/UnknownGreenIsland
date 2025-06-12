@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,28 +8,28 @@ public class PlayerInventoty : MonoBehaviour
     [ShowInInspector, ReadOnly]
     private Transform inventoryCanvas;
     private InventorySlot[] inventorySlots;
-    public int selectItemSlotIndex = -1;
     private TextMeshProUGUI titleText;
     private TextMeshProUGUI infoText;
     private InventoryButton inventoryButton;
     private Dictionary<Resource, int> ResourceAmount = new Dictionary<Resource, int>();
     private Transform weaponPivot;
     private PlayerStatus playerStatus;
+    public int selectItemSlotIndex = -1;
 
 
     private void OnValidate()
     {
-        inventoryCanvas = transform.GetTransformInParent("UI_Inventory_Canvas");
-        inventoryButton = inventoryCanvas.GetComponentForTransformFindName<InventoryButton>("Button");
-        inventorySlots = transform.GetComponentsInChildren<InventorySlot>();
-        for(int i = 0; i < inventorySlots.Length; i++)
+        weaponPivot         = Camera.main.transform.GetGameObjectSameNameDFS("WeaponPivot");
+        inventoryCanvas     = transform.GetTransformInParent("UI_Inventory_Canvas");
+        inventoryButton     = inventoryCanvas.GetComponentForTransformFindName<InventoryButton>("Button");
+        titleText           = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
+        infoText            = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
+        playerStatus        = transform.GetComponentInparentDebug<PlayerStatus>();
+        inventorySlots      = transform.GetComponentsInChildren<InventorySlot>();
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
             inventorySlots[i].slotIndex = i;
         }
-        titleText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemName");
-        infoText = transform.parent.parent.GetComponentForTransformFindName<TextMeshProUGUI>("ItemDescription");
-        weaponPivot = Camera.main.transform.GetGameObjectSameNameDFS("WeaponPivot");
-        playerStatus = transform.GetComponentInparentDebug<PlayerStatus>();
     }
 
 
@@ -75,8 +74,8 @@ public class PlayerInventoty : MonoBehaviour
     public void SelectedItemSlot(int index)
     {
         selectItemSlotIndex = index;
-        titleText.text = inventorySlots[selectItemSlotIndex].itemObject.data.ItemName;
-        infoText.text = inventorySlots[selectItemSlotIndex].itemObject.data.description;
+        titleText.text      = inventorySlots[selectItemSlotIndex].itemObject.data.ItemName;
+        infoText.text       = inventorySlots[selectItemSlotIndex].itemObject.data.description;
         titleText.gameObject.SetActive(true);
         infoText.gameObject.SetActive(true);
 
@@ -119,8 +118,6 @@ public class PlayerInventoty : MonoBehaviour
             //해당 itemObject를 WeaponPivot의 자식으로 보냄.
             //공격버튼에 핸들러 등록함.
             inventorySlots[selectItemSlotIndex].EquippedItem(weaponPivot);
-
-
 
             //playerStatus에 isWeapon true상태로 변경.
             playerStatus.SetIsWeapon(true);
@@ -186,6 +183,7 @@ public class PlayerInventoty : MonoBehaviour
         }
     }
 
+
     public bool CreateItem(ItemData data)
     {
         //생성 가능한 상태인지 확인하기
@@ -194,7 +192,6 @@ public class PlayerInventoty : MonoBehaviour
             if (!(ResourceAmount.ContainsKey(data.resources[i].type)) ||
                 ResourceAmount[data.resources[i].type] < data.resources[i].Amount)
             {
-                Debug.Log("돌아갔나요?");
                 return false;
             }
         }
@@ -202,14 +199,12 @@ public class PlayerInventoty : MonoBehaviour
         //아이템 슬롯에서 해당하는 Resource를 확인하고 삭제하기
         for(int i = 0; i < data.resources.Length; i++)
         {
-            Debug.Log("탐색하나요?");
             int reduceCount = data.resources[i].Amount;
             while(reduceCount > 0)
             {
                 int index = FindResourceIndex(data.resources[i].type);
                 if (index == -1) 
                 {
-                    Debug.LogError("index를 찾지 못하는 오류 발생");
                     return false;
                 }
                 inventorySlots[index].ReduceItem();
@@ -244,7 +239,6 @@ public class PlayerInventoty : MonoBehaviour
                 return i;
             }
         }
-
         return -1;
     }
 }

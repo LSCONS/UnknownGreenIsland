@@ -17,10 +17,7 @@ public class PlayerCraftingRecipe : MonoBehaviour
         {
             for(int i = 0; i < cookRecipe.Count; i++)
             {
-                if(cookRecipe[i] == itemObject)
-                {
-                    return;
-                }
+                if (cookRecipe[i] == itemObject) return;
             }
         }
         cookRecipe.Add(itemObject);
@@ -33,10 +30,7 @@ public class PlayerCraftingRecipe : MonoBehaviour
         {
             for (int i = 0; i < CraftRecipe.Count; i++)
             {
-                if (CraftRecipe[i] == itemObject)
-                {
-                    return;
-                }
+                if (CraftRecipe[i] == itemObject) return;
             }
         }
         craftRecipe.Add(itemObject);

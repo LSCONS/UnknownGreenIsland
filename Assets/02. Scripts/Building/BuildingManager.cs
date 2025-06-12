@@ -66,7 +66,6 @@ public class BuildingManager : MonoBehaviour
             }
         }
 
-
         if (Input.GetKeyDown(KeyCode.N))
         {
             RemoveBuild();
@@ -93,6 +92,7 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
+
     private void GhostBuild()
     {
         GameObject currentBuild = GetCurrentBuild();
@@ -101,6 +101,7 @@ public class BuildingManager : MonoBehaviour
         MoveGhostPrefabToRaycast();
         CheckBuildValidity();
     }
+
 
     private void CreateGhostPrefab(GameObject currentBuild)
     {
@@ -125,6 +126,7 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
+
     private void MoveGhostPrefabToRaycast()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -134,6 +136,7 @@ public class BuildingManager : MonoBehaviour
             ghostBuildGameobject.transform.position = hit.point;
         }
     }
+
 
     private void CheckBuildValidity()
     {
@@ -147,6 +150,7 @@ public class BuildingManager : MonoBehaviour
             GhostSeparateBuild();
         }
     }
+
 
     private void GhostConnectBuild(Collider[] colliders)
     {
@@ -173,6 +177,7 @@ public class BuildingManager : MonoBehaviour
         SnapGhostPrefabToConnector(bestConnector);
     }
 
+
     private void SnapGhostPrefabToConnector(Connector connector)
     {
         Transform ghostConnector = FindSnapConnector(connector.transform, ghostBuildGameobject.transform.GetChild(1));
@@ -188,6 +193,7 @@ public class BuildingManager : MonoBehaviour
         GhostifyModel(ModelParent, ghostMaterialValid);
         isGhostInValidPosition = true;
     }
+
 
     private void RemoveBuild()
     {
@@ -218,14 +224,13 @@ public class BuildingManager : MonoBehaviour
                     }
                 }
 
-               
                 Destroy(objectToDestroy);
 
-                
                 StartCoroutine(UpdateConnectorsNextFrame(nearbyConnectors));
             }
         }
     }
+
 
     private IEnumerator UpdateConnectorsNextFrame(List<Connector> nearbyConnectors)
     {
@@ -236,6 +241,7 @@ public class BuildingManager : MonoBehaviour
             connector.UpdateConnectors(true);
         }
     }
+
 
     private void GhostSeparateBuild()
     {
@@ -270,6 +276,7 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
+
     private Transform FindSnapConnector(Transform snapConnector, Transform ghostConnectorParent)
     {
         ConnectorPosition OppositeConnectorTag = GetOppositePosition(snapConnector.GetComponent<Connector>());
@@ -281,6 +288,7 @@ public class BuildingManager : MonoBehaviour
         }
         return null;
     }
+
 
     private ConnectorPosition GetOppositePosition(Connector connector)
     {
@@ -316,6 +324,7 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
+
     private ConnectorPosition GetConnectorClosestToPlayer(bool topBottom)
     {
         Transform cameraTransform = Camera.main.transform;
@@ -325,6 +334,7 @@ public class BuildingManager : MonoBehaviour
         else
             return cameraTransform.position.x >= ghostBuildGameobject.transform.position.x ? ConnectorPosition.left : ConnectorPosition.right;
     }
+
 
     private void GhostifyModel(Transform modelParent, Material ghostMaterial = null)
     {
@@ -344,6 +354,7 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
+
     private GameObject GetCurrentBuild()
     {
         switch (currentBuildType)
@@ -355,6 +366,7 @@ public class BuildingManager : MonoBehaviour
         }
         return null;
     }
+
 
     private void PlaceBuild()
     {
@@ -373,8 +385,8 @@ public class BuildingManager : MonoBehaviour
     }
 }
 
-[System.Serializable]
 
+[System.Serializable]
 public enum SelectedBuildingType
 {
     floor,

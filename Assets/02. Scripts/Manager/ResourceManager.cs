@@ -12,20 +12,22 @@ public class ResourceManager : Singleton<ResourceManager>
     public Dictionary<int, ItemObject> CookRecipe { get => cookRecipe; }
     public Dictionary<int, ItemObject> CraftRecipe { get => craftRecipe; }
 
+
     private void OnValidate()
     {
         resource.Clear();
         cookRecipe.Clear();
         craftRecipe.Clear();
 
-        ItemData[] resourceData = Resources.LoadAll<ItemData>($"Resource");
-        ItemData[] craftRecipeData = Resources.LoadAll<ItemData>($"CraftingRecipe");
-        ItemData[] cookRecipeData = Resources.LoadAll<ItemData>($"CookRecipe");
+        ItemData[] resourceData     = Resources.LoadAll<ItemData>($"Resource");
+        ItemData[] craftRecipeData  = Resources.LoadAll<ItemData>($"CraftingRecipe");
+        ItemData[] cookRecipeData   = Resources.LoadAll<ItemData>($"CookRecipe");
 
-        resource = CreateDictionary(resourceData);
-        cookRecipe = CreateDictionary(craftRecipeData);
+        resource    = CreateDictionary(resourceData);
+        cookRecipe  = CreateDictionary(craftRecipeData);
         craftRecipe = CreateDictionary(cookRecipeData);
     }
+
 
     private Dictionary<int, ItemObject> CreateDictionary(ItemData[] itemData)
     {

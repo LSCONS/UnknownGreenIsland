@@ -6,15 +6,15 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    private LayerMask interactionLayerMask;
     private Camera _camera;
     private GameObject currentObject;
-    private float distanceMax = 5f;
-    private LayerMask interactionLayerMask;
     private ItemObject itemObject;
     private PlayerInput playerInput;
     private UIInteraction uiInteraction;
     private PlayerInventoty playerInventoty;
     private CombinationController combinationController;
+    private float distanceMax = 5f;
     private float tempime = 0;
 
     public Action craftingToggle;
@@ -22,12 +22,12 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnValidate()
     {
-        combinationController = transform.GetComponentForTransformFindName<CombinationController>("CombinationControl");
-        playerInventoty = transform.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
-        playerInput = transform.GetComponentDebug<PlayerInput>();
-        uiInteraction  = transform.GetComponentForTransformFindName<UIInteraction>("UIInteraction");
-        interactionLayerMask = ReadonlyDataLayer.InteractionLayerMask | ReadonlyDataLayer.InteractionCookLayerMask | ReadonlyDataLayer.InteractionWorkLayerMask;
-        _camera = Camera.main;
+        combinationController   = transform.GetComponentForTransformFindName<CombinationController>("CombinationControl");
+        playerInventoty         = transform.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
+        playerInput             = transform.GetComponentDebug<PlayerInput>();
+        uiInteraction           = transform.GetComponentForTransformFindName<UIInteraction>("UIInteraction");
+        interactionLayerMask    = ReadonlyDataLayer.InteractionLayerMask | ReadonlyDataLayer.InteractionCookLayerMask | ReadonlyDataLayer.InteractionWorkLayerMask;
+        _camera                 = Camera.main;
     }
 
     private void Start()

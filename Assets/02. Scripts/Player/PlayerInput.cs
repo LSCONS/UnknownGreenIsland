@@ -41,18 +41,18 @@ public class PlayerInput : MonoBehaviour
     {
         inputSystem = new PlayerInputSystem();
 
-        inputSystem.Player.Move.performed += OnMove;
-        inputSystem.Player.Move.canceled += StopMove;
-        inputSystem.Player.MousePosition.performed += OnMousePosition;
-        inputSystem.Player.MousePosition.canceled += StopMousePosition;
-        inputSystem.Player.Jump.started += OnJump;
-        inputSystem.Player.Jump.canceled += StopJump;
-        inputSystem.Player.Action.started += OnAction;
-        inputSystem.Player.Action.canceled += StopAction;
-        inputSystem.Player.Run.started += OnRun;
-        inputSystem.Player.Run.canceled += StopRun;
-        inputSystem.Player.Inventory.started += ToggleInventory;
-        inputSystem.Player.Interaction.started += InteractionStart;
+        inputSystem.Player.Move.performed           += OnMove;
+        inputSystem.Player.Move.canceled            += StopMove;
+        inputSystem.Player.MousePosition.performed  += OnMousePosition;
+        inputSystem.Player.MousePosition.canceled   += StopMousePosition;
+        inputSystem.Player.Jump.started             += OnJump;
+        inputSystem.Player.Jump.canceled            += StopJump;
+        inputSystem.Player.Action.started           += OnAction;
+        inputSystem.Player.Action.canceled          += StopAction;
+        inputSystem.Player.Run.started              += OnRun;
+        inputSystem.Player.Run.canceled             += StopRun;
+        inputSystem.Player.Inventory.started        += ToggleInventory;
+        inputSystem.Player.Interaction.started      += InteractionStart;
 
         inputSystem.Enable();
     }
@@ -60,18 +60,18 @@ public class PlayerInput : MonoBehaviour
 
     private void OnDisable()
     {
-        inputSystem.Player.Move.performed -= OnMove;
-        inputSystem.Player.Move.canceled -= StopMove;
-        inputSystem.Player.MousePosition.performed -= OnMousePosition;
-        inputSystem.Player.MousePosition.canceled -= StopMousePosition;
-        inputSystem.Player.Jump.started -= OnJump;
-        inputSystem.Player.Jump.canceled -= StopJump;
-        inputSystem.Player.Action.started -= OnAction;
-        inputSystem.Player.Action.canceled -= StopAction;
-        inputSystem.Player.Run.started -= OnRun;
-        inputSystem.Player.Run.canceled -= StopRun;
-        inputSystem.Player.Inventory.started -= ToggleInventory;
-        inputSystem.Player.Interaction.started -= InteractionStart;
+        inputSystem.Player.Move.performed           -= OnMove;
+        inputSystem.Player.Move.canceled            -= StopMove;
+        inputSystem.Player.MousePosition.performed  -= OnMousePosition;
+        inputSystem.Player.MousePosition.canceled   -= StopMousePosition;
+        inputSystem.Player.Jump.started             -= OnJump;
+        inputSystem.Player.Jump.canceled            -= StopJump;
+        inputSystem.Player.Action.started           -= OnAction;
+        inputSystem.Player.Action.canceled          -= StopAction;
+        inputSystem.Player.Run.started              -= OnRun;
+        inputSystem.Player.Run.canceled             -= StopRun;
+        inputSystem.Player.Inventory.started        -= ToggleInventory;
+        inputSystem.Player.Interaction.started      -= InteractionStart;
 
         inputSystem.Disable();
     }
