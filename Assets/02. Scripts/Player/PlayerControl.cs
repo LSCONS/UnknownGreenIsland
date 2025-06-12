@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using VInspector;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -14,8 +10,7 @@ public class PlayerControl : MonoBehaviour
     private PlayerCheckAngle checkAngle;
     private float gravity = -9.81f;
     private Vector3 playerVelocity;
-    [ShowInInspector]
-    private float nowJumpForce = 0f;
+    [SerializeField] private float nowJumpForce = 0f;
     private float multiple = 15f;
     private float defaultGravity = -2;
 
@@ -25,13 +20,13 @@ public class PlayerControl : MonoBehaviour
 
     private void OnValidate()
     {
-        _difValue           = transform.position - chrConPlayer.transform.position;
         input               = transform.GetComponentDebug<PlayerInput>();
         playerStatus        = transform.GetComponentDebug<PlayerStatus>();
         chrConPlayer        = "PlayerObject".GetComponentNameDFS<CharacterController>();
         playerIsgrounded    = "PlayerObject".GetComponentNameDFS<PlayerIsgrounded>();
         checkAngle          = "PlayerObject".GetComponentNameDFS<PlayerCheckAngle>();
         animator            = GetComponentInChildren<Animator>();
+        _difValue           = transform.position - chrConPlayer.transform.position;
     }
 
 
@@ -98,7 +93,6 @@ public class PlayerControl : MonoBehaviour
                 playerStatus.CanJump()
             )
         {
-            Debug.Log("점프중");
             nowJumpForce = playerStatus.NewJumpForce;
         }
     }

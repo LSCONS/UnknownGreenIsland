@@ -1,10 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
-using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using VInspector;
 
@@ -39,7 +35,7 @@ public enum PlayerAction
 public class PlayerStatus : MonoBehaviour
 {
     #region 플레이어 기본 수치 선언
-    [ShowInInspector]
+    [SerializeField]
     private float   moveSpeed           = 5f;       //플레이어가 움직일 때 스피드 보정 값
     private float   runMultiple         = 1f;       //플레이어가 달릴 때 스피드 곱
     private float   maxHealth           = 100f;     //플레이어 최대 체력

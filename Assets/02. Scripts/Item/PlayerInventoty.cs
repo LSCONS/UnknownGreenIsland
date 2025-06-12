@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using VInspector;
 
 public class PlayerInventoty : MonoBehaviour
 {
-    [ShowInInspector, ReadOnly]
+    [SerializeField]
     private Transform inventoryCanvas;
     private InventorySlot[] inventorySlots;
     private TextMeshProUGUI titleText;

@@ -17,22 +17,22 @@ public class IconCapture : MonoBehaviour
     [Button]
     public void CaptureIcon()
     {
-        // RenderTexture Å©±â¸¦ ¼³Á¤ÇÕ´Ï´Ù.
+        // RenderTexture í¬ê¸°ë¥¼ ì„¤ì •í•©ë‹ˆë‹¤.
         _texture.width = iconWidth;
         _texture.height = iconHeight;
         _texture.antiAliasing = 4; 
 
-        // Ä«¸Ş¶ó¿¡ RenderTexture¸¦ ÇÒ´çÇÏ°í ·»´õ¸µ
+        // ì¹´ë©”ë¼ì— RenderTextureë¥¼ í• ë‹¹í•˜ê³  ë Œë”ë§
         _camera.targetTexture = _texture;
         _camera.Render();
 
-        // RenderTextureÀÇ ³»¿ëÀ» Texture2D·Î ÀĞ¾î¿É´Ï´Ù.
+        // RenderTextureì˜ ë‚´ìš©ì„ Texture2Dë¡œ ì½ì–´ì˜µë‹ˆë‹¤.
         RenderTexture.active = _texture;
         Texture2D iconTexture = new Texture2D(iconWidth, iconHeight, TextureFormat.ARGB32, false);
         iconTexture.ReadPixels(new Rect(0, 0, iconWidth, iconHeight), 0, 0);
         iconTexture.Apply();
 
-        // Á¤¸®
+        // ì •ë¦¬
         GL.Clear(true, true, Color.clear);
         _camera.targetTexture = null;
         RenderTexture.active = null;
@@ -42,25 +42,25 @@ public class IconCapture : MonoBehaviour
     }
 
 #if UNITY_EDITOR
-    // Ä¸Ã³ÇÑ ¾ÆÀÌÄÜ ÅØ½ºÃ³¸¦ ÁöÁ¤ÇÑ °æ·Î¿¡ PNG ÆÄÀÏ·Î ÀúÀåÇÏ´Â ¸Ş¼­µå
+    // ìº¡ì²˜í•œ ì•„ì´ì½˜ í…ìŠ¤ì²˜ë¥¼ ì§€ì •í•œ ê²½ë¡œì— PNG íŒŒì¼ë¡œ ì €ì¥í•˜ëŠ” ë©”ì„œë“œ
     public void SaveIconTexture(Texture2D iconTexture, string fileName)
     {
-        // ÅØ½ºÃ³¸¦ PNG Æ÷¸ËÀÇ ¹ÙÀÌÆ® ¹è¿­·Î ÀÎÄÚµù
+        // í…ìŠ¤ì²˜ë¥¼ PNG í¬ë§·ì˜ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ì¸ì½”ë”©
         byte[] pngData = iconTexture.EncodeToPNG();
         if (pngData != null)
         {
-            // ¿øÇÏ´Â Æú´õ °æ·Î: Assets/05. Resources/Icon
+            // ì›í•˜ëŠ” í´ë” ê²½ë¡œ: Assets/05. Resources/Icon
             string folderPath = "Assets/05. Resources/Icon";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
-            // ÆÄÀÏ °æ·Î »ı¼º
+            // íŒŒì¼ ê²½ë¡œ ìƒì„±
             string filePath = Path.Combine(folderPath, fileName + ".png");
-            // ÆÄÀÏ ¾²±â
+            // íŒŒì¼ ì“°ê¸°
             File.WriteAllBytes(filePath, pngData);
-            Debug.Log("¾ÆÀÌÄÜÀÌ ÀúÀåµÇ¾ú½À´Ï´Ù: " + filePath);
-            // ¿¡µğÅÍ¿¡ º¯°æ»çÇ×À» ¹İ¿µ
+            Debug.Log("ì•„ì´ì½˜ì´ ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤: " + filePath);
+            // ì—ë””í„°ì— ë³€ê²½ì‚¬í•­ì„ ë°˜ì˜
             AssetDatabase.Refresh();
         }
     }
