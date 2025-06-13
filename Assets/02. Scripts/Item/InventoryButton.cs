@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class InventoryButton : MonoBehaviour
 {
-    private PlayerInventoty playerInventoty;
+    private PlayerInventory playerInventory;
     private PlayerStatus playerStatus;
     private Transform inventoryCanvas;
     private Button equipButton;
@@ -14,17 +14,17 @@ public class InventoryButton : MonoBehaviour
     private void OnValidate()
     {
         inventoryCanvas     = transform.GetTransformInParent("UI_Inventory_Canvas");
-        playerInventoty     = inventoryCanvas.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
+        playerInventory     = inventoryCanvas.GetComponentForTransformFindName<PlayerInventory>("PlayerInventory");
         playerStatus        = transform.GetComponentInparentDebug<PlayerStatus>();
         equipButton         = transform.GetComponentForTransformFindName<Button>("EquipButton");
         unEquipButton       = transform.GetComponentForTransformFindName<Button>("UnEquipButton");
         useButton           = transform.GetComponentForTransformFindName<Button>("UseButton");
         discardButton       = transform.GetComponentForTransformFindName<Button>("DiscardButton");
 
-        equipButton.onClick.AddListener(playerInventoty.EquippedItem);
-        unEquipButton.onClick.AddListener(playerInventoty.UnEquippedItem);
-        useButton.onClick.AddListener(playerInventoty.UseItem);
-        discardButton.onClick.AddListener(playerInventoty.DiscardItem);
+        equipButton.onClick.AddListener(playerInventory.EquippedItem);
+        unEquipButton.onClick.AddListener(playerInventory.UnEquippedItem);
+        useButton.onClick.AddListener(playerInventory.UseItem);
+        discardButton.onClick.AddListener(playerInventory.DiscardItem);
     }
 
 

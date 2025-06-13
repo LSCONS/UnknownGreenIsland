@@ -8,7 +8,7 @@ public class InventorySlot : MonoBehaviour
     private Button button;
     private GameObject objectPool;
     private TextMeshProUGUI text;
-    private PlayerInventoty playerInventory;
+    private PlayerInventory playerInventory;
     private PlayerInput playerinput;
     private PlayerStatus playerStatus;
     public int itemAmount = 0;
@@ -29,7 +29,7 @@ public class InventorySlot : MonoBehaviour
     private void Awake()
     {
         playerinput     = transform.GetComponentInparentDebug<PlayerInput>();
-        playerInventory = transform.GetComponentInparentDebug<PlayerInventoty>();
+        playerInventory = transform.GetComponentInparentDebug<PlayerInventory>();
         playerStatus    = transform.GetComponentInparentDebug<PlayerStatus>();
         UpdateAmountText();
         UpdateIcon();

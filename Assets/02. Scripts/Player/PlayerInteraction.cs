@@ -9,7 +9,7 @@ public class PlayerInteraction : MonoBehaviour
     private ItemObject itemObject;
     private PlayerInput playerInput;
     private UIInteraction uiInteraction;
-    private PlayerInventoty playerInventoty;
+    private PlayerInventory playerInventoty;
     private CombinationController combinationController;
     private float distanceMax = 5f;
     private float tempime = 0;
@@ -20,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
     private void OnValidate()
     {
         combinationController   = transform.GetComponentForTransformFindName<CombinationController>("CombinationControl");
-        playerInventoty         = transform.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory");
+        playerInventoty         = transform.GetComponentForTransformFindName<PlayerInventory>("PlayerInventory");
         playerInput             = transform.GetComponentDebug<PlayerInput>();
         uiInteraction           = transform.GetComponentForTransformFindName<UIInteraction>("UIInteraction");
         interactionLayerMask    = ReadonlyDataLayer.InteractionLayerMask | ReadonlyDataLayer.InteractionCookLayerMask | ReadonlyDataLayer.InteractionWorkLayerMask;

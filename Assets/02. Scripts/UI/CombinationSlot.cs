@@ -46,7 +46,7 @@ public class CombinationSlot : MonoBehaviour
     private void TryCreateItem()
     {
         Transform inventoryCanvas = transform.GetTransformInParent("UI_Player");
-        if (inventoryCanvas.GetComponentForTransformFindName<PlayerInventoty>("PlayerInventory").CreateItem(itemObject.data))
+        if (inventoryCanvas.GetComponentForTransformFindName<PlayerInventory>("PlayerInventory").CreateItem(itemObject.data))
         {
             Debug.Log("생성 성공");
         }

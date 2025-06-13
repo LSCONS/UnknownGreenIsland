@@ -12,10 +12,10 @@ public class ConditionHandler : MonoBehaviour
     [ReadOnly, ShowInInspector]
     private Condition conditionThirsty;
 
-    public Condition ConditionHP { get => conditionHP; }
-    public Condition Conditionstamina { get => conditionstamina; }
-    public Condition ConditionHunger { get => conditionHunger; }
-    public Condition ConditionThirsty { get => conditionThirsty; }
+    public Condition ConditionHP        { get => conditionHP; }
+    public Condition Conditionstamina   { get => conditionstamina; }
+    public Condition ConditionHunger    { get => conditionHunger; }
+    public Condition ConditionThirsty   { get => conditionThirsty; }
 
     private void OnValidate()
     {

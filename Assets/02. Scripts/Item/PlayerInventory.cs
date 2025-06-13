@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerInventoty : MonoBehaviour
+public class PlayerInventory : MonoBehaviour
 {
     [SerializeField]
     private Transform inventoryCanvas;
